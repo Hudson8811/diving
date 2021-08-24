@@ -1,10 +1,10 @@
 /* base */
 @import "base/var";
+@import "base/mixin";
 @import "base/reset";
 @import "base/fonts";
 @import "base/animation";
 @import "base/global";
-@import "base/mixin";
 
 /* libs */
 @import "./../../node_modules/swiper/swiper";
@@ -13,5 +13,7 @@
 /* partials */
 @import "partials/header";
 @import "partials/footer";
+@import "partials/title";
 
 /* blocks */
+@import "blocks/components";

@@ -7,4 +7,18 @@ block vars
 		};
 
 block main
-	.container
+	.components
+		.container
+			.components__block-outer
+				.components__title Типография
+				.components__block-inner
+					.components__subtitle Заголовки
+					+title('Давно выяснено, что при оценке', 'h1', 'title--large components__title-item')
+					+title('Здесь ваш текст.. Здесь ваш текст.." Многие', 'h2', 'title--medium components__title-item')
+					+title('так что поиск по ключевым словам "lorem ipsum" сразу показывает', 'h3', 'title--small components__title-item')
+					+title('редакторы HTML используют Lorem Ipsum в качестве текста по умолчанию', 'h4', 'components__title-item')
+					+title('За прошедшие годы текст Lorem Ipsum получил много версий. Некоторые версии появились по ошибке', 'h5', 'components__title-item')
+					+title('Многие думают, что Lorem Ipsum - взятый с потолка псевдо-латинский набор слов, но это не совсем так', 'h6', 'components__title-item')
+				.components__block-inner
+					.components__subtitle Наборный текст
+
