@@ -1,0 +1,28 @@
+.product-preview {
+  &__label {
+  }
+  &__image {
+    img {
+    }
+  }
+
+  &__title {
+  }
+  &__bottom {
+  }
+  &__btn {
+  }
+
+  &__price {
+    font-size: 19px;
+    line-height: (23 / 19);
+    color: $dark-blue;
+
+    &-old {
+      //18/15
+      display: block;
+      color: $gray;
+      text-decoration: line-through;
+    }
+  }
+}
