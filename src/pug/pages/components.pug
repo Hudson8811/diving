@@ -6,6 +6,14 @@ block vars
 			title: 'Общие компоненты'
 		};
 
+		const PRODUCTS = [
+			{img: {n: '1', w: '120', h: '171'}, title: 'SDI OWD', text: 'Open Water Diver. Учебное пособие по дайвингу', isOldPrice: true, label: '-10%', cl: 'products-grid__item'},
+			{img: {n: '2', w: '115', h: '171'}, title: 'SDI ночной дайвинг', text: 'Ночной дайвинг. Подводная навигация и погружения ', label: 'Хит', cl: 'products-grid__item'},
+			{img: {n: '3', w: '120', h: '171'}, title: 'FRTI пособие', text: 'Экстренная медицинская помощь для взрослых и детей', label: 'New', cl: 'products-grid__item'},
+			{img: {n: '4', w: '123', h: '171'}, title: 'Стивен Барски Dry Suit', text: 'Дайвинг в сухом костюме. История, обзор теории, уход.', cl: 'products-grid__item'},
+			{img: {n: '5', w: '140', h: '186'}, title: 'SDI OWD', text: 'Open Water Diver. Учебное пособие по дайвингу', isOrderIt: true, cl: 'products-grid__item'}
+		];
+
 block main
 	.components
 		.container
@@ -23,20 +31,9 @@ block main
 					.components__subtitle Наборный текст
 			
 			.components__block-outer
-				.product-preview
-					//16-25-25
-					span.product-preview__label -10%
-					.product-preview__image 
-						//h 200px
-						img(src="https://via.placeholder.com/200", alt="")
-					h3.product-preview__title 
-						a(href="#") Стивен Барски Dry Suit
-					.product-preview__text Дайвинг в сухом костюме. История, обзор теории, уход.
-					.product-preview__bottom 
-						a.product-preview__btn(href="#") 
-							img(src="images/components/btn.png", alt="")
-						.product-preview__price
-							.product-preview__price-old 1200₽
-							| 1200₽
+				.products-grid
+					each item in PRODUCTS
+						+product-preview(item)
+	
 					
 
