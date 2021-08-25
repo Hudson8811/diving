@@ -1,10 +1,16 @@
 extends ../layouts/default
 
 block vars
-	-
-		const page = {
-			title: 'Кислородный баллон TANK BACK PACK'
-		};
+  -
+    const page = {
+      title: 'Кислородный баллон TANK BACK PACK'
+    };
+
+    const bc = [
+      {text: 'Магазин', url: URLS.catalog},
+      {text: page.title}
+    ];
 
 block main
-
+  article.product-card 
+    +breadcrumbs(bc)
