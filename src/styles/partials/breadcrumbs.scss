@@ -1,0 +1,39 @@
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+
+  & > * {
+    font-size: 14px;
+    line-height: (22 / 14);
+    color: $gray-a4;
+  }
+
+  & > * + * {
+    position: relative;
+    margin-left: 25px;
+
+    &::before {
+      content: "/";
+      position: absolute;
+      left: -15px;
+      pointer-events: none;
+    }
+  }
+
+  a {
+    transition: color 0.3s ease;
+
+    @include hover {
+      color: $dark;
+
+      &::before {
+        color: $gray-a4;
+      }
+    }
+  }
+
+  span {
+    color: $dark;
+  }
+}

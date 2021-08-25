@@ -1,29 +1,40 @@
 .components {
-	$self: &;
+  $self: &;
 
-	padding: 150px 0 100px;
+  padding: 150px 0 100px;
 
-	&__title {
-		font-size: 39px;
-		line-height: 61px;
-		font-weight: 700;
-	}
+  &__title {
+    font-size: 39px;
+    line-height: 61px;
+    font-weight: 700;
+  }
 
-	&__subtitle {
-		font-size: 31px;
-		line-height: 32px;
-		font-weight: 500;
-		margin-top: 62px;
-		margin-bottom: 50px;
-	}
+  &__subtitle {
+    font-size: 31px;
+    line-height: 32px;
+    font-weight: 500;
+    margin-top: 62px;
+    margin-bottom: 50px;
+  }
 
-	&__title-item {
-		+ #{$self}__title-item {
-			margin-top: 41px;
-		}
+  &__title-item {
+    + #{$self}__title-item {
+      margin-top: 41px;
+    }
 
-		&:last-child {
-			margin-bottom: 78px;
-		}
-	}
+    &:last-child {
+      margin-bottom: 78px;
+    }
+  }
+
+  &__block {
+    &-outer {
+      padding-top: 24px;
+      padding-bottom: 24px;
+
+      & + & {
+        border-top: solid 1px $gray;
+      }
+    }
+  }
 }
