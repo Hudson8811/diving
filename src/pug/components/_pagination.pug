@@ -1,0 +1,13 @@
+mixin pagination()
+	.pagination
+		span.pagination__control.pagination__control--first(data-page-num='1')
+			+icon('arrow-thin')
+		span.pagination__link(data-page-num='1') 1
+		span.pagination__link(data-page-num='2') 2
+		span.pagination__link.current(data-page-num='3') 3
+		span.pagination__link(data-page-num='4') 4
+		span.pagination__link(data-page-num='5') 5
+		span.pagination__link ...
+		span.pagination__link(data-page-num='10') 10
+		span.pagination__control(data-page-num='10')
+			+icon('arrow-thin')

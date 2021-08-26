@@ -1,7 +1,0 @@
-mixin text-block(title, text, className)
-	.text-block(class= className)
-		if title
-			.text-block__title!= title
-		.text-block__text
-			each item in text
-				p!= item

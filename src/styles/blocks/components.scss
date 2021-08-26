@@ -3,6 +3,13 @@
 
 	padding: 150px 0 100px;
 
+
+	&__block-outer {
+		+ .components__block-outer {
+			margin-top: 61px;
+		}
+	}
+
 	&__title {
 		font-size: 39px;
 		line-height: 61px;
@@ -25,5 +32,9 @@
 		&:last-child {
 			margin-bottom: 78px;
 		}
+	}
+
+	&__title-text {
+		margin-bottom: 30px;
 	}
 }
