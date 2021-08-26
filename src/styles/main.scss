@@ -14,9 +14,13 @@
 @import "partials/header";
 @import "partials/footer";
 @import "partials/title";
+@import "partials/text";
+@import "partials/button";
+@import "partials/pagination";
 @import "partials/breadcrumbs";
 
 /* blocks */
+@import "blocks/components";
 @import "blocks/product-preview";
 @import "blocks/products-grid";
 

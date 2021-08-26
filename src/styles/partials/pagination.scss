@@ -1,0 +1,33 @@
+.pagination {
+	display: flex;
+	align-items: center;
+
+	&__control {
+		svg {
+			width: 9px;
+			height: 16px;
+		}
+
+		&--first {
+			margin-right: 30px;
+
+			svg {
+				transform: rotate(180deg);
+			}
+		}
+	}
+
+	&__link {
+		font-family: $fontRoboto;
+		font-size: 15px;
+		line-height: 22px;
+
+		+ .pagination__link {
+			margin-left: 32px;
+		}
+
+		&.current {
+			background-color: #fff;
+		}
+	}
+}
