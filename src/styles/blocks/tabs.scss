@@ -1,0 +1,39 @@
+.tabs {
+  border-top: solid 1px $gray;
+  border-bottom: solid 1px $gray;
+
+  &__container {
+    display: flex;
+  }
+
+  &__item {
+    width: 100%;
+    max-width: 316px;
+    display: flex;
+    min-height: 88px;
+
+    button {
+      font-size: 15px;
+      line-height: 1;
+      color: $gray-ph;
+      font-weight: 500;
+      background-color: transparent;
+      cursor: pointer;
+      transition: color 0.3s ease;
+      appearance: none;
+      align-self: center;
+
+      @include hover {
+        color: $blue;
+      }
+    }
+
+    &.active {
+      button {
+        font-size: 19px;
+        color: $blue;
+        pointer-events: none;
+      }
+    }
+  }
+}

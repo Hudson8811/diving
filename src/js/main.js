@@ -3,3 +3,5 @@
 //= ./libs/jquery.fancybox.min.js
 
 //= ./partials/main.js
+//= ./partials/swiper-init.js
+//= ./partials/tabs.js
