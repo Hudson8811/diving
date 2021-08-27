@@ -100,6 +100,25 @@
     background-color: $lightBlue2;
   }
 
+  &--white {
+    color: $blue-hover;
+    background-color: $white;
+
+    @include hover {
+      opacity: 0.85;
+      background-color: $white;
+    }
+  }
+
+  &--more {
+    svg {
+      width: 7px;
+      height: 11px;
+      margin-left: 8px;
+      fill: $blue-hover;
+    }
+  }
+
   &--color {
     width: 40px;
     height: 40px;
