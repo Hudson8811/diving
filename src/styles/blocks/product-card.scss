@@ -4,4 +4,113 @@
   &__breadcrumbs {
     margin-bottom: 50px;
   }
+
+  &__main {
+    display: flex;
+    margin-bottom: 50px;
+  }
+
+  &__image {
+    display: flex;
+    margin-right: 20px;
+    flex-shrink: 0;
+  }
+
+  &__photo {
+    width: 495px;
+    height: 545px;
+    border: solid 1px $gray;
+    border-radius: 5px;
+    overflow: hidden;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__thumbs {
+    margin-left: 20px;
+
+    &-item {
+      border: solid 1px $gray;
+      border-radius: 5px;
+      overflow: hidden;
+
+      & + & {
+        margin-top: 10px;
+      }
+
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  &__info {
+    max-width: 558px;
+    margin-left: auto;
+  }
+
+  &__title {
+    margin-bottom: 50px;
+  }
+
+  &__article {
+    margin-bottom: 30px;
+    font-size: 19px;
+    line-height: (29 / 19);
+    font-weight: 500;
+    color: $dark;
+  }
+
+  &__parameters {
+  }
+
+  &__parameter {
+    & + & {
+      margin-top: 30px;
+    }
+  }
+
+  &__price {
+    display: flex;
+    margin-top: 56px;
+    font-size: 39px;
+    line-height: 1;
+    font-weight: 500;
+
+    & > * {
+      align-self: center;
+    }
+
+    &-max {
+      font-size: 31px;
+      margin-left: 10px;
+      color: $gray;
+    }
+  }
+
+  &__action {
+    display: flex;
+    margin-top: 30px;
+
+    & > * + * {
+      margin-left: 20px;
+    }
+  }
+
+  &__content {
+    margin-top: 0;
+  }
+
+  &__give-review,
+  &__review + &__review {
+    margin-top: 10px;
+  }
 }

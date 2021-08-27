@@ -35,25 +35,33 @@ block vars
         img: {n: '5', w: '140', h: '186'},
         title: 'SDI OWD',
         text: 'Open Water Diver. Учебное пособие по дайвингу',
-        cl: 'products-carousel__item'
+        cl: 'products-carousel__item swiper-slide'
       },
       {
         img: {n: '6', w: '171', h: '195'},
         title: 'SDI ночной дайвинг',
         text: 'Ночной дайвинг. Подводная навигация и погружения',
-        cl: 'products-carousel__item'
+        cl: 'products-carousel__item swiper-slide'
       },
       {
         img: {n: '7', w: '106', h: '193'},
         title: 'FRTI пособие',
         text: 'Экстренная медицинская помощь для взрослых и детей',
-        cl: 'products-carousel__item'
+        cl: 'products-carousel__item swiper-slide'
       },
       {
         img: {n: '8', w: '112', h: '201'},
         title: 'Стивен Барски Dry Suit',
         text: 'Дайвинг в сухом костюме. История, обзор теории, уход.',
-        cl: 'products-carousel__item'
+        cl: 'products-carousel__item swiper-slide'
+      },
+      {
+        img: {n: '1', w: '120', h: '171'},
+        title: 'SDI OWD',
+        text: 'Open Water Diver. Учебное пособие по дайвингу',
+        isOldPrice: true,
+        label: '-10%',
+        cl: 'products-carousel__item swiper-slide'
       }
     ];
 
@@ -62,13 +70,13 @@ block vars
         img: {n: '5', w: '140', h: '186'},
         title: 'SDI OWD',
         text: 'Open Water Diver. Учебное пособие по дайвингу',
-        cl: 'products-carousel__item'
+        cl: 'products-carousel__item swiper-slide'
       },
       {
         img: {n: '6', w: '171', h: '195'},
         title: 'SDI ночной дайвинг',
         text: 'Ночной дайвинг. Подводная навигация и погружения',
-        cl: 'products-carousel__item'
+        cl: 'products-carousel__item swiper-slide'
       }
     ];
 
@@ -80,16 +88,15 @@ block main
         .product-card__image
           .product-card__photo
             img(src="images/product-card/product-full.jpg", srcset="images/product-card/product-full@2x.jpg 2x"  width="495", height="545", alt="")
-          .product-card__slider.product-thumbs.swiper-container
-            .swiper-wrapper
-              .product-thumds__item.swiper-slide
-                img(src="images/product-card/product-thumb-1.jpg", srcset="images/product-card/product-thumb-1@2x.jpg 2x"  width="93", height="93", alt="")
-              .product-thumds__item.swiper-slide
-                img(src="images/product-card/product-thumb-2.jpg", srcset="images/product-card/product-thumb-2@2x.jpg 2x"  width="93", height="93", alt="")
-              .product-thumds__item.swiper-slide
-                img(src="images/product-card/product-thumb-3.jpg", srcset="images/product-card/product-thumb-3@2x.jpg 2x"  width="93", height="93", alt="")
-              .product-thumds__item.swiper-slide
-                img(src="images/product-card/product-thumb-4.jpg", srcset="images/product-card/product-thumb-4@2x.jpg 2x"  width="93", height="93", alt="")
+          .product-card__thumbs
+            .product-card__thumbs-item
+              img(src="images/product-card/product-thumb-1.jpg", srcset="images/product-card/product-thumb-1@2x.jpg 2x"  width="93", height="93", alt="")
+            .product-card__thumbs-item
+              img(src="images/product-card/product-thumb-2.jpg", srcset="images/product-card/product-thumb-2@2x.jpg 2x"  width="93", height="93", alt="")
+            .product-card__thumbs-item
+              img(src="images/product-card/product-thumb-3.jpg", srcset="images/product-card/product-thumb-3@2x.jpg 2x"  width="93", height="93", alt="")
+            .product-card__thumbs-item
+              img(src="images/product-card/product-thumb-4.jpg", srcset="images/product-card/product-thumb-4@2x.jpg 2x"  width="93", height="93", alt="")
         .product-card__info 
           +title(page.title, 'h1', 'title--large product-card__title')
           .product-card__article Артикул: 01234567890abc
@@ -98,32 +105,35 @@ block main
               .parameter__title Вместимость воздуха (мл)
               .parameter__list 
                 each item, index in ['1000', '1500', '2000', '2500']
-                  a.parameter__item(class= (index === 2 ? '.parameter__item--checked' : ''), href="#")= item
-            
-            .product-card__parameter.parameter
+                  - let cl = index === 2 ? 'parameter__item parameter__item--checked' : 'parameter__item button--lightblue';
+                  +button(item, cl, '', '#')
+
+            .product-card__parameter.parameter.parameter--colors
               .parameter__title Цвет
               .parameter__list 
                 each item, index in [{n: 'Yellow', c: '#dec200'}, {n: 'Black', c: '#000000'}, {n: 'Gray', c: '#706e79'}]
-                  a.parameter__item(href="#", style="background-color: " + item.c + ";", title= item.n)
-                    span.visually-hidden= item.n
-          
+
+                  +button('', 'parameter__item button--color', '', '#')(style="background-color: " + item.c + ";", title= item.n, aria-label= item.n + ' color')
+
           .product-card__price
-            span.product-card__price-min 1500
-            span.product-card__price-max - 2500
-          .product-card__action 
-            a(href="") 
-            img(src="images/components/btn.png", alt="")
-            a(href="") 
+            span 1 500₽
+            span.product-card__price-max - 2 500₽
+          .product-card__action
+            +button('В корзину', 'button--to-cart', 'cart', '#')
+            +button('Купить в 1 клик', 'button--outline', '', '#')
 
     .product-card__tabs.tabs
       .tabs__container.container
-          button.tabs__item(type="button", data-target="#description") Описание товара
-          button.tabs__item(type="button", data-target="#specifications") Характеристики
-          button.tabs__item(type="button", data-target="#reviews") Отзывы
+        .tabs__item.active
+          button(type="button", data-target="#description") Описание товара
+        .tabs__item
+          button(type="button", data-target="#specifications") Характеристики
+        .tabs__item
+          button(type="button", data-target="#reviews") Отзывы
 
     .product-card__content 
       .container 
-        .tab-content 
+        .tab-content.active#description
           p Новичкам и любителям дайвинга рекомендуется использовать этот продукт на глубине до 5 метров. Профессиональных дайверов рекомендуют в качестве запасных кислородных баллонов для глубины воды до 30 метров. Качественное литье из алюминиевого сплава, безопасное и долговечное.
 
           p 
@@ -139,54 +149,56 @@ block main
 
           p Откуда товар? Ответ: Все товары в магазине из-за границы Китая.
 
-        .tab-content
-          table 
+        .tab-content#specifications
+          table
             tbody
               each tr in table
                 tr 
                   th= tr.th 
                   td= tr.td
 
-        .tab-content
+        .tab-content#reviews
           each review in reviews 
-            .review
+            .product-card__review.review
               .review__author
                 .review__author-image
                   if review.img
                     img(src="images/product-card/" + review.img + ".jpg", srcset="images/product-card/" + review.img + "@2x.jpg 2x", width="36", height="36", alt= review.name)
+                  else 
+                    img(src="images/no-avatar.svg", width="36", height="36", alt="Нет аватара")
                 .review__author-meta 
                   .review__author-name= review.name
-                  time(datetime="2021-08-12") 12.08.21
+                  time.review__author-date(datetime="2021-08-12") 12.08.21
               .review__content 
-                .review__title= review.title
+                +title(review.title, 'div', 'title--small review__title')
                 .review__text= review.text
-          sectiob.give-review
+          section.product-card__give-review.give-review
             +title('Оставить отзыв', 'h2', 'title--small give-review__title')
             form(action="#", method="post")
               label
                 textarea(name="review")
-              +button('Отправить')
+              +button('Отправить', 'give-review__send')
 
     section.products-carousel
       .products-carousel__container.container
         +title('Похожие товары', 'h2', 'title--small products-carousel__title')
-        .swiper-container
+        .products-carousel__swiper.swiper-container.__js_products-carousel
           .swiper-wrapper 
             each item in similar
               +product-preview(item)
           .swiper-pagination
-          .swiper-navigation
-            +button('', 'button--outline button--icon button--disabled', 'chevron-left')
-            +button('', 'button--outline button--icon button--disabled', 'chevron-right')
+          .products-carousel__navigation
+            +button('', 'products-carousel__btn button--outline button--icon __js_prev', 'chevron-left')
+            +button('', 'products-carousel__btn button--outline button--icon __js_next', 'chevron-right')
 
     section.products-carousel
       .products-carousel__container.container
         +title('Вы недавно смотрели', 'h2', 'title--small products-carousel__title')
-        .swiper-container
+        .products-carousel__swiper.swiper-container.__js_products-carousel
           .swiper-wrapper 
             each item in viewed
               +product-preview(item)
           .swiper-pagination
-          .swiper-navigation
-            +button('', 'button--outline button--icon button--disabled', 'chevron-left')
-            +button('', 'button--outline button--icon button--disabled', 'chevron-right')
+          .products-carousel__navigation
+            +button('', 'products-carousel__btn button--outline button--icon __js_prev', 'chevron-left')
+            +button('', 'products-carousel__btn button--outline button--icon __js_next', 'chevron-right')

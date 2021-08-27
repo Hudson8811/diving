@@ -20,13 +20,11 @@
         <div class="product-card__main">
           <div class="product-card__image">
             <div class="product-card__photo"><img src="images/product-card/product-full.jpg" srcset="images/product-card/product-full@2x.jpg 2x" width="495" height="545" alt=""></div>
-            <div class="product-card__slider product-thumbs swiper-container">
-              <div class="swiper-wrapper">
-                <div class="product-thumds__item swiper-slide"><img src="images/product-card/product-thumb-1.jpg" srcset="images/product-card/product-thumb-1@2x.jpg 2x" width="93" height="93" alt=""></div>
-                <div class="product-thumds__item swiper-slide"><img src="images/product-card/product-thumb-2.jpg" srcset="images/product-card/product-thumb-2@2x.jpg 2x" width="93" height="93" alt=""></div>
-                <div class="product-thumds__item swiper-slide"><img src="images/product-card/product-thumb-3.jpg" srcset="images/product-card/product-thumb-3@2x.jpg 2x" width="93" height="93" alt=""></div>
-                <div class="product-thumds__item swiper-slide"><img src="images/product-card/product-thumb-4.jpg" srcset="images/product-card/product-thumb-4@2x.jpg 2x" width="93" height="93" alt=""></div>
-              </div>
+            <div class="product-card__thumbs">
+              <div class="product-card__thumbs-item"><img src="images/product-card/product-thumb-1.jpg" srcset="images/product-card/product-thumb-1@2x.jpg 2x" width="93" height="93" alt=""></div>
+              <div class="product-card__thumbs-item"><img src="images/product-card/product-thumb-2.jpg" srcset="images/product-card/product-thumb-2@2x.jpg 2x" width="93" height="93" alt=""></div>
+              <div class="product-card__thumbs-item"><img src="images/product-card/product-thumb-3.jpg" srcset="images/product-card/product-thumb-3@2x.jpg 2x" width="93" height="93" alt=""></div>
+              <div class="product-card__thumbs-item"><img src="images/product-card/product-thumb-4.jpg" srcset="images/product-card/product-thumb-4@2x.jpg 2x" width="93" height="93" alt=""></div>
             </div>
           </div>
           <div class="product-card__info"> 
@@ -35,30 +33,40 @@
             <div class="product-card__parameters">
               <div class="product-card__parameter parameter">
                 <div class="parameter__title">Вместимость воздуха (мл)</div>
-                <div class="parameter__list"> <a class="parameter__item" href="#">1000</a><a class="parameter__item" href="#">1500</a><a class="parameter__item .parameter__item--checked" href="#">2000</a><a class="parameter__item" href="#">2500</a>
+                <div class="parameter__list"> <a class="button parameter__item button--lightblue" href="#"><span>1000</span></a><a class="button parameter__item button--lightblue" href="#"><span>1500</span></a><a class="button parameter__item parameter__item--checked" href="#"><span>2000</span></a><a class="button parameter__item button--lightblue" href="#"><span>2500</span></a>
                 </div>
               </div>
-              <div class="product-card__parameter parameter">
+              <div class="product-card__parameter parameter parameter--colors">
                 <div class="parameter__title">Цвет</div>
-                <div class="parameter__list"> <a class="parameter__item" href="#" style="background-color: #dec200;" title="Yellow"><span class="visually-hidden">Yellow</span></a><a class="parameter__item" href="#" style="background-color: #000000;" title="Black"><span class="visually-hidden">Black</span></a><a class="parameter__item" href="#" style="background-color: #706e79;" title="Gray"><span class="visually-hidden">Gray</span></a>
+                <div class="parameter__list"> <a class="button parameter__item button--color" href="#" style="background-color: #dec200;" title="Yellow" aria-label="Yellow color"><span></span></a><a class="button parameter__item button--color" href="#" style="background-color: #000000;" title="Black" aria-label="Black color"><span></span></a><a class="button parameter__item button--color" href="#" style="background-color: #706e79;" title="Gray" aria-label="Gray color"><span></span></a>
                 </div>
               </div>
             </div>
-            <div class="product-card__price"><span class="product-card__price-min">1500</span><span class="product-card__price-max">- 2500</span></div>
-            <div class="product-card__action"> <a href=""> </a><img src="images/components/btn.png" alt=""><a href=""> </a></div>
+            <div class="product-card__price"><span>1 500₽</span><span class="product-card__price-max">- 2 500₽</span></div>
+            <div class="product-card__action"><a class="button button--to-cart" href="#"><span>В корзину</span>
+                <svg>
+                  <use xlink:href="./images/sprite.svg#cart"></use>
+                </svg></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span></a>
+            </div>
           </div>
         </div>
       </div>
       <div class="product-card__tabs tabs">
         <div class="tabs__container container">
-          <button class="tabs__item" type="button" data-target="#description">Описание товара</button>
-          <button class="tabs__item" type="button" data-target="#specifications">Характеристики</button>
-          <button class="tabs__item" type="button" data-target="#reviews">Отзывы</button>
+          <div class="tabs__item active">
+            <button type="button" data-target="#description">Описание товара</button>
+          </div>
+          <div class="tabs__item">
+            <button type="button" data-target="#specifications">Характеристики</button>
+          </div>
+          <div class="tabs__item">
+            <button type="button" data-target="#reviews">Отзывы</button>
+          </div>
         </div>
       </div>
       <div class="product-card__content"> 
         <div class="container"> 
-          <div class="tab-content"> 
+          <div class="tab-content active" id="description">
             <p>Новичкам и любителям дайвинга рекомендуется использовать этот продукт на глубине до 5 метров. Профессиональных дайверов рекомендуют в качестве запасных кислородных баллонов для глубины воды до 30 метров. Качественное литье из алюминиевого сплава, безопасное и долговечное.</p>
             <p>
                Примечания:<br>
@@ -73,8 +81,8 @@
             </p>
             <p>Откуда товар? Ответ: Все товары в магазине из-за границы Китая.</p>
           </div>
-          <div class="tab-content">
-            <table> 
+          <div class="tab-content" id="specifications">
+            <table>
               <tbody>
                 <tr> 
                   <th>Объем (мл)</th>
@@ -115,126 +123,151 @@
               </tbody>
             </table>
           </div>
-          <div class="tab-content">
-            <div class="review">
+          <div class="tab-content" id="reviews">
+            <div class="product-card__review review">
               <div class="review__author">
-                <div class="review__author-image">
+                <div class="review__author-image"><img src="images/no-avatar.svg" width="36" height="36" alt="Нет аватара">
                 </div>
                 <div class="review__author-meta"> 
                   <div class="review__author-name">Аноним</div>
-                  <time datetime="2021-08-12">12.08.21</time>
+                  <time class="review__author-date" datetime="2021-08-12">12.08.21</time>
                 </div>
               </div>
               <div class="review__content"> 
-                <div class="review__title">Рекомендую!</div>
+                <div class="title--small review__title title">Рекомендую!</div>
                 <div class="review__text">Таким образом начало повседневной работы по формированию позиции представляет собой интересный эксперимент проверки систем массового участия. Товарищи! укрепление и развитие структуры представляет собой интересный эксперимент проверки соответствующий условий активизации. Повседневная практика показывает, что укрепление и развитие структуры способствует подготовки и реализации новых предложений. Равным образом реализация намеченных плановых заданий влечет за собой процесс внедрения и модернизации модели развития. Задача организации, в особенности же сложившаяся структура организации обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач.</div>
               </div>
             </div>
-            <div class="review">
+            <div class="product-card__review review">
               <div class="review__author">
                 <div class="review__author-image"><img src="images/product-card/avatar.jpg" srcset="images/product-card/avatar@2x.jpg 2x" width="36" height="36" alt="Алекс Хазайбырген">
                 </div>
                 <div class="review__author-meta"> 
                   <div class="review__author-name">Алекс Хазайбырген</div>
-                  <time datetime="2021-08-12">12.08.21</time>
+                  <time class="review__author-date" datetime="2021-08-12">12.08.21</time>
                 </div>
               </div>
               <div class="review__content"> 
-                <div class="review__title">Не рекомендую!</div>
+                <div class="title--small review__title title">Не рекомендую!</div>
                 <div class="review__text">Задача организации, в особенности же постоянное информационно-пропагандистское обеспечение нашей деятельности представляет собой интересный эксперимент проверки форм развития. Таким образом постоянный количественный рост и сфера нашей активности обеспечивает широкому кругу (специалистов) участие в формировании форм развития.</div>
               </div>
             </div>
-            <div class="review">
+            <div class="product-card__review review">
               <div class="review__author">
-                <div class="review__author-image">
+                <div class="review__author-image"><img src="images/no-avatar.svg" width="36" height="36" alt="Нет аватара">
                 </div>
                 <div class="review__author-meta"> 
                   <div class="review__author-name">Аноним</div>
-                  <time datetime="2021-08-12">12.08.21</time>
+                  <time class="review__author-date" datetime="2021-08-12">12.08.21</time>
                 </div>
               </div>
               <div class="review__content"> 
-                <div class="review__title">Рекомендую!</div>
+                <div class="title--small review__title title">Рекомендую!</div>
                 <div class="review__text">Таким образом начало повседневной работы по формированию позиции представляет собой интересный эксперимент проверки систем массового участия. Товарищи! укрепление и развитие структуры представляет собой интересный эксперимент проверки соответствующий условий активизации. Повседневная практика показывает, что укрепление и развитие структуры способствует подготовки и реализации новых предложений. Равным образом реализация намеченных плановых заданий влечет за собой процесс внедрения и модернизации модели развития. Задача организации, в особенности же сложившаяся структура организации обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач.</div>
               </div>
             </div>
-            <div class="review">
+            <div class="product-card__review review">
               <div class="review__author">
                 <div class="review__author-image"><img src="images/product-card/avatar.jpg" srcset="images/product-card/avatar@2x.jpg 2x" width="36" height="36" alt="Алекс Хазайбырген">
                 </div>
                 <div class="review__author-meta"> 
                   <div class="review__author-name">Алекс Хазайбырген</div>
-                  <time datetime="2021-08-12">12.08.21</time>
+                  <time class="review__author-date" datetime="2021-08-12">12.08.21</time>
                 </div>
               </div>
               <div class="review__content"> 
-                <div class="review__title">Не рекомендую!</div>
+                <div class="title--small review__title title">Не рекомендую!</div>
                 <div class="review__text">Задача организации, в особенности же постоянное информационно-пропагандистское обеспечение нашей деятельности представляет собой интересный эксперимент проверки форм развития. Таким образом постоянный количественный рост и сфера нашей активности обеспечивает широкому кругу (специалистов) участие в формировании форм развития.</div>
               </div>
             </div>
-            <sectiob class="give-review">
+            <section class="product-card__give-review give-review">
               <h2 class="title--small give-review__title title">Оставить отзыв</h2>
               <form action="#" method="post">
                 <label>
                   <textarea name="review"></textarea>
                 </label>
-                <button class="button"><span>Отправить</span>
+                <button class="button give-review__send"><span>Отправить</span>
                 </button>
               </form>
-            </sectiob>
+            </section>
           </div>
         </div>
       </div>
       <section class="products-carousel">
         <div class="products-carousel__container container">
           <h2 class="title--small products-carousel__title title">Похожие товары</h2>
-          <div class="swiper-container">
+          <div class="products-carousel__swiper swiper-container __js_products-carousel">
             <div class="swiper-wrapper"> 
-              <div class="products-carousel__item product-preview">
+              <div class="products-carousel__item swiper-slide product-preview">
                 <div class="product-preview__image"> <img src="images/product-preview/5.jpg" srcset="images/product-preview/5@2x.jpg 2x" width="140" height="186" alt="SDI OWD"></div>
                 <h3 class="product-preview__title"> <a href="#">SDI OWD</a></h3>
                 <div class="product-preview__text">Open Water Diver. Учебное пособие по дайвингу</div>
-                <div class="product-preview__bottom"> <a class="product-preview__btn" href="#"> <img src="images/components/btn.png" alt=""></a>
+                <div class="product-preview__bottom"> <a class="button button--to-cart" href="#"><span>В корзину</span>
+                    <svg>
+                      <use xlink:href="./images/sprite.svg#cart"></use>
+                    </svg></a>
                   <div class="product-preview__price">1200₽
                   </div>
                 </div>
               </div>
-              <div class="products-carousel__item product-preview">
+              <div class="products-carousel__item swiper-slide product-preview">
                 <div class="product-preview__image"> <img src="images/product-preview/6.jpg" srcset="images/product-preview/6@2x.jpg 2x" width="171" height="195" alt="SDI ночной дайвинг"></div>
                 <h3 class="product-preview__title"> <a href="#">SDI ночной дайвинг</a></h3>
                 <div class="product-preview__text">Ночной дайвинг. Подводная навигация и погружения</div>
-                <div class="product-preview__bottom"> <a class="product-preview__btn" href="#"> <img src="images/components/btn.png" alt=""></a>
+                <div class="product-preview__bottom"> <a class="button button--to-cart" href="#"><span>В корзину</span>
+                    <svg>
+                      <use xlink:href="./images/sprite.svg#cart"></use>
+                    </svg></a>
                   <div class="product-preview__price">1200₽
                   </div>
                 </div>
               </div>
-              <div class="products-carousel__item product-preview">
+              <div class="products-carousel__item swiper-slide product-preview">
                 <div class="product-preview__image"> <img src="images/product-preview/7.jpg" srcset="images/product-preview/7@2x.jpg 2x" width="106" height="193" alt="FRTI пособие"></div>
                 <h3 class="product-preview__title"> <a href="#">FRTI пособие</a></h3>
                 <div class="product-preview__text">Экстренная медицинская помощь для взрослых и детей</div>
-                <div class="product-preview__bottom"> <a class="product-preview__btn" href="#"> <img src="images/components/btn.png" alt=""></a>
+                <div class="product-preview__bottom"> <a class="button button--to-cart" href="#"><span>В корзину</span>
+                    <svg>
+                      <use xlink:href="./images/sprite.svg#cart"></use>
+                    </svg></a>
                   <div class="product-preview__price">1200₽
                   </div>
                 </div>
               </div>
-              <div class="products-carousel__item product-preview">
+              <div class="products-carousel__item swiper-slide product-preview">
                 <div class="product-preview__image"> <img src="images/product-preview/8.jpg" srcset="images/product-preview/8@2x.jpg 2x" width="112" height="201" alt="Стивен Барски Dry Suit"></div>
                 <h3 class="product-preview__title"> <a href="#">Стивен Барски Dry Suit</a></h3>
                 <div class="product-preview__text">Дайвинг в сухом костюме. История, обзор теории, уход.</div>
-                <div class="product-preview__bottom"> <a class="product-preview__btn" href="#"> <img src="images/components/btn.png" alt=""></a>
+                <div class="product-preview__bottom"> <a class="button button--to-cart" href="#"><span>В корзину</span>
+                    <svg>
+                      <use xlink:href="./images/sprite.svg#cart"></use>
+                    </svg></a>
                   <div class="product-preview__price">1200₽
+                  </div>
+                </div>
+              </div>
+              <div class="products-carousel__item swiper-slide product-preview"><span class="product-preview__label">-10%</span>
+                <div class="product-preview__image"> <img src="images/product-preview/1.jpg" srcset="images/product-preview/1@2x.jpg 2x" width="120" height="171" alt="SDI OWD"></div>
+                <h3 class="product-preview__title"> <a href="#">SDI OWD</a></h3>
+                <div class="product-preview__text">Open Water Diver. Учебное пособие по дайвингу</div>
+                <div class="product-preview__bottom"> <a class="button button--to-cart" href="#"><span>В корзину</span>
+                    <svg>
+                      <use xlink:href="./images/sprite.svg#cart"></use>
+                    </svg></a>
+                  <div class="product-preview__price">
+                    <div class="product-preview__price-old">1200₽</div>1200₽
                   </div>
                 </div>
               </div>
             </div>
             <div class="swiper-pagination"></div>
-            <div class="swiper-navigation">
-              <button class="button button--outline button--icon button--disabled"><span></span>
+            <div class="products-carousel__navigation">
+              <button class="button products-carousel__btn button--outline button--icon __js_prev"><span></span>
                 <svg>
-                  <use xlink:href="./images/sprite.svg#chevron-right"></use>
+                  <use xlink:href="./images/sprite.svg#chevron-left"></use>
                 </svg>
               </button>
-              <button class="button button--outline button--icon button--disabled"><span></span>
+              <button class="button products-carousel__btn button--outline button--icon __js_next"><span></span>
                 <svg>
                   <use xlink:href="./images/sprite.svg#chevron-right"></use>
                 </svg>
@@ -246,35 +279,41 @@
       <section class="products-carousel">
         <div class="products-carousel__container container">
           <h2 class="title--small products-carousel__title title">Вы недавно смотрели</h2>
-          <div class="swiper-container">
+          <div class="products-carousel__swiper swiper-container __js_products-carousel">
             <div class="swiper-wrapper"> 
-              <div class="products-carousel__item product-preview">
+              <div class="products-carousel__item swiper-slide product-preview">
                 <div class="product-preview__image"> <img src="images/product-preview/5.jpg" srcset="images/product-preview/5@2x.jpg 2x" width="140" height="186" alt="SDI OWD"></div>
                 <h3 class="product-preview__title"> <a href="#">SDI OWD</a></h3>
                 <div class="product-preview__text">Open Water Diver. Учебное пособие по дайвингу</div>
-                <div class="product-preview__bottom"> <a class="product-preview__btn" href="#"> <img src="images/components/btn.png" alt=""></a>
+                <div class="product-preview__bottom"> <a class="button button--to-cart" href="#"><span>В корзину</span>
+                    <svg>
+                      <use xlink:href="./images/sprite.svg#cart"></use>
+                    </svg></a>
                   <div class="product-preview__price">1200₽
                   </div>
                 </div>
               </div>
-              <div class="products-carousel__item product-preview">
+              <div class="products-carousel__item swiper-slide product-preview">
                 <div class="product-preview__image"> <img src="images/product-preview/6.jpg" srcset="images/product-preview/6@2x.jpg 2x" width="171" height="195" alt="SDI ночной дайвинг"></div>
                 <h3 class="product-preview__title"> <a href="#">SDI ночной дайвинг</a></h3>
                 <div class="product-preview__text">Ночной дайвинг. Подводная навигация и погружения</div>
-                <div class="product-preview__bottom"> <a class="product-preview__btn" href="#"> <img src="images/components/btn.png" alt=""></a>
+                <div class="product-preview__bottom"> <a class="button button--to-cart" href="#"><span>В корзину</span>
+                    <svg>
+                      <use xlink:href="./images/sprite.svg#cart"></use>
+                    </svg></a>
                   <div class="product-preview__price">1200₽
                   </div>
                 </div>
               </div>
             </div>
             <div class="swiper-pagination"></div>
-            <div class="swiper-navigation">
-              <button class="button button--outline button--icon button--disabled"><span></span>
+            <div class="products-carousel__navigation">
+              <button class="button products-carousel__btn button--outline button--icon __js_prev"><span></span>
                 <svg>
-                  <use xlink:href="./images/sprite.svg#chevron-right"></use>
+                  <use xlink:href="./images/sprite.svg#chevron-left"></use>
                 </svg>
               </button>
-              <button class="button button--outline button--icon button--disabled"><span></span>
+              <button class="button products-carousel__btn button--outline button--icon __js_next"><span></span>
                 <svg>
                   <use xlink:href="./images/sprite.svg#chevron-right"></use>
                 </svg>

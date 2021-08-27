@@ -1,0 +1,44 @@
+.parameter {
+  $self: &;
+
+  &--colors {
+    #{$self}__list {
+      margin-left: -15px;
+    }
+
+    #{$self}__item {
+      margin-left: 15px;
+
+      &--checked {
+        box-shadow: 0 0 0 2px $white, 0 0 0 5px $blue;
+      }
+    }
+  }
+
+  &--buttons {
+  }
+
+  &__title {
+    margin-bottom: 15px;
+    font-size: 19px;
+    line-height: (29 / 19);
+    color: $gray-ph;
+    font-weight: 500;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -10px;
+    margin-top: -10px;
+  }
+
+  &__item {
+    margin-left: 10px;
+    margin-top: 10px;
+
+    &--checked {
+      pointer-events: none;
+    }
+  }
+}

@@ -9,11 +9,9 @@ mixin product-preview(item)
     .product-preview__text!= item.text
     .product-preview__bottom 
       if item.isOrderIt
-        a.product-preview__btn(href="#") 
-          img(src="images/components/btn2.png", alt="")
+        +button('Заказать', 'button--order', 'box', '#')
       else
-        a.product-preview__btn(href="#") 
-          img(src="images/components/btn.png", alt="")
+        +button('В корзину', 'button--to-cart', 'cart', '#')
       .product-preview__price
         if item.isOldPrice
           .product-preview__price-old 1200₽
