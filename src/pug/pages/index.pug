@@ -1,10 +1,23 @@
-extends ../layouts/default
+extends ../layouts/components
 
 block vars
 	-
 		const page = {
-			title: 'Главная'
+			title: 'Проект "Дайвинг" - разводящая'
 		};
+		//урлы страниц в файле c переменными ./pug/layouts/vars.pug
+		const pages = [
+			{name: 'Карточка товара', url: URLS.product},
+			{name: 'Магазин', url: URLS.catalog},
+		]
 
 block main
+	section.start-page 
+		.container
+			h1.start-page__title Проект дайвинг
+			ul 
+				each item in pages 
+					li 
+						a(href= item.url, target="_blank")= item.name
+
 
