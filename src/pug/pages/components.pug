@@ -83,7 +83,7 @@ block vars
       }
     ];
 
-    const cources = [
+    const courses = [
       {
         img: {n: '1', w: '397', h: '478'},
         title: 'SDI OWD',
@@ -91,7 +91,7 @@ block vars
         text: '4&nbsp;теоретических занятий, 4&nbsp;погружений в&nbsp;бассейне, экзамен, 4&nbsp;погружения в&nbsp;открытой воде, аренда оборудования включена.',
         price: {current: 'от 25 000₽', old: 'от 55 000₽'},
         isLabel: true,
-        cl: 'cources-grid__item'
+        cl: 'courses-grid__item'
       },
       {
         img: {n: '2', w: '397', h: '325'},
@@ -99,7 +99,7 @@ block vars
         list: ['От 10 лет', 'более 4-х часов'],
         text: '1&nbsp;погружение с&nbsp;инструктором в&nbsp;бассейне или водоеме. Аренда полного комплекта снаряжения включена',
         price: {current: '2 500₽', old: ''},
-        cl: 'cources-grid__item'
+        cl: 'courses-grid__item'
       },
       {
         img: {n: '3', w: '397', h: '341'},
@@ -107,7 +107,7 @@ block vars
         list: ['более 4-х часов'],
         text: 'Теория, 5&nbsp;погружений в&nbsp;открытой воде с&nbsp;инструктором.',
         price: {current: '12 000₽', old: ''},
-        cl: 'cources-grid__item'
+        cl: 'courses-grid__item'
       },
       {
         img: {n: '4', w: '397', h: '350'},
@@ -115,7 +115,7 @@ block vars
         list: ['От 15 лет', '30 мин и больше'],
         text: 'Теория, экзамен. Учебник или eLearning курс приобретается отдельно',
         price: {current: '2 500₽', old: ''},
-        cl: 'cources-grid__item'
+        cl: 'courses-grid__item'
       },
       {
         img: {n: '5', w: '397', h: '332'},
@@ -123,9 +123,9 @@ block vars
         list: ['c 15 лет', '30 мин и больше'],
         text: 'Теория, специфика конфигурации, 2&nbsp;погружения в&nbsp;бассейне, 4&nbsp;погружения на&nbsp;открытой воде. Аренда системы Sidemount включена, остальное оборудование...',
         price: {current: '20 000₽', old: ''},
-        cl: 'cources-grid__item'
+        cl: 'courses-grid__item'
       }
-    ]
+    ];
 
 block main
   .components
@@ -229,9 +229,9 @@ block main
       .components__block-outer
         
         .components__title Превью курса + сетка
-        .cources-grid
-          each item in cources 
-            +cource-preview(item)
+        .courses-grid
+          each item in courses 
+            +course-preview(item)
 
     section.products-carousel
       .products-carousel__container.container
