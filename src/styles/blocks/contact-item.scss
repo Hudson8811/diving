@@ -1,0 +1,26 @@
+.contact-item {
+  &__hint {
+    margin-bottom: 5px;
+    font-size: 14px;
+    line-height: (17.07 / 14);
+    color: $blue;
+    font-weight: 500;
+  }
+
+  &__text {
+    font-size: 18px;
+    line-height: 1.222222222222222;
+    font-weight: 500;
+    font-style: normal;
+    color: $gray-ph;
+
+    a {
+      color: $gray-ph;
+      transition: color 0.3s ease;
+
+      @include hover {
+        color: $black;
+      }
+    }
+  }
+}

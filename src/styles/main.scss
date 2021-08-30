@@ -21,6 +21,7 @@
 @import "partials/breadcrumbs";
 @import "partials/custom-checbox";
 @import "partials/choices"; //override lib styles
+@import "partials/field";
 
 /* blocks */
 @import "blocks/components";
@@ -32,10 +33,13 @@
 @import "blocks/parameter";
 @import "blocks/tab-content";
 @import "blocks/filter-block";
+@import "blocks/sform";
+@import "blocks/contact-item";
 
 @import "blocks/products-grid";
 @import "blocks/products-carousel";
 @import "blocks/courses-grid";
+@import "blocks/contact-section";
 
 // Страницы
 @import "blocks/catalog";
