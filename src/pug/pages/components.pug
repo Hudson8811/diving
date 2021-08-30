@@ -83,6 +83,50 @@ block vars
       }
     ];
 
+    const cources = [
+      {
+        img: {n: '1', w: '397', h: '478'},
+        title: 'SDI OWD',
+        list: ['От 10 лет', 'более 4-х часов'],
+        text: '4&nbsp;теоретических занятий, 4&nbsp;погружений в&nbsp;бассейне, экзамен, 4&nbsp;погружения в&nbsp;открытой воде, аренда оборудования включена.',
+        price: {current: 'от 25 000₽', old: 'от 55 000₽'},
+        isLabel: true,
+        cl: 'cources-grid__item'
+      },
+      {
+        img: {n: '2', w: '397', h: '325'},
+        title: 'Пробное погружение',
+        list: ['От 10 лет', 'более 4-х часов'],
+        text: '1&nbsp;погружение с&nbsp;инструктором в&nbsp;бассейне или водоеме. Аренда полного комплекта снаряжения включена',
+        price: {current: '2 500₽', old: ''},
+        cl: 'cources-grid__item'
+      },
+      {
+        img: {n: '3', w: '397', h: '341'},
+        title: 'SDI Advanced Adventure Open Water',
+        list: ['более 4-х часов'],
+        text: 'Теория, 5&nbsp;погружений в&nbsp;открытой воде с&nbsp;инструктором.',
+        price: {current: '12 000₽', old: ''},
+        cl: 'cources-grid__item'
+      },
+      {
+        img: {n: '4', w: '397', h: '350'},
+        title: 'TDI Basic Nitrox',
+        list: ['От 15 лет', '30 мин и больше'],
+        text: 'Теория, экзамен. Учебник или eLearning курс приобретается отдельно',
+        price: {current: '2 500₽', old: ''},
+        cl: 'cources-grid__item'
+      },
+      {
+        img: {n: '5', w: '397', h: '332'},
+        title: 'SDI Sidemount Diver',
+        list: ['c 15 лет', '30 мин и больше'],
+        text: 'Теория, специфика конфигурации, 2&nbsp;погружения в&nbsp;бассейне, 4&nbsp;погружения на&nbsp;открытой воде. Аренда системы Sidemount включена, остальное оборудование...',
+        price: {current: '20 000₽', old: ''},
+        cl: 'cources-grid__item'
+      }
+    ]
+
 block main
   .components
     .container
@@ -185,9 +229,11 @@ block main
       .components__block-outer
         
         .components__title Превью курса + сетка
-        .cources-grid 
-          .cource-preview
-            //-span.cource-preview__label
+        .cources-grid
+          each item in cources 
+            +cource-preview(item)
+          //-.cource-preview
+            span.cource-preview__label
               | Акция
               +icon('info')(width="20", height="20")
             .cource-preview__image

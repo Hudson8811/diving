@@ -3,8 +3,10 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  max-width: 33.33%;
+  width: 33.33%;
   padding-top: 220px;
+  border-radius: 5px;
+  overflow: hidden;
   //background-color: $blue;
   //background-image: linear-gradient(to top, $blue 50%, transparent 100%);
 
@@ -41,6 +43,27 @@
   }
 
   &__label {
+    position: absolute;
+    z-index: 1;
+    top: 32px;
+    left: 0;
+    display: flex;
+    padding: 2px 12px 2px 22px;
+    font-size: 19px;
+    line-height: (32 / 19);
+    color: $blue;
+    font-weight: 700;
+    border-radius: 0 5px 5px 0;
+    background-color: $white;
+
+    svg {
+      display: block;
+      width: 20px;
+      height: auto;
+      margin-left: 5px;
+      fill: $blue;
+      align-self: center;
+    }
   }
 
   &__content {
@@ -92,6 +115,7 @@
     width: 100%;
     max-width: 170px;
     margin-right: 22px;
+    flex-shrink: 1;
   }
 
   &__price {
@@ -100,6 +124,7 @@
     font-size: 19px;
     line-height: (23.16 / 19);
     color: $white;
+    flex-shrink: 0;
 
     &-old {
       position: absolute;
