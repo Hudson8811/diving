@@ -22,7 +22,7 @@
 /* blocks */
 @import "blocks/components";
 @import "blocks/product-preview";
-@import "blocks/cource-preview";
+@import "blocks/course-preview";
 @import "blocks/review";
 @import "blocks/give-review";
 @import "blocks/tabs";
@@ -31,10 +31,11 @@
 
 @import "blocks/products-grid";
 @import "blocks/products-carousel";
-@import "blocks/cources-grid";
+@import "blocks/courses-grid";
 
 // Страницы
 @import "blocks/catalog";
+@import "blocks/courses";
 @import "blocks/product-card";
 //////////////////
 @import "blocks/components";
