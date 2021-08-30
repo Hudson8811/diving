@@ -232,25 +232,7 @@ block main
         .cources-grid
           each item in cources 
             +cource-preview(item)
-          //-.cource-preview
-            span.cource-preview__label
-              | Акция
-              +icon('info')(width="20", height="20")
-            .cource-preview__image
-              img(src="images/cource-preview/1.jpg", srcset="images/cource-preview/1@2x.jpg 2x", width="397", height="478", alt="")
-            .cource-preview__content
-              h3.cource-preview__title SDI OWD
-              .cource-preview__list 
-                span От 10 лет
-                span более 4-х часов
-              .cource-preview__text 4&nbsp;теоретических занятий, 4&nbsp;погружений в&nbsp;бассейне, экзамен, 4&nbsp;погружения в&nbsp;открытой воде, аренда оборудования включена.
-              .cource-preview__action 
-                +button('Подробнее', 'cource-preview__btn button--white button--more', 'chevron-right', URLS.course)
-                .cource-preview__price
-                  .cource-preview__price-old от 55 000₽
-                  | от 25 000₽
-              a.cource-preview__link(href="#") Приобрести в подарок
-    
+
     section.products-carousel
       .products-carousel__container.container
         +title('Вы недавно смотрели', 'h2', 'title--small products-carousel__title')
