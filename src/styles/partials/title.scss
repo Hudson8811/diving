@@ -1,18 +1,23 @@
 .title {
-	font-weight: 500;
+  font-weight: 500;
 
-	&--large {
-		font-size: 39px;
-		line-height: 48px;
-	}
+  &--large {
+    font-size: 39px;
+    line-height: 48px;
+  }
 
-	&--medium {
-		font-size: 31px;
-		line-height: 38px;
-	}
+  &--medium {
+    font-size: 31px;
+    line-height: 38px;
 
-	&--small {
-		font-size: 24px;
-		line-height: 29px;
-	}
+    @include max(sm) {
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+
+  &--small {
+    font-size: 24px;
+    line-height: 29px;
+  }
 }

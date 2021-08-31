@@ -9,6 +9,10 @@
   overflow: hidden;
   //background-color: $blue;
 
+  @include max(sm) {
+    padding-top: 145px;
+  }
+
   &__image {
     position: absolute;
     top: 0;
@@ -49,11 +53,16 @@
     display: flex;
     padding: 2px 12px 2px 22px;
     font-size: 19px;
-    line-height: (32 / 19);
+    line-height: 32px;
     color: $blue;
     font-weight: 700;
     border-radius: 0 5px 5px 0;
     background-color: $white;
+
+    @include max(sm) {
+      padding: 2px 10px;
+      font-size: 14px;
+    }
 
     svg {
       display: block;
@@ -71,6 +80,10 @@
     display: flex;
     flex-direction: column;
     padding: 0 36px 30px;
+
+    @include max(sm) {
+      padding: 0 20px 30px;
+    }
   }
 
   &__title {
@@ -78,6 +91,13 @@
     line-height: (32 / 24);
     font-weight: 700;
     color: $white;
+
+    @include max(sm) {
+      margin-bottom: 10px;
+      font-size: 16px;
+      line-height: (19.5 / 16);
+      text-align: center;
+    }
   }
 
   &__list {
@@ -89,8 +109,23 @@
     line-height: 1.5;
     color: $white;
 
+    @include max(sm) {
+      justify-content: center;
+      font-size: 14px;
+      line-height: (17.07 / 14);
+    }
+
     span {
       margin-right: 20px;
+
+      &:last-child,
+      &:only-child {
+        margin-right: 0;
+      }
+
+      @include max(sm) {
+        margin-right: 38px;
+      }
     }
   }
 
@@ -99,6 +134,11 @@
     font-size: 14px;
     line-height: (22 / 14);
     color: $white;
+
+    @include max(sm) {
+      margin-bottom: 20px;
+      font-size: 15px;
+    }
   }
 
   &__action {
@@ -108,6 +148,16 @@
     & > * {
       align-self: center;
     }
+
+    @include max(sm) {
+      max-width: 138px;
+      margin: auto auto 0;
+      flex-direction: column-reverse;
+
+      & > * {
+        align-self: flex-end;
+      }
+    }
   }
 
   &__btn {
@@ -115,6 +165,12 @@
     max-width: 170px;
     margin-right: 22px;
     flex-shrink: 1;
+
+    @include max(sm) {
+      max-width: 138px;
+      margin-top: 11px;
+      margin-right: 0;
+    }
   }
 
   &__price {
@@ -125,6 +181,11 @@
     color: $white;
     flex-shrink: 0;
 
+    @include max(sm) {
+      margin-right: 11px;
+      font-size: 18px;
+    }
+
     &-old {
       position: absolute;
       top: -27px;
@@ -134,6 +195,10 @@
       color: $lightBlue3;
       font-weight: 300;
       text-decoration: line-through;
+
+      @include max(sm) {
+        top: -18px;
+      }
     }
   }
 

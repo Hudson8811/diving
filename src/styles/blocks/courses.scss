@@ -1,8 +1,16 @@
 .courses {
   padding: 50px 0;
 
+  @include max(sm) {
+    padding: 30px 0;
+  }
+
   &__breadcrumbs {
     margin-bottom: 50px;
+
+    @include max(sm) {
+      margin-bottom: 30px;
+    }
   }
 
   &__title {
