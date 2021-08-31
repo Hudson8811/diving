@@ -95,3 +95,15 @@ h6 {
 .float-right {
   float: right;
 }
+
+.slick-prev,
+.slick-next {
+	background-color: transparent !important;
+}
+
+.slick-prev {
+	svg {
+		transform: rotate(180deg);
+		margin-left: 3px;
+	}
+}

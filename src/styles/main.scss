@@ -19,6 +19,7 @@
 @import "partials/button";
 @import "partials/pagination";
 @import "partials/breadcrumbs";
+@import "partials/socials";
 @import "partials/custom-checbox";
 @import "partials/choices"; //override lib styles
 @import "partials/field";
@@ -36,8 +37,19 @@
 @import "blocks/sform";
 @import "blocks/contact-item";
 @import "blocks/features";
-
 @import "blocks/products-grid";
+@import "blocks/first-screen";
+@import "blocks/courses-card";
+@import "blocks/courses";
+@import "blocks/tutorials";
+@import "blocks/stock";
+@import "blocks/recommend";
+@import "blocks/trip-card";
+@import "blocks/trip";
+@import "blocks/reviews-card";
+@import "blocks/reviews";
+@import "blocks/products";
+@import "blocks/info-block";
 @import "blocks/products-carousel";
 @import "blocks/courses-grid";
 @import "blocks/courses-carousel";
