@@ -94,6 +94,12 @@
       margin-left: 10px;
       color: $gray;
     }
+
+    &-on-request {
+      font-size: 19px;
+      line-height: (29 / 19);
+      color: $gray-ph;
+    }
   }
 
   &__action {
