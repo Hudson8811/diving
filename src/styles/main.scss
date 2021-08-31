@@ -9,6 +9,7 @@
 /* libs */
 @import "./../../node_modules/swiper/swiper";
 @import "libs/jquery.fancybox.css";
+@import "libs/choices.min.css";
 
 /* partials */
 @import "partials/header";
@@ -19,10 +20,23 @@
 @import "partials/pagination";
 @import "partials/breadcrumbs";
 @import "partials/socials";
+@import "partials/custom-checbox";
+@import "partials/choices"; //override lib styles
+@import "partials/field";
 
 /* blocks */
 @import "blocks/components";
 @import "blocks/product-preview";
+@import "blocks/course-preview";
+@import "blocks/review";
+@import "blocks/give-review";
+@import "blocks/tabs";
+@import "blocks/parameter";
+@import "blocks/tab-content";
+@import "blocks/filter-block";
+@import "blocks/sform";
+@import "blocks/contact-item";
+@import "blocks/features";
 @import "blocks/products-grid";
 @import "blocks/first-screen";
 @import "blocks/courses-card";
@@ -36,3 +50,15 @@
 @import "blocks/reviews";
 @import "blocks/products";
 @import "blocks/info-block";
+@import "blocks/products-carousel";
+@import "blocks/courses-grid";
+@import "blocks/courses-carousel";
+@import "blocks/contact-section";
+
+// Страницы
+@import "blocks/catalog";
+@import "blocks/courses";
+@import "blocks/course";
+@import "blocks/product-card";
+//////////////////
+@import "blocks/components";

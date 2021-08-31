@@ -103,7 +103,10 @@
                 <div class="product-preview__image"> <img src="images/product-preview/1.jpg" srcset="images/product-preview/1@2x.jpg 2x" width="120" height="171" alt="SDI OWD"></div>
                 <h3 class="product-preview__title"> <a href="#">SDI OWD</a></h3>
                 <div class="product-preview__text">Open Water Diver. Учебное пособие по дайвингу</div>
-                <div class="product-preview__bottom"> <a class="product-preview__btn" href="#"> <img src="images/components/btn.png" alt=""></a>
+                <div class="product-preview__bottom"> <a class="button button--to-cart" href="#"><span>В корзину</span>
+                    <svg>
+                      <use xlink:href="./images/sprite.svg#cart"></use>
+                    </svg></a>
                   <div class="product-preview__price">
                     <div class="product-preview__price-old">1200₽</div>1200₽
                   </div>
@@ -113,7 +116,10 @@
                 <div class="product-preview__image"> <img src="images/product-preview/2.jpg" srcset="images/product-preview/2@2x.jpg 2x" width="115" height="171" alt="SDI ночной дайвинг"></div>
                 <h3 class="product-preview__title"> <a href="#">SDI ночной дайвинг</a></h3>
                 <div class="product-preview__text">Ночной дайвинг. Подводная навигация и погружения </div>
-                <div class="product-preview__bottom"> <a class="product-preview__btn" href="#"> <img src="images/components/btn.png" alt=""></a>
+                <div class="product-preview__bottom"> <a class="button button--to-cart" href="#"><span>В корзину</span>
+                    <svg>
+                      <use xlink:href="./images/sprite.svg#cart"></use>
+                    </svg></a>
                   <div class="product-preview__price">1200₽
                   </div>
                 </div>
@@ -122,7 +128,10 @@
                 <div class="product-preview__image"> <img src="images/product-preview/3.jpg" srcset="images/product-preview/3@2x.jpg 2x" width="120" height="171" alt="FRTI пособие"></div>
                 <h3 class="product-preview__title"> <a href="#">FRTI пособие</a></h3>
                 <div class="product-preview__text">Экстренная медицинская помощь для взрослых и детей</div>
-                <div class="product-preview__bottom"> <a class="product-preview__btn" href="#"> <img src="images/components/btn.png" alt=""></a>
+                <div class="product-preview__bottom"> <a class="button button--to-cart" href="#"><span>В корзину</span>
+                    <svg>
+                      <use xlink:href="./images/sprite.svg#cart"></use>
+                    </svg></a>
                   <div class="product-preview__price">1200₽
                   </div>
                 </div>
@@ -131,7 +140,10 @@
                 <div class="product-preview__image"> <img src="images/product-preview/4.jpg" srcset="images/product-preview/4@2x.jpg 2x" width="123" height="171" alt="Стивен Барски Dry Suit"></div>
                 <h3 class="product-preview__title"> <a href="#">Стивен Барски Dry Suit</a></h3>
                 <div class="product-preview__text">Дайвинг в сухом костюме. История, обзор теории, уход.</div>
-                <div class="product-preview__bottom"> <a class="product-preview__btn" href="#"> <img src="images/components/btn.png" alt=""></a>
+                <div class="product-preview__bottom"> <a class="button button--to-cart" href="#"><span>В корзину</span>
+                    <svg>
+                      <use xlink:href="./images/sprite.svg#cart"></use>
+                    </svg></a>
                   <div class="product-preview__price">1200₽
                   </div>
                 </div>
@@ -140,7 +152,10 @@
                 <div class="product-preview__image"> <img src="images/product-preview/5.jpg" srcset="images/product-preview/5@2x.jpg 2x" width="140" height="186" alt="SDI OWD"></div>
                 <h3 class="product-preview__title"> <a href="#">SDI OWD</a></h3>
                 <div class="product-preview__text">Open Water Diver. Учебное пособие по дайвингу</div>
-                <div class="product-preview__bottom"> <a class="product-preview__btn" href="#"> <img src="images/components/btn2.png" alt=""></a>
+                <div class="product-preview__bottom"> <a class="button button--order" href="#"><span>Заказать</span>
+                    <svg>
+                      <use xlink:href="./images/sprite.svg#box"></use>
+                    </svg></a>
                   <div class="product-preview__price">1200₽
                   </div>
                 </div>
@@ -148,7 +163,26 @@
             </div>
           </div>
           <div class="components__block-outer">
-            <div class="block__element breadcrumbs"><a href="#">Главная</a><a href="#">Магазин</a><span>Общие компоненты</span>
+            <div class="block__element breadcrumbs"><a href="#">Главная</a><a href="catalog.html">Магазин</a><span>Общие компоненты</span>
+            </div>
+          </div>
+          <div class="components__block-outer">
+            <div class="components__title">Фильтр</div>
+            <div class="filter-block">
+              <select class="__js_custom-select" name="select">
+                <option value="by-deadline">По сроку обучения </option>
+                <option value="by-deadline1">По сроку обучения 1</option>
+                <option value="by-deadline2">По сроку обучения 2</option>
+                <option value="by-deadline3">По сроку обучения 3</option>
+                <option value="by-deadline4">По сроку обучения 4</option>
+                <option value="by-deadline5">По сроку обучения 5</option>
+                <option value="by-deadline6">По сроку обучения 6</option>
+                <option value="by-deadline7">По сроку обучения 7</option>
+              </select>
+              <div class="custom-checbox">
+                <input class="visually-hidden" id="withDiscount" type="checkbox">
+                <label for="withDiscount">Со скидкой</label>
+              </div>
             </div>
           </div>
           <div class="components__block-outer">
@@ -197,21 +231,255 @@
             </div>
           </div>
           <div class="components__block-outer">
-            <div class="product-preview">
-              <!--16-25-25--><span class="product-preview__label">-10%</span>
-              <div class="product-preview__image">
-                <!--h 200px--><img src="https://via.placeholder.com/200" alt="">
+            <div class="components__title">Превью курса + сетка</div>
+            <div class="courses-grid">
+              <div class="courses-grid__item course-preview"><span class="course-preview__label">Акция
+                  <svg width="20" height="20">
+                    <use xlink:href="./images/sprite.svg#info"></use>
+                  </svg></span>
+                <div class="course-preview__image"><img src="images/course-preview/1.jpg" srcset="images/course-preview/1@2x.jpg 2x" width="397" height="478" alt=""></div>
+                <div class="course-preview__content">
+                  <h3 class="course-preview__title">SDI OWD</h3>
+                  <div class="course-preview__list"><span>От 10 лет</span><span>более 4-х часов</span>
+                  </div>
+                  <div class="course-preview__text">4&nbsp;теоретических занятий, 4&nbsp;погружений в&nbsp;бассейне, экзамен, 4&nbsp;погружения в&nbsp;открытой воде, аренда оборудования включена.</div>
+                  <div class="course-preview__action"> <a class="button course-preview__btn button--white button--more" href="course.html"><span>Подробнее</span>
+                      <svg>
+                        <use xlink:href="./images/sprite.svg#chevron-right"></use>
+                      </svg></a>
+                    <div class="course-preview__price">
+                      <div class="course-preview__price-old">от 55 000₽</div>от 25 000₽
+                    </div>
+                  </div><a class="course-preview__link" href="#">Приобрести в подарок</a>
+                </div>
               </div>
-              <h3 class="product-preview__title"><a href="#">Стивен Барски Dry Suit</a></h3>
-              <div class="product-preview__text">Дайвинг в сухом костюме. История, обзор теории, уход.</div>
-              <div class="product-preview__bottom"><a class="product-preview__btn" href="#"><img src="images/components/btn.png" alt=""></a>
-                <div class="product-preview__price">
-                  <div class="product-preview__price-old">1200₽</div>1200₽
+              <div class="courses-grid__item course-preview">
+                <div class="course-preview__image"><img src="images/course-preview/2.jpg" srcset="images/course-preview/2@2x.jpg 2x" width="397" height="325" alt=""></div>
+                <div class="course-preview__content">
+                  <h3 class="course-preview__title">Пробное погружение</h3>
+                  <div class="course-preview__list"><span>От 10 лет</span><span>более 4-х часов</span>
+                  </div>
+                  <div class="course-preview__text">1&nbsp;погружение с&nbsp;инструктором в&nbsp;бассейне или водоеме. Аренда полного комплекта снаряжения включена</div>
+                  <div class="course-preview__action"> <a class="button course-preview__btn button--white button--more" href="course.html"><span>Подробнее</span>
+                      <svg>
+                        <use xlink:href="./images/sprite.svg#chevron-right"></use>
+                      </svg></a>
+                    <div class="course-preview__price">2 500₽
+                    </div>
+                  </div><a class="course-preview__link" href="#">Приобрести в подарок</a>
+                </div>
+              </div>
+              <div class="courses-grid__item course-preview">
+                <div class="course-preview__image"><img src="images/course-preview/3.jpg" srcset="images/course-preview/3@2x.jpg 2x" width="397" height="341" alt=""></div>
+                <div class="course-preview__content">
+                  <h3 class="course-preview__title">SDI Advanced Adventure Open Water</h3>
+                  <div class="course-preview__list"><span>более 4-х часов</span>
+                  </div>
+                  <div class="course-preview__text">Теория, 5&nbsp;погружений в&nbsp;открытой воде с&nbsp;инструктором.</div>
+                  <div class="course-preview__action"> <a class="button course-preview__btn button--white button--more" href="course.html"><span>Подробнее</span>
+                      <svg>
+                        <use xlink:href="./images/sprite.svg#chevron-right"></use>
+                      </svg></a>
+                    <div class="course-preview__price">12 000₽
+                    </div>
+                  </div><a class="course-preview__link" href="#">Приобрести в подарок</a>
+                </div>
+              </div>
+              <div class="courses-grid__item course-preview">
+                <div class="course-preview__image"><img src="images/course-preview/4.jpg" srcset="images/course-preview/4@2x.jpg 2x" width="397" height="350" alt=""></div>
+                <div class="course-preview__content">
+                  <h3 class="course-preview__title">TDI Basic Nitrox</h3>
+                  <div class="course-preview__list"><span>От 15 лет</span><span>30 мин и больше</span>
+                  </div>
+                  <div class="course-preview__text">Теория, экзамен. Учебник или eLearning курс приобретается отдельно</div>
+                  <div class="course-preview__action"> <a class="button course-preview__btn button--white button--more" href="course.html"><span>Подробнее</span>
+                      <svg>
+                        <use xlink:href="./images/sprite.svg#chevron-right"></use>
+                      </svg></a>
+                    <div class="course-preview__price">2 500₽
+                    </div>
+                  </div><a class="course-preview__link" href="#">Приобрести в подарок</a>
+                </div>
+              </div>
+              <div class="courses-grid__item course-preview">
+                <div class="course-preview__image"><img src="images/course-preview/5.jpg" srcset="images/course-preview/5@2x.jpg 2x" width="397" height="332" alt=""></div>
+                <div class="course-preview__content">
+                  <h3 class="course-preview__title">SDI Sidemount Diver</h3>
+                  <div class="course-preview__list"><span>c 15 лет</span><span>30 мин и больше</span>
+                  </div>
+                  <div class="course-preview__text">Теория, специфика конфигурации, 2&nbsp;погружения в&nbsp;бассейне, 4&nbsp;погружения на&nbsp;открытой воде. Аренда системы Sidemount включена, остальное оборудование...</div>
+                  <div class="course-preview__action"> <a class="button course-preview__btn button--white button--more" href="course.html"><span>Подробнее</span>
+                      <svg>
+                        <use xlink:href="./images/sprite.svg#chevron-right"></use>
+                      </svg></a>
+                    <div class="course-preview__price">20 000₽
+                    </div>
+                  </div><a class="course-preview__link" href="#">Приобрести в подарок</a>
                 </div>
               </div>
             </div>
           </div>
         </div>
+        <div class="contact-section">
+          <div class="contact-section__container container"> 
+            <div class="contact-section__image"><img src="images/components/contacts-placeholder.jpg" srcset="images/components/contacts-placeholder@2x.jpg 2x" width="580" height="690" alt=""></div>
+            <section class="contact-section__main">
+              <h2 class="title--small contact-section__title title">Есть вопросы?</h2>
+              <div class="contact-section__text">Воспользуйтесь формой ниже, и мы поможем вам начать ваше путешествие</div>
+              <div class="contact-section__form sform">
+                <form action="#" method="post">
+                  <label class="sform__field sform__field--half field"><span class="field__hint">Ваше Имя*</span>
+                    <input type="text" name="name">
+                  </label>
+                  <label class="sform__field sform__field--half field"><span class="field__hint">Номер телефона*</span>
+                    <input type="tel" name="phone">
+                  </label>
+                  <label class="sform__field field"><span class="field__hint">Email*</span>
+                    <input type="email" name="email">
+                  </label>
+                  <label class="sform__field field"><span class="field__hint">Что вас интересует</span>
+                    <textarea name="message"></textarea>
+                  </label>
+                  <div class="sform__bottom"> 
+                    <button class="button sform__send" type="submit"><span>Отправить</span>
+                    </button>
+                    <div class="sform__bottom-text">Нажимая на кнопку «Отправить», вы соглашаетсь с <a href="#" target="_blank">условиями обработки персональных данных</a></div>
+                  </div>
+                </form>
+              </div>
+            </section>
+          </div>
+        </div><br><br><br>
+        <div class="contact-section">
+          <div class="contact-section__container container"> 
+            <section class="contact-section__info">
+              <h2 class="title--small contact-section__title title">Наш клуб</h2>
+              <div class="contact-section__list">
+                <div class="contact-section__item contact-item">
+                  <div class="contact-item__hint">Телефон</div>
+                  <div class="contact-item__text"> <a href="tel:89259999902">8 (925) 999-99-02</a></div>
+                </div>
+                <div class="contact-section__item contact-item">
+                  <div class="contact-item__hint">Email</div>
+                  <div class="contact-item__text"><a href="mailto:learn2dive-tdi-sdi@info.ru">learn2dive-tdi-sdi@info.ru</a></div>
+                </div>
+                <div class="contact-section__item contact-section__item--full contact-item">
+                  <div class="contact-item__hint">Адрес</div>
+                  <address class="contact-item__text">125284&nbsp;Москва, Беговой проезд, дом&nbsp;11</address>
+                </div>
+              </div>
+              <div class="contact-section__map"><img src="images/components/map.jpg" alt=""></div>
+            </section>
+            <section class="contact-section__main">
+              <h2 class="title--small contact-section__title title">Есть вопросы?</h2>
+              <div class="contact-section__text">Воспользуйтесь формой ниже, и мы поможем вам начать ваше путешествие</div>
+              <div class="contact-section__form sform">
+                <form action="#" method="post">
+                  <label class="sform__field sform__field--half field"><span class="field__hint">Ваше Имя*</span>
+                    <input type="text" name="name">
+                  </label>
+                  <label class="sform__field sform__field--half field"><span class="field__hint">Номер телефона*</span>
+                    <input type="tel" name="phone">
+                  </label>
+                  <label class="sform__field field"><span class="field__hint">Email*</span>
+                    <input type="email" name="email">
+                  </label>
+                  <label class="sform__field field"><span class="field__hint">Что вас интересует</span>
+                    <textarea name="message"></textarea>
+                  </label>
+                  <div class="sform__bottom"> 
+                    <button class="button sform__send" type="submit"><span>Отправить</span>
+                    </button>
+                    <div class="sform__bottom-text">Нажимая на кнопку «Отправить», вы соглашаетсь с <a href="#" target="_blank">условиями обработки персональных данных</a></div>
+                  </div>
+                </form>
+              </div>
+            </section>
+          </div>
+        </div>
+        <section class="products-carousel">
+          <div class="products-carousel__container container">
+            <h2 class="title--small products-carousel__title title">Вы недавно смотрели</h2>
+            <div class="products-carousel__swiper swiper-container __js_products-carousel">
+              <div class="swiper-wrapper"> 
+                <div class="products-carousel__item swiper-slide product-preview">
+                  <div class="product-preview__image"> <img src="images/product-preview/5.jpg" srcset="images/product-preview/5@2x.jpg 2x" width="140" height="186" alt="SDI OWD"></div>
+                  <h3 class="product-preview__title"> <a href="#">SDI OWD</a></h3>
+                  <div class="product-preview__text">Open Water Diver. Учебное пособие по дайвингу</div>
+                  <div class="product-preview__bottom"> <a class="button button--to-cart" href="#"><span>В корзину</span>
+                      <svg>
+                        <use xlink:href="./images/sprite.svg#cart"></use>
+                      </svg></a>
+                    <div class="product-preview__price">1200₽
+                    </div>
+                  </div>
+                </div>
+                <div class="products-carousel__item swiper-slide product-preview">
+                  <div class="product-preview__image"> <img src="images/product-preview/6.jpg" srcset="images/product-preview/6@2x.jpg 2x" width="171" height="195" alt="SDI ночной дайвинг"></div>
+                  <h3 class="product-preview__title"> <a href="#">SDI ночной дайвинг</a></h3>
+                  <div class="product-preview__text">Ночной дайвинг. Подводная навигация и погружения</div>
+                  <div class="product-preview__bottom"> <a class="button button--to-cart" href="#"><span>В корзину</span>
+                      <svg>
+                        <use xlink:href="./images/sprite.svg#cart"></use>
+                      </svg></a>
+                    <div class="product-preview__price">1200₽
+                    </div>
+                  </div>
+                </div>
+                <div class="products-carousel__item swiper-slide product-preview">
+                  <div class="product-preview__image"> <img src="images/product-preview/7.jpg" srcset="images/product-preview/7@2x.jpg 2x" width="106" height="193" alt="FRTI пособие"></div>
+                  <h3 class="product-preview__title"> <a href="#">FRTI пособие</a></h3>
+                  <div class="product-preview__text">Экстренная медицинская помощь для взрослых и детей</div>
+                  <div class="product-preview__bottom"> <a class="button button--to-cart" href="#"><span>В корзину</span>
+                      <svg>
+                        <use xlink:href="./images/sprite.svg#cart"></use>
+                      </svg></a>
+                    <div class="product-preview__price">1200₽
+                    </div>
+                  </div>
+                </div>
+                <div class="products-carousel__item swiper-slide product-preview">
+                  <div class="product-preview__image"> <img src="images/product-preview/8.jpg" srcset="images/product-preview/8@2x.jpg 2x" width="112" height="201" alt="Стивен Барски Dry Suit"></div>
+                  <h3 class="product-preview__title"> <a href="#">Стивен Барски Dry Suit</a></h3>
+                  <div class="product-preview__text">Дайвинг в сухом костюме. История, обзор теории, уход.</div>
+                  <div class="product-preview__bottom"> <a class="button button--to-cart" href="#"><span>В корзину</span>
+                      <svg>
+                        <use xlink:href="./images/sprite.svg#cart"></use>
+                      </svg></a>
+                    <div class="product-preview__price">1200₽
+                    </div>
+                  </div>
+                </div>
+                <div class="products-carousel__item swiper-slide product-preview"><span class="product-preview__label">-10%</span>
+                  <div class="product-preview__image"> <img src="images/product-preview/1.jpg" srcset="images/product-preview/1@2x.jpg 2x" width="120" height="171" alt="SDI OWD"></div>
+                  <h3 class="product-preview__title"> <a href="#">SDI OWD</a></h3>
+                  <div class="product-preview__text">Open Water Diver. Учебное пособие по дайвингу</div>
+                  <div class="product-preview__bottom"> <a class="button button--to-cart" href="#"><span>В корзину</span>
+                      <svg>
+                        <use xlink:href="./images/sprite.svg#cart"></use>
+                      </svg></a>
+                    <div class="product-preview__price">
+                      <div class="product-preview__price-old">1200₽</div>1200₽
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+              <div class="products-carousel__navigation">
+                <button class="button products-carousel__btn button--outline button--icon __js_prev"><span></span>
+                  <svg>
+                    <use xlink:href="./images/sprite.svg#chevron-left"></use>
+                  </svg>
+                </button>
+                <button class="button products-carousel__btn button--outline button--icon __js_next"><span></span>
+                  <svg>
+                    <use xlink:href="./images/sprite.svg#chevron-right"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </main>
     <script src="js/main.min.js"></script>

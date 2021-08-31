@@ -1,18 +1,27 @@
-extends ../layouts/default
+extends ../layouts/components
 
 block vars
 	-
 		const page = {
-			title: 'Главная'
+			title: 'Проект "Дайвинг" - разводящая'
 		};
+		//урлы страниц в файле c переменными ./pug/layouts/vars.pug
+		const pages = [
+			{name: 'Страница с компонентами', url: 'components.html'},
+			{name: 'Карточка товара', url: URLS.product},
+			{name: 'Карточка товара (нет в наличии)', url: URLS.productNo},
+			{name: 'Магазин', url: URLS.catalog},
+			{name: 'Курсы дайвинга', url: URLS.courses},
+			{name: 'Курс подробная ', url: URLS.course},
+		]
 
 block main
-	include ../blocks/first-screen.pug
-	include ../blocks/courses.pug
-	include ../blocks/tutorials.pug
-	include ../blocks/stock.pug
-	include ../blocks/recommend.pug
-	include ../blocks/trip.pug
-	include ../blocks/reviews.pug
-	include ../blocks/products.pug
-	include ../blocks/info-block.pug
+	section.start-page
+		.container
+			h1.start-page__title Проект дайвинг
+			ul
+				each item in pages
+					li
+						a(href= item.url, target="_blank")= item.name
+
+
