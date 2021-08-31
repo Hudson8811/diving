@@ -87,3 +87,15 @@ h6 {
 		padding: 0 32px;
 	}
 }
+
+.slick-prev,
+.slick-next {
+	background-color: transparent !important;
+}
+
+.slick-prev {
+	svg {
+		transform: rotate(180deg);
+		margin-left: 3px;
+	}
+}

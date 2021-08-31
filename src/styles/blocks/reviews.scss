@@ -1,0 +1,33 @@
+.reviews {
+	padding: 21px 0 104px;
+	background-color: $gray-f5;
+
+	&__row {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__more {
+		font-size: 18px;
+		padding-right: 0;
+	}
+
+	&__wrapper {
+		margin-top: 15px;
+		position: relative;
+	}
+
+	&__prev,
+	&__next {
+		position: absolute;
+		top: 46.5%;
+	}
+
+	&__prev {
+		left: -60px;
+	}
+
+	&__next {
+		right: -60px;
+	}
+}

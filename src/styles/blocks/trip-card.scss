@@ -1,0 +1,86 @@
+.trip-card {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	width: 100%;
+	height: 399px;
+	position: relative;
+	border-radius: 5px;
+	overflow: hidden;
+
+	&__bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+
+		&::after {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background: linear-gradient(270deg, #1B498E 40%, rgba(44, 96, 174, 0) 100%);
+		}
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__content {
+		position: relative;
+		width: 48%;
+		padding-right: 53px;
+		color: $white;
+	}
+
+	&__place {
+		font-size: 18px;
+		line-height: 32px;
+	}
+
+	&__title {
+		font-size: 24px;
+		line-height: 32px;
+		font-weight: 700;
+		margin-top: 5px;
+	}
+
+	&__date {
+		font-size: 15px;
+		line-height: 32px;
+		margin-top: 2px;
+	}
+
+	&__desc {
+		font-size: 14px;
+		line-height: 22px;
+		margin-top: 3px;
+	}
+
+	&__price {
+		font-size: 19px;
+		margin-top: 12px;
+	}
+
+	&__more {
+		width: 170px;
+		height: auto;
+		padding: 9px 12px;
+		margin-top: 30px;
+		font-size: 15px;
+
+		svg {
+			width: 12px;
+			height: 12px;
+			padding-left: 0;
+			margin-left: 5px;
+		}
+	}
+}

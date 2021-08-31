@@ -1,0 +1,77 @@
+.first-screen {
+	width: 100%;
+	min-height: 100vh;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	overflow: hidden;
+	position: relative;
+
+	&__scale {
+		width: 163px;
+		height: calc(100% - 98px - 54px);
+		position: absolute;
+		left: 56px;
+		bottom: 49px;
+
+		svg {
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	&__center {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		height: 100vh;
+		padding: 208px 0 116px;
+	}
+
+	&__title {
+		max-width: 1032px;
+		font-size: 60px;
+		line-height: 77px;
+		font-weight: 500;
+		color: $white;
+		text-transform: uppercase;
+		text-align: center;
+	}
+
+	&__logos {
+		display: flex;
+		align-items: flex-end;
+
+		svg {
+			&:not(:last-child) {
+				margin-right: 22px;
+			}
+		}
+	}
+
+	&__anchor {
+		display: flex;
+		justify-content: center;
+		width: 93px;
+		height: 93px;
+		padding: 25px 20px 50px;
+		border-radius: 50%;
+		background-color: $white;
+		position: absolute;
+		bottom: -46px;
+		left: 50%;
+		transform: translateX(-50%);
+		cursor: pointer;
+
+		svg {
+			fill: $dark-blue;
+		}
+	}
+
+	&__socials {
+		position: absolute;
+		bottom: 56px;
+		right: 65px;
+	}
+}

@@ -1,0 +1,11 @@
+.socials {
+	&__item {
+		+ .socials__item {
+			margin-top: 18px;
+		}
+
+		svg {
+			fill: $white;
+		}
+	}
+}

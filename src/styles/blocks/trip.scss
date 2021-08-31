@@ -1,0 +1,32 @@
+.trip {
+	padding-top: 47px;
+	background-color: $gray-f5;
+
+	&__title {
+		text-align: center;
+	}
+
+	&__wrapper {
+		margin-top: 24px;
+		position: relative;
+	}
+
+	&__prev,
+	&__next {
+		position: absolute;
+		top: 48%;
+	}
+
+	&__prev {
+		left: -53px;
+	}
+
+	&__next {
+		right: -53px;
+	}
+
+	&__all {
+		width: 250px;
+		margin: 44px auto 0;
+	}
+}

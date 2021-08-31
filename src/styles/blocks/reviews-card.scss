@@ -1,0 +1,159 @@
+.reviews-card {
+	display: flex;
+	width: 100%;
+	height: 477px;
+	background-color: $white;
+	border-radius: 5px;
+	border: 1px solid $gray;
+	overflow: hidden;
+
+	&__left {
+		display: flex;
+		align-items: flex-end;
+		width: 32%;
+		padding: 30px 35px;
+		position: relative;
+	}
+
+	&__right {
+		width: 68%;
+		padding: 35px 56px;
+	}
+
+	&__bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		padding-bottom: 136px;
+		background-color: $blue;
+
+		&::after {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 180px;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background: linear-gradient(360deg, #1B498E 49.16%, rgba(44, 96, 174, 0) 100%);
+		}
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__content {
+		position: relative;
+		color: $white;
+	}
+
+	&__place {
+		font-size: 18px;
+		line-height: 22px;
+	}
+
+	&__title {
+		font-size: 24px;
+		line-height: 30px;
+		font-weight: 700;
+	}
+
+	&__desc {
+		font-size: 14px;
+		line-height: 22px;
+		margin-top: 10px;
+	}
+
+	&__bottom {
+		display: flex;
+		justify-content: space-between;
+		font-size: 14px;
+		line-height: 22px;
+		margin-top: 10px;
+
+		a {
+			color: $white;
+			text-decoration: underline;
+
+			@include hover {
+				text-decoration: none;
+			}
+		}
+	}
+
+	&__row {
+		display: flex;
+	}
+
+	&__col {
+		width: 50%;
+
+		&:not(:last-child) {
+			margin-right: 27px;
+		}
+	}
+
+	&__person {
+		display: flex;
+		align-items: center;
+	}
+
+	&__avatar {
+		width: 58px;
+		height: 58px;
+		margin-right: 15px;
+		border-radius: 5px;
+		overflow: hidden;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__person-info {
+		padding-top: 4px;
+
+		p {
+			&:first-child {
+				font-size: 19px;
+				line-height: 22px;
+				font-weight: 700;
+			}
+
+			&:last-child {
+				font-size: 14px;
+				line-height: 22px;
+			}
+		}
+	}
+
+	&__text {
+		font-size: 14px;
+		line-height: 22px;
+		margin-top: 17px;
+
+		p + p {
+			margin-top: 22px;
+		}
+	}
+
+	&__report {
+		display: inline-block;
+		font-size: 14px;
+		line-height: 22px;
+		color: $blue;
+		text-decoration: underline;
+		margin-top: 28px;
+
+		@include hover {
+			text-decoration: none;
+		}
+	}
+}
