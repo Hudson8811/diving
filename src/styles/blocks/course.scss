@@ -1,0 +1,117 @@
+.course {
+  padding: 50px 0;
+
+  &__breadcrumbs {
+    margin-bottom: 50px;
+  }
+
+  &__hero {
+    margin-bottom: 22px;
+    padding: 50px 0 46px;
+    background-color: $smoky;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../images/course/hero-bg.jpg");
+
+    @include retina {
+      background-image: url("../images/course/hero-bg@2x.jpg");
+    }
+
+    &-container {
+      display: flex;
+    }
+
+    &-main {
+      width: 46.775%;
+      margin-right: 50px;
+    }
+
+    &-action {
+      display: flex;
+      margin-bottom: 48px;
+    }
+
+    &-btn {
+      & + & {
+        margin-left: 20px;
+      }
+
+      &.button--outline {
+        background-color: transparent;
+      }
+    }
+
+    &-price {
+      display: flex;
+      margin-bottom: 34px;
+
+      font-size: 39px;
+      line-height: 1;
+      font-weight: 500;
+      color: $blue-09;
+
+      & > * {
+        align-self: center;
+      }
+
+      .old {
+        margin-left: 10px;
+        font-size: 31px;
+        color: $lightBlue3;
+        font-weight: 400;
+        text-decoration: line-through;
+      }
+    }
+
+    &-text {
+      font-size: 14px;
+      line-height: 1.857142857142857;
+      color: $gray-ph;
+
+      p + p {
+        margin-top: 26px;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 35px;
+  }
+
+  &__description {
+    padding-bottom: 54px;
+    padding-right: 22px;
+    font-size: 14px;
+    line-height: 1.857142857142857;
+    color: $gray-ph;
+
+    .float-left {
+      margin-right: 24px;
+      margin-bottom: 24px;
+    }
+
+    .float-right {
+      margin-left: 24px;
+      margin-bottom: 24px;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+
+    p + p {
+      margin-top: 25px;
+    }
+  }
+
+  &__contact {
+    margin-top: 0;
+    margin-bottom: 56px;
+  }
+
+  &__courses {
+    margin-top: 0;
+  }
+}
