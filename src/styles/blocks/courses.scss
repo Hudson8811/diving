@@ -1,7 +1,7 @@
 .courses {
-	padding: 78px 0 70px;
+  padding: 78px 0 70px;
 
-	/*padding: 50px 0;
+  /*padding: 50px 0;
 
 	&__breadcrumbs {
 		margin-bottom: 50px;
@@ -15,41 +15,41 @@
 		padding-bottom: 50px;
 	}*/
 
-	&__title {
-		font-weight: 400;
-		text-align: center;
-		margin-bottom: 46px;
-	}
+  &__title {
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 46px;
+  }
 
-	&__wrapper {
-		position: relative;
-	}
+  &__wrapper {
+    position: relative;
+  }
 
-	&__note {
-		font-size: 19px;
-		line-height: 29px;
-		font-weight: 500;
-		text-align: center;
-		margin-top: 32px;
-	}
+  &__note {
+    font-size: 19px;
+    line-height: 29px;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 32px;
+  }
 
-	&__btn {
-		max-width: 250px;
-		margin: 30px auto 0;
-	}
+  &__btn {
+    max-width: 250px;
+    margin: 30px auto 0;
+  }
 
-	&__prev,
-	&__next {
-		position: absolute;
-		top: 50%;
-		transform: translateY(-50%);
-	}
+  &__prev,
+  &__next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 
-	&__prev {
-		left: -60px;
-	}
+  &__prev {
+    left: -60px;
+  }
 
-	&__next {
-		right: -60px;
-	}
+  &__next {
+    right: -60px;
+  }
 }
