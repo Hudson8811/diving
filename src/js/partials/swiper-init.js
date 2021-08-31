@@ -1,6 +1,7 @@
 
 window.addEventListener('load', () => {
   const productsCarousels = document.querySelectorAll('.__js_products-carousel');
+  const coursesCarousels = document.querySelectorAll('.__js_courses-carousel');
 
   if (productsCarousels.length) {
     productsCarousels.forEach(it => {
@@ -20,6 +21,36 @@ window.addEventListener('load', () => {
           },
           1280: {
             slidesPerView: 4
+          }
+        },
+        navigation: {
+          nextEl: '.__js_next',
+          prevEl: '.__js_prev',
+          disabledClass: 'button--disabled'
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          type: 'bullets',// 'bullets' | 'fraction' | 'progressbar' | 'custom'
+          clickable: true
+        },
+      });
+    });
+  }
+
+  if (coursesCarousels.length) {
+    coursesCarousels.forEach(it => {
+      new Swiper(it, {
+        speed: 300,
+        slidesPerView: 1,
+        spaceBetween: 24,
+        watchOverflow: true,
+        breakpoints: {
+          // when window width is >= 640px
+          1080: {
+            slidesPerView: 2
+          },
+          1280: {
+            slidesPerView: 3
           }
         },
         navigation: {

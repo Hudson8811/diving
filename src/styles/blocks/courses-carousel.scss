@@ -1,4 +1,4 @@
-.products-carousel {
+.courses-carousel {
   padding: 36px 0 58px;
   overflow: hidden;
 
@@ -99,5 +99,9 @@
     &.swiper-button-lock {
       display: none;
     }
+  }
+
+  &__item {
+    height: auto;
   }
 }
