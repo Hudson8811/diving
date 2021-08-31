@@ -5,6 +5,10 @@
   &__container {
     position: relative;
     display: flex;
+
+    @include max(sm) {
+      display: block;
+    }
   }
 
   &__image {
@@ -40,11 +44,18 @@
     width: 47.98387096774194%;
     margin-right: 38px;
     flex-shrink: 0;
+
+    @include max(sm) {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 50px;
+    }
   }
 
   &__list {
     display: flex;
     flex-wrap: wrap;
+    margin-top: -15px;
   }
 
   &__item {
@@ -74,13 +85,13 @@
   }
 
   &__title {
-    margin-bottom: 5px;
+    margin-bottom: 7px;
   }
 
   &__text {
-    margin-bottom: 28px;
+    margin-bottom: 20px;
     font-size: 17px;
-    line-height: (26 / 17);
+    line-height: 1.529411764705882;
     color: $gray-ph;
   }
 
