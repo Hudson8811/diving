@@ -16,7 +16,7 @@
     left: 15px;
     top: -92px;
     bottom: -92px;
-    width: 46.775%;
+    width: 45.67%;
     height: calc(100% + 184px);
     flex-shrink: 0;
 
@@ -33,7 +33,7 @@
   }
 
   &__image + &__main {
-    margin-left: calc(46.775% + 50px);
+    margin-left: calc(45.67% + 50px);
 
     @include max(sm) {
       margin-left: 0;
