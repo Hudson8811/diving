@@ -4,10 +4,18 @@
   &--colors {
     #{$self}__list {
       margin-left: -15px;
+
+      @include max(sm) {
+        margin-left: -9px;
+      }
     }
 
     #{$self}__item {
       margin-left: 15px;
+
+      @include max(sm) {
+        margin-left: 9px;
+      }
 
       &--checked {
         box-shadow: 0 0 0 2px $white, 0 0 0 5px $blue;
@@ -24,6 +32,10 @@
     line-height: (29 / 19);
     color: $gray-ph;
     font-weight: 500;
+
+    @include max(md) {
+      font-size: 15px;
+    }
   }
 
   &__list {
@@ -31,11 +43,21 @@
     flex-wrap: wrap;
     margin-left: -10px;
     margin-top: -10px;
+
+    @include max(sm) {
+      margin-left: -2px;
+      margin-top: -2px;
+    }
   }
 
   &__item {
     margin-left: 10px;
     margin-top: 10px;
+
+    @include max(sm) {
+      margin-left: 2px;
+      margin-top: 2px;
+    }
 
     &--checked {
       pointer-events: none;

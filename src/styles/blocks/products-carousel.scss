@@ -2,11 +2,22 @@
   padding: 36px 0 58px;
   overflow: hidden;
 
+  @include max(sm) {
+    padding: 25px 0;
+  }
+
   &__container {
   }
 
   &__title {
     margin-bottom: 15px;
+
+    @include max(sm) {
+      margin-bottom: 30px;
+      font-size: 18px;
+      line-height: 1.222222222222222;
+      text-align: center;
+    }
   }
 
   &__swiper {
