@@ -1,7 +1,7 @@
 
 window.addEventListener('load', () => {
   const productsCarousels = document.querySelectorAll('.__js_products-carousel');
-  const coursesCarousels = document.querySelectorAll('.__js_courses-carousel');
+  const coursesCarousels = document.querySelectorAll('.__js_courses-carousel-a');
 
   if (productsCarousels.length) {
     productsCarousels.forEach(it => {

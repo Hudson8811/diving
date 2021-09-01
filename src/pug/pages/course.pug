@@ -155,7 +155,7 @@ block main
     section.course__courses.courses-carousel
       .container
         +title('Предлагаем курсы', 'h2', 'title--small courses-carousel__title')
-        .courses-carousel__swiper.swiper-container.__js_courses-carousel
+        .courses-carousel__swiper.swiper-container.__js_courses-carousel-a
           .swiper-wrapper 
             each item in courses
               +course-preview(item)
