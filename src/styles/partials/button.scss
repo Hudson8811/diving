@@ -124,6 +124,11 @@
     height: 40px;
     border-radius: 50%;
 
+    @include max(sm) {
+      width: 30px;
+      height: 30px;
+    }
+
     @include hover {
       opacity: 0.7;
     }

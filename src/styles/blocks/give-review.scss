@@ -6,6 +6,11 @@
 
   &__title {
     margin-bottom: 20px;
+
+    @include max(sm) {
+      font-size: 18px;
+      line-height: 22px;
+    }
   }
 
   label {
@@ -22,6 +27,10 @@
     appearance: none;
     transition: border-color 0.3s ease;
 
+    @include max(sm) {
+      height: 370px;
+    }
+
     @include hover {
       border-color: $dark;
     }
@@ -31,5 +40,10 @@
     width: 170px;
     margin-left: auto;
     margin-top: 30px;
+
+    @include max(sm) {
+      margin-right: auto;
+      margin-top: 20px;
+    }
   }
 }

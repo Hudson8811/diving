@@ -2,8 +2,16 @@
   border-top: solid 1px $gray;
   border-bottom: solid 1px $gray;
 
+  @include max(sm) {
+    border: none;
+  }
+
   &__container {
     display: flex;
+
+    @include max(sm) {
+      display: block;
+    }
   }
 
   &__item {
@@ -11,6 +19,10 @@
     max-width: 316px;
     display: flex;
     min-height: 88px;
+
+    @include max(sm) {
+      display: none;
+    }
 
     button {
       font-size: 15px;
@@ -33,6 +45,43 @@
         font-size: 19px;
         color: $blue;
         pointer-events: none;
+      }
+    }
+  }
+
+  &__only-mobile {
+    display: none;
+
+    @include max(sm) {
+      display: block;
+      padding: 20px 24px;
+      border: solid 1px $gray;
+
+      .choices {
+        font-size: 15px;
+        line-height: 1.2;
+        color: $blue;
+
+        &::after {
+          background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='8' height='4' viewBox='0 0 8 4' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M0 0l4 4 4-4H0z' fill='%232c60ae'/%3e%3c/svg%3e");
+        }
+      }
+
+      .choices__inner {
+        padding-bottom: 0 !important;
+        border-bottom: 0;
+      }
+
+      .choices__list--dropdown {
+        width: calc(100% + 50px);
+        margin-top: 20px;
+        margin-left: -25px;
+        padding: 16px 24px;
+      }
+
+      .is-flipped .choices__list--dropdown {
+        top: 100%;
+        bottom: auto;
       }
     }
   }

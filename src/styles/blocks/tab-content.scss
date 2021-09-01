@@ -7,18 +7,39 @@
 
   display: none;
 
+  @include max(sm) {
+    padding: 30px 20px;
+    border: solid 1px $gray;
+    border-top: none;
+  }
+
+  &--no-border-padding {
+    @include max(sm) {
+      padding: 0;
+      border: none;
+    }
+  }
+
   &.active {
     display: block;
   }
 
   p + p {
     margin-top: 38px;
+
+    @include max(sm) {
+      margin-top: 20px;
+    }
   }
 
   table {
     font-size: 14px;
     line-height: (22 / 14);
     color: $dark;
+
+    @include max(sm) {
+      width: 100%;
+    }
 
     tr:first-child {
       td,
@@ -34,6 +55,11 @@
       font-weight: 400;
       text-align: left;
 
+      @include max(sm) {
+        width: 50%;
+        min-width: 200px;
+      }
+
       &::after {
         content: "";
         display: inline-block;
@@ -46,6 +72,16 @@
 
     td {
       padding: 15px 0 0 0;
+    }
+  }
+
+  &__only-mobile {
+    display: none;
+
+    @include max(sm) {
+      display: flex;
+      justify-content: center;
+      padding: 20px 0 50px;
     }
   }
 }
