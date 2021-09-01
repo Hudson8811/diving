@@ -140,6 +140,7 @@
 
       &.active {
         border-color: $blue;
+        pointer-events: none;
       }
 
       &:last-child {
