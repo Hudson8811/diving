@@ -1,7 +1,9 @@
 
 window.addEventListener('load', () => {
   const productsCarousels = document.querySelectorAll('.__js_products-carousel');
-  const coursesCarousels = document.querySelectorAll('.__js_courses-carousel');
+  const coursesCarousels = document.querySelectorAll('.__js_courses-carousel-a');
+  const thumbsCarouselEl = document.querySelector('.__js_product-thumbs');
+  const productFullPhoto = document.querySelector('.product-card__photo')
 
   if (productsCarousels.length) {
     productsCarousels.forEach(it => {
@@ -65,5 +67,57 @@ window.addEventListener('load', () => {
         },
       });
     });
+  }
+
+  if (thumbsCarouselEl ) {
+    const thumbs = thumbsCarouselEl.querySelectorAll('.swiper-slide');
+
+    if (thumbs.length && productFullPhoto) {
+      const productImg =productFullPhoto.querySelector('img');
+
+      thumbs.forEach(it => it.addEventListener('click', function() {
+        thumbsCarouselEl.querySelector('.active').classList.remove('active');
+        productFullPhoto.classList.add('opacity-0');
+        
+        productFullPhoto.ontransitionend = () => {
+          productFullPhoto.ontransitionend = null;
+          productImg.src = it.dataset.fullImage;
+          productImg.srcset = it.dataset.fullImage2x;
+          productImg.alt = it.dataset.alt;
+          it.classList.add('active');
+          productFullPhoto.classList.remove('opacity-0');
+        };
+      }));
+    }
+
+    let resizeId = null;
+    let thumbsCarousel = null;
+    let direction = document.documentElement.clientWidth < 768 ? 'horizontal' : 'vertical';
+
+    initThumbCarousel();
+
+    window.addEventListener('resize', () => {
+      direction = document.documentElement.clientWidth < 768 ? 'horizontal' : 'vertical';
+      clearTimeout(resizeId);
+      resizeId = setTimeout(reInit, 150);
+    });
+
+    function reInit() {
+      thumbsCarousel.destroy();
+      initThumbCarousel();
+    }
+
+    function initThumbCarousel() {
+      thumbsCarousel = new Swiper(thumbsCarouselEl, {
+        speed: 300,
+        slidesPerView: 'auto',
+        watchOverflow: true,
+        direction: direction,
+        navigation: {
+          nextEl: '.__js_next',
+          prevEl: '.__js_prev',
+        }
+      });
+    }
   }
 })

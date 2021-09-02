@@ -87,16 +87,22 @@ block main
       .product-card__main
         .product-card__image
           .product-card__photo
-            img(src="images/product-card/product-full.jpg", srcset="images/product-card/product-full@2x.jpg 2x"  width="495", height="545", alt="")
-          .product-card__thumbs
-            .product-card__thumbs-item
-              img(src="images/product-card/product-thumb-1.jpg", srcset="images/product-card/product-thumb-1@2x.jpg 2x"  width="93", height="93", alt="")
-            .product-card__thumbs-item
-              img(src="images/product-card/product-thumb-2.jpg", srcset="images/product-card/product-thumb-2@2x.jpg 2x"  width="93", height="93", alt="")
-            .product-card__thumbs-item
-              img(src="images/product-card/product-thumb-3.jpg", srcset="images/product-card/product-thumb-3@2x.jpg 2x"  width="93", height="93", alt="")
-            .product-card__thumbs-item
-              img(src="images/product-card/product-thumb-4.jpg", srcset="images/product-card/product-thumb-4@2x.jpg 2x"  width="93", height="93", alt="")
+            img(src="images/product-card/product-full.jpg", srcset="images/product-card/product-full@2x.jpg 2x", width="495", height="545", alt="Вид слева")
+          .product-card__thumbs.swiper-container.__js_product-thumbs
+            .swiper-wrapper
+              button.product-card__thumbs-item.active.swiper-slide(type="button", data-full-image="images/product-card/product-full.jpg", data-full-image2x="images/product-card/product-full@2x.jpg 2x", data-alt="Вид слева")
+                img(src="images/product-card/product-thumb-1.jpg", srcset="images/product-card/product-thumb-1@2x.jpg 2x", width="93", height="93", alt="Миниатюра вид слева")
+              button.product-card__thumbs-item.swiper-slide(type="button", data-full-image="images/product-card/full-2.jpg", data-full-image2x="images/product-card/full-2@2x.jpg 2x", data-alt="Вид справа")
+                img(src="images/product-card/product-thumb-2.jpg", srcset="images/product-card/product-thumb-2@2x.jpg 2x", width="93", height="93", alt="Миниатюра вид справа")
+              button.product-card__thumbs-item.swiper-slide(type="button", data-full-image="images/product-card/full-3.jpg", data-full-image2x="images/product-card/full-3@2x.jpg 2x", data-alt="Вид сверху")
+                img(src="images/product-card/product-thumb-3.jpg", srcset="images/product-card/product-thumb-3@2x.jpg 2x", width="93", height="93", alt="Миниатюра вид сверху")
+              button.product-card__thumbs-item.swiper-slide(type="button", data-full-image="images/product-card/full-4.jpg", data-full-image2x="images/product-card/full-4@2x.jpg 2x", data-alt="Вид снизу")
+                img(src="images/product-card/product-thumb-4.jpg", srcset="images/product-card/product-thumb-4@2x.jpg 2x", width="93", height="93", alt="Миниатюра вид снизу")
+            button.product-card__thumbs-btn.product-card__thumbs-btn--prev.__js_prev(type="button")
+              +icon('chevron-up')(width="18", height="18")
+            button.product-card__thumbs-btn.product-card__thumbs-btn--next.__js_next(type="button")
+              +icon('chevron-down')(width="18", height="18")
+
         .product-card__info 
           +title(page.title, 'h1', 'title--large product-card__title')
           .product-card__article Артикул: 01234567890abc
@@ -122,6 +128,11 @@ block main
 
     .product-card__tabs.tabs
       .tabs__container.container
+        .tabs__only-mobile
+          select.__js_tabs-select(name="tabs-select")
+            option(value="#description" ) Описание товара
+            option(value="#specifications") Характеристики
+            option(value="#reviews") Отзывы (20)
         .tabs__item.active
           button(type="button", data-target="#description") Описание товара
         .tabs__item
@@ -155,7 +166,7 @@ block main
                   th= tr.th 
                   td= tr.td
 
-        .tab-content#reviews
+        .tab-content.tab-content--no-border-padding#reviews
           each review in reviews 
             .product-card__review.review
               .review__author
@@ -170,6 +181,8 @@ block main
               .review__content 
                 +title(review.title, 'div', 'title--small review__title')
                 .review__text= review.text
+          .tab-content__only-mobile 
+            +button('Все отзывы (105)', '', '', '#')
           section.product-card__give-review.give-review
             +title('Оставить отзыв', 'h2', 'title--small give-review__title')
             form(action="#", method="post")

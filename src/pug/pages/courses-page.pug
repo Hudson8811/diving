@@ -87,12 +87,12 @@ block vars
     ];
 
 block main
-  article.courses
+  article.courses-page
     .container
-      header.courses__header
-        +breadcrumbs(bc, 'courses__breadcrumbs')
-        +title(page.title, 'h1', 'title--medium courses__title')
-        .courses__filter.filter-block
+      header.courses-page__header
+        +breadcrumbs(bc, 'courses-page__breadcrumbs')
+        +title(page.title, 'h1', 'title--medium courses-page__title')
+        .courses-page__filter.filter-block
           select.__js_custom-select(name="select")
             each it in ['',1,2,3,4,5,6,7]
               option(value="by-deadline" + it) По сроку обучения #{it}
@@ -100,7 +100,7 @@ block main
             input.visually-hidden#withDiscount(type="checkbox")
             label(for="withDiscount") Со скидкой
       
-      .courses__grid.courses-grid
+      .courses-page__grid.courses-grid
         each item in courses
           +course-preview(item)
         each item in courses

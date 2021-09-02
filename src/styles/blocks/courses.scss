@@ -1,7 +1,7 @@
 .courses {
-	padding: 78px 0 70px;
+  padding: 78px 0 70px;
 
-	@include max(md) {
+  @include max(md) {
 		padding: 50px 0;
 	}
 
@@ -30,15 +30,15 @@
 		}
 	}
 
-	&__wrapper {
-		position: relative;
-	}
+  &__wrapper {
+    position: relative;
+  }
 
-	&__note {
-		font-size: 19px;
-		line-height: 29px;
-		font-weight: 500;
-		color: $gray-ph;
+  &__note {
+    font-size: 19px;
+    line-height: 29px;
+    font-weight: 500;
+    color: $gray-ph;
 		text-align: center;
 		margin-top: 32px;
 

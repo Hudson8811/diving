@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="keywords" content="">
+    <link rel="prefetch prerender" href="images/product-card/full-2.jpg">
+    <link rel="prefetch prerender" href="images/product-card/full-2@2x.jpg">
+    <link rel="prefetch prerender" href="images/product-card/full-3.jpg">
+    <link rel="prefetch prerender" href="images/product-card/full-3@2x.jpg">
+    <link rel="prefetch prerender" href="images/product-card/full-4.jpg">
+    <link rel="prefetch prerender" href="images/product-card/full-4@2x.jpg">
     <link href="css/main.min.css" rel="stylesheet">
     <title>Кислородный баллон TANK BACK PACK</title>
   </head>
@@ -18,17 +24,29 @@
         <div class="product-card__breadcrumbs breadcrumbs"><a href="homepage.html">Главная</a><a href="catalog.html">Магазин</a><span>Кислородный баллон TANK BACK PACK</span>
         </div>
         <div class="product-card__main">
+          <h1 class="title--large product-card__title title">Кислородный баллон TANK BACK PACK</h1>
           <div class="product-card__image">
-            <div class="product-card__photo"><img src="images/product-card/product-full.jpg" srcset="images/product-card/product-full@2x.jpg 2x" width="495" height="545" alt=""></div>
-            <div class="product-card__thumbs">
-              <div class="product-card__thumbs-item"><img src="images/product-card/product-thumb-1.jpg" srcset="images/product-card/product-thumb-1@2x.jpg 2x" width="93" height="93" alt=""></div>
-              <div class="product-card__thumbs-item"><img src="images/product-card/product-thumb-2.jpg" srcset="images/product-card/product-thumb-2@2x.jpg 2x" width="93" height="93" alt=""></div>
-              <div class="product-card__thumbs-item"><img src="images/product-card/product-thumb-3.jpg" srcset="images/product-card/product-thumb-3@2x.jpg 2x" width="93" height="93" alt=""></div>
-              <div class="product-card__thumbs-item"><img src="images/product-card/product-thumb-4.jpg" srcset="images/product-card/product-thumb-4@2x.jpg 2x" width="93" height="93" alt=""></div>
+            <div class="product-card__photo"><img src="images/product-card/product-full.jpg" srcset="images/product-card/product-full@2x.jpg 2x" width="495" height="545" alt="Вид слева"></div>
+            <div class="product-card__thumbs swiper-container __js_product-thumbs">
+              <div class="swiper-wrapper">
+                <button class="product-card__thumbs-item active swiper-slide" type="button" data-full-image="images/product-card/product-full.jpg" data-full-image2x="images/product-card/product-full@2x.jpg 2x" data-alt="Вид слева"><img src="images/product-card/product-thumb-1.jpg" srcset="images/product-card/product-thumb-1@2x.jpg 2x" width="93" height="93" alt="Миниатюра вид слева"></button>
+                <button class="product-card__thumbs-item swiper-slide" type="button" data-full-image="images/product-card/full-2.jpg" data-full-image2x="images/product-card/full-2@2x.jpg 2x" data-alt="Вид справа"><img src="images/product-card/product-thumb-2.jpg" srcset="images/product-card/product-thumb-2@2x.jpg 2x" width="93" height="93" alt="Миниатюра вид справа"></button>
+                <button class="product-card__thumbs-item swiper-slide" type="button" data-full-image="images/product-card/full-3.jpg" data-full-image2x="images/product-card/full-3@2x.jpg 2x" data-alt="Вид сверху"><img src="images/product-card/product-thumb-3.jpg" srcset="images/product-card/product-thumb-3@2x.jpg 2x" width="93" height="93" alt="Миниатюра вид сверху"></button>
+                <button class="product-card__thumbs-item swiper-slide" type="button" data-full-image="images/product-card/full-4.jpg" data-full-image2x="images/product-card/full-4@2x.jpg 2x" data-alt="Вид снизу"><img src="images/product-card/product-thumb-4.jpg" srcset="images/product-card/product-thumb-4@2x.jpg 2x" width="93" height="93" alt="Миниатюра вид снизу"></button>
+              </div>
+              <button class="product-card__thumbs-btn product-card__thumbs-btn--prev __js_prev" type="button">
+                <svg width="18" height="18">
+                  <use xlink:href="./images/sprite.svg#chevron-up"></use>
+                </svg>
+              </button>
+              <button class="product-card__thumbs-btn product-card__thumbs-btn--next __js_next" type="button">
+                <svg width="18" height="18">
+                  <use xlink:href="./images/sprite.svg#chevron-down"></use>
+                </svg>
+              </button>
             </div>
           </div>
           <div class="product-card__info"> 
-            <h1 class="title--large product-card__title title">Кислородный баллон TANK BACK PACK</h1>
             <div class="product-card__article">Артикул: 01234567890abc</div>
             <div class="product-card__parameters">
               <div class="product-card__parameter parameter">
@@ -42,17 +60,24 @@
                 </div>
               </div>
             </div>
-            <div class="product-card__price"><span>1 500₽</span><span class="product-card__price-max">- 2 500₽</span></div>
-            <div class="product-card__action"><a class="button button--to-cart" href="#"><span>В корзину</span>
+            <div class="product-card__price"><span>1&nbsp;500₽</span><span class="product-card__price-max">-&nbsp;2&nbsp;500₽</span></div>
+            <div class="product-card__action"><a class="button product-card__btn button--to-cart" href="#"><span>В корзину</span>
                 <svg>
                   <use xlink:href="./images/sprite.svg#cart"></use>
-                </svg></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span></a>
+                </svg></a><a class="product-card__btn button button--outline" href="#"><span class="only-mobile">Оформить</span><span>Купить в 1 клик</span></a>
             </div>
           </div>
         </div>
       </div>
       <div class="product-card__tabs tabs">
         <div class="tabs__container container">
+          <div class="tabs__only-mobile">
+            <select class="__js_tabs-select" name="tabs-select">
+              <option value="#description">Описание товара</option>
+              <option value="#specifications">Характеристики</option>
+              <option value="#reviews">Отзывы (20)</option>
+            </select>
+          </div>
           <div class="tabs__item active">
             <button type="button" data-target="#description">Описание товара</button>
           </div>
@@ -60,7 +85,7 @@
             <button type="button" data-target="#specifications">Характеристики</button>
           </div>
           <div class="tabs__item">
-            <button type="button" data-target="#reviews">Отзывы</button>
+            <button type="button" data-target="#reviews">Отзывы (20)</button>
           </div>
         </div>
       </div>
@@ -123,7 +148,7 @@
               </tbody>
             </table>
           </div>
-          <div class="tab-content" id="reviews">
+          <div class="tab-content tab-content--no-border-padding" id="reviews">
             <div class="product-card__review review">
               <div class="review__author">
                 <div class="review__author-image"><img src="images/no-avatar.svg" width="36" height="36" alt="Нет аватара">
@@ -179,6 +204,8 @@
                 <div class="title--small review__title title">Не рекомендую!</div>
                 <div class="review__text">Задача организации, в особенности же постоянное информационно-пропагандистское обеспечение нашей деятельности представляет собой интересный эксперимент проверки форм развития. Таким образом постоянный количественный рост и сфера нашей активности обеспечивает широкому кругу (специалистов) участие в формировании форм развития.</div>
               </div>
+            </div>
+            <div class="tab-content__only-mobile"> <a class="button" href="#"><span>Все отзывы (105)</span></a>
             </div>
             <section class="product-card__give-review give-review">
               <h2 class="title--small give-review__title title">Оставить отзыв</h2>
