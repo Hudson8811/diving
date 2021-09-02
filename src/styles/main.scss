@@ -23,6 +23,7 @@
 @import "partials/custom-checbox";
 @import "partials/choices"; //override lib styles
 @import "partials/field";
+@import "partials/share-btn";
 
 /* blocks */
 @import "blocks/components";
@@ -59,6 +60,8 @@
 @import "blocks/catalog";
 @import "blocks/courses-page";
 @import "blocks/course";
+@import "blocks/trips-page";
+@import "blocks/trip-page";
 @import "blocks/product-card";
 //////////////////
 @import "blocks/components";
