@@ -9,6 +9,14 @@ $(window).on('load', function() {
 		}
 	});
 
+	setTimeout(function () {
+		var dropdown = $('.recommend__wrapper .choices');
+
+		dropdown.change(function () {
+			$('.recommend__content-item').hide().eq($('.choices__item.is-selected').index()).fadeIn(300);
+		});
+	}, 100);
+
 	const selects = document.querySelectorAll('.__js_custom-select');
 
 	if (selects.length) {
@@ -32,7 +40,7 @@ $(window).on('load', function() {
 				searchFloor: 1,
 				searchResultLimit: 4,
 				searchFields: ['label', 'value'],
-				position: 'auto',
+				position: 'bottom',
 				resetScrollPosition: true,
 				shouldSort: false,
 				shouldSortItems: false,

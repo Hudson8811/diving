@@ -2,7 +2,7 @@ section.courses
 	.container
 		+title('Курсы обучения дайвингу', '', 'title--large courses__title')
 		.courses__wrapper
-			.swiper-container.__js_courses-carousel
+			.swiper-container.__js_courses-carousel-2
 				.swiper-wrapper
 					.courses-card.swiper-slide
 						.courses-card__stock Акция
@@ -12,7 +12,7 @@ section.courses
 						.courses-card__content
 							.courses-card__title SDI OWD
 							.courses-card__limit
-								span От 10 лет
+								span.year От 10 лет
 								span более 4-х часов
 							.courses-card__desc 4 теоретических занятий, 4 погружений в бассейне, экзамен, 4 погружения
 								|  в открытой  воде, аренда оборудования включена.
@@ -27,7 +27,7 @@ section.courses
 						.courses-card__content
 							.courses-card__title Пробное погружение
 							.courses-card__limit
-								span От 10 лет
+								span.year От 10 лет
 								span более 4-х часов
 							.courses-card__desc 1 погружение с инструктором в бассейне или водоеме. Аренда полного комплекта снаряжения включена
 							.courses-card__row
@@ -51,4 +51,7 @@ section.courses
 			+button('', 'button--outline button--icon slick-prev courses__prev', 'chevron-right')
 			+button('', 'button--outline button--icon slick-next courses__next', 'chevron-right')
 		.courses__note По окончании выбранного курса присваивается соответствующий сертификат международного образца
-		+button('Все курсы', 'courses__btn', '', '#')
+		.courses__mobile-wrapper
+			+button('', 'button--outline button--icon slick-prev courses__prev', 'chevron-right')
+			+button('Все курсы', 'courses__btn', '', '#')
+			+button('', 'button--outline button--icon slick-next courses__next', 'chevron-right')

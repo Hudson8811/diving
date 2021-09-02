@@ -58,7 +58,7 @@
       <div class="container">
         <h2 class="title--large courses__title title">Курсы обучения дайвингу</h2>
         <div class="courses__wrapper">
-          <div class="swiper-container __js_courses-carousel">
+          <div class="swiper-container __js_courses-carousel-2">
             <div class="swiper-wrapper">
               <div class="courses-card swiper-slide">
                 <div class="courses-card__stock">Акция
@@ -69,7 +69,7 @@
                 <div class="courses-card__bg"><img src="images/homepage/courses/1.jpg" srcset="images/homepage/courses/1@2x.jpg 2x" width="397" height="478" alt=""></div>
                 <div class="courses-card__content">
                   <div class="courses-card__title">SDI OWD</div>
-                  <div class="courses-card__limit"><span>От 10 лет</span><span>более 4-х часов</span></div>
+                  <div class="courses-card__limit"><span class="year">От 10 лет</span><span>более 4-х часов</span></div>
                   <div class="courses-card__desc">
                     4 теоретических занятий, 4 погружений в бассейне, экзамен, 4 погружения в открытой  воде, аренда оборудования включена.</div>
                   <div class="courses-card__row"><a class="button button--outline button--icon courses-card__more" href="#"><span>Подробнее</span>
@@ -85,7 +85,7 @@
                 <div class="courses-card__bg"><img src="images/homepage/courses/2.jpg" srcset="images/homepage/courses/2@2x.jpg 2x" width="397" height="325" alt=""></div>
                 <div class="courses-card__content">
                   <div class="courses-card__title">Пробное погружение</div>
-                  <div class="courses-card__limit"><span>От 10 лет</span><span>более 4-х часов</span></div>
+                  <div class="courses-card__limit"><span class="year">От 10 лет</span><span>более 4-х часов</span></div>
                   <div class="courses-card__desc">1 погружение с инструктором в бассейне или водоеме. Аренда полного комплекта снаряжения включена</div>
                   <div class="courses-card__row"><a class="button button--outline button--icon courses-card__more" href="#"><span>Подробнее</span>
                       <svg>
@@ -124,7 +124,19 @@
             </svg>
           </button>
         </div>
-        <div class="courses__note">По окончании выбранного курса присваивается соответствующий сертификат международного образца</div><a class="button courses__btn" href="#"><span>Все курсы</span></a>
+        <div class="courses__note">По окончании выбранного курса присваивается соответствующий сертификат международного образца</div>
+        <div class="courses__mobile-wrapper">
+          <button class="button button--outline button--icon slick-prev courses__prev"><span></span>
+            <svg>
+              <use xlink:href="./images/sprite.svg#chevron-right"></use>
+            </svg>
+          </button><a class="button courses__btn" href="#"><span>Все курсы</span></a>
+          <button class="button button--outline button--icon slick-next courses__next"><span></span>
+            <svg>
+              <use xlink:href="./images/sprite.svg#chevron-right"></use>
+            </svg>
+          </button>
+        </div>
       </div>
     </section>
     <section class="tutorials">
@@ -185,33 +197,53 @@
               </div>
             </div>
           </div>
-          <button class="button button--outline button--icon slick-prev tutorials__prev"><span></span>
-            <svg>
-              <use xlink:href="./images/sprite.svg#chevron-right"></use>
-            </svg>
-          </button>
-          <button class="button button--outline button--icon slick-next tutorials__next"><span></span>
-            <svg>
-              <use xlink:href="./images/sprite.svg#chevron-right"></use>
-            </svg>
-          </button>
+          <div class="tutorials__nav">
+            <button class="button button--outline button--icon slick-prev tutorials__prev"><span></span>
+              <svg>
+                <use xlink:href="./images/sprite.svg#chevron-right"></use>
+              </svg>
+            </button>
+            <div class="tutorials__pagination"></div>
+            <button class="button button--outline button--icon slick-next tutorials__next"><span></span>
+              <svg>
+                <use xlink:href="./images/sprite.svg#chevron-right"></use>
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
     </section>
     <section class="stock">
-      <div class="container">
+      <div class="container stock__container">
         <div class="stock__wrapper">
-          <div class="stock__item">
-            <div class="stock__bg"><img src="images/homepage/stock/1.jpg" srcset="images/homepage/stock/1@2x.jpg 2x" width="397" height="246" alt=""></div>
-            <div class="stock__text">Скидка 15% на аксессуары при покупке костюма</div>
+          <div class="swiper-container __js_stock-carousel">
+            <div class="swiper-wrapper">
+              <div class="stock__item swiper-slide">
+                <div class="stock__bg"><img src="images/homepage/stock/1.jpg" srcset="images/homepage/stock/1@2x.jpg 2x" width="397" height="246" alt=""></div>
+                <div class="stock__text">Скидка 15% на аксессуары при покупке костюма</div>
+              </div>
+              <div class="stock__item swiper-slide">
+                <div class="stock__bg"><img src="images/homepage/stock/2.jpg" srcset="images/homepage/stock/2@2x.jpg 2x" width="397" height="246" alt=""></div>
+                <div class="stock__text">Скидка 5% на курсы для начинающих после пробного погружения</div>
+              </div>
+              <div class="stock__item swiper-slide">
+                <div class="stock__bg"><img src="images/homepage/stock/3.jpg" srcset="images/homepage/stock/3@2x.jpg 2x" width="397" height="245" alt=""></div>
+                <div class="stock__text">Скидка 10% на SDI OWD <br> при покупке учебника</div>
+              </div>
+            </div>
           </div>
-          <div class="stock__item">
-            <div class="stock__bg"><img src="images/homepage/stock/2.jpg" srcset="images/homepage/stock/2@2x.jpg 2x" width="397" height="246" alt=""></div>
-            <div class="stock__text">Скидка 5% на курсы для начинающих после пробного погружения</div>
-          </div>
-          <div class="stock__item">
-            <div class="stock__bg"><img src="images/homepage/stock/3.jpg" srcset="images/homepage/stock/3@2x.jpg 2x" width="397" height="245" alt=""></div>
-            <div class="stock__text">Скидка 10% на SDI OWD <br> при покупке учебника</div>
+          <div class="stock__nav">
+            <button class="button button--outline button--icon slick-prev stock__prev"><span></span>
+              <svg>
+                <use xlink:href="./images/sprite.svg#chevron-right"></use>
+              </svg>
+            </button>
+            <div class="stock__pagination"></div>
+            <button class="button button--outline button--icon slick-next stock__next"><span></span>
+              <svg>
+                <use xlink:href="./images/sprite.svg#chevron-right"></use>
+              </svg>
+            </button>
           </div>
         </div>
         <button class="button button--angle stock__more"><span>Подробнее об акциях</span>
@@ -223,8 +255,26 @@
     </section>
     <section class="recommend">
       <div class="container">
-        <h2 class="title--large recommend__title title">Рекомендуемые товары для дайвинга</h2>
+        <h2 class="title--large recommend__title title">Рекомендуемые товары <br> для дайвинга</h2>
+        <button class="button button--angle recommend__more recommend__more--mobile"><span>Все учебники</span>
+          <svg>
+            <use xlink:href="./images/sprite.svg#arrow-angle"></use>
+          </svg>
+        </button>
         <div class="recommend__wrapper">
+          <select class="__js_custom-select" name="categories">
+            <option value="Категории">Категории</option>
+            <option value="Популярное">Популярное</option>
+            <option value="Костюмы">Костюмы</option>
+            <option value="Аксессуары">Аксессуары</option>
+            <option value="Такелаж">Такелаж</option>
+            <option value="Фонари">Фонари</option>
+            <option value="Ребризер">Ребризер</option>
+            <option value="Подводная съемка">Подводная съемка</option>
+            <option value="Ласты">Ласты</option>
+            <option value="Катушки и буи">Катушки и буи</option>
+            <option value="Sidemount">Sidemount</option>
+          </select>
           <div class="recommend__tabs">
             <p class="active">Категории</p>
             <p>Популярное</p>
@@ -288,16 +338,19 @@
                   </div>
                 </div>
               </div>
-              <button class="button button--outline button--icon slick-prev recommend__prev"><span></span>
-                <svg>
-                  <use xlink:href="./images/sprite.svg#chevron-right"></use>
-                </svg>
-              </button>
-              <button class="button button--outline button--icon slick-next recommend__next"><span></span>
-                <svg>
-                  <use xlink:href="./images/sprite.svg#chevron-right"></use>
-                </svg>
-              </button>
+              <div class="recommend__nav">
+                <button class="button button--outline button--icon slick-prev recommend__prev"><span></span>
+                  <svg>
+                    <use xlink:href="./images/sprite.svg#chevron-right"></use>
+                  </svg>
+                </button>
+                <div class="recommend__pagination"></div>
+                <button class="button button--outline button--icon slick-next recommend__next"><span></span>
+                  <svg>
+                    <use xlink:href="./images/sprite.svg#chevron-right"></use>
+                  </svg>
+                </button>
+              </div>
               <button class="button button--angle recommend__more"><span>Перейти в магазин</span>
                 <svg>
                   <use xlink:href="./images/sprite.svg#arrow-angle"></use>
@@ -375,16 +428,19 @@
                   </div>
                 </div>
               </div>
-              <button class="button button--outline button--icon slick-prev recommend__prev"><span></span>
-                <svg>
-                  <use xlink:href="./images/sprite.svg#chevron-right"></use>
-                </svg>
-              </button>
-              <button class="button button--outline button--icon slick-next recommend__next"><span></span>
-                <svg>
-                  <use xlink:href="./images/sprite.svg#chevron-right"></use>
-                </svg>
-              </button>
+              <div class="recommend__nav">
+                <button class="button button--outline button--icon slick-prev recommend__prev"><span></span>
+                  <svg>
+                    <use xlink:href="./images/sprite.svg#chevron-right"></use>
+                  </svg>
+                </button>
+                <div class="recommend__pagination"></div>
+                <button class="button button--outline button--icon slick-next recommend__next"><span></span>
+                  <svg>
+                    <use xlink:href="./images/sprite.svg#chevron-right"></use>
+                  </svg>
+                </button>
+              </div>
               <button class="button button--angle recommend__more"><span>Перейти в магазин</span>
                 <svg>
                   <use xlink:href="./images/sprite.svg#arrow-angle"></use>
@@ -440,6 +496,24 @@
                   </div>
                 </div>
               </div>
+              <div class="recommend__nav">
+                <button class="button button--outline button--icon slick-prev recommend__prev"><span></span>
+                  <svg>
+                    <use xlink:href="./images/sprite.svg#chevron-right"></use>
+                  </svg>
+                </button>
+                <div class="recommend__pagination"></div>
+                <button class="button button--outline button--icon slick-next recommend__next"><span></span>
+                  <svg>
+                    <use xlink:href="./images/sprite.svg#chevron-right"></use>
+                  </svg>
+                </button>
+              </div>
+              <button class="button button--angle recommend__more"><span>Перейти в магазин</span>
+                <svg>
+                  <use xlink:href="./images/sprite.svg#arrow-angle"></use>
+                </svg>
+              </button>
             </div>
             <div class="recommend__content-item">
               <div class="swiper-container __js_recommend-carousel">
@@ -512,16 +586,19 @@
                   </div>
                 </div>
               </div>
-              <button class="button button--outline button--icon slick-prev recommend__prev"><span></span>
-                <svg>
-                  <use xlink:href="./images/sprite.svg#chevron-right"></use>
-                </svg>
-              </button>
-              <button class="button button--outline button--icon slick-next recommend__next"><span></span>
-                <svg>
-                  <use xlink:href="./images/sprite.svg#chevron-right"></use>
-                </svg>
-              </button>
+              <div class="recommend__nav">
+                <button class="button button--outline button--icon slick-prev recommend__prev"><span></span>
+                  <svg>
+                    <use xlink:href="./images/sprite.svg#chevron-right"></use>
+                  </svg>
+                </button>
+                <div class="recommend__pagination"></div>
+                <button class="button button--outline button--icon slick-next recommend__next"><span></span>
+                  <svg>
+                    <use xlink:href="./images/sprite.svg#chevron-right"></use>
+                  </svg>
+                </button>
+              </div>
               <button class="button button--angle recommend__more"><span>Перейти в магазин</span>
                 <svg>
                   <use xlink:href="./images/sprite.svg#arrow-angle"></use>
@@ -577,6 +654,24 @@
                   </div>
                 </div>
               </div>
+              <div class="recommend__nav">
+                <button class="button button--outline button--icon slick-prev recommend__prev"><span></span>
+                  <svg>
+                    <use xlink:href="./images/sprite.svg#chevron-right"></use>
+                  </svg>
+                </button>
+                <div class="recommend__pagination"></div>
+                <button class="button button--outline button--icon slick-next recommend__next"><span></span>
+                  <svg>
+                    <use xlink:href="./images/sprite.svg#chevron-right"></use>
+                  </svg>
+                </button>
+              </div>
+              <button class="button button--angle recommend__more"><span>Перейти в магазин</span>
+                <svg>
+                  <use xlink:href="./images/sprite.svg#arrow-angle"></use>
+                </svg>
+              </button>
             </div>
             <div class="recommend__content-item">
               <div class="swiper-container __js_recommend-carousel">
@@ -649,16 +744,19 @@
                   </div>
                 </div>
               </div>
-              <button class="button button--outline button--icon slick-prev recommend__prev"><span></span>
-                <svg>
-                  <use xlink:href="./images/sprite.svg#chevron-right"></use>
-                </svg>
-              </button>
-              <button class="button button--outline button--icon slick-next recommend__next"><span></span>
-                <svg>
-                  <use xlink:href="./images/sprite.svg#chevron-right"></use>
-                </svg>
-              </button>
+              <div class="recommend__nav">
+                <button class="button button--outline button--icon slick-prev recommend__prev"><span></span>
+                  <svg>
+                    <use xlink:href="./images/sprite.svg#chevron-right"></use>
+                  </svg>
+                </button>
+                <div class="recommend__pagination"></div>
+                <button class="button button--outline button--icon slick-next recommend__next"><span></span>
+                  <svg>
+                    <use xlink:href="./images/sprite.svg#chevron-right"></use>
+                  </svg>
+                </button>
+              </div>
               <button class="button button--angle recommend__more"><span>Перейти в магазин</span>
                 <svg>
                   <use xlink:href="./images/sprite.svg#arrow-angle"></use>
@@ -714,6 +812,24 @@
                   </div>
                 </div>
               </div>
+              <div class="recommend__nav">
+                <button class="button button--outline button--icon slick-prev recommend__prev"><span></span>
+                  <svg>
+                    <use xlink:href="./images/sprite.svg#chevron-right"></use>
+                  </svg>
+                </button>
+                <div class="recommend__pagination"></div>
+                <button class="button button--outline button--icon slick-next recommend__next"><span></span>
+                  <svg>
+                    <use xlink:href="./images/sprite.svg#chevron-right"></use>
+                  </svg>
+                </button>
+              </div>
+              <button class="button button--angle recommend__more"><span>Перейти в магазин</span>
+                <svg>
+                  <use xlink:href="./images/sprite.svg#arrow-angle"></use>
+                </svg>
+              </button>
             </div>
             <div class="recommend__content-item">
               <div class="swiper-container __js_recommend-carousel">
@@ -786,16 +902,19 @@
                   </div>
                 </div>
               </div>
-              <button class="button button--outline button--icon slick-prev recommend__prev"><span></span>
-                <svg>
-                  <use xlink:href="./images/sprite.svg#chevron-right"></use>
-                </svg>
-              </button>
-              <button class="button button--outline button--icon slick-next recommend__next"><span></span>
-                <svg>
-                  <use xlink:href="./images/sprite.svg#chevron-right"></use>
-                </svg>
-              </button>
+              <div class="recommend__nav">
+                <button class="button button--outline button--icon slick-prev recommend__prev"><span></span>
+                  <svg>
+                    <use xlink:href="./images/sprite.svg#chevron-right"></use>
+                  </svg>
+                </button>
+                <div class="recommend__pagination"></div>
+                <button class="button button--outline button--icon slick-next recommend__next"><span></span>
+                  <svg>
+                    <use xlink:href="./images/sprite.svg#chevron-right"></use>
+                  </svg>
+                </button>
+              </div>
               <button class="button button--angle recommend__more"><span>Перейти в магазин</span>
                 <svg>
                   <use xlink:href="./images/sprite.svg#arrow-angle"></use>
@@ -851,6 +970,24 @@
                   </div>
                 </div>
               </div>
+              <div class="recommend__nav">
+                <button class="button button--outline button--icon slick-prev recommend__prev"><span></span>
+                  <svg>
+                    <use xlink:href="./images/sprite.svg#chevron-right"></use>
+                  </svg>
+                </button>
+                <div class="recommend__pagination"></div>
+                <button class="button button--outline button--icon slick-next recommend__next"><span></span>
+                  <svg>
+                    <use xlink:href="./images/sprite.svg#chevron-right"></use>
+                  </svg>
+                </button>
+              </div>
+              <button class="button button--angle recommend__more"><span>Перейти в магазин</span>
+                <svg>
+                  <use xlink:href="./images/sprite.svg#arrow-angle"></use>
+                </svg>
+              </button>
             </div>
             <div class="recommend__content-item">
               <div class="swiper-container __js_recommend-carousel">
@@ -923,16 +1060,19 @@
                   </div>
                 </div>
               </div>
-              <button class="button button--outline button--icon slick-prev recommend__prev"><span></span>
-                <svg>
-                  <use xlink:href="./images/sprite.svg#chevron-right"></use>
-                </svg>
-              </button>
-              <button class="button button--outline button--icon slick-next recommend__next"><span></span>
-                <svg>
-                  <use xlink:href="./images/sprite.svg#chevron-right"></use>
-                </svg>
-              </button>
+              <div class="recommend__nav">
+                <button class="button button--outline button--icon slick-prev recommend__prev"><span></span>
+                  <svg>
+                    <use xlink:href="./images/sprite.svg#chevron-right"></use>
+                  </svg>
+                </button>
+                <div class="recommend__pagination"></div>
+                <button class="button button--outline button--icon slick-next recommend__next"><span></span>
+                  <svg>
+                    <use xlink:href="./images/sprite.svg#chevron-right"></use>
+                  </svg>
+                </button>
+              </div>
               <button class="button button--angle recommend__more"><span>Перейти в магазин</span>
                 <svg>
                   <use xlink:href="./images/sprite.svg#arrow-angle"></use>
@@ -988,6 +1128,24 @@
                   </div>
                 </div>
               </div>
+              <div class="recommend__nav">
+                <button class="button button--outline button--icon slick-prev recommend__prev"><span></span>
+                  <svg>
+                    <use xlink:href="./images/sprite.svg#chevron-right"></use>
+                  </svg>
+                </button>
+                <div class="recommend__pagination"></div>
+                <button class="button button--outline button--icon slick-next recommend__next"><span></span>
+                  <svg>
+                    <use xlink:href="./images/sprite.svg#chevron-right"></use>
+                  </svg>
+                </button>
+              </div>
+              <button class="button button--angle recommend__more"><span>Перейти в магазин</span>
+                <svg>
+                  <use xlink:href="./images/sprite.svg#arrow-angle"></use>
+                </svg>
+              </button>
             </div>
           </div>
         </div>
@@ -1042,8 +1200,20 @@
             </svg>
           </button>
         </div>
-        <button class="button trip__all"><span>Все поездки</span>
-        </button>
+        <div class="trip__mobile-wrapper">
+          <button class="button button--outline button--icon slick-prev trip__prev"><span></span>
+            <svg>
+              <use xlink:href="./images/sprite.svg#chevron-right"></use>
+            </svg>
+          </button>
+          <button class="button trip__all"><span>Все поездки</span>
+          </button>
+          <button class="button button--outline button--icon slick-next trip__next"><span></span>
+            <svg>
+              <use xlink:href="./images/sprite.svg#chevron-right"></use>
+            </svg>
+          </button>
+        </div>
       </div>
     </section>
     <section class="reviews">
@@ -1057,58 +1227,110 @@
           </button>
         </div>
         <div class="reviews__wrapper">
-          <div class="swiper-container __js_reviews-carousel">
-            <div class="swiper-wrapper">
-              <div class="reviews-card swiper-slide">
-                <div class="reviews-card__left">
-                  <div class="reviews-card__bg"><img src="images/homepage/courses/3.jpg" srcset="images/homepage/courses/3@2x.jpg 2x" width="397" height="341" alt=""></div>
-                  <div class="reviews-card__content">
-                    <div class="reviews-card__place">Мальдивы</div>
-                    <div class="reviews-card__title">Золотой треугольник</div>
-                    <div class="reviews-card__desc">Манты, китовые акулы и сафари вдоль райских островов.</div>
-                    <div class="reviews-card__bottom"><a href="#" target="_blank">Подробнее</a>
-                      <div class="reviews-card__date">01.05.2021</div>
+          <div class="reviews-card swiper-slide">
+            <div class="reviews-card__left">
+              <div class="reviews-card__bg"><img src="images/homepage/courses/3.jpg" srcset="images/homepage/courses/3@2x.jpg 2x" width="397" height="341" alt=""></div>
+              <div class="reviews-card__content">
+                <div class="reviews-card__place">Мальдивы</div>
+                <div class="reviews-card__title">Золотой треугольник</div>
+                <div class="reviews-card__desc">Манты, китовые акулы и сафари вдоль райских островов.</div>
+                <div class="reviews-card__bottom"><a href="#" target="_blank">Подробнее</a>
+                  <div class="reviews-card__date">01.05.2021</div>
+                </div>
+              </div>
+            </div>
+            <div class="reviews-card__right">
+              <div class="swiper-container __js_reviews-carousel">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="reviews-card__row">
+                      <div class="reviews-card__col">
+                        <div class="reviews-card__person">
+                          <div class="reviews-card__avatar"><img src="images/homepage/courses/3.jpg" srcset="images/homepage/courses/3@2x.jpg 2x" width="397" height="341" alt=""></div>
+                          <div class="reviews-card__person-info">
+                            <p>Александр</p>
+                            <p>Мальдивы</p>
+                          </div>
+                        </div>
+                        <div class="reviews-card__text">
+                          <p>
+                            Не следует, однако забывать, что постоянный количественный рост и сфера нашей активности требуют от нас анализа систем массового участия.</p>
+                          <p>
+                            Значимость этих проблем настолько очевидна, что укрепление и развитие структуры способствует подготовки и реализации системы обучения кадров, соответствует насущным потребностям.</p>
+                          <p>Значимость этих проблем настолько очевидна, что сложившаяся...</p>
+                        </div>
+                      </div>
+                      <div class="reviews-card__col">
+                        <div class="reviews-card__person">
+                          <div class="reviews-card__avatar"><img src="images/homepage/courses/3.jpg" srcset="images/homepage/courses/3@2x.jpg 2x" width="397" height="341" alt=""></div>
+                          <div class="reviews-card__person-info">
+                            <p>Андрей</p>
+                            <p>Мальдивы</p>
+                          </div>
+                        </div>
+                        <div class="reviews-card__text">
+                          <p>
+                            Повседневная практика показывает, что консультация с широким активом обеспечивает широкому кругу (специалистов) участие в формировании системы обучения кадров, соответствует насущным потребностям.</p>
+                          <p>
+                            Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции в значительной степени обуславливает создание систем массового участия. Равным образом
+                             рамки и место обучения кадров требуют...
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="reviews-card__row">
+                      <div class="reviews-card__col">
+                        <div class="reviews-card__person">
+                          <div class="reviews-card__avatar"><img src="images/homepage/courses/3.jpg" srcset="images/homepage/courses/3@2x.jpg 2x" width="397" height="341" alt=""></div>
+                          <div class="reviews-card__person-info">
+                            <p>Александр</p>
+                            <p>Мальдивы</p>
+                          </div>
+                        </div>
+                        <div class="reviews-card__text">
+                          <p>
+                            Не следует, однако забывать, что постоянный количественный рост и сфера нашей активности требуют от нас анализа систем массового участия.</p>
+                          <p>
+                            Значимость этих проблем настолько очевидна, что укрепление и развитие структуры способствует подготовки и реализации системы обучения кадров, соответствует насущным потребностям.</p>
+                          <p>Значимость этих проблем настолько очевидна, что сложившаяся...</p>
+                        </div>
+                      </div>
+                      <div class="reviews-card__col">
+                        <div class="reviews-card__person">
+                          <div class="reviews-card__avatar"><img src="images/homepage/courses/3.jpg" srcset="images/homepage/courses/3@2x.jpg 2x" width="397" height="341" alt=""></div>
+                          <div class="reviews-card__person-info">
+                            <p>Андрей</p>
+                            <p>Мальдивы</p>
+                          </div>
+                        </div>
+                        <div class="reviews-card__text">
+                          <p>
+                            Повседневная практика показывает, что консультация с широким активом обеспечивает широкому кругу (специалистов) участие в формировании системы обучения кадров, соответствует насущным потребностям.</p>
+                          <p>
+                            Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции в значительной степени обуславливает создание систем массового участия. Равным образом
+                             рамки и место обучения кадров требуют...
+                          </p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div class="reviews-card__right">
-                  <div class="reviews-card__row">
-                    <div class="reviews-card__col">
-                      <div class="reviews-card__person">
-                        <div class="reviews-card__avatar"><img src="images/homepage/courses/3.jpg" srcset="images/homepage/courses/3@2x.jpg 2x" width="397" height="341" alt=""></div>
-                        <div class="reviews-card__person-info">
-                          <p>Александр</p>
-                          <p>Мальдивы</p>
-                        </div>
-                      </div>
-                      <div class="reviews-card__text">
-                        <p>
-                          Не следует, однако забывать, что постоянный количественный рост и сфера нашей активности требуют от нас анализа систем массового участия.</p>
-                        <p>
-                          Значимость этих проблем настолько очевидна, что укрепление и развитие структуры способствует подготовки и реализации системы обучения кадров, соответствует насущным потребностям.</p>
-                        <p>Значимость этих проблем настолько очевидна, что сложившаяся...</p>
-                      </div>
-                    </div>
-                    <div class="reviews-card__col">
-                      <div class="reviews-card__person">
-                        <div class="reviews-card__avatar"><img src="images/homepage/courses/3.jpg" srcset="images/homepage/courses/3@2x.jpg 2x" width="397" height="341" alt=""></div>
-                        <div class="reviews-card__person-info">
-                          <p>Андрей</p>
-                          <p>Мальдивы</p>
-                        </div>
-                      </div>
-                      <div class="reviews-card__text">
-                        <p>
-                          Повседневная практика показывает, что консультация с широким активом обеспечивает широкому кругу (специалистов) участие в формировании системы обучения кадров, соответствует насущным потребностям.</p>
-                        <p>
-                          Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции в значительной степени обуславливает создание систем массового участия. Равным образом
-                           рамки и место обучения кадров требуют...
-                        </p>
-                      </div>
-                    </div>
-                  </div><a class="reviews-card__report" href="" target="_blank">Перейти к фотоотчету</a>
-                </div>
               </div>
+              <div class="reviews__mobile-wrapper">
+                <button class="button button--outline button--icon slick-prev reviews__prev"><span></span>
+                  <svg>
+                    <use xlink:href="./images/sprite.svg#chevron-right"></use>
+                  </svg>
+                </button>
+                <div class="reviews__pagination"></div>
+                <button class="button button--outline button--icon slick-next reviews__next"><span></span>
+                  <svg>
+                    <use xlink:href="./images/sprite.svg#chevron-right"></use>
+                  </svg>
+                </button>
+              </div><a class="reviews-card__report" href="" target="_blank">Перейти к фотоотчету</a>
             </div>
           </div>
           <button class="button button--outline button--icon slick-prev reviews__prev"><span></span>
@@ -1135,7 +1357,7 @@
           </button>
         </div>
         <div class="products__wrapper">
-          <div class="swiper-container __js_products-carousel">
+          <div class="swiper-container __js_products-carousel-2">
             <div class="swiper-wrapper">
               <div class="products__item product-preview swiper-slide">
                 <div class="product-preview__image"><img src="images/homepage/products/1.jpg" srcset="images/homepage/products/1@2x.jpg 2x" width="140" height="186" alt=""></div>
@@ -1183,22 +1405,30 @@
               </div>
             </div>
           </div>
-          <button class="button button--outline button--icon slick-prev products__prev"><span></span>
-            <svg>
-              <use xlink:href="./images/sprite.svg#chevron-right"></use>
-            </svg>
-          </button>
-          <button class="button button--outline button--icon slick-next products__next"><span></span>
-            <svg>
-              <use xlink:href="./images/sprite.svg#chevron-right"></use>
-            </svg>
-          </button>
+          <div class="products__nav">
+            <button class="button button--outline button--icon slick-prev products__prev"><span></span>
+              <svg>
+                <use xlink:href="./images/sprite.svg#chevron-right"></use>
+              </svg>
+            </button>
+            <div class="products__pagination"></div>
+            <button class="button button--outline button--icon slick-next products__next"><span></span>
+              <svg>
+                <use xlink:href="./images/sprite.svg#chevron-right"></use>
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
     </section>
-    <section class="info-block" style="background: url(&quot;images/homepage/banner-info.jpg&quot;)">
-      <div class="container">
-        <div class="info-block__image"></div>
+    <section class="info-block">
+      <div class="info-block__bg"><img src="images/homepage/banner-info.jpg" srcset="images/homepage/banner-info@2x.jpg 2x" width="1899" height="217" alt=""></div>
+      <div class="container info-block__container">
+        <div class="info-block__image">
+          <picture>
+            <source media="(max-width: 1079px)" srcset="images/homepage/cards-small.png 1x, images/homepage/cards-small@2x.png 2x"><img src="images/homepage/cards.png" srcset="images/homepage/cards@2x.png 2x" alt="">
+          </picture>
+        </div>
         <div class="info-block__content">
           <div class="info-block__title">Производим выпуск <br> и перевыпуск карт сертификации дайверов</div>
           <button class="button button--outline button--icon info-block__more"><span>Подробнее</span>
@@ -1209,7 +1439,122 @@
         </div>
       </div>
     </section>
+    <section class="articles">
+      <div class="container">
+        <h2 class="title--large articles__title title">Наши статьи</h2>
+        <div class="articles__wrapper">
+          <div class="articles__item articles-card">
+            <div class="articles-card__image"><img src="images/homepage/articles/1.jpg" srcset="images/homepage/articles/1.jpg 2x" width="397" height="246" alt=""></div>
+            <div class="articles-card__content">
+              <div class="articles-card__title">Что такое дейли дайвинг <br> или сафари. Его особенности</div>
+              <div class="articles-card__row">
+                <button class="button button--angle articles-card__more"><span>Подробнее</span>
+                  <svg>
+                    <use xlink:href="./images/sprite.svg#arrow-angle"></use>
+                  </svg>
+                </button>
+                <div class="articles-card__date">20 июля 2021</div>
+              </div>
+            </div>
+          </div>
+          <div class="articles__item articles-card">
+            <div class="articles-card__image"><img src="images/homepage/articles/2.jpg" srcset="images/homepage/articles/2.jpg 2x" width="397" height="246" alt=""></div>
+            <div class="articles-card__content">
+              <div class="articles-card__title">Сайдмаунт - плюсы и минусы. Сложности сборки</div>
+              <div class="articles-card__row">
+                <button class="button button--angle articles-card__more"><span>Подробнее</span>
+                  <svg>
+                    <use xlink:href="./images/sprite.svg#arrow-angle"></use>
+                  </svg>
+                </button>
+                <div class="articles-card__date">20 июля 2021</div>
+              </div>
+            </div>
+          </div>
+          <div class="articles__item articles-card">
+            <div class="articles-card__image"><img src="images/homepage/articles/3.jpg" srcset="images/homepage/articles/3.jpg 2x" width="397" height="246" alt=""></div>
+            <div class="articles-card__content">
+              <div class="articles-card__title">Лучшие места для дайвинга. <br> Наша подборка</div>
+              <div class="articles-card__row">
+                <button class="button button--angle articles-card__more"><span>Подробнее</span>
+                  <svg>
+                    <use xlink:href="./images/sprite.svg#arrow-angle"></use>
+                  </svg>
+                </button>
+                <div class="articles-card__date">20 июля 2021</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="button button--angle articles__more"><span>Все статьи</span>
+          <svg>
+            <use xlink:href="./images/sprite.svg#arrow-angle"></use>
+          </svg>
+        </button>
+      </div>
+    </section>
+    <div class="contact-section">
+      <div class="contact-section__container container">
+        <section class="contact-section__info">
+          <h2 class="title--small contact-section__title title">Наш клуб</h2>
+          <div class="contact-section__list">
+            <div class="contact-section__item contact-item">
+              <div class="contact-item__hint">Телефон</div>
+              <div class="contact-item__text"><a href="tel:89259999902">8 (925) 999-99-02</a></div>
+            </div>
+            <div class="contact-section__item contact-item">
+              <div class="contact-item__hint">Email</div>
+              <div class="contact-item__text"><a href="mailto:learn2dive-tdi-sdi@info.ru">learn2dive-tdi-sdi@info.ru</a></div>
+            </div>
+            <div class="contact-section__item contact-section__item--full contact-item">
+              <div class="contact-item__hint">Адрес</div>
+              <address class="contact-item__text">125284&nbsp;Москва, Беговой проезд, дом&nbsp;11</address>
+            </div>
+          </div>
+          <div class="contact-section__map"><img src="images/components/map.jpg" alt=""></div>
+        </section>
+        <section class="contact-section__main">
+          <h2 class="title--small contact-section__title title">Есть вопросы?</h2>
+          <div class="contact-section__text">Воспользуйтесь формой ниже, и мы поможем вам начать ваше путешествие</div>
+          <div class="contact-section__form sform">
+            <form action="#" method="post">
+              <label class="sform__field sform__field--half field"><span class="field__hint">Ваше Имя*</span>
+                <input type="text" name="name">
+              </label>
+              <label class="sform__field sform__field--half field"><span class="field__hint">Номер телефона*</span>
+                <input type="tel" name="phone">
+              </label>
+              <label class="sform__field field"><span class="field__hint">Email*</span>
+                <input type="email" name="email">
+              </label>
+              <label class="sform__field field"><span class="field__hint">Что вас интересует</span>
+                <textarea name="message"></textarea>
+              </label>
+              <div class="sform__bottom">
+                <button class="button sform__send" type="submit"><span>Отправить</span>
+                </button>
+                <div class="sform__bottom-text">Нажимая на кнопку «Отправить», вы соглашаетсь с <a href="#" target="_blank">условиями обработки персональных данных</a></div>
+              </div>
+            </form>
+          </div>
+        </section>
+      </div>
+    </div>
   </main>
-  <footer class="footer"></footer>
+  <!--footer.footer
+  .container
+  	.footer__wrapper
+  		.footer__col
+  			ul
+  				li
+  					a(href='#', target='_blank')
+  				li
+  				li
+  				li
+  				li
+  				li
+  				li
+  				li
+  -->
   <script src="js/main.min.js"></script>
 </html>

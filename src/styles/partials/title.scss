@@ -4,11 +4,21 @@
 	&--large {
 		font-size: 39px;
 		line-height: 48px;
+
+		@include max(md) {
+			font-size: 18px;
+			line-height: 22px;
+		}
 	}
 
 	&--medium {
 		font-size: 31px;
 		line-height: 38px;
+
+		@include max(md) {
+			font-size: 18px;
+			line-height: 22px;
+		}
 	}
 
 	&--small {

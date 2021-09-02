@@ -1,6 +1,10 @@
 .courses {
 	padding: 78px 0 70px;
 
+	@include max(md) {
+		padding: 50px 0;
+	}
+
 	/*padding: 50px 0;
 
 	&__breadcrumbs {
@@ -19,6 +23,11 @@
 		font-weight: 400;
 		text-align: center;
 		margin-bottom: 46px;
+
+		@include max(md) {
+			font-weight: 500;
+			margin-bottom: 28px;
+		}
 	}
 
 	&__wrapper {
@@ -29,13 +38,51 @@
 		font-size: 19px;
 		line-height: 29px;
 		font-weight: 500;
+		color: $gray-ph;
 		text-align: center;
 		margin-top: 32px;
+
+		@include max(md) {
+			font-size: 12px;
+			line-height: 15px;
+			margin-top: 25px;
+		}
+	}
+
+	&__mobile-wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		@include max(xl) {
+			margin-top: 15px;
+		}
+
+		@include max(xs) {
+			justify-content: space-between;
+		}
+
+		.courses__prev,
+		.courses__next {
+			display: none;
+
+			@include max(xl) {
+				display: block;
+			}
+		}
 	}
 
 	&__btn {
 		max-width: 250px;
+		padding: 14.5px 16px;
 		margin: 30px auto 0;
+		font-size: 19px;
+
+		@include max(xl) {
+			margin: 0 30px;
+			font-size: 15px;
+			padding: 11px 15px;
+		}
 	}
 
 	&__prev,
@@ -43,13 +90,29 @@
 		position: absolute;
 		top: 50%;
 		transform: translateY(-50%);
+
+		@include max(xl) {
+			display: none;
+			position: relative;
+			top: unset;
+			bottom: 0;
+			transform: none;
+		}
 	}
 
 	&__prev {
 		left: -60px;
+
+		@include max(xl) {
+			left: 0;
+		}
 	}
 
 	&__next {
 		right: -60px;
+
+		@include max(xl) {
+			right: 0;
+		}
 	}
 }

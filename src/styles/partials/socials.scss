@@ -1,11 +1,25 @@
 .socials {
+	@include max(md) {
+		display: flex;
+	}
+
 	&__item {
 		+ .socials__item {
 			margin-top: 18px;
+
+			@include max(md) {
+				margin-top: 0;
+				margin-left: 4px;
+			}
 		}
 
 		svg {
 			fill: $white;
+
+			@include max(md) {
+				width: 15px;
+				height: 15px;
+			}
 		}
 	}
 }
