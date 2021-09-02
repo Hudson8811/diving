@@ -19,21 +19,47 @@
 
     &-container {
       display: flex;
+
+      & > * {
+        align-self: flex-start;
+      }
+    }
+
+    &-image {
+      @include max(md) {
+        display: none;
+      }
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
     }
 
     &-main {
       width: 46.775%;
       margin-right: 50px;
+
+      @include max(md) {
+        width: 100%;
+        margin-right: 0;
+      }
     }
 
     &-action {
       display: flex;
+      flex-wrap: wrap;
+      margin-top: -12px;
       margin-bottom: 48px;
     }
 
     &-btn {
-      & + & {
-        margin-left: 20px;
+      margin-top: 12px;
+      margin-right: 20px;
+
+      &:last-child {
+        margin-right: 0;
       }
 
       &.button--outline {
@@ -43,14 +69,21 @@
 
     &-price {
       display: flex;
+      flex-wrap: wrap;
       margin-bottom: 34px;
+      margin-top: -8px;
 
       font-size: 39px;
       line-height: 1;
       font-weight: 500;
       color: $blue-09;
 
+      @include max(sm) {
+        font-size: 30px;
+      }
+
       & > * {
+        margin-top: 8px;
         align-self: center;
       }
 
@@ -60,6 +93,10 @@
         color: $lightBlue3;
         font-weight: 400;
         text-decoration: line-through;
+
+        @include max(sm) {
+          font-size: 22px;
+        }
       }
     }
 
@@ -84,6 +121,24 @@
     font-size: 14px;
     line-height: 1.857142857142857;
     color: $gray-ph;
+
+    @include max(md) {
+      padding-right: 0;
+    }
+
+    img {
+      @include max(md) {
+        max-width: 50%;
+        height: auto;
+      }
+
+      @include max(xs) {
+        max-width: none;
+        width: 100%;
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+      }
+    }
 
     .float-left {
       margin-right: 24px;
