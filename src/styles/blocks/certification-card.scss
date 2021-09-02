@@ -1,0 +1,66 @@
+.certification-card {
+  padding: 30px;
+  border: solid 1px $gray;
+  border-radius: 5px;
+
+  @include max(sm) {
+    padding: 20px;
+  }
+
+  & + & {
+    margin-top: 30px;
+  }
+
+  &__main {
+    font-size: 15px;
+    line-height: 1.6;
+    color: $gray-ph;
+
+    &::after {
+      content: "";
+      display: table;
+      width: 100%;
+      clear: both;
+    }
+
+    p + p {
+      margin-top: 20px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 25px;
+    color: $dark;
+  }
+
+  &__image {
+    &.float-right {
+      margin-left: 20px;
+      //margin-bottom: 20px;
+    }
+    &.float-left {
+      margin-right: 20px;
+      //margin-bottom: 20px;
+    }
+
+    @include max(sm) {
+      float: none !important;
+      margin: 0 auto 30px;
+    }
+  }
+
+  &__action {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 11px;
+  }
+
+  &__btn {
+    margin-top: 12px;
+    margin-right: 20px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
