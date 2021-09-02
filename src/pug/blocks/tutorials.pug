@@ -45,5 +45,7 @@ section.tutorials
 						.product-preview__bottom
 							+button('В корзину', 'product-preview__btn', 'cart', '#')
 							.product-preview__price 1200₽
-			+button('', 'button--outline button--icon slick-prev tutorials__prev', 'chevron-right')
-			+button('', 'button--outline button--icon slick-next tutorials__next', 'chevron-right')
+			.tutorials__nav
+				+button('', 'button--outline button--icon slick-prev tutorials__prev', 'chevron-right')
+				.tutorials__pagination
+				+button('', 'button--outline button--icon slick-next tutorials__next', 'chevron-right')

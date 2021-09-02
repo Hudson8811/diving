@@ -14,6 +14,11 @@ $(window).on('load', function() {
 					prevEl: '.reviews__prev',
 					nextEl: '.reviews__next'
 				},
+				pagination: {
+					el: '.reviews__pagination',
+					type: 'bullets',
+					clickable: true
+				}
 			});
 		}
 	}

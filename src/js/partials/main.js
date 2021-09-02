@@ -9,6 +9,14 @@ $(window).on('load', function() {
 		}
 	});
 
+	setTimeout(function () {
+		var dropdown = $('.recommend__wrapper .choices');
+
+		dropdown.change(function () {
+			$('.recommend__content-item').hide().eq($('.choices__item.is-selected').index()).fadeIn(300);
+		});
+	}, 100);
+
 	function initChoices(it) {
 		return new Choices(it, {
 			silent: false,

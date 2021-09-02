@@ -1,0 +1,28 @@
+.articles {
+	padding: 77px 0 63px;
+
+	&__title {
+		text-align: center;
+	}
+
+	&__wrapper {
+		display: flex;
+		margin: 25px -12px 0;
+	}
+
+	&__item {
+		width: calc(33.3333% - 24px);
+		margin: 0 12px;
+	}
+
+	&__more {
+		margin: 17px auto 0;
+		font-size: 18px;
+
+		svg {
+			width: 10px;
+			height: 10px;
+			margin-left: 7px;
+		}
+	}
+}

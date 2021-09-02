@@ -4,7 +4,7 @@ section.products
 			+title('Товары с клубной символикой', '', 'title--small products__title')
 			+button('Все товары', 'button--angle products__more', 'arrow-angle')
 		.products__wrapper
-			.swiper-container.__js_products-carousel
+			.swiper-container.__js_products-carousel-2
 				.swiper-wrapper
 					.products__item.product-preview.swiper-slide
 						.product-preview__image
@@ -42,5 +42,7 @@ section.products
 						.product-preview__bottom
 							+button('В корзину', 'product-preview__btn', 'cart', '#')
 							.product-preview__price 1 200₽
-			+button('', 'button--outline button--icon slick-prev products__prev', 'chevron-right')
-			+button('', 'button--outline button--icon slick-next products__next', 'chevron-right')
+			.products__nav
+				+button('', 'button--outline button--icon slick-prev products__prev', 'chevron-right')
+				.products__pagination
+				+button('', 'button--outline button--icon slick-next products__next', 'chevron-right')

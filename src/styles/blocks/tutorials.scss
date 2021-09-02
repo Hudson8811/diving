@@ -3,6 +3,10 @@
 	background-color: $gray-f3;
 	position: relative;
 
+	@include max(md) {
+		padding: 50px 0;
+	}
+
 	&__bg {
 		position: absolute;
 		bottom: 0;
@@ -15,7 +19,12 @@
 			position: absolute;
 			top: 0;
 			right: 0;
-			background: linear-gradient(269.92deg, #F3F5F6 0.07%, rgba(200, 209, 223, 0) 99.93%);
+			background: linear-gradient(270deg, #F3F5F6 0.07%, rgba(200, 209, 223, 0) 100%);
+
+			@include max(md) {
+				width: 100%;
+				background: linear-gradient(270deg, #F3F5F6 65%, rgba(200, 209, 223, 0) 100%);
+			}
 		}
 	}
 
@@ -27,6 +36,18 @@
 		display: flex;
 		align-items: flex-end;
 		justify-content: space-between;
+
+		@include max(md) {
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+
+	&__title {
+		@include max(md) {
+			text-align: center;
+		}
 	}
 
 	&__all {
@@ -34,6 +55,12 @@
 		font-weight: 500;
 		color: $blue;
 		transition: color 0.3s ease;
+
+		@include max(md) {
+			font-size: 16px;
+			line-height: 20px;
+			margin-top: 21px;
+		}
 
 		@include hover {
 			color: $blue-hover;
@@ -53,6 +80,10 @@
 
 	&__wrapper {
 		margin-top: 16px;
+
+		@include max(md) {
+			margin-top: 19px;
+		}
 	}
 
 	&__item {
@@ -66,10 +97,25 @@
 
 			&__title {
 				margin-top: 18px;
+
+				@include max(md) {
+					margin-top: 14px;
+				}
+			}
+
+			&__text {
+				@include max(md) {
+					margin-top: 9px;
+					margin-bottom: 11px;
+				}
 			}
 
 			&__bottom {
 				justify-content: flex-start;
+
+				@include max(md) {
+					justify-content: space-between;
+				}
 			}
 
 			&__price {
@@ -78,17 +124,73 @@
 		}
 	}
 
+	&__nav {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		@include max(xl) {
+			margin-top: 19px;
+		}
+
+		@include max(xs) {
+			justify-content: space-between;
+		}
+	}
+
+	&__pagination {
+		display: none;
+		justify-content: center;
+		position: relative;
+		z-index: 1;
+
+		@include max(xl) {
+			display: flex;
+			margin: 0 30px;
+		}
+
+		&.swiper-pagination-lock {
+			display: none;
+		}
+
+		.swiper-pagination-bullet {
+			display: block;
+			width: 20px;
+			height: 2px;
+			background-color: $lightBlue;
+			cursor: pointer;
+
+			&-active {
+				background-color: $blue;
+			}
+		}
+	}
+
 	&__prev,
 	&__next {
 		position: absolute;
 		top: 52%;
+
+		@include max(xl) {
+			position: relative;
+			top: unset;
+			bottom: 0;
+		}
 	}
 
 	&__prev {
 		left: -45px;
+
+		@include max(xl) {
+			left: 0;
+		}
 	}
 
 	&__next {
 		right: -45px;
+
+		@include max(xl) {
+			right: 0;
+		}
 	}
 }

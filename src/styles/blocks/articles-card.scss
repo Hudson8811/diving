@@ -1,0 +1,54 @@
+.articles-card {
+	border: 1px solid $gray;
+	border-radius: 5px;
+	overflow: hidden;
+
+	&__image {
+		position: relative;
+		width: 100%;
+		height: 0;
+		padding-top: 62%;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	}
+
+	&__content {
+		padding: 23px 20px;
+	}
+
+	&__title {
+		font-size: 19px;
+		line-height: 28px;
+		font-weight: 500;
+	}
+
+	&__row {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-top: 16px;
+	}
+
+	&__more {
+		padding-left: 0;
+
+		svg {
+			width: 8px;
+			height: 8px;
+			margin-left: 7px;
+		}
+	}
+
+	&__date {
+		font-size: 15px;
+		font-weight: 500;
+		color: $gray-a4;
+	}
+}

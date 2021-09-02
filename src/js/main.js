@@ -12,3 +12,4 @@
 //= ./partials/trip-carousel.js
 //= ./partials/reviews-carousel.js
 //= ./partials/products-carousel.js
+//= ./partials/stock-carousel.js
