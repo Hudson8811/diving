@@ -16,6 +16,10 @@
   &__breadcrumbs {
     margin-bottom: 50px;
 
+    @include max(sm) {
+      margin-bottom: 25px;
+    }
+
     &.no-margin {
       margin-bottom: 0;
     }
