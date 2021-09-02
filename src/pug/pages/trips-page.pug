@@ -10,28 +10,90 @@ block vars
       {text: page.title}
     ];
 
+    const trips = [
+      {
+        img: '1',
+        place: 'Египет',
+        title: 'Дейли-дайвинг на Красном море',
+        date: '02.09.2021 - 11.09.2021',
+        desc: 'Один из лучших и излюбленных дайверами маршрутов сафари.',
+        price: '97 000₽'
+      },
+      {
+        img: '2',
+        place: 'Мексика',
+        title: 'Полуостров Юкатан',
+        date: '30.10.2021 - 13.11.2021',
+        desc: 'Увлекательное путешествие по следам древних цивилизаций и погружения в невероятных сенотах',
+        price: '288 000₽'
+      },
+      {
+        img: '2',
+        place: 'Мексика',
+        title: 'Полуостров Юкатан',
+        date: '30.10.2021 - 13.11.2021',
+        desc: 'Увлекательное путешествие по следам древних цивилизаций и погружения в невероятных сенотах',
+        price: '288 000₽'
+      },
+      {
+        img: '1',
+        place: 'Египет',
+        title: 'Дейли-дайвинг на Красном море',
+        date: '02.09.2021 - 11.09.2021',
+        desc: 'Один из лучших и излюбленных дайверами маршрутов сафари.',
+        price: '97 000₽'
+      },
+      {
+        img: '1',
+        place: 'Египет',
+        title: 'Дейли-дайвинг на Красном море',
+        date: '02.09.2021 - 11.09.2021',
+        desc: 'Один из лучших и излюбленных дайверами маршрутов сафари.',
+        price: '97 000₽'
+      },
+      {
+        img: '2',
+        place: 'Мексика',
+        title: 'Полуостров Юкатан',
+        date: '30.10.2021 - 13.11.2021',
+        desc: 'Увлекательное путешествие по следам древних цивилизаций и погружения в невероятных сенотах',
+        price: '288 000₽'
+      },
+      {
+        img: '2',
+        place: 'Мексика',
+        title: 'Полуостров Юкатан',
+        date: '30.10.2021 - 13.11.2021',
+        desc: 'Увлекательное путешествие по следам древних цивилизаций и погружения в невероятных сенотах',
+        price: '288 000₽'
+      },
+      {
+        img: '1',
+        place: 'Египет',
+        title: 'Дейли-дайвинг на Красном море',
+        date: '02.09.2021 - 11.09.2021',
+        desc: 'Один из лучших и излюбленных дайверами маршрутов сафари.',
+        price: '97 000₽'
+      },
+    ];
+
 block main
-  article.trips-page
+  article.inner-page
+    header.inner-page__header
+      .container
+        +breadcrumbs(bc, 'inner-page__breadcrumbs')
+        +title(page.title, 'h1', 'title--medium inner-page__title')
+    
     .container
-      header.trips-page__header
-        +breadcrumbs(bc, 'trips-page__breadcrumbs')
-        +title(page.title, 'h1', 'title--medium trips-page__title')
-      
-      .trips-page__grid.trips-grid
-        .trips-grid__item.trip-card
-          .trip-card__bg
-            img(src="images/homepage/trip/1.jpg", srcset="images/homepage/trip/1@2x.jpg 2x", width="607", height="339", alt="")
-          .trip-card__content
-            .trip-card__place Египет
-            .trip-card__title Дейли-дайвинг на Красном море
-            .trip-card__date 02.09.2021 - 11.09.2021
-            .trip-card__desc Один из лучших и излюбленных дайверами маршрутов сафари.
-            .trip-card__price 97 000₽
-            +button('Подробнее', 'button--outline button--icon trip-card__more', 'chevron-right')
-        
-        
-        
-        //each item in courses
-          +course-preview(item)
-        //each item in courses
-          +course-preview(item)
+      .inner-page__grid.trips-grid
+        each item in trips
+          .trips-grid__item.trip-card
+            .trip-card__bg
+              img(src="images/homepage/trip/" + item.img + ".jpg", srcset="images/homepage/trip/" + item.img + "@2x.jpg 2x", width="607", height="339", alt="")
+            .trip-card__content
+              .trip-card__place= item.place
+              .trip-card__title= item.title
+              .trip-card__date= item.date
+              .trip-card__desc= item.desc
+              .trip-card__price= item.price
+              +button('Подробнее', 'button--outline button--icon trip-card__more', 'chevron-right', URLS.trip)
