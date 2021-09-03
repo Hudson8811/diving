@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link href="css/main.min.css" rel="stylesheet">
+    <title>Корзина</title>
+  </head>
+  <body>
+    <header class="header"></header>
+    <div class="main-menu"></div>
+  </body>
+  <main class="main">
+    <article class="inner-page">
+      <header class="inner-page__header">
+        <div class="container">
+          <div class="inner-page__breadcrumbs breadcrumbs"><a href="homepage.html">Главная</a><span>Корзина</span>
+          </div>
+          <div class="inner-page__header-row">
+            <h1 class="title--medium inner-page__title title">Оформление заказа</h1>
+          </div>
+        </div>
+      </header>
+      <div class="container"> 
+        <section class="cart-promo"> 
+          <div class="cart-promo__top">Есть купон? <a href="#">Нажмите, чтобы ввести</a></div>
+          <div class="cart-promo__bottom">
+            <div class="cart-promo__text">Если у вас есть код купона, укажите его ниже.</div>
+            <form action="#" method="post">
+              <label class="cart-promo__field field field--inline"><span class="field__hint">Промокод</span>
+                <input type="text" name="promocode">
+              </label>
+              <button class="button cart-promo__btn" type="submit"><span>Применить</span>
+              </button>
+            </form>
+          </div>
+        </section>
+        <div class="inner-page__flex-wrapper"> 
+          <section class="making-order-part">
+            <h2 class="title--small making-order-part__title title">Детали оплаты</h2>
+            <div class="making-order-part__form sform">
+              <form action="#" method="post">
+                <label class="sform__field sform__field--half field"><span class="field__hint">Ваше Имя*</span>
+                  <input type="text" name="name">
+                </label>
+                <label class="sform__field sform__field--half field"><span class="field__hint">Номер телефона*</span>
+                  <input type="tel" name="phone">
+                </label>
+                <label class="sform__field field"><span class="field__hint">Email*</span>
+                  <input type="email" name="email">
+                </label>
+                <label class="sform__field field"><span class="field__hint">Что вас интересует</span>
+                  <textarea name="message"></textarea>
+                </label>
+                <div class="custom-radio">
+                  <label class="custom-radio__item">
+                    <input class="visually-hidden" type="radio" name="delivery-type" value="1"><span class="custom-radio__text">Самовывоз</span>
+                  </label>
+                  <label class="custom-radio__item">
+                    <input class="visually-hidden" type="radio" name="delivery-type" value="2" checked><span class="custom-radio__text">Единая ставка</span>
+                  </label>
+                </div>
+              </form>
+            </div>
+          </section>
+          <section class="making-order-part">
+            <h2 class="title--small making-order-part__title title">Детали оплаты</h2>
+            <div class="cart-result">
+              <header class="cart-result__header"> 
+                <div class="cart-result__title">Товар</div>
+                <div class="cart-result__title">Стоимость</div>
+              </header>
+              <div class="cart-result__body">
+                <div class="cart-result__row">
+                  <div class="cart-result__hint">Стивен Барски Dry Suit х1</div>
+                  <div class="cart-result__val">999&nbsp;200₽</div>
+                </div>
+                <div class="cart-result__row">
+                  <div class="cart-result__hint">Скидка</div>
+                  <div class="cart-result__val">-200₽</div>
+                </div>
+              </div>
+              <footer class="cart-result__footer"> 
+                <div class="cart-result__row">
+                  <div class="cart-result__hint">Итого</div>
+                  <div class="cart-result__val"> 999&nbsp;200₽</div>
+                </div>
+                <div class="cart-result__action"><a class="cart-result__clear" href="#">Очистить</a><a class="button cart-result__send" href="#"><span>Подтвердить заказ</span></a>
+                </div>
+              </footer>
+            </div>
+          </section>
+        </div>
+      </div>
+    </article>
+  </main>
+  <!--footer.footer
+  .container
+  	.footer__wrapper
+  		.footer__col
+  			ul
+  				li
+  					a(href='#', target='_blank')
+  				li
+  				li
+  				li
+  				li
+  				li
+  				li
+  				li
+  -->
+  <script src="js/main.min.js"></script>
+</html>
