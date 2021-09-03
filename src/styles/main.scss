@@ -21,9 +21,11 @@
 @import "partials/breadcrumbs";
 @import "partials/socials";
 @import "partials/custom-checbox";
+@import "partials/custom-radio";
 @import "partials/choices"; //override lib styles
 @import "partials/field";
 @import "partials/share-btn";
+@import "partials/quantity";
 
 /* blocks */
 @import "blocks/components";
@@ -60,6 +62,8 @@
 @import "blocks/articles";
 @import "blocks/certification-card";
 @import "blocks/inner-hero";
+@import "blocks/cart-table";
+@import "blocks/cart-result";
 
 // Страницы
 @import "blocks/inner-page";

@@ -11,6 +11,28 @@
     @include max(sm) {
       padding-bottom: 30px;
     }
+
+    &-row {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &-clear-cart {
+      display: inline-block;
+      vertical-align: top;
+      margin-left: 30px;
+      font-size: 15px;
+      line-height: 1.2;
+      font-weight: 500;
+      color: $blue;
+      transition: color 0.3s ease;
+
+      align-self: center;
+
+      @include hover {
+        color: $blue-hover;
+      }
+    }
   }
 
   &__breadcrumbs {
@@ -26,6 +48,14 @@
   }
 
   &__title {
+    @include max(sm) {
+      width: 100%;
+
+      & + * {
+        margin-left: 0 !important;
+        margin-top: 16px;
+      }
+    }
   }
 
   &__filter {
@@ -158,5 +188,10 @@
       width: 100%;
       height: auto;
     }
+  }
+
+  &__cart-result {
+    margin-top: 30px;
+    margin-left: auto;
   }
 }
