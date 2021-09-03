@@ -175,12 +175,13 @@ block vars
     ];
 
 block main
-  article.catalog
+  article.inner-page
+    header.inner-page__header
+      .container
+        +breadcrumbs(bc, 'inner-page__breadcrumbs')
+        +title('Магазин', 'h1', 'title--medium inner-page__title')
+    
     .container
-      header.catalog__header
-        +breadcrumbs(bc, 'product-card__breadcrumbs')
-        +title('Магазин', 'h1', 'title--medium catalog__title')
-      
-      .catalog__list.products-grid
+      .products-grid
         each item in PRODUCTS
           +product-preview(item)

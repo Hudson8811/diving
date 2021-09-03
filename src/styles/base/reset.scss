@@ -61,7 +61,7 @@ img {
 
 /* Указываем понятную периодичность в потоке данных у article*/
 article > * + * {
-  margin-top: 1em;
+  //margin-top: 1em;
 }
 
 /* Наследуем шрифты для инпутов и кнопок */
@@ -97,4 +97,14 @@ html {
   -o-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
+}
+
+/**/
+::-webkit-textfield-decoration-container {
+}
+::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+::-webkit-outer-spin-button {
+  -webkit-appearance: none;
 }
