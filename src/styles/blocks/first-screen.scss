@@ -30,10 +30,11 @@
 		justify-content: space-between;
 		align-items: center;
 		height: 100vh;
-		padding: 208px 0 116px;
+		padding: 208px 170px 116px;
 
 		@include max(md) {
-			padding: 150px 35px 55px;
+			padding: 70px 35px;
+			justify-content: center;
 		}
 	}
 
@@ -80,6 +81,11 @@
 		left: 50%;
 		transform: translateX(-50%);
 		cursor: pointer;
+		transition: background-color 0.3s ease;
+
+		@include hover {
+			background-color: rgba($white, 0.85);
+		}
 
 		@include max(md) {
 			width: 40px;

@@ -72,7 +72,7 @@
 		position: relative;
 		z-index: 1;
 
-		@include max(lg) {
+		@include max(xl) {
 			display: flex;
 			margin: 0 30px;
 		}
