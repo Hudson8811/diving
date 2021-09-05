@@ -121,4 +121,17 @@ $(window).on('load', function() {
 			});
 		};
 	});
+
+	let switchLang = document.querySelector('.header__lang-swither');
+
+	switchLang.addEventListener('click', function (e) {
+		const items = document.querySelectorAll('.header__lang-swither span:not(.delimiter)'),
+					target = e.target;
+
+		items.forEach(function (el) {
+			el.classList.remove('active');
+		});
+
+		target.classList.add('active');
+	});
 });

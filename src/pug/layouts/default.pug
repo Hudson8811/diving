@@ -20,7 +20,9 @@ html(lang="ru")
 
 		title= `${page.title}`
 
-	body
+	- let modClass = headerModClass ? ' ' + headerModClass : '';
+
+	body(class=modClass)
 		block header
 			include ../partials/header
 			include ../partials/main-menu
