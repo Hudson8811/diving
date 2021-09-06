@@ -64,6 +64,10 @@
       border: none;
       background-color: $smoky;
     }
+
+    &--unbordered {
+      border: none;
+    }
   }
 
   &__title {
@@ -143,5 +147,17 @@
 
   &__scale {
     margin-bottom: 30px;
+  }
+
+  &__order-notice {
+    margin-top: -50px;
+    margin-bottom: 50px;
+    font-size: 18px;
+    line-height: 1.22;
+    color: $dark;
+  }
+
+  &__result {
+    margin-top: 35px;
   }
 }

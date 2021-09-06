@@ -78,6 +78,10 @@
     font-size: 15px;
     line-height: 1.2;
     color: $gray-ph;
+
+    b {
+      font-weight: 500;
+    }
   }
 
   &__val {
