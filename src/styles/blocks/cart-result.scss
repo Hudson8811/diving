@@ -10,6 +10,8 @@
   }
 
   &__header {
+    display: flex;
+    justify-content: space-between;
     padding: 36px 30px;
     border-bottom: solid 1px $gray;
 
@@ -41,10 +43,15 @@
   }
 
   &__title {
+    min-width: 150px;
     font-size: 15px;
     line-height: 1.2;
     font-weight: 700;
     color: $dark;
+
+    @include max(sm) {
+      min-width: 0;
+    }
   }
 
   &__row {

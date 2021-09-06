@@ -1,6 +1,21 @@
 .custom-radio {
   $self: &;
 
+  &--inline {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -16px;
+
+    #{$self}__item {
+      margin-top: 16px;
+      margin-right: 20px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
   &__item {
     display: block;
     cursor: pointer;
