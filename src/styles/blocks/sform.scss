@@ -58,4 +58,86 @@
       align-self: center;
     }
   }
+
+  &__part {
+    width: 100%;
+
+    & + & {
+      @include max(sm) {
+        margin-top: 35px;
+      }
+    }
+
+    &--small {
+      max-width: 46.20967741935484%;
+
+      @include max(sm) {
+        max-width: none;
+      }
+    }
+
+    &--large {
+      max-width: 51.85483870967742%;
+
+      @include max(sm) {
+        max-width: none;
+      }
+    }
+
+    &-title {
+      margin-bottom: 25px;
+      color: $dark;
+    }
+
+    & > * {
+      max-width: none !important;
+      width: 100%;
+    }
+  }
+
+  &__bg-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 35px;
+    padding: 35px;
+    padding-top: 17px;
+    border-radius: 5px 5px 0 0;
+    background-color: $smoky;
+
+    @include max(xs) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+
+  &__fieldset {
+    width: 100%;
+    margin-top: 24px;
+
+    padding: 0;
+    border: none;
+
+    &--bg {
+      padding: 30px;
+      border: solid 1px $gray;
+      background-color: $white;
+    }
+
+    &-notice {
+      margin-top: 15px;
+      font-size: 15px;
+      line-height: 1.2;
+      color: $gray-ph;
+    }
+  }
+
+  &__legend {
+    margin-bottom: 12px;
+    padding: 0;
+  }
+
+  .custom-checbox {
+    font-weight: 500;
+  }
 }

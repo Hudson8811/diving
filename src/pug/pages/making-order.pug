@@ -19,63 +19,112 @@ block main
         .inner-page__header-row
           +title('Оформление заказа', 'h1', 'title--medium inner-page__title')
     .container 
-      section.cart-promo 
+      section.inner-page__cart-promo.cart-promo 
         .cart-promo__top Есть купон? <a href="#">Нажмите, чтобы ввести</a>
         .cart-promo__bottom
           .cart-promo__text Если у вас есть код купона, укажите его ниже.
           form(action="#", method="post")
-            label.cart-promo__field.field.field--inline
+            label.cart-promo__field.field
               span.field__hint Промокод
               input(type="text", name="promocode")
             +button('Применить', 'cart-promo__btn')(type="submit")
       
-      .inner-page__flex-wrapper 
-        section.making-order-part
-          +title('Детали оплаты', 'h2', 'title--small making-order-part__title')
-          .making-order-part__form.sform
-            form(action="#", method="post")
+      .inner-page__order-form.sform
+        form(action="#", method="post")
+          .sform__part.sform__part--small
+            +title('Детали оплаты', 'div', 'title--small sform__part-title')
+            .sform__bg-wrapper
               //- .field--valid .field--error
               label.sform__field.sform__field--half.field
                 span.field__hint Ваше Имя*
-                input(type="text", name="name")
+                input(type="text", name="name", required)
+              label.sform__field.sform__field--half.field
+                span.field__hint Ваше Фамилия*
+                input(type="text", name="surname", required)
+
+              label.sform__field.field.field--select
+                span.field__hint Страна/регион*
+                select.__js_custom-select(name="country")
+                  option(value="Russia") Россия
+                  option(value="Ukraine") Украина
+                  option(value="Kazahstan") Казахстан
+
+              label.sform__field.field
+                span.field__hint Адрес*
+                input(type="text", name="address", required)
+
+              label.sform__field.field
+                span.field__hint Населенный пункт*
+                input(type="text", name="city", required)
+
+              label.sform__field.field
+                span.field__hint Область/район*
+                input(type="text", name="region", required)
+              
+              label.sform__field.sform__field--half.field
+                span.field__hint Почтовый индекс*
+                input(type="text", name="postzip", required)
+
               label.sform__field.sform__field--half.field
                 span.field__hint Номер телефона*
                 input(type="tel", name="phone")
+              
               label.sform__field.field
                 span.field__hint Email*
                 input(type="email", name="email")
-              label.sform__field.field
-                span.field__hint Что вас интересует
-                textarea(name="message")
-              .custom-radio
-                label.custom-radio__item
-                  input.visually-hidden(type="radio", name="delivery-type", value="1")
-                  span.custom-radio__text Самовывоз
-                label.custom-radio__item
-                  input.visually-hidden(type="radio", name="delivery-type", value="2", checked)
-                  span.custom-radio__text Единая ставка
-              
-        section.making-order-part
-          +title('Детали оплаты', 'h2', 'title--small making-order-part__title')
 
-          .cart-result
-            header.cart-result__header 
-              .cart-result__title Товар
-              .cart-result__title Стоимость
-            .cart-result__body
-              .cart-result__row
-                .cart-result__hint Стивен Барски Dry Suit х1
-                .cart-result__val 999&nbsp;200₽
-              .cart-result__row
-                .cart-result__hint Скидка
-                .cart-result__val -200₽
-                  
-            footer.cart-result__footer 
-              .cart-result__row
-                .cart-result__hint Итого
-                .cart-result__val  999&nbsp;200₽
-              .cart-result__action
-                a.cart-result__clear(href="#") Очистить
-                +button('Подтвердить заказ', 'cart-result__send', '', '#')
+
+              .sform__fieldset
+                .sform__legend Доставка
+              
+                .custom-radio.custom-radio--inline
+                  label.custom-radio__item
+                    input.visually-hidden(type="radio", name="delivery-type", value="1")
+                    span.custom-radio__text Самовывоз
+                  label.custom-radio__item
+                    input.visually-hidden(type="radio", name="delivery-type", value="2", checked)
+                    span.custom-radio__text Единая ставка
+              
+              .sform__fieldset.sform__fieldset--bg
+                .sform__legend Способ оплаты
+              
+                .custom-radio
+                  label.custom-radio__item
+                    input.visually-hidden(type="radio", name="payment-method", value="1")
+                    span.custom-radio__text  Прямой банковский перевод
+                  label.custom-radio__item
+                    input.visually-hidden(type="radio", name="payment-method", value="2", checked)
+                    span.custom-radio__text Оплата при доставке
+              
+                .sform__fieldset-notice Оплата наличными при доставке заказа.
+            .custom-checbox
+              input.visually-hidden#diliveryAddress(type="checkbox")
+              label(for="diliveryAddress") Доставка по другому адресу?
+            label.sform__field.field
+              span.field__hint Примечание к заказу (необязательно)
+              textarea(name="message")
+            
+          .sform__part.sform__part--large
+            +title('Детали оплаты', 'div', 'title--small sform__part-title')
+
+            .cart-result
+              .cart-result__header 
+                .cart-result__title Товар
+                .cart-result__title Стоимость
+              .cart-result__body
+                .cart-result__row
+                  .cart-result__hint Стивен Барски Dry Suit х1
+                  .cart-result__val 999&nbsp;200₽
+                .cart-result__row
+                  .cart-result__hint Скидка
+                  .cart-result__val -200₽
+                    
+              .cart-result__footer 
+                .cart-result__row
+                  .cart-result__hint Итого
+                  .cart-result__val  999&nbsp;200₽
+                .cart-result__action
+                  a.cart-result__clear(href="#") Очистить
+                  +button('Подтвердить заказ', 'cart-result__send')(type="submit")
 
 

@@ -117,12 +117,12 @@
         </div>
       </header>
       <div class="container"> 
-        <section class="cart-promo"> 
+        <section class="inner-page__cart-promo cart-promo"> 
           <div class="cart-promo__top">Есть купон? <a href="#">Нажмите, чтобы ввести</a></div>
           <div class="cart-promo__bottom">
             <div class="cart-promo__text">Если у вас есть код купона, укажите его ниже.</div>
             <form action="#" method="post">
-              <label class="cart-promo__field field field--inline"><span class="field__hint">Промокод</span>
+              <label class="cart-promo__field field"><span class="field__hint">Промокод</span>
                 <input type="text" name="promocode">
               </label>
               <button class="button cart-promo__btn" type="submit"><span>Применить</span>
@@ -130,13 +130,35 @@
             </form>
           </div>
         </section>
-        <div class="inner-page__flex-wrapper"> 
-          <section class="making-order-part">
-            <h2 class="title--small making-order-part__title title">Детали оплаты</h2>
-            <div class="making-order-part__form sform">
-              <form action="#" method="post">
+        <div class="inner-page__order-form sform">
+          <form action="#" method="post">
+            <div class="sform__part sform__part--small">
+              <div class="title--small sform__part-title title">Детали оплаты</div>
+              <div class="sform__bg-wrapper">
                 <label class="sform__field sform__field--half field"><span class="field__hint">Ваше Имя*</span>
-                  <input type="text" name="name">
+                  <input type="text" name="name" required>
+                </label>
+                <label class="sform__field sform__field--half field"><span class="field__hint">Ваше Фамилия*</span>
+                  <input type="text" name="surname" required>
+                </label>
+                <label class="sform__field field field--select"><span class="field__hint">Страна/регион*</span>
+                  <select class="__js_custom-select" name="country">
+                    <option value="Russia">Россия</option>
+                    <option value="Ukraine">Украина</option>
+                    <option value="Kazahstan">Казахстан</option>
+                  </select>
+                </label>
+                <label class="sform__field field"><span class="field__hint">Адрес*</span>
+                  <input type="text" name="address" required>
+                </label>
+                <label class="sform__field field"><span class="field__hint">Населенный пункт*</span>
+                  <input type="text" name="city" required>
+                </label>
+                <label class="sform__field field"><span class="field__hint">Область/район*</span>
+                  <input type="text" name="region" required>
+                </label>
+                <label class="sform__field sform__field--half field"><span class="field__hint">Почтовый индекс*</span>
+                  <input type="text" name="postzip" required>
                 </label>
                 <label class="sform__field sform__field--half field"><span class="field__hint">Номер телефона*</span>
                   <input type="tel" name="phone">
@@ -144,47 +166,68 @@
                 <label class="sform__field field"><span class="field__hint">Email*</span>
                   <input type="email" name="email">
                 </label>
-                <label class="sform__field field"><span class="field__hint">Что вас интересует</span>
-                  <textarea name="message"></textarea>
-                </label>
-                <div class="custom-radio">
-                  <label class="custom-radio__item">
-                    <input class="visually-hidden" type="radio" name="delivery-type" value="1"><span class="custom-radio__text">Самовывоз</span>
-                  </label>
-                  <label class="custom-radio__item">
-                    <input class="visually-hidden" type="radio" name="delivery-type" value="2" checked><span class="custom-radio__text">Единая ставка</span>
-                  </label>
+                <div class="sform__fieldset">
+                  <div class="sform__legend">Доставка</div>
+                  <div class="custom-radio custom-radio--inline">
+                    <label class="custom-radio__item">
+                      <input class="visually-hidden" type="radio" name="delivery-type" value="1"><span class="custom-radio__text">Самовывоз</span>
+                    </label>
+                    <label class="custom-radio__item">
+                      <input class="visually-hidden" type="radio" name="delivery-type" value="2" checked><span class="custom-radio__text">Единая ставка</span>
+                    </label>
+                  </div>
                 </div>
-              </form>
-            </div>
-          </section>
-          <section class="making-order-part">
-            <h2 class="title--small making-order-part__title title">Детали оплаты</h2>
-            <div class="cart-result">
-              <header class="cart-result__header"> 
-                <div class="cart-result__title">Товар</div>
-                <div class="cart-result__title">Стоимость</div>
-              </header>
-              <div class="cart-result__body">
-                <div class="cart-result__row">
-                  <div class="cart-result__hint">Стивен Барски Dry Suit х1</div>
-                  <div class="cart-result__val">999&nbsp;200₽</div>
-                </div>
-                <div class="cart-result__row">
-                  <div class="cart-result__hint">Скидка</div>
-                  <div class="cart-result__val">-200₽</div>
+                <div class="sform__fieldset sform__fieldset--bg">
+                  <div class="sform__legend">Способ оплаты</div>
+                  <div class="custom-radio">
+                    <label class="custom-radio__item">
+                      <input class="visually-hidden" type="radio" name="payment-method" value="1"><span class="custom-radio__text"> Прямой банковский перевод</span>
+                    </label>
+                    <label class="custom-radio__item">
+                      <input class="visually-hidden" type="radio" name="payment-method" value="2" checked><span class="custom-radio__text">Оплата при доставке</span>
+                    </label>
+                  </div>
+                  <div class="sform__fieldset-notice">Оплата наличными при доставке заказа.</div>
                 </div>
               </div>
-              <footer class="cart-result__footer"> 
-                <div class="cart-result__row">
-                  <div class="cart-result__hint">Итого</div>
-                  <div class="cart-result__val"> 999&nbsp;200₽</div>
-                </div>
-                <div class="cart-result__action"><a class="cart-result__clear" href="#">Очистить</a><a class="button cart-result__send" href="#"><span>Подтвердить заказ</span></a>
-                </div>
-              </footer>
+              <div class="custom-checbox">
+                <input class="visually-hidden" id="diliveryAddress" type="checkbox">
+                <label for="diliveryAddress">Доставка по другому адресу?</label>
+              </div>
+              <label class="sform__field field"><span class="field__hint">Примечание к заказу (необязательно)</span>
+                <textarea name="message"></textarea>
+              </label>
             </div>
-          </section>
+            <div class="sform__part sform__part--large">
+              <div class="title--small sform__part-title title">Детали оплаты</div>
+              <div class="cart-result">
+                <div class="cart-result__header"> 
+                  <div class="cart-result__title">Товар</div>
+                  <div class="cart-result__title">Стоимость</div>
+                </div>
+                <div class="cart-result__body">
+                  <div class="cart-result__row">
+                    <div class="cart-result__hint">Стивен Барски Dry Suit х1</div>
+                    <div class="cart-result__val">999&nbsp;200₽</div>
+                  </div>
+                  <div class="cart-result__row">
+                    <div class="cart-result__hint">Скидка</div>
+                    <div class="cart-result__val">-200₽</div>
+                  </div>
+                </div>
+                <div class="cart-result__footer"> 
+                  <div class="cart-result__row">
+                    <div class="cart-result__hint">Итого</div>
+                    <div class="cart-result__val"> 999&nbsp;200₽</div>
+                  </div>
+                  <div class="cart-result__action"><a class="cart-result__clear" href="#">Очистить</a>
+                    <button class="button cart-result__send" type="submit"><span>Подтвердить заказ</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
     </article>
