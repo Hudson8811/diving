@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <link href="css/main.min.css" rel="stylesheet">
-    <title>Корзина</title>
+    <title>Личный кабинет</title>
   </head>
   <body>
     <header class="header">
@@ -109,168 +109,29 @@
     <article class="inner-page">
       <header class="inner-page__header">
         <div class="container">
-          <div class="inner-page__breadcrumbs breadcrumbs"><a href="homepage.html">Главная</a><span>Корзина</span>
+          <div class="inner-page__breadcrumbs breadcrumbs"><a href="homepage.html">Главная</a><span>Личный кабинет</span>
           </div>
-          <div class="inner-page__header-row">
-            <h1 class="title--medium inner-page__title title">Корзина (3)</h1><a class="inner-page__header-clear-cart" href="#">Очистить корзину</a>
-          </div>
+          <h1 class="title--medium inner-page__title title">Александр Александрович Неалександров</h1>
         </div>
       </header>
-      <div class="container"> 
-        <section class="cart-table">
-          <div class="cart-table__head"> 
-            <div class="cart-table__row">
-              <div class="cart-table__cell cart-table__cell--th cart-table__cell--product">Товар</div>
-              <div class="cart-table__cell cart-table__cell--th cart-table__cell--price">Цена</div>
-              <div class="cart-table__cell cart-table__cell--th cart-table__cell--quantity">Количество</div>
-              <div class="cart-table__cell cart-table__cell--th cart-table__cell--amount">Стоимость</div>
-            </div>
+      <div class="cabinet">
+        <section class="cabinet__container container">
+          <div class="cabinet__main cabinet__main--simple">
+            <div class="cabinet__accept-message">Спасибо. Ваш заказ был принят.</div>
+            <h2 class="title--small cabinet__title title">Ваш заказ</h2>
+            <ul class="cabinet__order-info">
+              <li>
+                 Номер заказа:<span>1</span></li>
+              <li>
+                 Дата:<span>16.08.2021</span></li>
+              <li>
+                 Оплата:<span>При доставке</span></li>
+              <li>
+                 Email:<span>12345@mail.com</span></li>
+              <li>
+                 Итог:<span>999 000₽</span></li>
+            </ul>
           </div>
-          <div class="cart-table__body">
-            <div class="cart-table__row">
-              <div class="cart-table__cell cart-table__cell--image"><img src="images/cart/1.jpg" srcset="images/cart/1@2x.jpg" width="116" height="154" alt="Фото Стивен Барски Dry Suit"></div>
-              <div class="cart-table__cell cart-table__cell--product">
-                <div class="cart-table__product">Стивен Барски Dry Suit</div>
-                <div class="cart-table__article">01234567890abc</div>
-              </div>
-              <div class="cart-table__cell cart-table__cell--price">
-                <div class="cart-table__cell-title">Цена</div><span>1 200₽</span>
-              </div>
-              <div class="cart-table__cell cart-table__cell--quantity">
-                <div class="quantity">
-                  <button class="quantity__btn" type="button" data-action="minus" aria-label="Уменьшить количество товара - Стивен Барски Dry Suit">
-                    <svg width="7" height="3">
-                      <use xlink:href="./images/sprite.svg#minus"></use>
-                    </svg>
-                  </button>
-                  <input class="quantity__input" type="number" name="quantity" value="2">
-                  <button class="quantity__btn" type="button" data-action="plus" aria-label="Увеличить количество товара - Стивен Барски Dry Suit">
-                    <svg width="12" height="11">
-                      <use xlink:href="./images/sprite.svg#plus"></use>
-                    </svg>
-                  </button>
-                </div>
-              </div>
-              <div class="cart-table__cell cart-table__cell--amount">
-                <div class="cart-table__cell-title">Стоимость</div><span>2 400₽</span>
-              </div>
-              <div class="cart-table__cell cart-table__cell--remove"> 
-                <button class="cart-table__remove" type="button" aria-label="Удалить товар из корзины"><span class="cart-table__remove-icon"> 
-                    <svg width="15" height="15">
-                      <use xlink:href="./images/sprite.svg#remove"></use>
-                    </svg></span><span class="cart-table__remove-text">Удалить</span></button>
-              </div>
-            </div>
-            <div class="cart-table__row">
-              <div class="cart-table__cell cart-table__cell--image"><img src="images/cart/2.jpg" srcset="images/cart/2@2x.jpg" width="100" height="143" alt="Фото SDI OWD"></div>
-              <div class="cart-table__cell cart-table__cell--product">
-                <div class="cart-table__product">SDI OWD</div>
-                <div class="cart-table__article">01234567890abc</div>
-              </div>
-              <div class="cart-table__cell cart-table__cell--price">
-                <div class="cart-table__cell-title">Цена</div><span>1 222 200₽</span>
-              </div>
-              <div class="cart-table__cell cart-table__cell--quantity">
-                <div class="quantity">
-                  <button class="quantity__btn" type="button" data-action="minus" aria-label="Уменьшить количество товара - SDI OWD">
-                    <svg width="7" height="3">
-                      <use xlink:href="./images/sprite.svg#minus"></use>
-                    </svg>
-                  </button>
-                  <input class="quantity__input" type="number" name="quantity" value="1">
-                  <button class="quantity__btn" type="button" data-action="plus" aria-label="Увеличить количество товара - SDI OWD">
-                    <svg width="12" height="11">
-                      <use xlink:href="./images/sprite.svg#plus"></use>
-                    </svg>
-                  </button>
-                </div>
-              </div>
-              <div class="cart-table__cell cart-table__cell--amount">
-                <div class="cart-table__cell-title">Стоимость</div><span>1 222 200₽</span>
-              </div>
-              <div class="cart-table__cell cart-table__cell--remove"> 
-                <button class="cart-table__remove" type="button" aria-label="Удалить товар из корзины"><span class="cart-table__remove-icon"> 
-                    <svg width="15" height="15">
-                      <use xlink:href="./images/sprite.svg#remove"></use>
-                    </svg></span><span class="cart-table__remove-text">Удалить</span></button>
-              </div>
-            </div>
-            <div class="cart-table__row">
-              <div class="cart-table__cell cart-table__cell--image"><img src="images/cart/3.jpg" srcset="images/cart/3@2x.jpg" width="104" height="179" alt="Фото Кислородный баллон &lt;br&gt;TANK BACK PACK"></div>
-              <div class="cart-table__cell cart-table__cell--product">
-                <div class="cart-table__product">Кислородный баллон <br>TANK BACK PACK</div>
-                <div class="cart-table__article">01234567890abc</div>
-              </div>
-              <div class="cart-table__cell cart-table__cell--price">
-                <div class="cart-table__cell-title">Цена</div><span>754 200₽</span>
-              </div>
-              <div class="cart-table__cell cart-table__cell--quantity">
-                <div class="quantity">
-                  <button class="quantity__btn" type="button" data-action="minus" aria-label="Уменьшить количество товара - Кислородный баллон &lt;br&gt;TANK BACK PACK">
-                    <svg width="7" height="3">
-                      <use xlink:href="./images/sprite.svg#minus"></use>
-                    </svg>
-                  </button>
-                  <input class="quantity__input" type="number" name="quantity" value="1">
-                  <button class="quantity__btn" type="button" data-action="plus" aria-label="Увеличить количество товара - Кислородный баллон &lt;br&gt;TANK BACK PACK">
-                    <svg width="12" height="11">
-                      <use xlink:href="./images/sprite.svg#plus"></use>
-                    </svg>
-                  </button>
-                </div>
-              </div>
-              <div class="cart-table__cell cart-table__cell--amount">
-                <div class="cart-table__cell-title">Стоимость</div><span>754 200₽</span>
-              </div>
-              <div class="cart-table__cell cart-table__cell--remove"> 
-                <button class="cart-table__remove" type="button" aria-label="Удалить товар из корзины"><span class="cart-table__remove-icon"> 
-                    <svg width="15" height="15">
-                      <use xlink:href="./images/sprite.svg#remove"></use>
-                    </svg></span><span class="cart-table__remove-text">Удалить</span></button>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="inner-page__cart-result cart-result">
-          <header class="cart-result__header"> 
-            <h2 class="cart-result__title">Итого</h2>
-          </header>
-          <div class="cart-result__body">
-            <div class="cart-result__row">
-              <div class="cart-result__hint">Предварительная стоимость:</div>
-              <div class="cart-result__val">999&nbsp;200₽</div>
-            </div>
-            <div class="cart-result__row">
-              <div class="cart-result__hint">Доставка:</div>
-              <div class="cart-result__val">
-                <div class="custom-radio">
-                  <label class="custom-radio__item">
-                    <input class="visually-hidden" type="radio" name="delivery-type" value="1"><span class="custom-radio__text">Самовывоз</span>
-                  </label>
-                  <label class="custom-radio__item">
-                    <input class="visually-hidden" type="radio" name="delivery-type" value="2" checked><span class="custom-radio__text">Единая ставка</span>
-                  </label>
-                </div>
-              </div>
-            </div>
-            <div class="cart-result__row cart-result__row--address">
-              <div class="cart-result__hint">Адрес доставки:</div>
-              <address class="cart-result__val">Ленина, д.137А, кв.&nbsp;2245, г. Москва, Московская обл, 000000.</address>
-            </div>
-            <div class="cart-result__row">
-              <div class="cart-result__val"><a href="profile.html">Изменить адрес</a></div>
-            </div>
-          </div>
-          <footer class="cart-result__footer"> 
-            <div class="cart-result__row">
-              <div class="cart-result__hint">Итого</div>
-              <div class="cart-result__val"> 999&nbsp;200₽</div>
-            </div>
-            <div class="cart-result__action"><a class="cart-result__clear" href="#">Очистить</a>
-              <button class="button cart-result__send"><span>Оформить заказ</span>
-              </button>
-            </div>
-          </footer>
         </section>
       </div>
     </article>
