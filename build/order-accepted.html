@@ -116,55 +116,21 @@
       </header>
       <div class="cabinet">
         <section class="cabinet__container container">
-          <ul class="cabinet__nav">
-            <li class="cabinet__nav-item"><a class="cabinet__nav-link" href="profile.html"><span class="cabinet__nav-icon">
-                  <svg width="20" height="20">
-                    <use xlink:href="./images/sprite.svg#profile"></use>
-                  </svg></span>Данные профиля</a></li>
-            <li class="cabinet__nav-item cabinet__nav-item--current"><a class="cabinet__nav-link"><span class="cabinet__nav-icon">
-                  <svg width="13" height="20">
-                    <use xlink:href="./images/sprite.svg#sand-clock"></use>
-                  </svg></span>История заказов</a></li>
-            <li class="cabinet__nav-item"><a class="cabinet__nav-link" href="#"><span class="cabinet__nav-icon">
-                  <svg width="20" height="20">
-                    <use xlink:href="./images/sprite.svg#coupon"></use>
-                  </svg></span>Накопительная скидка</a></li>
-            <li class="cabinet__nav-item"><a class="cabinet__nav-link" href="#"><span class="cabinet__nav-icon">
-                  <svg width="20" height="20">
-                    <use xlink:href="./images/sprite.svg#logout"></use>
-                  </svg></span>Выйти</a></li>
-          </ul>
-          <div class="cabinet__main cabinet__main--unbordered">
-            <div class="cabinet__order-notice">Заказ №1 был оформлен 12.08.2021 и сейчас находится в обработке</div>
+          <div class="cabinet__main cabinet__main--simple">
+            <div class="cabinet__accept-message">Спасибо. Ваш заказ был принят.</div>
             <h2 class="title--small cabinet__title title">Ваш заказ</h2>
-            <div class="cabinet__result cart-result">
-              <div class="cart-result__body">
-                <div class="cart-result__row">
-                  <div class="cart-result__hint"><b>Стивен Барски Dry Suit х1</b></div>
-                  <div class="cart-result__val">999&nbsp;200₽</div>
-                </div>
-                <div class="cart-result__row">
-                  <div class="cart-result__hint">Стоимость</div>
-                  <div class="cart-result__val">999&nbsp;200₽</div>
-                </div>
-                <div class="cart-result__row">
-                  <div class="cart-result__hint">Доставка</div>
-                  <div class="cart-result__val">Самовывоз</div>
-                </div>
-                <div class="cart-result__row">
-                  <div class="cart-result__hint">Оплата</div>
-                  <div class="cart-result__val">При доставке</div>
-                </div>
-              </div>
-              <div class="cart-result__footer"> 
-                <div class="cart-result__row">
-                  <div class="cart-result__hint">Итого</div>
-                  <div class="cart-result__val"> 999&nbsp;000₽</div>
-                </div>
-                <div class="cart-result__action"><a class="cart-result__clear" href="#">Очистить</a><a class="button cart-result__send" href="order-accepted.html"><span>Подтвердить заказ</span></a>
-                </div>
-              </div>
-            </div>
+            <ul class="cabinet__order-info">
+              <li>
+                 Номер заказа:<span>1</span></li>
+              <li>
+                 Дата:<span>16.08.2021</span></li>
+              <li>
+                 Оплата:<span>При доставке</span></li>
+              <li>
+                 Email:<span>12345@mail.com</span></li>
+              <li>
+                 Итог:<span>999 000₽</span></li>
+            </ul>
           </div>
         </section>
       </div>

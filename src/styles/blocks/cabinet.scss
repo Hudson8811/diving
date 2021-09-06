@@ -1,6 +1,8 @@
 .cabinet {
   $self: &;
 
+  min-height: 400px;
+
   &__container {
     display: flex;
   }
@@ -66,6 +68,11 @@
     }
 
     &--unbordered {
+      border: none;
+    }
+
+    &--simple {
+      padding: 0;
       border: none;
     }
   }
@@ -159,5 +166,44 @@
 
   &__result {
     margin-top: 35px;
+  }
+
+  &__accept-message {
+    margin-bottom: 30px;
+    font-size: 18px;
+    line-height: 1.22;
+    color: $dark;
+  }
+
+  &__order-info {
+    margin-top: 35px !important;
+
+    li {
+      font-size: 15px;
+      line-height: 1.22;
+      color: $gray-ph;
+
+      &::before {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        width: 10px;
+        height: 10px;
+        margin-right: 5px;
+        border-radius: 50%;
+        background-color: $blue;
+      }
+
+      span {
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 15px;
+        color: $dark;
+      }
+    }
+
+    li + li {
+      margin-top: 6px;
+    }
   }
 }
