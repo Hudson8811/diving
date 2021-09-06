@@ -107,4 +107,31 @@ $(window).on('load', function() {
 	}
 
 	window.initChoices = initChoices;
+
+	document.querySelectorAll('.anchor').forEach(function(el) {
+		el.onclick = function(e) {
+			e.preventDefault();
+			let hash = this.getAttribute('href');
+			let target = document.querySelector(hash);
+			let elementPosition = target.offsetTop;
+
+			window.scrollTo({
+				top: elementPosition,
+				behavior: "smooth"
+			});
+		};
+	});
+
+	let switchLang = document.querySelector('.header__lang-swither');
+
+	switchLang.addEventListener('click', function (e) {
+		const items = document.querySelectorAll('.header__lang-swither span:not(.delimiter)'),
+					target = e.target;
+
+		items.forEach(function (el) {
+			el.classList.remove('active');
+		});
+
+		target.classList.add('active');
+	});
 });

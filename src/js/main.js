@@ -13,3 +13,5 @@
 //= ./partials/reviews-carousel.js
 //= ./partials/products-carousel.js
 //= ./partials/stock-carousel.js
+//= ./partials/footer-accordion.js
+//= ./partials/articles-carousel.js
