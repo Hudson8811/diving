@@ -121,4 +121,27 @@
       margin-left: 30px;
     }
   }
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+  }
+
+  &__infotext {
+    margin-bottom: 30px;
+    margin-right: 20px;
+    font-size: 18px;
+    line-height: 1.22;
+    color: $gray-ph;
+
+    b {
+      color: $dark;
+      font-weight: 500;
+    }
+  }
+
+  &__scale {
+    margin-bottom: 30px;
+  }
 }
