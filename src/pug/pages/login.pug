@@ -1,0 +1,20 @@
+extends ../layouts/default
+
+block vars
+  -
+    const page = {
+      title: 'Личный кабинет'
+    };
+
+    const bc = [
+      {text: page.title}
+    ];
+
+
+
+block main
+  article.inner-page
+    header.inner-page__header
+      .container
+        +breadcrumbs(bc, 'inner-page__breadcrumbs')
+        +title('Александр Александрович Неалександров', 'h1', 'title--medium inner-page__title')
