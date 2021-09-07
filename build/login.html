@@ -109,11 +109,34 @@
     <article class="inner-page">
       <header class="inner-page__header">
         <div class="container">
-          <div class="inner-page__breadcrumbs breadcrumbs"><a href="homepage.html">Главная</a><span>Личный кабинет</span>
+          <div class="inner-page__breadcrumbs no-margin breadcrumbs"><a href="homepage.html">Главная</a><span>Личный кабинет</span>
           </div>
-          <h1 class="title--medium inner-page__title title">Александр Александрович Неалександров</h1>
         </div>
       </header>
+      <div class="container">
+        <section class="inner-page__form-section form-section">
+          <h1 class="title--medium form-section__title title">Авторизация</h1>
+          <form action="#" method="post">
+            <label class="form-section__field field"><span class="field__hint">Ваш логин*</span>
+              <input type="text" name="login">
+            </label>
+            <label class="form-section__field field"><span class="field__hint">Пароль*</span>
+              <input type="password" name="password">
+            </label>
+            <div class="form-section__row">
+              <div class="custom-checbox">
+                <input class="visually-hidden" id="rememberMe" type="checkbox">
+                <label for="rememberMe">Запомнить меня на этом компьютере</label>
+              </div><a class="form-section__link" href="#">Забыли пароль?</a>
+            </div>
+            <div class="form-section__action"> 
+              <button class="button form-section__btn" type="submit"><span>Войти</span>
+              </button><a class="button form-section__btn button--outline" href="reg.html"><span>Регистрация</span></a>
+            </div>
+          </form>
+          <div class="form-section__text">Здравствуйте! С возвращением на сайт!</div>
+        </section>
+      </div>
     </article>
   </main>
   <footer class="footer">
