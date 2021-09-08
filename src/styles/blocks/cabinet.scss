@@ -19,9 +19,6 @@
       display: flex;
       flex-wrap: wrap;
       max-width: none;
-    }
-
-    @include max(sm) {
       margin-bottom: 30px !important;
     }
 
@@ -133,6 +130,11 @@
   &__main {
     padding: 50px;
     border: solid 1px $gray;
+
+    @include max(md) {
+      border-left: none;
+      border-right: none;
+    }
 
     @include max(sm) {
       padding: 50px 20px;
@@ -274,6 +276,10 @@
     display: flex;
     flex-wrap: wrap;
     margin-top: 50px;
+
+    @include max(sm) {
+      margin-top: 25px;
+    }
   }
 
   &__infotext {
@@ -283,6 +289,12 @@
     line-height: 1.22;
     color: $gray-ph;
 
+    &--discount {
+      @include max(sm) {
+        display: none;
+      }
+    }
+
     b {
       color: $dark;
       font-weight: 500;
@@ -291,6 +303,10 @@
 
   &__scale {
     margin-bottom: 30px;
+
+    @include max(sm) {
+      display: none;
+    }
   }
 
   &__order-notice {
