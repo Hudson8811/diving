@@ -1,33 +1,68 @@
 .pagination {
-	display: flex;
-	align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 
-	&__control {
-		svg {
-			width: 9px;
-			height: 16px;
-		}
+  &__control {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
 
-		&--first {
-			margin-right: 30px;
+    @include max(xs) {
+      width: 30px;
+      height: 30px;
+    }
 
-			svg {
-				transform: rotate(180deg);
-			}
-		}
-	}
+    @include hover {
+      background-color: $smoky;
+    }
 
-	&__link {
-		font-family: $fontRoboto;
-		font-size: 15px;
-		line-height: 22px;
+    svg {
+      width: 9px;
+      height: 16px;
+      align-self: center;
+    }
 
-		+ .pagination__link {
-			margin-left: 32px;
-		}
+    &--back {
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+  }
 
-		&.current {
-			background-color: #fff;
-		}
-	}
+  &__link {
+    display: block;
+    width: 40px;
+    height: 40px;
+    font-size: 15px;
+    line-height: 40px;
+    color: $dark;
+    text-align: center;
+    border-radius: 50%;
+    align-self: center;
+    transition: background-color 0.3s ease;
+
+    @include max(xs) {
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      font-size: 14px;
+    }
+
+    &.current {
+      color: $white;
+      background-color: $blue;
+      pointer-events: none;
+    }
+
+    &[href] {
+      @include hover {
+        background-color: $smoky;
+      }
+    }
+  }
 }

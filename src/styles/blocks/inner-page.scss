@@ -76,7 +76,25 @@
   }
 
   &__filter {
-    margin-top: 30px;
+    margin-top: 14px;
+  }
+
+  &__tags {
+    margin-top: 35px;
+  }
+
+  &__pagination {
+    margin-top: 40px;
+
+    @include max(sm) {
+      display: none;
+    }
+  }
+
+  &__more-products {
+    width: 100%;
+    max-width: 250px;
+    margin: 20px auto 0;
   }
 
   &__hero {
@@ -104,6 +122,10 @@
 
     @include max(md) {
       padding-right: 0;
+    }
+
+    @include max(xs) {
+      font-size: 15px;
     }
 
     img {
@@ -151,49 +173,29 @@
     line-height: 1.857142857142857;
     color: $gray-ph;
 
-    p + p {
+    @include max(xs) {
+      font-size: 15px;
+    }
+
+    p + * {
       margin-top: 25px;
+    }
+
+    figure {
+      margin-top: 25px;
+
+      & + p {
+        margin-top: 25px;
+      }
     }
 
     &--columns {
       column-count: 2;
+      column-gap: 25px;
 
       @include max(sm) {
         column-count: 1;
       }
-    }
-  }
-
-  &__illustrated {
-    font-size: 14px;
-    line-height: 1.857142857142857;
-    color: $gray-ph;
-
-    figure {
-      @include max(md) {
-        max-width: 50%;
-        height: auto;
-      }
-
-      @include max(xs) {
-        max-width: none;
-        width: 100%;
-        margin-right: 0 !important;
-        margin-left: 0 !important;
-      }
-    }
-
-    .float-left {
-      margin-right: 24px;
-      margin-bottom: 24px;
-    }
-    .float-right {
-      margin-left: 24px;
-      margin-bottom: 24px;
-    }
-
-    p + p {
-      margin-top: 25px;
     }
   }
 
@@ -218,5 +220,20 @@
 
   &__form-section {
     margin: 0 auto;
+  }
+
+  &__certification-card {
+    @include max(xs) {
+      width: calc(100% + 40px);
+      margin-left: -20px;
+    }
+
+    & + & {
+      margin-top: 30px;
+
+      @include max(xs) {
+        margin-top: 10px;
+      }
+    }
   }
 }
