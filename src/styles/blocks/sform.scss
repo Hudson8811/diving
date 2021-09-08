@@ -81,6 +81,9 @@
 
       @include max(sm) {
         max-width: none;
+        order: -1;
+        margin-top: 0;
+        margin-bottom: 35px;
       }
     }
 
@@ -105,9 +108,21 @@
     border-radius: 5px 5px 0 0;
     background-color: $smoky;
 
-    @include max(xs) {
+    @include max(sm) {
+      width: calc(100% + 40px);
+      margin-left: -20px;
       padding-left: 20px;
       padding-right: 20px;
+    }
+  }
+
+  &__cart-result {
+    @include max(sm) {
+      width: calc(100% + 40px);
+      margin-left: -20px;
+      border-left: none !important;
+      border-right: none !important;
+      border-radius: 0 !important;
     }
   }
 

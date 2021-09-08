@@ -65,6 +65,7 @@ block main
             +button('Изменить пароль', 'cabinet__form-field button--outline')
 
             +title('Контактная информация', 'div', 'title--small cabinet__form-title')
+            
             label.cabinet__form-field.cabinet__form-field--half.field
               span.field__hint Email
               input(type="email", name="email")
@@ -77,17 +78,18 @@ block main
               span.field__hint Адрес*
               input(type="text", name="address", required)
               
-            label.cabinet__form-field.cabinet__form-field--small.field
+            label.cabinet__form-field.cabinet__form-field--house.field
               span.field__hint Дом
               input(type="number", name="house")
               
-            label.cabinet__form-field.cabinet__form-field--small.field
+            label.cabinet__form-field.cabinet__form-field--flat.field
               span.field__hint Квартира
               input(type="number", name="flat")
               
-            label.cabinet__form-field.cabinet__form-field--small.field
+            label.cabinet__form-field.cabinet__form-field--intercome.field
               span.field__hint Домофон
               input(type="number", name="intercome")
             
-            +button('Сохранить настройки', 'cabinet__form-send')(type="submit")
+            .cabinet__form-bottom
+              +button('Сохранить настройки', 'cabinet__form-send')(type="submit")
               

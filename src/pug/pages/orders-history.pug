@@ -50,21 +50,19 @@ block main
             .cabinet__infotext До накопительной скидки в 5%: <b>5₽</b>
           .cabinet__scale.discount-scale
             img(src="images/cabinet/discount-scale-placeholder.svg", alt="")
-          .cabinet__infotext Обычная скидка: <b>4%</b>
+          .cabinet__infotext.cabinet__infotext--discount Обычная скидка: <b>4%</b>
           - let orderCount = 4
           while orderCount--
             - const status = orderCount === 3 ? 'Ожидает оплаты' : 'Завершен';
             .cabinet__order-preview.order-preview
               .order-preview__main
-                .order-preview__row
-                  +order-preview-item('№ заказа:', '12345')
-                  +order-preview-item('Дата заказа:', '21.08.2021')
-                  +order-preview-item('Статус заказа:', status, 'blue')
+                +order-preview-item('№ заказа:', '12345')
+                +order-preview-item('Дата заказа:', '21.08.2021')
+                +order-preview-item('Статус заказа:', status, 'blue')
 
-                .order-preview__row
-                  +order-preview-item('Позиций:', '156')
-                  +order-preview-item('Стоимость:', '999 990₽', 'blue')
-                  +order-preview-item('Покупатель:', 'Александр Неалександров')
+                +order-preview-item('Позиций:', '156')
+                +order-preview-item('Стоимость:', '999 990₽', 'blue')
+                +order-preview-item('Покупатель:', 'Александр Неалександров')
 
               .order-preview__action
                 +button('Подробнее', 'order-preview__btn button--outline', '', URLS.cabinet.order)

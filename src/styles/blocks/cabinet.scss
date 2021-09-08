@@ -5,19 +5,57 @@
 
   &__container {
     display: flex;
+
+    @include max(md) {
+      display: block;
+    }
   }
 
   &__nav {
     max-width: 292px;
     border: solid 1px $gray;
 
+    @include max(md) {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: none;
+      margin-bottom: 30px !important;
+    }
+
     &-item {
+      display: flex;
+
+      @include max(md) {
+        width: 25%;
+      }
+
+      @include max(sm) {
+        width: 50%;
+
+        border: solid 1px $gray;
+        border-top: none;
+
+        &:nth-child(odd) {
+          border-left: none;
+        }
+        &:nth-child(even) {
+          border-right: none;
+        }
+        &:nth-last-child(-n + 2) {
+          border-bottom: none;
+        }
+      }
+
       &--current {
         #{$self}__nav-link {
+          width: calc(100% + 2px);
+          height: calc(100% + 2px);
+          margin: -1px;
           color: $white;
           background-color: $blue;
           pointer-events: none;
         }
+
         #{$self}__nav-icon {
           svg {
             fill: $white;
@@ -25,14 +63,27 @@
         }
       }
     }
+
     &-link {
       display: flex;
       align-items: center;
+      width: 100%;
       padding: 35px;
       font-size: 15px;
       line-height: 1.2;
       color: $dark;
       transition: background-color 0.3s ease;
+
+      @include max(md) {
+        padding: 30px;
+      }
+
+      @include max(sm) {
+        flex-direction: column;
+        padding-left: 8px;
+        padding-right: 8px;
+        text-align: center;
+      }
 
       @include hover {
         background-color: $lightBlue3;
@@ -46,8 +97,17 @@
       height: 20px;
       margin-right: 10px;
 
+      @include max(sm) {
+        width: 35px;
+        height: 35px;
+        margin-right: 0;
+        margin-bottom: 5px;
+      }
+
       svg {
         display: block;
+        width: auto;
+        height: 100%;
         fill: $dark;
       }
     }
@@ -56,11 +116,29 @@
   &__nav + &__main {
     width: calc(100% - 292px);
     border-left: none;
+
+    @include max(md) {
+      width: 100%;
+    }
+
+    @include max(md) {
+      width: calc(100% + 40px);
+      margin-left: -20px;
+    }
   }
 
   &__main {
     padding: 50px;
     border: solid 1px $gray;
+
+    @include max(md) {
+      border-left: none;
+      border-right: none;
+    }
+
+    @include max(sm) {
+      padding: 50px 20px;
+    }
 
     &--bg {
       border: none;
@@ -90,10 +168,21 @@
     margin-top: -30px;
     margin-left: -30px;
 
+    @include max(sm) {
+      max-width: none;
+      margin-top: -40px;
+      margin-left: -20px;
+    }
+
     &-title {
       width: 100%;
       margin-left: 30px;
       margin-top: 30px;
+
+      @include max(sm) {
+        margin-top: 40px;
+        margin-left: 20px;
+      }
     }
 
     &-field {
@@ -102,22 +191,63 @@
       margin-top: 18px;
       align-self: flex-end;
 
+      @include max(sm) {
+        margin-left: 20px;
+      }
+
       &--half {
         width: calc(50% - 30px);
+
+        @include max(sm) {
+          width: calc(50% - 20px);
+        }
+
+        @include max(xs) {
+          width: 100%;
+        }
       }
 
       &--address {
-        width: auto;
+        width: calc(100% - 320px);
         flex-grow: 1;
+
+        @include max(sm) {
+          width: calc(100% - 310px);
+        }
+
+        @include max(xs) {
+          width: 100%;
+        }
       }
 
-      &--address + &--small {
+      &--house {
+        width: 70px;
         margin-left: 30px;
+
+        @include max(sm) {
+          width: calc(100% - 189px);
+          margin-left: 20px;
+        }
       }
 
-      &--small {
+      &--flat {
         width: 70px;
         margin-left: 20px;
+
+        @include max(xs) {
+          width: 75px;
+          margin-left: 15px;
+        }
+      }
+
+      &--intercome {
+        width: 70px;
+        margin-left: 20px;
+
+        @include max(xs) {
+          width: 64px;
+          margin-left: 15px;
+        }
       }
 
       &.button {
@@ -127,9 +257,18 @@
       }
     }
 
+    &-bottom {
+      width: 100%;
+    }
+
     &-send {
       margin-top: 30px;
       margin-left: 30px;
+
+      @include max(sm) {
+        margin-top: 20px;
+        margin-left: 20px;
+      }
     }
   }
 
@@ -137,6 +276,10 @@
     display: flex;
     flex-wrap: wrap;
     margin-top: 50px;
+
+    @include max(sm) {
+      margin-top: 25px;
+    }
   }
 
   &__infotext {
@@ -146,6 +289,12 @@
     line-height: 1.22;
     color: $gray-ph;
 
+    &--discount {
+      @include max(sm) {
+        display: none;
+      }
+    }
+
     b {
       color: $dark;
       font-weight: 500;
@@ -154,6 +303,10 @@
 
   &__scale {
     margin-bottom: 30px;
+
+    @include max(sm) {
+      display: none;
+    }
   }
 
   &__order-notice {
