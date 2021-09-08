@@ -24,5 +24,10 @@
   &--small {
     font-size: 24px;
     line-height: 29px;
+
+    @include max(sm) {
+      font-size: 21px;
+      line-height: 25.6px;
+    }
   }
 }
