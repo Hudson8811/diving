@@ -120,19 +120,23 @@
             <div class="inner-hero__price"> <span>5&nbsp;000₽</span><span class="old">- 7&nbsp;500₽</span></div>
             <div class="inner-hero__action"> <a class="button inner-hero__btn" href="#"><span>Приобрести курс</span></a><a class="button button--outline inner-hero__btn" href="#"><span>Приобрести в подарок</span></a>
             </div>
-            <div class="inner-hero__text">
-              <p>Не&nbsp;следует, однако забывать, что реализация намеченных плановых заданий представляет собой интересный эксперимент проверки дальнейших направлений развития. Идейные соображения высшего порядка, а&nbsp;также начало повседневной работы по&nbsp;формированию позиции способствует подготовки и&nbsp;реализации форм развития.</p>
-              <p>С&nbsp;другой стороны рамки и&nbsp;место обучения кадров способствует подготовки и&nbsp;реализации системы обучения кадров, соответствует насущным потребностям. Таким образом консультация с&nbsp;широким активом в&nbsp;значительной степени обуславливает создание системы обучения кадров, соответствует насущным потребностям.</p>
-              <p>Таким образом новая модель организационной деятельности позволяет выполнять важные задания по&nbsp;разработке системы обучения кадров, соответствует насущным потребностям. Задача организации, в&nbsp;особенности же постоянный количественный рост и&nbsp;сфера нашей активности в&nbsp;значительной степени обуславливает создание систем массового участия. Равным образом постоянный количественный рост и&nbsp;сфера нашей активности представляет собой интересный эксперимент проверки систем массового участия. Повседневная практика показывает, что рамки и&nbsp;место обучения кадров способствует подготовки и&nbsp;реализации форм развития.</p>
-            </div>
           </div>
-          <div class="inner-hero__image"> <img src="images/course/hero-image.jpg" srcset="images/course/hero-image@2x.jpg 2x" width="608" height="756" alt=""></div>
+          <div class="inner-hero__image">
+            <picture>
+              <source media="(max-width: 1079px)" srcset="images/course/hero-image-mobile.jpg 1x, images/course/hero-image-mobile@2x.jpg 2x"><img src="images/course/hero-image.jpg" srcset="images/course/hero-image@2x.jpg 2x" alt="">
+            </picture>
+          </div>
+          <div class="inner-hero__text">
+            <p>Не&nbsp;следует, однако забывать, что реализация намеченных плановых заданий представляет собой интересный эксперимент проверки дальнейших направлений развития. Идейные соображения высшего порядка, а&nbsp;также начало повседневной работы по&nbsp;формированию позиции способствует подготовки и&nbsp;реализации форм развития.</p>
+            <p>С&nbsp;другой стороны рамки и&nbsp;место обучения кадров способствует подготовки и&nbsp;реализации системы обучения кадров, соответствует насущным потребностям. Таким образом консультация с&nbsp;широким активом в&nbsp;значительной степени обуславливает создание системы обучения кадров, соответствует насущным потребностям.</p>
+            <p>Таким образом новая модель организационной деятельности позволяет выполнять важные задания по&nbsp;разработке системы обучения кадров, соответствует насущным потребностям. Задача организации, в&nbsp;особенности же постоянный количественный рост и&nbsp;сфера нашей активности в&nbsp;значительной степени обуславливает создание систем массового участия. Равным образом постоянный количественный рост и&nbsp;сфера нашей активности представляет собой интересный эксперимент проверки систем массового участия. Повседневная практика показывает, что рамки и&nbsp;место обучения кадров способствует подготовки и&nbsp;реализации форм развития.</p>
+          </div>
         </div>
       </div>
       <div class="container">
-        <div class="inner-page__features features">
-          <ul class="features__list">
-            <li class="features__item"> 
+        <div class="inner-page__features features swiper-container __js_features-carousel">
+          <ul class="features__list swiper-wrapper">
+            <li class="features__item swiper-slide">
               <div class="features__item-icon">
                 <svg width="47" height="61">
                   <use xlink:href="./images/sprite.svg#textbook"></use>
@@ -141,7 +145,7 @@
               <div class="features__item-text">500 часов</div>
               <div class="features__item-title">Время теории</div>
             </li>
-            <li class="features__item"> 
+            <li class="features__item swiper-slide">
               <div class="features__item-icon">
                 <svg width="61" height="61">
                   <use xlink:href="./images/sprite.svg#scuba-diving"></use>
@@ -150,7 +154,7 @@
               <div class="features__item-text">1 в бассейне</div>
               <div class="features__item-title">Сколько погружений</div>
             </li>
-            <li class="features__item"> 
+            <li class="features__item swiper-slide">
               <div class="features__item-icon">
                 <svg width="71" height="61">
                   <use xlink:href="./images/sprite.svg#mortarboard"></use>
@@ -159,7 +163,7 @@
               <div class="features__item-text">с 10 лет</div>
               <div class="features__item-title">Возраст обучения</div>
             </li>
-            <li class="features__item"> 
+            <li class="features__item swiper-slide">
               <div class="features__item-icon">
                 <svg width="78" height="61">
                   <use xlink:href="./images/sprite.svg#open-book"></use>
@@ -169,6 +173,19 @@
               <div class="features__item-title">Учебное пособие</div>
             </li>
           </ul>
+          <div class="swiper-pagination"></div>
+          <div class="features__navigation">
+            <button class="button features__btn button--outline button--icon __js_prev"><span></span>
+              <svg>
+                <use xlink:href="./images/sprite.svg#chevron-left"></use>
+              </svg>
+            </button>
+            <button class="button features__btn button--outline button--icon __js_next"><span></span>
+              <svg>
+                <use xlink:href="./images/sprite.svg#chevron-right"></use>
+              </svg>
+            </button>
+          </div>
         </div>
         <div class="inner-page__description"><img class="float-left" src="images/course/image.jpg" srcset="images/course/image@2x.jpg 2x" width="608" height="540" alt="">
           <p>Не&nbsp;следует, однако забывать, что реализация намеченных плановых заданий представляет собой интересный эксперимент проверки дальнейших направлений развития. Идейные соображения высшего порядка, а&nbsp;также начало повседневной работы по&nbsp;формированию позиции способствует подготовки и&nbsp;реализации форм развития.</p>

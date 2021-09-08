@@ -1,10 +1,16 @@
 .features {
+  position: relative;
   padding: 50px 0;
 
   &__list {
     display: flex;
     flex-wrap: wrap;
     margin-top: -32px !important;
+
+    @include max(480) {
+      margin-top: 0 !important;
+      flex-wrap: nowrap;
+    }
   }
 
   &__item {
@@ -20,6 +26,7 @@
 
     @include max(480) {
       width: 100%;
+      margin-top: 0;
     }
 
     & > * {
@@ -52,7 +59,48 @@
       text-align: center;
 
       @include max(md) {
-        font-size: 20px;
+        font-size: 18px;
+      }
+    }
+  }
+
+  &__navigation {
+    display: none;
+
+    @include max(480) {
+      display: flex;
+      justify-content: space-between;
+
+      width: 100%;
+      margin-top: 10px;
+    }
+  }
+
+  &__btn {
+  }
+
+  .swiper-pagination {
+    display: none;
+
+    @include max(480) {
+      position: absolute;
+      z-index: 1;
+      bottom: 66px;
+      left: 60px;
+      right: 60px;
+      display: flex;
+      justify-content: center;
+    }
+
+    &-bullet {
+      display: block;
+      width: 20px;
+      height: 2px;
+      background-color: $lightBlue;
+      cursor: pointer;
+
+      &-active {
+        background-color: $blue;
       }
     }
   }

@@ -1,0 +1,68 @@
+.order-preview {
+  display: flex;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-top: solid 1px $gray;
+
+  &__main {
+  }
+
+  &__action {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    width: 178px;
+    margin-left: auto;
+    padding-left: 8px;
+
+    & > * {
+      align-self: center;
+    }
+  }
+
+  &__row {
+    display: flex;
+    margin-left: -72px;
+
+    & + & {
+      margin-top: 46px;
+    }
+  }
+
+  &__item {
+    min-width: 114px;
+    margin-left: 72px;
+    font-size: 18px;
+    line-height: 1.22;
+    color: $gray-ph;
+
+    &-title {
+      margin-bottom: 17px;
+    }
+
+    &-text {
+      color: $dark;
+      font-weight: 500;
+
+      &--blue {
+        color: $blue;
+      }
+    }
+  }
+
+  &__btn {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  &__remove {
+    font-size: 15px;
+    line-height: 1.2;
+    color: $blue;
+    transition: color 0.3s ease;
+
+    @include hover {
+      color: $blue-hover;
+    }
+  }
+}

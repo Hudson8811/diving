@@ -1,9 +1,12 @@
 
 window.addEventListener('load', () => {
+  const html = document.documentElement;
   const productsCarousels = document.querySelectorAll('.__js_products-carousel');
   const coursesCarousels = document.querySelectorAll('.__js_courses-carousel-a');
   const thumbsCarouselEl = document.querySelector('.__js_product-thumbs');
   const productFullPhoto = document.querySelector('.product-card__photo')
+  const featuresEl = document.querySelector('.__js_features-carousel');
+
 
   if (productsCarousels.length) {
     productsCarousels.forEach(it => {
@@ -119,5 +122,52 @@ window.addEventListener('load', () => {
         }
       });
     }
+  }
+
+  if (featuresEl) {
+    let carousel = null;
+    const breakpoint = 480;
+
+    if (html.clientWidth < breakpoint && !carousel) {
+      initCarousel();
+    }
+
+    window.addEventListener('resize', () => {
+      if (html.clientWidth < breakpoint && !carousel) {
+        initCarousel();
+      } else if (html.clientWidth >= breakpoint && carousel) {
+        carousel.destroy();
+        carousel = null;
+      }
+    });
+
+    function initCarousel() {
+      carousel = new Swiper(featuresEl, {
+        speed: 300,
+        slidesPerView: 1,
+        //spaceBetween: 24,
+        watchOverflow: true,
+        /*breakpoints: {
+          // when window width is >= 640px
+          1080: {
+            slidesPerView: 2
+          },
+          1280: {
+            slidesPerView: 3
+          }
+        },*/
+        navigation: {
+          nextEl: '.__js_next',
+          prevEl: '.__js_prev',
+          disabledClass: 'button--disabled'
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          type: 'bullets',// 'bullets' | 'fraction' | 'progressbar' | 'custom'
+          clickable: true
+        },
+      });
+    }
+
   }
 })

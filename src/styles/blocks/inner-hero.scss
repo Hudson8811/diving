@@ -5,7 +5,20 @@
   background-size: cover;
 
   &__container {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 608px;
+
+    @include max(lg) {
+      //display: block;
+      grid-template-columns: 1fr 1fr;
+    }
+    @include max(md) {
+      //display: block;
+      //grid-template-columns: 1fr 560px;
+    }
+    @include max(640) {
+      display: block;
+    }
 
     & > * {
       align-self: flex-start;
@@ -13,9 +26,20 @@
   }
 
   &__image {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+
     @include max(md) {
-      display: none;
+      //display: none;
+      grid-row-start: 1;
+      grid-row-end: 2;
+
+      height: 280px;
+      margin-bottom: 30px;
     }
+
     img {
       display: block;
       width: 100%;
@@ -25,17 +49,32 @@
   }
 
   &__main {
-    width: 46.775%;
-    margin-right: 50px;
+    //width: 46.775%;
+    width: 100%;
+    padding-right: 50px;
+
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
 
     @include max(md) {
       width: 100%;
-      margin-right: 0;
+      padding-right: 25px;
+      margin-bottom: 30px;
+    }
+
+    @include max(xs) {
+      padding-right: 0;
     }
   }
 
   &__title {
     margin-bottom: 35px;
+
+    @include max(xs) {
+      margin-bottom: 10px;
+    }
   }
 
   &__date {
@@ -64,16 +103,26 @@
   &__action {
     display: flex;
     flex-wrap: wrap;
-    margin-top: -12px;
-    margin-bottom: 48px;
+    margin-top: -20px;
+    //margin-bottom: 48px;
+
+    @include max(xs) {
+      flex-direction: column;
+    }
   }
 
   &__btn {
-    margin-top: 12px;
+    margin-top: 20px;
     margin-right: 20px;
 
     &:last-child {
       margin-right: 0;
+    }
+
+    @include max(xs) {
+      width: auto;
+      margin-right: 0;
+      align-self: flex-start;
     }
 
     &.button--outline {
@@ -96,6 +145,11 @@
       font-size: 30px;
     }
 
+    @include max(xs) {
+      margin-bottom: 20px;
+      font-size: 21px;
+    }
+
     & > * {
       margin-top: 8px;
       align-self: center;
@@ -111,13 +165,34 @@
       @include max(sm) {
         font-size: 22px;
       }
+      @include max(xs) {
+        font-size: 21px;
+      }
     }
   }
 
   &__text {
+    padding-right: 50px;
     font-size: 14px;
     line-height: 1.857142857142857;
     color: $gray-ph;
+
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+
+    @include max(md) {
+      //display: none;
+      grid-column-start: 1;
+      grid-column-end: 3;
+
+      padding-right: 0;
+    }
+
+    @include max(md) {
+      font-size: 15px;
+    }
 
     p + p {
       margin-top: 26px;
