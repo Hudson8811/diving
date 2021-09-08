@@ -1,6 +1,10 @@
 .header {
+	$self: &;
+
 	width: 100%;
 	padding: 23px 62px;
+	position: relative;
+	z-index: 20;
 	box-sizing: border-box;
 
 	@include max(md) {
@@ -16,7 +20,6 @@
 		position: absolute;
 		top: 0;
 		left: 0;
-		z-index: 20;
 	}
 
 	&__left {
@@ -305,6 +308,173 @@
 
 			@include max(md) {
 				display: flex;
+			}
+		}
+	}
+
+	&--main {
+		display: flex;
+		align-items: center;
+		height: 90px;
+		padding: 0 62px;
+		background-color: $dark-blue;
+
+		@include max(md) {
+			padding: 0 20px;
+		}
+
+		#{$self} {
+			&__logos {
+				height: 40px;
+				margin-right: 23px;
+
+				@include max(md) {
+					height: 34px;
+					margin: 0 auto;
+				}
+
+				a {
+					&:last-child svg {
+						@include max(md) {
+							margin-right: 0;
+						}
+					}
+				}
+
+				svg {
+					width: 83px;
+					height: 40px;
+					margin-right: 10px;
+
+					@include max(md) {
+						width: 73px;
+						height: 34px;
+					}
+				}
+			}
+
+			&__wrapper {
+				align-items: center;
+				width: 100%;
+				height: 100%;
+			}
+
+			&__menu {
+				height: 100%;
+				margin: 0 auto;
+
+				@include max(x1160) {
+					display: none;
+				}
+
+				> li {
+					+ li {
+						margin-left: 25px;
+					}
+
+					a {
+						display: flex;
+						align-items: center;
+						height: 100%;
+					}
+
+					&.expand {
+						border: 1px solid transparent;
+						transition: background-color 0.3s ease, border-color 0.3s ease;
+
+						@include hover {
+							background-color: $white;
+							border-color: $gray;
+
+							> a {
+								color: $blue;
+							}
+
+							svg {
+								fill: $blue;
+							}
+						}
+
+						a {
+							transition: color 0.3s ease;
+						}
+
+						svg {
+							transition: fill 0.3s ease;
+						}
+					}
+				}
+
+				&--bottom {
+					margin-right: auto;
+
+					li {
+						padding: 0 12.5px;
+
+						+ li {
+							margin-left: 0;
+						}
+					}
+				}
+			}
+
+			&__submenu {
+				top: 100%;
+				right: unset;
+				left: 0;
+				transform: none;
+			}
+
+			&__lang-swither {
+				margin-right: 0;
+				margin-left: 20px;
+
+				@include max(x1160) {
+					margin-left: auto;
+				}
+
+				@include max(md) {
+					display: none;
+				}
+
+				span.active {
+					text-decoration: underline;
+
+					@include hover {
+						text-decoration: none;
+					}
+				}
+			}
+
+			&__buttons {
+				@include max(lg) {
+					align-self: center;
+					margin-top: 0;
+				}
+
+				@include max(md) {
+					display: none;
+				}
+			}
+
+			&__basket {
+				margin-left: 22px;
+			}
+
+			&__burger {
+				@include max(x1160) {
+					display: flex;
+					order: 1;
+					width: 40px;
+					height: 40px;
+					margin-left: 17px;
+				}
+
+				@include max(md) {
+					width: 30px;
+					height: 30px;
+					margin-left: 0;
+				}
 			}
 		}
 	}
