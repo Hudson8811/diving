@@ -437,12 +437,8 @@
 					display: none;
 				}
 
-				span.active {
+				span.active:not(.delimiter) {
 					text-decoration: underline;
-
-					@include hover {
-						text-decoration: none;
-					}
 				}
 			}
 
