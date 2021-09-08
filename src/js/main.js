@@ -6,6 +6,7 @@
 //= ./partials/main.js
 //= ./partials/swiper-init.js
 //= ./partials/tabs.js
+//= ./partials/tags-block.js
 //= ./partials/courses-carousel.js
 //= ./partials/tutorials-carousel.js
 //= ./partials/recommend-carousel.js
@@ -15,3 +16,4 @@
 //= ./partials/stock-carousel.js
 //= ./partials/footer-accordion.js
 //= ./partials/articles-carousel.js
+//= ./partials/catalog.js

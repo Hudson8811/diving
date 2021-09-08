@@ -4,7 +4,12 @@
   margin-top: -24px;
   margin-left: -24px;
 
-  @include max(xs) {
+  @include max(md) {
+    margin-top: -10px;
+    margin-left: -10px;
+  }
+
+  @include max(600) {
     margin-left: 0;
   }
 
@@ -13,15 +18,21 @@
     margin-top: 24px;
     margin-left: 24px;
 
-    @include max(md) {
+    @include max(lg) {
       width: calc(33.33% - 24px);
     }
 
-    @include max(sm) {
-      width: calc(50% - 24px);
+    @include max(md) {
+      width: calc(33.33% - 10px);
+      margin-top: 10px;
+      margin-left: 10px;
     }
 
-    @include max(xs) {
+    @include max(890) {
+      width: calc(50% - 10px);
+    }
+
+    @include max(600) {
       width: 100%;
       margin-left: 0;
     }

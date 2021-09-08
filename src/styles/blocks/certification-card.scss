@@ -7,14 +7,15 @@
     padding: 20px;
   }
 
-  & + & {
-    margin-top: 30px;
-  }
-
   &__main {
     font-size: 15px;
     line-height: 1.6;
     color: $gray-ph;
+
+    @include max(sm) {
+      display: flex;
+      flex-direction: column;
+    }
 
     &::after {
       content: "";
@@ -31,6 +32,10 @@
   &__title {
     margin-bottom: 25px;
     color: $dark;
+
+    @include max(sm) {
+      order: -1;
+    }
   }
 
   &__image {
@@ -43,9 +48,20 @@
       //margin-bottom: 20px;
     }
 
+    img {
+      display: inline-block;
+      vertical-align: top;
+
+      @include max(xs) {
+        max-width: 120px;
+        height: auto;
+      }
+    }
+
     @include max(sm) {
       float: none !important;
-      margin: 0 auto 30px;
+      margin: 0 0 30px !important;
+      text-align: center;
     }
   }
 
@@ -53,11 +69,20 @@
     display: flex;
     flex-wrap: wrap;
     margin-top: 11px;
+
+    @include max(xs) {
+      flex-direction: column;
+    }
   }
 
   &__btn {
     margin-top: 12px;
     margin-right: 20px;
+
+    @include max(xs) {
+      margin-right: 0;
+      align-self: flex-start;
+    }
 
     &:last-child {
       margin-right: 0;

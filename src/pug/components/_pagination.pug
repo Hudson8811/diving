@@ -1,13 +1,14 @@
-mixin pagination()
-	.pagination
-		span.pagination__control.pagination__control--first(data-page-num='1')
+mixin pagination(className)
+	- let cl = className + ' ' || '';
+	div(class= cl + 'pagination')
+		a.pagination__control.pagination__control--back(href="#")
 			+icon('arrow-thin')
-		span.pagination__link(data-page-num='1') 1
-		span.pagination__link(data-page-num='2') 2
-		span.pagination__link.current(data-page-num='3') 3
-		span.pagination__link(data-page-num='4') 4
-		span.pagination__link(data-page-num='5') 5
-		span.pagination__link ...
-		span.pagination__link(data-page-num='10') 10
-		span.pagination__control(data-page-num='10')
+		a.pagination__link(href="#") 1
+		a.pagination__link(href="#") 2
+		a.pagination__link.current 3
+		a.pagination__link(href="#") 4
+		a.pagination__link(href="#") 5
+		a.pagination__link ...
+		a.pagination__link(href="#") 10
+		a.pagination__control.pagination__control--next(href="#")
 			+icon('arrow-thin')

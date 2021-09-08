@@ -7,12 +7,22 @@ mixin product-preview(item)
     h3.product-preview__title 
       a(href="#")!= item.title
     .product-preview__text!= item.text
-    .product-preview__bottom 
-      if item.isOrderIt
-        +button('Заказать', 'button--order', 'box', '#')
-      else
-        +button('В корзину', 'button--to-cart', 'cart', '#')
-      .product-preview__price
+    .product-preview__middle 
+      .product-preview__price 1&nbsp;200₽
         if item.isOldPrice
-          .product-preview__price-old 1200₽
-        | 1200₽
+          .product-preview__price-old 1&nbsp;200₽
+      if item.isOldPrice
+        .product-preview__discount -10%
+      .product-preview__orders 150
+    .product-preview__bottom 
+      .product-preview__rating
+        - let starCount = 4;
+        while starCount--
+          +icon('star')(width="15", height="15")
+        +icon('star-empty')(width="15", height="15")
+      if item.isOrderIt
+        //-+button('Заказать', 'product-preview__btn button--order', 'box', '#')
+        .product-preview__out-of-stock Нет в наличии
+      else
+        +button('В корзину', 'product-preview__btn button--to-cart', 'cart', '#')
+      
