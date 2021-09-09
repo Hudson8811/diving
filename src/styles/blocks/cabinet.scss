@@ -14,6 +14,7 @@
   &__nav {
     max-width: 292px;
     border: solid 1px $gray;
+    align-self: flex-start;
 
     @include max(md) {
       display: flex;
@@ -114,14 +115,15 @@
   }
 
   &__nav + &__main {
-    width: calc(100% - 292px);
-    border-left: none;
+    width: calc(100% - 291px);
+    margin-left: -1px;
+    //border-left: none;
 
     @include max(md) {
       width: 100%;
     }
 
-    @include max(md) {
+    @include max(sm) {
       width: calc(100% + 40px);
       margin-left: -20px;
     }
@@ -301,7 +303,7 @@
     }
   }
 
-  &__scale {
+  &__discount-status {
     margin-bottom: 30px;
 
     @include max(sm) {
@@ -317,8 +319,28 @@
     color: $dark;
   }
 
+  &__order-status {
+    max-width: 608px;
+    margin-bottom: 50px;
+
+    @include max(md) {
+      //width: 100%;
+      max-width: none;
+    }
+  }
+
   &__result {
     margin-top: 35px;
+
+    @include max(md) {
+      //width: 100%;
+      max-width: none;
+    }
+
+    @include max(sm) {
+      width: calc(100% + 40px);
+      margin-left: -20px;
+    }
   }
 
   &__accept-message {

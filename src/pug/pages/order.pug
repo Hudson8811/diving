@@ -45,6 +45,21 @@ block main
 
         .cabinet__main.cabinet__main--unbordered
           .cabinet__order-notice Заказ №1 был оформлен 12.08.2021 и сейчас находится в обработке
+          .cabinet__order-status.order-status.__js_order-status(data-status="3")
+            +title('Статус заказа', 'h2', 'title--small order-status__title')
+            .order-status__steps 
+              .order-status__step Оформление
+              .order-status__step Оплата
+              .order-status__step Доставка
+              .order-status__step Завершение заказа
+            .order-status__scale
+              .order-status__scale-line
+              - let count = 3;
+              - let i = 17;
+              while i--
+                span.order-status__scale-sep(class= (count === 3 ? ' order-status__scale-sep--long' : ''))
+                - count ? count-- : count = 3;
+
           +title('Ваш заказ', 'h2', 'title--small cabinet__title')
           .cabinet__result.cart-result
             .cart-result__body
