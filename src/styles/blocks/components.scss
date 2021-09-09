@@ -67,6 +67,8 @@
 
   ul {
     list-style: none;
+    column-count: 3;
+    column-gap: 40px;
   }
 
   li + li {

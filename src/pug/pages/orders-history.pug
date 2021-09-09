@@ -48,8 +48,22 @@ block main
           .cabinet__row
             .cabinet__infotext Общая сумма заказов: <b>222&nbsp;555₽</b>
             .cabinet__infotext До накопительной скидки в 5%: <b>5₽</b>
-          .cabinet__scale.discount-scale
-            img(src="images/cabinet/discount-scale-placeholder.svg", alt="")
+          // data-progress - прогресс в процентах до накоп. скидки 
+          .cabinet__discount-status.discount-status.__js_discount-status(data-progress="68")
+            .discount-status__thumb
+              img(src="images/cabinet/diver.svg", width="97", height="50" alt="")
+            .discount-status__line
+            - let count = 3;
+            - let i = 25;
+            //17 21 25
+            while i--
+              - let cl = count === 3 ? ' discount-status__sep--long' : '';
+              - cl += count === 3 && 25 - i >= 17 ? ' discount-status__sep--higher' : '';
+              span.discount-status__sep(class= cl + (25 - i === 1 ? ' discount-status__sep--active discount-status__sep--done' : ''))
+                //-= 25 - i + '--- '
+              - count ? count-- : count = 3;
+              
+            //img(src="images/cabinet/discount-scale-placeholder.svg", alt="")
           .cabinet__infotext.cabinet__infotext--discount Обычная скидка: <b>4%</b>
           - let orderCount = 4
           while orderCount--

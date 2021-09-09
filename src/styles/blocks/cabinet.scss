@@ -115,8 +115,9 @@
   }
 
   &__nav + &__main {
-    width: calc(100% - 292px);
-    border-left: none;
+    width: calc(100% - 291px);
+    margin-left: -1px;
+    //border-left: none;
 
     @include max(md) {
       width: 100%;
@@ -302,7 +303,7 @@
     }
   }
 
-  &__scale {
+  &__discount-status {
     margin-bottom: 30px;
 
     @include max(sm) {
@@ -318,7 +319,7 @@
     color: $dark;
   }
 
-  &__status {
+  &__order-status {
     max-width: 608px;
     margin-bottom: 50px;
 
