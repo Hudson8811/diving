@@ -14,6 +14,7 @@
   &__nav {
     max-width: 292px;
     border: solid 1px $gray;
+    align-self: flex-start;
 
     @include max(md) {
       display: flex;
@@ -121,7 +122,7 @@
       width: 100%;
     }
 
-    @include max(md) {
+    @include max(sm) {
       width: calc(100% + 40px);
       margin-left: -20px;
     }
@@ -317,8 +318,28 @@
     color: $dark;
   }
 
+  &__status {
+    max-width: 608px;
+    margin-bottom: 50px;
+
+    @include max(md) {
+      //width: 100%;
+      max-width: none;
+    }
+  }
+
   &__result {
     margin-top: 35px;
+
+    @include max(md) {
+      //width: 100%;
+      max-width: none;
+    }
+
+    @include max(sm) {
+      width: calc(100% + 40px);
+      margin-left: -20px;
+    }
   }
 
   &__accept-message {

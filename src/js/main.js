@@ -17,3 +17,4 @@
 //= ./partials/footer-accordion.js
 //= ./partials/articles-carousel.js
 //= ./partials/catalog.js
+//= ./partials/status.js
