@@ -231,6 +231,14 @@
     }
   }
 
+  &__options {
+    margin-top: 26px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+
   &__info {
     width: 100%;
     max-width: 558px;
@@ -281,6 +289,42 @@
 
     @include max(md) {
       font-size: 15px;
+    }
+  }
+
+  &__download {
+    margin-top: 50px;
+
+    &-item {
+      display: flex;
+
+      & + & {
+        margin-top: 10px;
+      }
+
+      &-icon {
+        margin-right: 10px;
+        align-self: center;
+
+        svg {
+          display: block;
+          fill: $blue;
+        }
+      }
+
+      a {
+        font-size: 19px;
+        line-height: 1.526315789473684;
+        color: $gray-ph;
+        font-weight: 500;
+        transition: color 0.3s ease;
+
+        align-self: center;
+
+        @include hover {
+          color: $blue;
+        }
+      }
     }
   }
 
