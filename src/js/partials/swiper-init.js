@@ -7,7 +7,6 @@ window.addEventListener('load', () => {
   const productFullPhoto = document.querySelector('.product-card__photo')
   const featuresEl = document.querySelector('.__js_features-carousel');
 
-
   if (productsCarousels.length) {
     productsCarousels.forEach(it => {
       new Swiper(it, {
@@ -170,4 +169,4 @@ window.addEventListener('load', () => {
     }
 
   }
-})
+});

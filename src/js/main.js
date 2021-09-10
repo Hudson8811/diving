@@ -18,3 +18,4 @@
 //= ./partials/articles-carousel.js
 //= ./partials/catalog.js
 //= ./partials/status.js
+//= ./partials/product-options.js
