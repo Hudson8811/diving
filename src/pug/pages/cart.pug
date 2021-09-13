@@ -93,13 +93,7 @@ block main
           .cart-result__row
             .cart-result__hint Доставка:
             .cart-result__val
-              .custom-radio
-                label.custom-radio__item
-                  input.visually-hidden(type="radio", name="delivery-type", value="1")
-                  span.custom-radio__text Самовывоз
-                label.custom-radio__item
-                  input.visually-hidden(type="radio", name="delivery-type", value="2", checked)
-                  span.custom-radio__text Единая ставка
+              +custom-radio('delivery-type', ['Самовывоз', 'Единая ставка'], 2, '')
           .cart-result__row.cart-result__row--address
             .cart-result__hint Адрес доставки:
             address.cart-result__val Ленина, д.137А, кв.&nbsp;2245, г. Москва, Московская обл, 000000.

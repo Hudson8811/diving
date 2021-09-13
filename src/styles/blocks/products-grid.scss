@@ -1,4 +1,6 @@
 .products-grid {
+  $self: &;
+
   display: flex;
   flex-wrap: wrap;
   margin-top: -24px;
@@ -11,6 +13,29 @@
 
   @include max(600) {
     margin-left: 0;
+  }
+
+  &--three-columns {
+    #{$self}__item {
+      width: calc(33.33% - 24px);
+
+      @include max(lg) {
+        width: calc(50% - 24px);
+      }
+
+      @include max(md) {
+        width: calc(33.33% - 10px);
+      }
+
+      @include max(890) {
+        width: calc(50% - 10px);
+      }
+
+      @include max(600) {
+        width: 100%;
+        margin-left: 0;
+      }
+    }
   }
 
   &__item {

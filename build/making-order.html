@@ -159,7 +159,7 @@
                 </label>
                 <div class="sform__fieldset">
                   <div class="sform__legend">Доставка</div>
-                  <div class="custom-radio custom-radio--inline">
+                  <div class="custom-radio--inline custom-radio">
                     <label class="custom-radio__item">
                       <input class="visually-hidden" type="radio" name="delivery-type" value="1"><span class="custom-radio__text">Самовывоз</span>
                     </label>
@@ -172,7 +172,7 @@
                   <div class="sform__legend">Способ оплаты</div>
                   <div class="custom-radio">
                     <label class="custom-radio__item">
-                      <input class="visually-hidden" type="radio" name="payment-method" value="1"><span class="custom-radio__text"> Прямой банковский перевод</span>
+                      <input class="visually-hidden" type="radio" name="payment-method" value="1"><span class="custom-radio__text">Прямой банковский перевод</span>
                     </label>
                     <label class="custom-radio__item">
                       <input class="visually-hidden" type="radio" name="payment-method" value="2" checked><span class="custom-radio__text">Оплата при доставке</span>
@@ -181,10 +181,9 @@
                   <div class="sform__fieldset-notice">Оплата наличными при доставке заказа.</div>
                 </div>
               </div>
-              <div class="custom-checbox">
-                <input class="visually-hidden" id="diliveryAddress" type="checkbox">
-                <label for="diliveryAddress">Доставка по другому адресу?</label>
-              </div>
+              <label class="custom-checkbox">
+                <input class="visually-hidden" type="checkbox" name="anotherDiliveryAddress"><span class="custom-checkbox__text">Доставка по другому адресу?</span>
+              </label>
               <label class="sform__field field"><span class="field__hint">Примечание к заказу (необязательно)</span>
                 <textarea name="message"></textarea>
               </label>

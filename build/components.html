@@ -267,7 +267,7 @@
           </div>
           <div class="components__block-outer">
             <div class="components__title">Фильтр</div>
-            <div class="filter-block">
+            <div class="sort-block">
               <select class="__js_custom-select" name="select">
                 <option value="by-deadline">По сроку обучения </option>
                 <option value="by-deadline1">По сроку обучения 1</option>
@@ -278,10 +278,23 @@
                 <option value="by-deadline6">По сроку обучения 6</option>
                 <option value="by-deadline7">По сроку обучения 7</option>
               </select>
-              <div class="custom-checbox">
-                <input class="visually-hidden" id="withDiscount" type="checkbox">
-                <label for="withDiscount">Со скидкой</label>
-              </div>
+              <label class="custom-checkbox">
+                <input class="visually-hidden" type="checkbox" name="withDiscount"><span class="custom-checkbox__text">Со скидкой</span>
+              </label>
+            </div>
+          </div>
+          <div class="components__block-outer">
+            <div class="components__title">Радиокнопка</div>
+            <div class="block__element custom-radio">
+              <label class="custom-radio__item">
+                <input class="visually-hidden" type="radio" name="availability" value="1" checked><span class="custom-radio__text">В наличии</span>
+              </label>
+              <label class="custom-radio__item">
+                <input class="visually-hidden" type="radio" name="availability" value="2"><span class="custom-radio__text">В наличии под заказ</span>
+              </label>
+              <label class="custom-radio__item">
+                <input class="visually-hidden" type="radio" name="availability" value="3"><span class="custom-radio__text">Нет в наличии</span>
+              </label>
             </div>
           </div>
           <div class="components__block-outer">

@@ -20,7 +20,7 @@
 @import "partials/pagination";
 @import "partials/breadcrumbs";
 @import "partials/socials";
-@import "partials/custom-checbox";
+@import "partials/custom-checkbox";
 @import "partials/custom-radio";
 @import "partials/choices"; //override lib styles
 @import "partials/field";
@@ -36,7 +36,7 @@
 @import "blocks/tabs";
 @import "blocks/parameter";
 @import "blocks/tab-content";
-@import "blocks/filter-block";
+@import "blocks/sort-block";
 @import "blocks/sform";
 @import "blocks/contact-item";
 @import "blocks/features";
@@ -76,6 +76,7 @@
 @import "blocks/certificate-preview";
 @import "blocks/certificates-grid";
 @import "blocks/product-options";
+@import "blocks/filters";
 
 // Страницы
 @import "blocks/inner-page";

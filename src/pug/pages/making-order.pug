@@ -76,30 +76,15 @@ block main
 
               .sform__fieldset
                 .sform__legend Доставка
-              
-                .custom-radio.custom-radio--inline
-                  label.custom-radio__item
-                    input.visually-hidden(type="radio", name="delivery-type", value="1")
-                    span.custom-radio__text Самовывоз
-                  label.custom-radio__item
-                    input.visually-hidden(type="radio", name="delivery-type", value="2", checked)
-                    span.custom-radio__text Единая ставка
+                +custom-radio('delivery-type', ['Самовывоз', 'Единая ставка'], 2, 'custom-radio--inline')
+     
               
               .sform__fieldset.sform__fieldset--bg
                 .sform__legend Способ оплаты
-              
-                .custom-radio
-                  label.custom-radio__item
-                    input.visually-hidden(type="radio", name="payment-method", value="1")
-                    span.custom-radio__text  Прямой банковский перевод
-                  label.custom-radio__item
-                    input.visually-hidden(type="radio", name="payment-method", value="2", checked)
-                    span.custom-radio__text Оплата при доставке
+                +custom-radio('payment-method', ['Прямой банковский перевод', 'Оплата при доставке'], 2, '')
               
                 .sform__fieldset-notice Оплата наличными при доставке заказа.
-            .custom-checbox
-              input.visually-hidden#diliveryAddress(type="checkbox")
-              label(for="diliveryAddress") Доставка по другому адресу?
+            +custom-checkbox('anotherDiliveryAddress', 'Доставка по другому адресу?')
             label.sform__field.field
               span.field__hint Примечание к заказу (необязательно)
               textarea(name="message")

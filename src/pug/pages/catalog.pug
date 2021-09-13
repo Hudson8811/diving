@@ -182,14 +182,12 @@ block main
       .container
         +breadcrumbs(bc, 'inner-page__breadcrumbs')
         +title('Магазин', 'h1', 'title--medium inner-page__title')
-        .inner-page__filter.filter-block
+        .inner-page__sort.sort-block
           select.__js_custom-select(name="select")
             option(value="by-popular") По популярности
             option(value="by-price") По цене
-          .custom-checbox
-            input.visually-hidden#withDiscount(type="checkbox")
-            label(for="withDiscount") Со скидкой
-        .inner-page__tags.tags-block
+          +custom-checkbox('withDiscount', 'Со скидкой')
+        //-.inner-page__tags.tags-block
           +title('Теги', 'div', 'title--small tags-block__title')
           .tags-block__list
             each item, index in tags 
@@ -202,9 +200,50 @@ block main
 
     
     .container
-      .products-grid
-        each item in PRODUCTS
-          +product-preview(item)
+      .inner-page__category
+        .inner-page__category-aside.inner-page__category-aside--flex-column
+          +title('Фильтры', 'div', 'title--small inner-page__category-aside-title')
+          
+          .inner-page__category-aside-filters.filters
+            form(action="#", method="post")
+              .filters__section
+                button.filters__section-title(type="button") Наличие
+                .filters__section-main
+                  +custom-radio('availability', ['В наличии', 'В наличии под заказ', 'Нет в наличии'], 0, '')
+            
+
+
+              .filters__section
+                button.filters__section-title(type="button") Цена
+                .filters__section-main
+                  .filters__section-fields
+                    label.filters__section-field.field
+                      span.field__hint От
+                      input(type="number", name="from")
+                    label.filters__section-field.field
+                      span.field__hint До
+                      input(type="number", name="to")
+                  +custom-checkbox('less-than', 'Менее 1 000₽', false, 'filters__section-checkbox')
+                  +custom-checkbox('from-to', 'От 1 000₽ до 3 000₽', false, 'filters__section-checkbox')
+                  +custom-checkbox('more-than', 'Более 5 000₽', false, 'filters__section-checkbox')
+
+              .filters__section
+                button.filters__section-title(type="button") Производитель
+                .filters__section-main
+                  +custom-checkbox('manafacturer-sdi', 'SDI', false, 'filters__section-checkbox')
+                  +custom-checkbox('manafacturer-frti', 'FRTI', false, 'filters__section-checkbox')
+                  +custom-checkbox('manafacturer-tdi', 'TDI', false, 'filters__section-checkbox')
+              
+              .filters__section
+                button.filters__section-title(type="button") Акция
+                .filters__section-main
+                  +custom-checkbox('profitable-kits', 'Выгодные комплекты (455)', false, 'filters__section-checkbox')
+                  +custom-checkbox('discounted-products', 'Товары со скидкой (2)', false, 'filters__section-checkbox')
+
+
+        .inner-page__category-grid.products-grid.products-grid--three-columns
+          each item in PRODUCTS
+            +product-preview(item)
       
       +button('Больше товаров', 'inner-page__more-products __js_show-more-products')
       

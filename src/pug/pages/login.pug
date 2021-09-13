@@ -30,9 +30,7 @@ block main
             span.field__hint Пароль*
             input(type="password", name="password")
           .form-section__row
-            .custom-checbox
-              input.visually-hidden#rememberMe(type="checkbox")
-              label(for="rememberMe") Запомнить меня на этом компьютере
+            +custom-checkbox('rememberMe', 'Запомнить меня на этом компьютере')
             a.form-section__link(href="#") Забыли пароль?
           .form-section__action 
             +button('Войти', 'form-section__btn')(type="submit")

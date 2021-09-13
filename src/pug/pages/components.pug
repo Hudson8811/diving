@@ -211,13 +211,15 @@ block main
       
       .components__block-outer
         .components__title Фильтр
-        .filter-block
+        .sort-block
           select.__js_custom-select(name="select")
             each it in ['',1,2,3,4,5,6,7]
               option(value="by-deadline" + it) По сроку обучения #{it}
-          .custom-checbox
-            input.visually-hidden#withDiscount(type="checkbox")
-            label(for="withDiscount") Со скидкой
+          +custom-checkbox('withDiscount', 'Со скидкой')
+
+      .components__block-outer
+        .components__title Радиокнопка
+        +custom-radio('availability', ['В наличии', 'В наличии под заказ', 'Нет в наличии'], 1, 'block__element')
 
       .components__block-outer
         .components__title Кнопки
