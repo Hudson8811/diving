@@ -1,12 +1,15 @@
 //= ./../../node_modules/jquery/dist/jquery.min.js
 //= ./../../node_modules/swiper/swiper-bundle.min.js
 //= ./libs/jquery.fancybox.min.js
+//= ./libs/imagesloaded.pkgd.min.js
 //= ./libs/choices.min.js
+//= ./libs/gsap.min.js
+//= ./libs/gsap-slider.js
 
 //= ./partials/main.js
 //= ./partials/swiper-init.js
 //= ./partials/tabs.js
-//= ./partials/tags-block.js
+// ./partials/tags-block.js
 //= ./partials/courses-carousel.js
 //= ./partials/tutorials-carousel.js
 //= ./partials/recommend-carousel.js
@@ -19,3 +22,4 @@
 //= ./partials/catalog.js
 //= ./partials/status.js
 //= ./partials/product-options.js
+//= ./partials/filters.js

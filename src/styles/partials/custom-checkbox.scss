@@ -1,5 +1,7 @@
-.custom-checbox {
-  label {
+.custom-checkbox {
+  display: block;
+
+  &__text {
     position: relative;
     display: inline-block;
     vertical-align: top;
@@ -23,14 +25,14 @@
     }
   }
 
-  input:focus ~ label,
-  label:hover {
+  input:focus ~ &__text,
+  &__text:hover {
     &::before {
       border-color: $dark;
     }
   }
 
-  input:checked ~ label {
+  input:checked ~ &__text {
     &::before {
       box-shadow: inset 0 0 0 5px $white;
       background-color: $dark;

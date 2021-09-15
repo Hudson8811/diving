@@ -5,6 +5,16 @@
     padding: 39px 0 30px;
   }
 
+  &--bg {
+    background-repeat: no-repeat;
+    background-image: url("../images/stock-bg.jpg");
+    background-size: cover;
+
+    @include retina {
+      background-image: url("../images/stock-bg@2x.jpg");
+    }
+  }
+
   &__container {
     display: flex;
     flex-direction: column;

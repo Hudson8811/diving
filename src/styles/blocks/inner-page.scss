@@ -79,12 +79,8 @@
     }
   }
 
-  &__filter {
+  &__sort {
     margin-top: 14px;
-  }
-
-  &__tags {
-    margin-top: 35px;
   }
 
   &__pagination {
@@ -95,10 +91,63 @@
     }
   }
 
+  &__category {
+    display: flex;
+    width: 100%;
+
+    @include max(md) {
+      display: block;
+    }
+
+    &-aside {
+      $aside: &;
+
+      width: 100%;
+      max-width: 292px;
+      margin-right: 24px;
+      flex-shrink: 0;
+
+      @include max(md) {
+        max-width: none;
+        margin-right: 0;
+        margin-bottom: 50px;
+      }
+
+      &--flex-column {
+        display: flex;
+        flex-direction: column;
+
+        @include max(md) {
+          display: block;
+        }
+
+        #{$aside}-filters {
+          flex-grow: 1;
+        }
+      }
+
+      &-title {
+        margin-bottom: 30px;
+      }
+
+      &-filters {
+        @include max(600) {
+          width: calc(100% + 40px);
+          margin-left: -20px;
+        }
+      }
+    }
+  }
+
   &__more-products {
+    display: none;
     width: 100%;
     max-width: 250px;
     margin: 20px auto 0;
+
+    @include max(sm) {
+      display: flex;
+    }
   }
 
   &__hero {

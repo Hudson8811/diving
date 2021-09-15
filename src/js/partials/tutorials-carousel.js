@@ -1,37 +1,40 @@
 $(window).on('load', function() {
-	let tutorialsEl = document.querySelector('.__js_tutorials-carousel');
+	let tutorialsEl = document.querySelectorAll('.__js_tutorials-carousel');
 
-	if (tutorialsEl) {
+	if (tutorialsEl.length) {
 		initTutorialsCarousel();
 
 		function initTutorialsCarousel() {
-			let tutorialsCarousel = new Swiper(tutorialsEl, {
-				slidesPerView: 1,
-				speed: 300,
-				spaceBetween: 14,
-				loop: true,
-				navigation: {
-					prevEl: '.tutorials__prev',
-					nextEl: '.tutorials__next'
-				},
-				pagination: {
-					el: '.tutorials__pagination',
-					type: 'bullets',
-					clickable: true
-				},
-				breakpoints: {
-					768: {
-						slidesPerView: 2
+			tutorialsEl.forEach(it => {
+				let tutorialsCarousel = new Swiper(it, {
+					slidesPerView: 1,
+					speed: 300,
+					spaceBetween: 14,
+					loop: true,
+					navigation: {
+						prevEl: it.nextElementSibling.querySelector('.tutorials__prev'),
+						nextEl: it.nextElementSibling.querySelector('.tutorials__next')
 					},
-					1080: {
-						slidesPerView: 3,
-						spaceBetween: 24
+					pagination: {
+						el: it.nextElementSibling.querySelector('.tutorials__pagination'),
+						type: 'bullets',
+						clickable: true
 					},
-					1280: {
-						slidesPerView: 4
+					breakpoints: {
+						768: {
+							slidesPerView: 2
+						},
+						1080: {
+							slidesPerView: 3,
+							spaceBetween: 24
+						},
+						1280: {
+							slidesPerView: 4
+						}
 					}
-				}
-			});
+				});
+			})
+			
 		}
 	}
 })
