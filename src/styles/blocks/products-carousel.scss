@@ -1,6 +1,18 @@
 .products-carousel {
+  $self: &;
+
   padding: 36px 0 58px;
   overflow: hidden;
+
+  &--bg {
+    background-repeat: no-repeat;
+    background-image: url("../images/products-carosel-bg.jpg");
+    background-size: cover;
+
+    @include retina {
+      background-image: url("../images/products-carosel-bg@2x.jpg");
+    }
+  }
 
   @include max(sm) {
     padding: 25px 0;
@@ -17,6 +29,43 @@
       font-size: 18px;
       line-height: 1.222222222222222;
       text-align: center;
+    }
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+
+    @include max(sm) {
+      margin-bottom: 20px;
+      flex-direction: column;
+    }
+
+    & > * {
+      align-self: center;
+    }
+
+    #{$self}__title {
+      margin-bottom: 0;
+      margin-right: 20px;
+
+      @include max(sm) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__more {
+    padding: 0;
+
+    @include max(sm) {
+      margin-top: 15px;
+    }
+
+    svg {
+      width: 4px;
+      height: 8px;
     }
   }
 
@@ -111,4 +160,13 @@
       display: none;
     }
   }
+}
+
+.products-carousel + .info-block {
+  margin-top: 40px;
+  margin-bottom: 36px;
+}
+.products-carousel + .stock {
+  margin-top: 26px;
+  margin-bottom: 36px;
 }

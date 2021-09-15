@@ -1,0 +1,93 @@
+.shop-categories {
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    max-width: calc(100% - 82px);
+
+    @include max(lg) {
+      max-width: 100%;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    @include max(sm) {
+      padding-top: 30px;
+      padding-bottom: 24px;
+      border: solid 1px $gray;
+      border-bottom: solid 1px $gray;
+      justify-content: space-between;
+    }
+  }
+
+  &__title {
+    display: none;
+
+    @include max(sm) {
+      display: block;
+      width: 100%;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__item {
+    $item: &;
+
+    display: inline-flex;
+    padding: 19px 20px;
+    border: solid 1px $gray;
+    margin-left: -1px;
+    margin-top: -1px;
+
+    @include max(sm) {
+      position: relative;
+      display: flex;
+      width: calc(50% - 20px);
+      margin: 0;
+      padding: 20px 12px 20px 0;
+      border: none;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 0;
+        width: 8px;
+        height: 4px;
+        transform: rotate(-90deg);
+        background-repeat: no-repeat;
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='8' height='4' viewBox='0 0 8 4' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M0 0l4 4 4-4H0z' fill='%234F5764'/%3e%3c/svg%3e");
+      }
+    }
+
+    @include max(480) {
+      width: 100%;
+    }
+
+    @include hover {
+      #{$item}-text {
+        color: $blue;
+      }
+    }
+
+    &-icon {
+      margin-right: 5px;
+      align-self: center;
+
+      svg {
+        display: block;
+        fill: $blue;
+      }
+    }
+
+    &-text {
+      font-size: 15px;
+      line-height: 1.2;
+      color: $gray-ph;
+      font-weight: 500;
+      align-self: center;
+      transition: color 0.3s ease;
+    }
+  }
+}

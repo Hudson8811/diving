@@ -1,0 +1,12 @@
+.shop-page {
+  &__hero {
+    @include max(sm) {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__categories {
+    margin: 0 auto;
+  }
+}

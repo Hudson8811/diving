@@ -1,8 +1,10 @@
 //= ./../../node_modules/jquery/dist/jquery.min.js
 //= ./../../node_modules/swiper/swiper-bundle.min.js
 //= ./libs/jquery.fancybox.min.js
+//= ./libs/imagesloaded.pkgd.min.js
 //= ./libs/choices.min.js
 //= ./libs/gsap.min.js
+//= ./libs/gsap-slider.js
 
 //= ./partials/main.js
 //= ./partials/swiper-init.js

@@ -169,4 +169,35 @@ window.addEventListener('load', () => {
     }
 
   }
+
+  /*const test = document.querySelector('.__js_test-carousel');
+  new Swiper(test, {
+        speed: 300,
+        slidesPerView: 1,
+        spaceBetween: 24,
+        //watchOverflow: true,
+        breakpoints: {
+          // when window width is >= 480px
+          560: {
+            slidesPerView: 2
+          },
+          // when window width is >= 640px
+          1080: {
+            slidesPerView: 3
+          },
+          1280: {
+            slidesPerView: 4
+          }
+        },
+        navigation: {
+          nextEl: test.nextElementSibling.querySelector('.__js_next'),
+          prevEl: test.nextElementSibling.querySelector('.__js_prev'),
+          disabledClass: 'button--disabled'
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          type: 'bullets',// 'bullets' | 'fraction' | 'progressbar' | 'custom'
+          clickable: true
+        },
+      });*/
 });
