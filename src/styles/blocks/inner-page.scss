@@ -306,11 +306,6 @@
 
   &__form-section {
     margin: 0 auto;
-
-    @include max(xs) {
-      width: calc(100% + 40px);
-      margin: 0 -20px;
-    }
   }
 
   &__certification-card {
