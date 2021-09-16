@@ -37,7 +37,7 @@
   }
 
   &__image + &__main {
-    margin-left: calc(45.67% + 50px);
+    margin-left: calc(45.67% + 65px);
 
     @include max(sm) {
       margin-left: 0;

@@ -151,6 +151,15 @@
   &__contact {
     margin-top: 68px; //92px;
 
+    &--m-more {
+      margin-top: 92px;
+      margin-bottom: 42px;
+
+      @include max(sm) {
+        margin-bottom: 0;
+      }
+    }
+
     @include max(sm) {
       margin-top: 50px;
     }
