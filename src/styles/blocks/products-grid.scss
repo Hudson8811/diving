@@ -62,4 +62,23 @@
       margin-left: 0;
     }
   }
+
+  &__pagination {
+    margin-top: 40px;
+
+    @include max(sm) {
+      display: none;
+    }
+  }
+
+  &__more-products {
+    display: none;
+    width: 100%;
+    max-width: 250px;
+    margin: 20px auto 0;
+
+    @include max(sm) {
+      display: flex;
+    }
+  }
 }

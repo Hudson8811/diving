@@ -19,7 +19,6 @@
 //= ./partials/stock-carousel.js
 //= ./partials/footer-accordion.js
 //= ./partials/articles-carousel.js
-//= ./partials/catalog.js
 //= ./partials/status.js
 //= ./partials/product-options.js
 //= ./partials/filters.js

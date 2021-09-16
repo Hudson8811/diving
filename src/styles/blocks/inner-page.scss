@@ -83,17 +83,10 @@
     margin-top: 14px;
   }
 
-  &__pagination {
-    margin-top: 40px;
-
-    @include max(sm) {
-      display: none;
-    }
-  }
-
   &__category {
     display: flex;
     width: 100%;
+    padding-top: 20px;
 
     @include max(md) {
       display: block;
@@ -105,12 +98,17 @@
       width: 100%;
       max-width: 292px;
       margin-right: 24px;
+      margin-bottom: -50px;
       flex-shrink: 0;
 
       @include max(md) {
         max-width: none;
         margin-right: 0;
         margin-bottom: 50px;
+      }
+
+      @include max(sm) {
+        margin-bottom: -30px;
       }
 
       &--flex-column {
@@ -136,17 +134,6 @@
           margin-left: -20px;
         }
       }
-    }
-  }
-
-  &__more-products {
-    display: none;
-    width: 100%;
-    max-width: 250px;
-    margin: 20px auto 0;
-
-    @include max(sm) {
-      display: flex;
     }
   }
 
