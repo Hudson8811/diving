@@ -92,10 +92,14 @@ block main
       .container
         +breadcrumbs(bc, 'inner-page__breadcrumbs')
         +title(page.title, 'h1', 'title--medium inner-page__title')
-        .inner-page__filter.filter-block
+        .inner-page__sort.sort-block
           select.__js_custom-select(name="select")
             each it in ['',1,2,3,4,5,6,7]
               option(value="by-deadline" + it) По сроку обучения #{it}
+          
+          select.__js_custom-select(name="select2")
+            option(value="sdi") SDI
+            option(value="tdi") TDI
           +custom-checkbox('withDiscount', 'Со скидкой')
     .container
       .inner-page__grid.courses-grid

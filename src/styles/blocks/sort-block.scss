@@ -5,7 +5,11 @@
 
   & > * {
     align-self: center;
-    margin-right: 20px;
+    margin-right: 35px;
     margin-top: 16px;
+  }
+
+  .choices {
+    min-width: 92px;
   }
 }
