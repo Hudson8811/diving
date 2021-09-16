@@ -43,7 +43,7 @@ block main
                     +icon(item.icon.id)(width= item.icon.w, height= item.icon.h)
                   | #{item.text}
 
-        .cabinet__main.cabinet__main--unbordered
+        .cabinet__main.cabinet__main--unbordered.cabinet__main--no-pb
           .cabinet__order-notice Заказ №1 был оформлен 12.08.2021 и сейчас находится в обработке
           .cabinet__order-status.order-status.__js_order-status(data-status="3")
             +title('Статус заказа', 'h2', 'title--small order-status__title')

@@ -24,7 +24,7 @@
     padding: 30px;
 
     @include max(480) {
-      padding: 24px 16px;
+      padding: 35px 16px; //24px 16px;
     }
   }
 
@@ -69,6 +69,10 @@
 
     & + & {
       margin-top: 25px;
+
+      @include max(sm) {
+        margin-top: 15px;
+      }
     }
   }
 
@@ -108,8 +112,8 @@
     margin-top: 20px;
 
     @include max(480) {
-      flex-direction: column;
-      margin-top: 32px;
+      //flex-direction: column;
+      margin-top: 20px; //32px;
     }
 
     & > * {
@@ -127,8 +131,8 @@
     transition: color 0.3s ease;
 
     @include max(480) {
-      margin-top: 16px;
-      order: 1;
+      //margin-top: 16px;
+      //order: 1;
     }
 
     @include hover {
@@ -140,8 +144,8 @@
     margin-left: 20px;
 
     @include max(480) {
-      width: 100%;
-      margin-left: 0;
+      //width: 100%;
+      //margin-left: 0;
     }
   }
 }

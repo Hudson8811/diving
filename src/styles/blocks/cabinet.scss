@@ -12,6 +12,7 @@
   }
 
   &__nav {
+    width: 100%;
     max-width: 292px;
     border: solid 1px $gray;
     align-self: flex-start;
@@ -154,6 +155,10 @@
     &--simple {
       padding: 0;
       border: none;
+    }
+
+    &--no-pb {
+      padding-bottom: 0;
     }
   }
 
@@ -317,6 +322,12 @@
     font-size: 18px;
     line-height: 1.22;
     color: $dark;
+
+    @include max(sm) {
+      margin-top: -32px;
+      font-size: 15px;
+      line-height: 1.466666666666667;
+    }
   }
 
   &__order-status {
@@ -340,6 +351,7 @@
     @include max(sm) {
       width: calc(100% + 40px);
       margin-left: -20px;
+      margin-top: 15px;
     }
   }
 
