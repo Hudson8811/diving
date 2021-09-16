@@ -1,6 +1,17 @@
 .certificate-preview {
   @extend .stock__item;
+
+  $self: &;
   margin: 0;
+  overflow: hidden;
+
+  @include hover {
+    #{$self}__bg {
+      &::after {
+        transform: scale(1.4, 1);
+      }
+    }
+  }
 
   &__bg {
     @extend .stock__bg;
@@ -19,6 +30,8 @@
       top: 0;
       left: 0;
       bottom: 0;
+      transform-origin: 0 50%;
+      transition: transform 0.3s ease;
     }
 
     img {

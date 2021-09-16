@@ -69,8 +69,12 @@
   }
 
   &__title {
+    color: $dark;
+
     @include max(sm) {
       width: 100%;
+      font-size: 18px;
+      line-height: 21px;
 
       & + * {
         margin-left: 0 !important;

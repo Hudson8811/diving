@@ -89,6 +89,11 @@
   &__title {
     margin-bottom: 35px;
 
+    @include max(sm) {
+      font-size: 21px;
+      line-height: 25.6px;
+    }
+
     @include max(xs) {
       margin-bottom: 10px;
     }
