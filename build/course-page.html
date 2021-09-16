@@ -104,7 +104,7 @@
           </div>
         </div>
       </header>
-      <div class="inner-page__hero inner-hero" style="background-image: url(images/course/hero-bg.jpg)">
+      <div class="inner-page__hero inner-hero inner-hero--course">
         <div class="inner-hero__container container">
           <div class="inner-hero__main">
             <h1 class="title--large inner-hero__title title">Курс SDI Ice Diver</h1>
@@ -214,109 +214,101 @@
           </section>
         </div>
       </div>
-      <section class="inner-page__courses courses-carousel">
+      <!--section.inner-page__courses.inner-page__courses--negative-mb.courses-carousel
+      .container
+        +title('Предлагаем курсы', 'h2', 'title--small courses-carousel__title')
+        .courses-carousel__swiper.swiper-container.__js_courses-carousel-a
+          .swiper-wrapper 
+            each item in courses
+              +course-preview(item)
+      
+          .swiper-pagination
+          .courses-carousel__navigation
+            +button('', 'products-carousel__btn button--outline button--icon __js_prev', 'chevron-left')
+            +button('', 'products-carousel__btn button--outline button--icon __js_next', 'chevron-right')
+      
+      -->
+      <section class="courses inner-page__courses inner-page__courses--negative-mb" id="courses">
         <div class="container">
-          <h2 class="title--small courses-carousel__title title">Предлагаем курсы</h2>
-          <div class="courses-carousel__swiper swiper-container __js_courses-carousel-a">
-            <div class="swiper-wrapper"> 
-              <div class="courses-carousel__item swiper-slide course-preview"><span class="course-preview__label">Акция
-                  <svg width="20" height="20">
-                    <use xlink:href="./images/sprite.svg#info"></use>
-                  </svg></span>
-                <div class="course-preview__image"><img src="images/course-preview/1.jpg" srcset="images/course-preview/1@2x.jpg 2x" width="397" height="478" alt=""></div>
-                <div class="course-preview__content">
-                  <h3 class="course-preview__title">SDI OWD</h3>
-                  <div class="course-preview__list"><span>От 10 лет</span><span>более 4-х часов</span>
+          <h2 class="title--small courses__title title">Предлагаем курсы</h2>
+          <div class="courses__wrapper">
+            <div class="swiper-container __js_courses-carousel-2">
+              <div class="swiper-wrapper">
+                <div class="courses-card swiper-slide">
+                  <div class="courses-card__stock">Акция
+                    <svg>
+                      <use xlink:href="./images/sprite.svg#info"></use>
+                    </svg>
                   </div>
-                  <div class="course-preview__text">4&nbsp;теоретических занятий, 4&nbsp;погружений в&nbsp;бассейне, экзамен, 4&nbsp;погружения в&nbsp;открытой воде, аренда оборудования включена.</div>
-                  <div class="course-preview__action"> <a class="button course-preview__btn button--white button--more" href="course-page.html"><span>Подробнее</span>
-                      <svg>
-                        <use xlink:href="./images/sprite.svg#chevron-right"></use>
-                      </svg></a>
-                    <div class="course-preview__price">
-                      <div class="course-preview__price-old">от 55 000₽</div>от 25 000₽
+                  <div class="courses-card__bg"><img src="images/homepage/courses/1.jpg" srcset="images/homepage/courses/1@2x.jpg 2x" width="397" height="478" alt=""></div>
+                  <div class="courses-card__content">
+                    <div class="courses-card__title">SDI OWD</div>
+                    <div class="courses-card__limit"><span class="year">От 10 лет</span><span>более 4-х часов</span></div>
+                    <div class="courses-card__desc">
+                      4 теоретических занятий, 4 погружений в бассейне, экзамен, 4 погружения в открытой  воде, аренда оборудования включена.</div>
+                    <div class="courses-card__row"><a class="button button--outline button--icon courses-card__more" href="#"><span>Подробнее</span>
+                        <svg>
+                          <use xlink:href="./images/sprite.svg#chevron-right"></use>
+                        </svg></a>
+                      <div class="courses-card__price">от 25 000₽</div>
                     </div>
-                  </div><a class="course-preview__link" href="#">Приобрести в подарок</a>
+                    <div class="courses-card__gift"><a href="#" target="_blank">Приобрести в подарок</a></div>
+                  </div>
                 </div>
-              </div>
-              <div class="courses-carousel__item swiper-slide course-preview">
-                <div class="course-preview__image"><img src="images/course-preview/2.jpg" srcset="images/course-preview/2@2x.jpg 2x" width="397" height="325" alt=""></div>
-                <div class="course-preview__content">
-                  <h3 class="course-preview__title">Пробное погружение</h3>
-                  <div class="course-preview__list"><span>От 10 лет</span><span>более 4-х часов</span>
-                  </div>
-                  <div class="course-preview__text">1&nbsp;погружение с&nbsp;инструктором в&nbsp;бассейне или водоеме. Аренда полного комплекта снаряжения включена</div>
-                  <div class="course-preview__action"> <a class="button course-preview__btn button--white button--more" href="course-page.html"><span>Подробнее</span>
-                      <svg>
-                        <use xlink:href="./images/sprite.svg#chevron-right"></use>
-                      </svg></a>
-                    <div class="course-preview__price">2 500₽
+                <div class="courses-card swiper-slide">
+                  <div class="courses-card__bg"><img src="images/homepage/courses/2.jpg" srcset="images/homepage/courses/2@2x.jpg 2x" width="397" height="325" alt=""></div>
+                  <div class="courses-card__content">
+                    <div class="courses-card__title">Пробное погружение</div>
+                    <div class="courses-card__limit"><span class="year">От 10 лет</span><span>более 4-х часов</span></div>
+                    <div class="courses-card__desc">1 погружение с инструктором в бассейне или водоеме. Аренда полного комплекта снаряжения включена</div>
+                    <div class="courses-card__row"><a class="button button--outline button--icon courses-card__more" href="#"><span>Подробнее</span>
+                        <svg>
+                          <use xlink:href="./images/sprite.svg#chevron-right"></use>
+                        </svg></a>
+                      <div class="courses-card__price">2 500₽</div>
                     </div>
-                  </div><a class="course-preview__link" href="#">Приобрести в подарок</a>
+                    <div class="courses-card__gift"><a href="#" target="_blank">Приобрести в подарок</a></div>
+                  </div>
                 </div>
-              </div>
-              <div class="courses-carousel__item swiper-slide course-preview">
-                <div class="course-preview__image"><img src="images/course-preview/3.jpg" srcset="images/course-preview/3@2x.jpg 2x" width="397" height="341" alt=""></div>
-                <div class="course-preview__content">
-                  <h3 class="course-preview__title">SDI Advanced Adventure Open Water</h3>
-                  <div class="course-preview__list"><span>более 4-х часов</span>
-                  </div>
-                  <div class="course-preview__text">Теория, 5&nbsp;погружений в&nbsp;открытой воде с&nbsp;инструктором.</div>
-                  <div class="course-preview__action"> <a class="button course-preview__btn button--white button--more" href="course-page.html"><span>Подробнее</span>
-                      <svg>
-                        <use xlink:href="./images/sprite.svg#chevron-right"></use>
-                      </svg></a>
-                    <div class="course-preview__price">12 000₽
+                <div class="courses-card swiper-slide">
+                  <div class="courses-card__bg"><img src="images/homepage/courses/3.jpg" srcset="images/homepage/courses/3@2x.jpg 2x" width="397" height="341" alt=""></div>
+                  <div class="courses-card__content">
+                    <div class="courses-card__title">SDI Advanced Adventure <br> Open Water</div>
+                    <div class="courses-card__limit"><span>более 4-х часов</span></div>
+                    <div class="courses-card__desc">Теория, 5 погружений в открытой воде <br> с инструктором.</div>
+                    <div class="courses-card__row"><a class="button button--outline button--icon courses-card__more" href="#"><span>Подробнее</span>
+                        <svg>
+                          <use xlink:href="./images/sprite.svg#chevron-right"></use>
+                        </svg></a>
+                      <div class="courses-card__price">12 000₽</div>
                     </div>
-                  </div><a class="course-preview__link" href="#">Приобрести в подарок</a>
-                </div>
-              </div>
-              <div class="courses-carousel__item swiper-slide course-preview">
-                <div class="course-preview__image"><img src="images/course-preview/4.jpg" srcset="images/course-preview/4@2x.jpg 2x" width="397" height="350" alt=""></div>
-                <div class="course-preview__content">
-                  <h3 class="course-preview__title">TDI Basic Nitrox</h3>
-                  <div class="course-preview__list"><span>От 15 лет</span><span>30 мин и больше</span>
+                    <div class="courses-card__gift"><a href="#" target="_blank">Приобрести в подарок</a></div>
                   </div>
-                  <div class="course-preview__text">Теория, экзамен. Учебник или eLearning курс приобретается отдельно</div>
-                  <div class="course-preview__action"> <a class="button course-preview__btn button--white button--more" href="course-page.html"><span>Подробнее</span>
-                      <svg>
-                        <use xlink:href="./images/sprite.svg#chevron-right"></use>
-                      </svg></a>
-                    <div class="course-preview__price">2 500₽
-                    </div>
-                  </div><a class="course-preview__link" href="#">Приобрести в подарок</a>
-                </div>
-              </div>
-              <div class="courses-carousel__item swiper-slide course-preview">
-                <div class="course-preview__image"><img src="images/course-preview/5.jpg" srcset="images/course-preview/5@2x.jpg 2x" width="397" height="332" alt=""></div>
-                <div class="course-preview__content">
-                  <h3 class="course-preview__title">SDI Sidemount Diver</h3>
-                  <div class="course-preview__list"><span>c 15 лет</span><span>30 мин и больше</span>
-                  </div>
-                  <div class="course-preview__text">Теория, специфика конфигурации, 2&nbsp;погружения в&nbsp;бассейне, 4&nbsp;погружения на&nbsp;открытой воде. Аренда системы Sidemount включена, остальное оборудование...</div>
-                  <div class="course-preview__action"> <a class="button course-preview__btn button--white button--more" href="course-page.html"><span>Подробнее</span>
-                      <svg>
-                        <use xlink:href="./images/sprite.svg#chevron-right"></use>
-                      </svg></a>
-                    <div class="course-preview__price">20 000₽
-                    </div>
-                  </div><a class="course-preview__link" href="#">Приобрести в подарок</a>
                 </div>
               </div>
             </div>
-            <div class="swiper-pagination"></div>
-            <div class="courses-carousel__navigation">
-              <button class="button products-carousel__btn button--outline button--icon __js_prev"><span></span>
-                <svg>
-                  <use xlink:href="./images/sprite.svg#chevron-left"></use>
-                </svg>
-              </button>
-              <button class="button products-carousel__btn button--outline button--icon __js_next"><span></span>
-                <svg>
-                  <use xlink:href="./images/sprite.svg#chevron-right"></use>
-                </svg>
-              </button>
-            </div>
+            <button class="button button--outline button--icon slick-prev courses__prev"><span></span>
+              <svg>
+                <use xlink:href="./images/sprite.svg#chevron-right"></use>
+              </svg>
+            </button>
+            <button class="button button--outline button--icon slick-next courses__next"><span></span>
+              <svg>
+                <use xlink:href="./images/sprite.svg#chevron-right"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="courses__mobile-wrapper">
+            <button class="button button--outline button--icon slick-prev courses__prev"><span></span>
+              <svg>
+                <use xlink:href="./images/sprite.svg#chevron-right"></use>
+              </svg>
+            </button><a class="button courses__btn" href="#"><span>Все курсы</span></a>
+            <button class="button button--outline button--icon slick-next courses__next"><span></span>
+              <svg>
+                <use xlink:href="./images/sprite.svg#chevron-right"></use>
+              </svg>
+            </button>
           </div>
         </div>
       </section>

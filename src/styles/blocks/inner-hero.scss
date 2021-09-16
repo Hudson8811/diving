@@ -3,6 +3,18 @@
   background-color: $smoky;
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: $gray-c8;
+
+  &--course {
+    background-image: url("../images/course/hero-bg.jpg");
+
+    @include max(sm) {
+      background-image: url("../images/course/hero-bg-mobile.jpg");
+    }
+  }
+
+  &--trip {
+  }
 
   &__container {
     display: grid;
@@ -172,6 +184,7 @@
   }
 
   &__text {
+    padding-top: 48px;
     padding-right: 50px;
     font-size: 14px;
     line-height: 1.857142857142857;
@@ -188,6 +201,7 @@
       grid-column-end: 3;
 
       padding-right: 0;
+      padding-top: 0;
     }
 
     @include max(md) {

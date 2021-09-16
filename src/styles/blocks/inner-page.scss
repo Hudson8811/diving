@@ -155,14 +155,13 @@
   }
 
   &__features {
-    margin-top: -22px;
   }
 
   &__contact {
-    margin-top: 92px;
+    margin-top: 68px; //92px;
 
     @include max(sm) {
-      margin-top: 72px;
+      margin-top: 50px;
     }
   }
 
@@ -218,6 +217,14 @@
 
   &__courses {
     margin-top: 56px;
+
+    @include max(sm) {
+      margin-top: 14px;
+    }
+
+    &--negative-mb {
+      margin-bottom: -36px;
+    }
   }
 
   &__content {

@@ -84,7 +84,7 @@ block main
     header.inner-page__header
       .container
         +breadcrumbs(bc, 'inner-page__breadcrumbs no-margin')
-    .inner-page__hero.inner-hero(style="background-image: url(images/course/hero-bg.jpg)")
+    .inner-page__hero.inner-hero.inner-hero--course
       .inner-hero__container.container
         .inner-hero__main
           +title(page.title, 'h1', 'title--large inner-hero__title')
@@ -160,7 +160,7 @@ block main
                 +button('Отправить', 'sform__send')(type="submit")
                 .sform__bottom-text Нажимая на кнопку «Отправить», вы соглашаетсь с <a href="#" target="_blank">условиями обработки персональных данных</a>
     
-    section.inner-page__courses.courses-carousel
+    //section.inner-page__courses.inner-page__courses--negative-mb.courses-carousel
       .container
         +title('Предлагаем курсы', 'h2', 'title--small courses-carousel__title')
         .courses-carousel__swiper.swiper-container.__js_courses-carousel-a
@@ -172,3 +172,61 @@ block main
           .courses-carousel__navigation
             +button('', 'products-carousel__btn button--outline button--icon __js_prev', 'chevron-left')
             +button('', 'products-carousel__btn button--outline button--icon __js_next', 'chevron-right')
+
+    section#courses.courses.inner-page__courses.inner-page__courses--negative-mb
+      .container
+        +title('Предлагаем курсы', 'h2', 'title--small courses__title')
+        .courses__wrapper
+          .swiper-container.__js_courses-carousel-2
+            .swiper-wrapper
+              .courses-card.swiper-slide
+                .courses-card__stock Акция
+                  +icon('info')
+                .courses-card__bg
+                  img(src="images/homepage/courses/1.jpg", srcset="images/homepage/courses/1@2x.jpg 2x", width="397", height="478", alt="")
+                .courses-card__content
+                  .courses-card__title SDI OWD
+                  .courses-card__limit
+                    span.year От 10 лет
+                    span более 4-х часов
+                  .courses-card__desc 4 теоретических занятий, 4 погружений в бассейне, экзамен, 4 погружения
+                    |  в открытой  воде, аренда оборудования включена.
+                  .courses-card__row
+                    +button('Подробнее', 'button--outline button--icon courses-card__more', 'chevron-right', '#')
+                    .courses-card__price от 25 000₽
+                  .courses-card__gift
+                    a(href='#', target='_blank') Приобрести в подарок
+              .courses-card.swiper-slide
+                .courses-card__bg
+                  img(src="images/homepage/courses/2.jpg", srcset="images/homepage/courses/2@2x.jpg 2x", width="397", height="325", alt="")
+                .courses-card__content
+                  .courses-card__title Пробное погружение
+                  .courses-card__limit
+                    span.year От 10 лет
+                    span более 4-х часов
+                  .courses-card__desc 1 погружение с инструктором в бассейне или водоеме. Аренда полного комплекта снаряжения включена
+                  .courses-card__row
+                    +button('Подробнее', 'button--outline button--icon courses-card__more', 'chevron-right', '#')
+                    .courses-card__price 2 500₽
+                  .courses-card__gift
+                    a(href='#', target='_blank') Приобрести в подарок
+              .courses-card.swiper-slide
+                .courses-card__bg
+                  img(src="images/homepage/courses/3.jpg", srcset="images/homepage/courses/3@2x.jpg 2x", width="397", height="341", alt="")
+                .courses-card__content
+                  .courses-card__title SDI Advanced Adventure <br> Open Water
+                  .courses-card__limit
+                    span более 4-х часов
+                  .courses-card__desc Теория, 5 погружений в открытой воде <br> с инструктором.
+                  .courses-card__row
+                    +button('Подробнее', 'button--outline button--icon courses-card__more', 'chevron-right', '#')
+                    .courses-card__price 12 000₽
+                  .courses-card__gift
+                    a(href='#', target='_blank') Приобрести в подарок
+          +button('', 'button--outline button--icon slick-prev courses__prev', 'chevron-right')
+          +button('', 'button--outline button--icon slick-next courses__next', 'chevron-right')
+
+        .courses__mobile-wrapper
+          +button('', 'button--outline button--icon slick-prev courses__prev', 'chevron-right')
+          +button('Все курсы', 'courses__btn', '', '#')
+          +button('', 'button--outline button--icon slick-next courses__next', 'chevron-right')

@@ -358,11 +358,11 @@
   }
 
   // Initialize the slideshow
-  const slideshow = new Slideshow(document.querySelector(".slideshow"));
-  // Preload all the images..
-  imagesLoaded(document.querySelectorAll(".slide__img"), { background: true }, () => document.body.classList.remove("loading"));
-}
+  const slideshowEl = document.querySelector(".slideshow");
 
-document.addEventListener('click', e => {
-  //console.log(e.target)
-})
+  if (slideshowEl) {
+    const slideshow = new Slideshow();
+    // Preload all the images..
+    imagesLoaded(document.querySelectorAll(".slide__img"), { background: true }, () => document.body.classList.remove("loading"));
+  }
+}
