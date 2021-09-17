@@ -4,6 +4,7 @@
   max-width: 608px;
   border: solid 1px $gray;
   border-radius: 5px;
+  background-color: $white;
 
   @include max(sm) {
     max-width: none;

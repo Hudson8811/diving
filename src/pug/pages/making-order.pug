@@ -84,11 +84,20 @@ block main
                 +custom-radio('payment-method', ['Прямой банковский перевод', 'Оплата при доставке'], 2, '')
               
                 .sform__fieldset-notice Оплата наличными при доставке заказа.
-            +custom-checkbox('anotherDiliveryAddress', 'Доставка по другому адресу?')
-            label.sform__field.field
-              span.field__hint Примечание к заказу (необязательно)
-              textarea(name="message")
-            
+            .sform__bg-mobile-wrapper
+              +custom-checkbox('anotherDiliveryAddress', 'Доставка по другому адресу?')
+              label.sform__field.field
+                span.field__hint Примечание к заказу (необязательно)
+                textarea(name="message")
+              .sform__cart-result.cart-result
+                .cart-result__footer 
+                  .cart-result__row
+                    .cart-result__hint Итого
+                    .cart-result__val  999&nbsp;000₽
+                  .cart-result__action
+                    a.cart-result__clear(href="#") Очистить
+                    +button('Подтвердить заказ', 'cart-result__send', '', URLS.cabinet.orderAccepted)
+              
           .sform__part.sform__part--large
             +title('Ваш заказ', 'div', 'title--small sform__part-title')
 

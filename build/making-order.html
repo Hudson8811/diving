@@ -95,247 +95,259 @@
         </div>
       </div>
     </header>
-  </body>
-  <main class="main">
-    <article class="inner-page">
-      <header class="inner-page__header">
-        <div class="container">
-          <div class="inner-page__breadcrumbs breadcrumbs"><a href="homepage.html">Главная</a><span>Корзина</span>
+    <main class="main">
+      <article class="inner-page">
+        <header class="inner-page__header">
+          <div class="container">
+            <div class="inner-page__breadcrumbs breadcrumbs"><a href="homepage.html">Главная</a><span>Корзина</span>
+            </div>
+            <div class="inner-page__header-row">
+              <h1 class="title--medium inner-page__title title">Оформление заказа</h1>
+            </div>
           </div>
-          <div class="inner-page__header-row">
-            <h1 class="title--medium inner-page__title title">Оформление заказа</h1>
-          </div>
-        </div>
-      </header>
-      <div class="container"> 
-        <section class="inner-page__cart-promo cart-promo"> 
-          <div class="cart-promo__top">Есть купон? <a href="#">Нажмите, чтобы ввести</a></div>
-          <div class="cart-promo__bottom">
-            <div class="cart-promo__text">Если у вас есть код купона, укажите его ниже.</div>
+        </header>
+        <div class="container"> 
+          <section class="inner-page__cart-promo cart-promo"> 
+            <div class="cart-promo__top">Есть купон? <a href="#">Нажмите, чтобы ввести</a></div>
+            <div class="cart-promo__bottom">
+              <div class="cart-promo__text">Если у вас есть код купона, укажите его ниже.</div>
+              <form action="#" method="post">
+                <label class="cart-promo__field field"><span class="field__hint">Промокод</span>
+                  <input type="text" name="promocode">
+                </label>
+                <button class="button cart-promo__btn" type="submit"><span>Применить</span>
+                </button>
+              </form>
+            </div>
+          </section>
+          <div class="inner-page__order-form sform">
             <form action="#" method="post">
-              <label class="cart-promo__field field"><span class="field__hint">Промокод</span>
-                <input type="text" name="promocode">
-              </label>
-              <button class="button cart-promo__btn" type="submit"><span>Применить</span>
-              </button>
+              <div class="sform__part sform__part--small">
+                <div class="title--small sform__part-title title">Детали оплаты</div>
+                <div class="sform__bg-wrapper">
+                  <label class="sform__field sform__field--half field"><span class="field__hint">Ваше Имя*</span>
+                    <input type="text" name="name" required>
+                  </label>
+                  <label class="sform__field sform__field--half field"><span class="field__hint">Ваше Фамилия*</span>
+                    <input type="text" name="surname" required>
+                  </label>
+                  <label class="sform__field field field--select"><span class="field__hint">Страна/регион*</span>
+                    <select class="__js_custom-select" name="country">
+                      <option value="Russia">Россия</option>
+                      <option value="Ukraine">Украина</option>
+                      <option value="Kazahstan">Казахстан</option>
+                    </select>
+                  </label>
+                  <label class="sform__field field"><span class="field__hint">Адрес*</span>
+                    <input type="text" name="address" required>
+                  </label>
+                  <label class="sform__field field"><span class="field__hint">Населенный пункт*</span>
+                    <input type="text" name="city" required>
+                  </label>
+                  <label class="sform__field field"><span class="field__hint">Область/район*</span>
+                    <input type="text" name="region" required>
+                  </label>
+                  <label class="sform__field sform__field--half field"><span class="field__hint">Почтовый индекс*</span>
+                    <input type="text" name="postzip" required>
+                  </label>
+                  <label class="sform__field sform__field--half field"><span class="field__hint">Номер телефона*</span>
+                    <input type="tel" name="phone">
+                  </label>
+                  <label class="sform__field field"><span class="field__hint">Email*</span>
+                    <input type="email" name="email">
+                  </label>
+                  <div class="sform__fieldset">
+                    <div class="sform__legend">Доставка</div>
+                    <div class="custom-radio--inline custom-radio">
+                      <label class="custom-radio__item">
+                        <input class="visually-hidden" type="radio" name="delivery-type" value="1"><span class="custom-radio__text">Самовывоз</span>
+                      </label>
+                      <label class="custom-radio__item">
+                        <input class="visually-hidden" type="radio" name="delivery-type" value="2" checked><span class="custom-radio__text">Единая ставка</span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="sform__fieldset sform__fieldset--bg">
+                    <div class="sform__legend">Способ оплаты</div>
+                    <div class="custom-radio">
+                      <label class="custom-radio__item">
+                        <input class="visually-hidden" type="radio" name="payment-method" value="1"><span class="custom-radio__text">Прямой банковский перевод</span>
+                      </label>
+                      <label class="custom-radio__item">
+                        <input class="visually-hidden" type="radio" name="payment-method" value="2" checked><span class="custom-radio__text">Оплата при доставке</span>
+                      </label>
+                    </div>
+                    <div class="sform__fieldset-notice">Оплата наличными при доставке заказа.</div>
+                  </div>
+                </div>
+                <div class="sform__bg-mobile-wrapper">
+                  <label class="custom-checkbox">
+                    <input class="visually-hidden" type="checkbox" name="anotherDiliveryAddress"><span class="custom-checkbox__text">Доставка по другому адресу?</span>
+                  </label>
+                  <label class="sform__field field"><span class="field__hint">Примечание к заказу (необязательно)</span>
+                    <textarea name="message"></textarea>
+                  </label>
+                  <div class="sform__cart-result cart-result">
+                    <div class="cart-result__footer"> 
+                      <div class="cart-result__row">
+                        <div class="cart-result__hint">Итого</div>
+                        <div class="cart-result__val"> 999&nbsp;000₽</div>
+                      </div>
+                      <div class="cart-result__action"><a class="cart-result__clear" href="#">Очистить</a><a class="button cart-result__send" href="order-accepted.html"><span>Подтвердить заказ</span></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="sform__part sform__part--large">
+                <div class="title--small sform__part-title title">Ваш заказ</div>
+                <div class="sform__cart-result cart-result">
+                  <div class="cart-result__header"> 
+                    <div class="cart-result__title">Товар</div>
+                    <div class="cart-result__title">Стоимость</div>
+                  </div>
+                  <div class="cart-result__body">
+                    <div class="cart-result__row">
+                      <div class="cart-result__hint">Стивен Барски Dry Suit х1</div>
+                      <div class="cart-result__val">999&nbsp;200₽</div>
+                    </div>
+                    <div class="cart-result__row">
+                      <div class="cart-result__hint">Скидка</div>
+                      <div class="cart-result__val">-200₽</div>
+                    </div>
+                  </div>
+                  <div class="cart-result__footer"> 
+                    <div class="cart-result__row">
+                      <div class="cart-result__hint">Итого</div>
+                      <div class="cart-result__val"> 999&nbsp;200₽</div>
+                    </div>
+                    <div class="cart-result__action"><a class="cart-result__clear" href="#">Очистить</a>
+                      <button class="button cart-result__send" type="submit"><span>Подтвердить заказ</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </form>
           </div>
-        </section>
-        <div class="inner-page__order-form sform">
-          <form action="#" method="post">
-            <div class="sform__part sform__part--small">
-              <div class="title--small sform__part-title title">Детали оплаты</div>
-              <div class="sform__bg-wrapper">
-                <label class="sform__field sform__field--half field"><span class="field__hint">Ваше Имя*</span>
-                  <input type="text" name="name" required>
-                </label>
-                <label class="sform__field sform__field--half field"><span class="field__hint">Ваше Фамилия*</span>
-                  <input type="text" name="surname" required>
-                </label>
-                <label class="sform__field field field--select"><span class="field__hint">Страна/регион*</span>
-                  <select class="__js_custom-select" name="country">
-                    <option value="Russia">Россия</option>
-                    <option value="Ukraine">Украина</option>
-                    <option value="Kazahstan">Казахстан</option>
-                  </select>
-                </label>
-                <label class="sform__field field"><span class="field__hint">Адрес*</span>
-                  <input type="text" name="address" required>
-                </label>
-                <label class="sform__field field"><span class="field__hint">Населенный пункт*</span>
-                  <input type="text" name="city" required>
-                </label>
-                <label class="sform__field field"><span class="field__hint">Область/район*</span>
-                  <input type="text" name="region" required>
-                </label>
-                <label class="sform__field sform__field--half field"><span class="field__hint">Почтовый индекс*</span>
-                  <input type="text" name="postzip" required>
-                </label>
-                <label class="sform__field sform__field--half field"><span class="field__hint">Номер телефона*</span>
-                  <input type="tel" name="phone">
-                </label>
-                <label class="sform__field field"><span class="field__hint">Email*</span>
-                  <input type="email" name="email">
-                </label>
-                <div class="sform__fieldset">
-                  <div class="sform__legend">Доставка</div>
-                  <div class="custom-radio--inline custom-radio">
-                    <label class="custom-radio__item">
-                      <input class="visually-hidden" type="radio" name="delivery-type" value="1"><span class="custom-radio__text">Самовывоз</span>
-                    </label>
-                    <label class="custom-radio__item">
-                      <input class="visually-hidden" type="radio" name="delivery-type" value="2" checked><span class="custom-radio__text">Единая ставка</span>
-                    </label>
-                  </div>
-                </div>
-                <div class="sform__fieldset sform__fieldset--bg">
-                  <div class="sform__legend">Способ оплаты</div>
-                  <div class="custom-radio">
-                    <label class="custom-radio__item">
-                      <input class="visually-hidden" type="radio" name="payment-method" value="1"><span class="custom-radio__text">Прямой банковский перевод</span>
-                    </label>
-                    <label class="custom-radio__item">
-                      <input class="visually-hidden" type="radio" name="payment-method" value="2" checked><span class="custom-radio__text">Оплата при доставке</span>
-                    </label>
-                  </div>
-                  <div class="sform__fieldset-notice">Оплата наличными при доставке заказа.</div>
-                </div>
-              </div>
-              <label class="custom-checkbox">
-                <input class="visually-hidden" type="checkbox" name="anotherDiliveryAddress"><span class="custom-checkbox__text">Доставка по другому адресу?</span>
-              </label>
-              <label class="sform__field field"><span class="field__hint">Примечание к заказу (необязательно)</span>
-                <textarea name="message"></textarea>
-              </label>
+        </div>
+      </article>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__wrapper">
+          <div class="footer__group">
+            <div class="footer__accordion-item"><a href="#" target="_blank">Обучение дайвингу</a>
+              <svg width="15" height="10">
+                <use xlink:href="./images/sprite.svg#arrow-angle"></use>
+              </svg>
             </div>
-            <div class="sform__part sform__part--large">
-              <div class="title--small sform__part-title title">Ваш заказ</div>
-              <div class="sform__cart-result cart-result">
-                <div class="cart-result__header"> 
-                  <div class="cart-result__title">Товар</div>
-                  <div class="cart-result__title">Стоимость</div>
-                </div>
-                <div class="cart-result__body">
-                  <div class="cart-result__row">
-                    <div class="cart-result__hint">Стивен Барски Dry Suit х1</div>
-                    <div class="cart-result__val">999&nbsp;200₽</div>
-                  </div>
-                  <div class="cart-result__row">
-                    <div class="cart-result__hint">Скидка</div>
-                    <div class="cart-result__val">-200₽</div>
-                  </div>
-                </div>
-                <div class="cart-result__footer"> 
-                  <div class="cart-result__row">
-                    <div class="cart-result__hint">Итого</div>
-                    <div class="cart-result__val"> 999&nbsp;200₽</div>
-                  </div>
-                  <div class="cart-result__action"><a class="cart-result__clear" href="#">Очистить</a>
-                    <button class="button cart-result__send" type="submit"><span>Подтвердить заказ</span>
-                    </button>
-                  </div>
-                </div>
+            <div class="footer__inner-wrapper">
+              <div class="footer__col">
+                <ul class="footer__list footer__list--inner">
+                  <li><a href="#" target="_blank">OWD</a></li>
+                  <li><a href="#" target="_blank">Advanced Adventure Open Water</a></li>
+                  <li><a href="#" target="_blank">Advanced Diver Development Program</a></li>
+                  <li><a href="#" target="_blank">Advanced Buoyancy</a></li>
+                  <li><a href="#" target="_blank">Advanced Buoyancy ext</a></li>
+                  <li><a href="#" target="_blank">U/W Navigation</a></li>
+                  <li><a href="#" target="_blank">Deep Diver</a></li>
+                  <li><a href="#" target="_blank">Night Diver</a></li>
+                </ul>
+              </div>
+              <div class="footer__col">
+                <ul class="footer__list footer__list--inner">
+                  <li><a href="#" target="_blank">Dry Suit Diver</a></li>
+                  <li><a href="#" target="_blank">Ice Diver</a></li>
+                  <li><a href="#" target="_blank">Sidemount Diver</a></li>
+                  <li><a href="#" target="_blank">Rescue Diver</a></li>
+                  <li><a href="#" target="_blank">SDI Divemaster</a></li>
+                  <li><a href="#" target="_blank">Assistant Instructor</a></li>
+                  <li><a href="#" target="_blank">Adult and Child Emergency Care</a></li>
+                  <li><a href="#" target="_blank">O2 Administrator</a></li>
+                </ul>
               </div>
             </div>
-          </form>
-        </div>
-      </div>
-    </article>
-  </main>
-  <footer class="footer">
-    <div class="container">
-      <div class="footer__wrapper">
-        <div class="footer__group">
-          <div class="footer__accordion-item"><a href="#" target="_blank">Обучение дайвингу</a>
-            <svg width="15" height="10">
-              <use xlink:href="./images/sprite.svg#arrow-angle"></use>
-            </svg>
           </div>
-          <div class="footer__inner-wrapper">
-            <div class="footer__col">
-              <ul class="footer__list footer__list--inner">
-                <li><a href="#" target="_blank">OWD</a></li>
-                <li><a href="#" target="_blank">Advanced Adventure Open Water</a></li>
-                <li><a href="#" target="_blank">Advanced Diver Development Program</a></li>
-                <li><a href="#" target="_blank">Advanced Buoyancy</a></li>
-                <li><a href="#" target="_blank">Advanced Buoyancy ext</a></li>
-                <li><a href="#" target="_blank">U/W Navigation</a></li>
-                <li><a href="#" target="_blank">Deep Diver</a></li>
-                <li><a href="#" target="_blank">Night Diver</a></li>
-              </ul>
+          <div class="footer__col">
+            <div class="footer__accordion-item"><a href="#" target="_blank">Каталог товаров</a>
+              <svg width="15" height="10">
+                <use xlink:href="./images/sprite.svg#arrow-angle"></use>
+              </svg>
             </div>
-            <div class="footer__col">
-              <ul class="footer__list footer__list--inner">
-                <li><a href="#" target="_blank">Dry Suit Diver</a></li>
-                <li><a href="#" target="_blank">Ice Diver</a></li>
-                <li><a href="#" target="_blank">Sidemount Diver</a></li>
-                <li><a href="#" target="_blank">Rescue Diver</a></li>
-                <li><a href="#" target="_blank">SDI Divemaster</a></li>
-                <li><a href="#" target="_blank">Assistant Instructor</a></li>
-                <li><a href="#" target="_blank">Adult and Child Emergency Care</a></li>
-                <li><a href="#" target="_blank">O2 Administrator</a></li>
-              </ul>
+            <ul class="footer__list">
+              <li><a href="#" target="_blank">Костюмы</a></li>
+              <li><a href="#" target="_blank">Аксессуары</a></li>
+              <li><a href="#" target="_blank">Такелаж</a></li>
+              <li><a href="#" target="_blank">Фонари</a></li>
+              <li><a href="#" target="_blank">Ребризер</a></li>
+              <li><a href="#" target="_blank">Подводная съемка</a></li>
+              <li><a href="#" target="_blank">Ласты</a></li>
+              <li><a href="#" target="_blank">Катушки и буи</a></li>
+              <li><a href="#" target="_blank">Sidemount</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <div class="footer__accordion-item"><a href="#" target="_blank">Для клиентов</a>
+              <svg width="15" height="10">
+                <use xlink:href="./images/sprite.svg#arrow-angle"></use>
+              </svg>
+            </div>
+            <ul class="footer__list">
+              <li><a href="#" target="_blank">Подарочные сертификаты</a></li>
+              <li><a href="#" target="_blank">Новости</a></li>
+              <li><a href="#" target="_blank">Клубные поездки</a></li>
+              <li><a href="#" target="_blank">О нас</a></li>
+              <li><a href="#" target="_blank">Контакты</a></li>
+              <li><a href="#" target="_blank">Личный кабинет</a></li>
+              <li><a href="#" target="_blank">Сертификация</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__wrapper footer__wrapper--bottom">
+          <div class="footer__col">
+            <p>Политика конфиденциальности</p>
+            <p>Обработка персональных данных</p>
+          </div>
+          <div class="footer__col">
+            <p>Создание и продвижение сайта:</p>
+            <p><a href="#" target="_blank">mockup.digital</a></p>
+          </div>
+          <div class="footer__col">
+            <p>Мы в соцсетях:</p>
+            <div class="socials socials--horizontal footer__socials">
+              <div class="socials__item"><a href="#" target="_blank">
+                  <svg width="30" height="30">
+                    <use xlink:href="./images/sprite.svg#tiktok"></use>
+                  </svg></a></div>
+              <div class="socials__item"><a href="#" target="_blank">
+                  <svg width="30" height="30">
+                    <use xlink:href="./images/sprite.svg#vk-fill"></use>
+                  </svg></a></div>
+              <div class="socials__item"><a href="#" target="_blank">
+                  <svg width="30" height="30">
+                    <use xlink:href="./images/sprite.svg#insta"></use>
+                  </svg></a></div>
+              <div class="socials__item"><a href="#" target="_blank">
+                  <svg width="30" height="30">
+                    <use xlink:href="./images/sprite.svg#fb"></use>
+                  </svg></a></div>
             </div>
           </div>
-        </div>
-        <div class="footer__col">
-          <div class="footer__accordion-item"><a href="#" target="_blank">Каталог товаров</a>
-            <svg width="15" height="10">
-              <use xlink:href="./images/sprite.svg#arrow-angle"></use>
-            </svg>
+          <div class="footer__col">
+            <div class="footer__logos">
+              <svg width="101" height="47">
+                <use xlink:href="./images/sprite.svg#logo-tdi"></use>
+              </svg>
+              <svg width="98" height="47">
+                <use xlink:href="./images/sprite.svg#logo-sdi"></use>
+              </svg>
+            </div>
+            <p>2021 © Все права защищены</p>
           </div>
-          <ul class="footer__list">
-            <li><a href="#" target="_blank">Костюмы</a></li>
-            <li><a href="#" target="_blank">Аксессуары</a></li>
-            <li><a href="#" target="_blank">Такелаж</a></li>
-            <li><a href="#" target="_blank">Фонари</a></li>
-            <li><a href="#" target="_blank">Ребризер</a></li>
-            <li><a href="#" target="_blank">Подводная съемка</a></li>
-            <li><a href="#" target="_blank">Ласты</a></li>
-            <li><a href="#" target="_blank">Катушки и буи</a></li>
-            <li><a href="#" target="_blank">Sidemount</a></li>
-          </ul>
-        </div>
-        <div class="footer__col">
-          <div class="footer__accordion-item"><a href="#" target="_blank">Для клиентов</a>
-            <svg width="15" height="10">
-              <use xlink:href="./images/sprite.svg#arrow-angle"></use>
-            </svg>
-          </div>
-          <ul class="footer__list">
-            <li><a href="#" target="_blank">Подарочные сертификаты</a></li>
-            <li><a href="#" target="_blank">Новости</a></li>
-            <li><a href="#" target="_blank">Клубные поездки</a></li>
-            <li><a href="#" target="_blank">О нас</a></li>
-            <li><a href="#" target="_blank">Контакты</a></li>
-            <li><a href="#" target="_blank">Личный кабинет</a></li>
-            <li><a href="#" target="_blank">Сертификация</a></li>
-          </ul>
         </div>
       </div>
-      <div class="footer__wrapper footer__wrapper--bottom">
-        <div class="footer__col">
-          <p>Политика конфиденциальности</p>
-          <p>Обработка персональных данных</p>
-        </div>
-        <div class="footer__col">
-          <p>Создание и продвижение сайта:</p>
-          <p><a href="#" target="_blank">mockup.digital</a></p>
-        </div>
-        <div class="footer__col">
-          <p>Мы в соцсетях:</p>
-          <div class="socials socials--horizontal footer__socials">
-            <div class="socials__item"><a href="#" target="_blank">
-                <svg width="30" height="30">
-                  <use xlink:href="./images/sprite.svg#tiktok"></use>
-                </svg></a></div>
-            <div class="socials__item"><a href="#" target="_blank">
-                <svg width="30" height="30">
-                  <use xlink:href="./images/sprite.svg#vk-fill"></use>
-                </svg></a></div>
-            <div class="socials__item"><a href="#" target="_blank">
-                <svg width="30" height="30">
-                  <use xlink:href="./images/sprite.svg#insta"></use>
-                </svg></a></div>
-            <div class="socials__item"><a href="#" target="_blank">
-                <svg width="30" height="30">
-                  <use xlink:href="./images/sprite.svg#fb"></use>
-                </svg></a></div>
-          </div>
-        </div>
-        <div class="footer__col">
-          <div class="footer__logos">
-            <svg width="101" height="47">
-              <use xlink:href="./images/sprite.svg#logo-tdi"></use>
-            </svg>
-            <svg width="98" height="47">
-              <use xlink:href="./images/sprite.svg#logo-sdi"></use>
-            </svg>
-          </div>
-          <p>2021 © Все права защищены</p>
-        </div>
-      </div>
-    </div>
-  </footer>
-  <script src="js/main.min.js"></script>
+    </footer>
+    <script src="js/main.min.js"></script>
+  </body>
 </html>

@@ -1,4 +1,6 @@
 .sform {
+  $self: &;
+
   form {
     display: flex;
     justify-content: space-between;
@@ -85,6 +87,12 @@
         margin-top: 0;
         margin-bottom: 35px;
       }
+
+      .cart-result__footer {
+        @include max(sm) {
+          display: none;
+        }
+      }
     }
 
     &-title {
@@ -111,8 +119,33 @@
     @include max(sm) {
       width: calc(100% + 40px);
       margin-left: -20px;
+      margin-bottom: 0;
       padding-left: 20px;
       padding-right: 20px;
+    }
+  }
+
+  &__bg-mobile-wrapper {
+    @include max(sm) {
+      width: calc(100% + 40px);
+      margin-left: -20px;
+      padding-left: 20px;
+      padding-right: 20px;
+      background-color: $smoky;
+    }
+
+    #{$self}__cart-result {
+      display: none;
+
+      @include max(sm) {
+        display: block;
+        border-top: none;
+        margin-top: 50px;
+      }
+    }
+
+    .custom-checkbox {
+      font-weight: 500;
     }
   }
 
