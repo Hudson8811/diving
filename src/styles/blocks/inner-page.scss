@@ -156,6 +156,12 @@
   &__features {
   }
 
+  &__grid {
+    @include max(sm) {
+      margin-bottom: 20px;
+    }
+  }
+
   &__contact {
     margin-top: 68px; //92px;
 
