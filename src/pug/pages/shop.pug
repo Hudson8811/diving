@@ -65,7 +65,7 @@ block main
               span.shop-categories__item-icon
                 +icon(item.icon.id)(width= item.icon.w, height= item.icon.h)
               span.shop-categories__item-text= item.text
-      .shop-slider
+      .shop-page__slider.shop-slider
         include ../blocks/shop-slider
 
 
@@ -103,7 +103,7 @@ block main
             +button('', 'products-carousel__btn button--outline button--icon __js_prev', 'chevron-left')
             +button('', 'products-carousel__btn button--outline button--icon __js_next', 'chevron-right')
     
-    section.stock.stock--bg
+    section.shop-page__stock.stock.stock--bg
       .container.stock__container
         .stock__wrapper
           .swiper-container.__js_stock-carousel
@@ -124,7 +124,7 @@ block main
             +button('', 'button--outline button--icon slick-prev stock__prev', 'chevron-right')
             .stock__pagination
             +button('', 'button--outline button--icon slick-next stock__next', 'chevron-right')
-        +button('Подробнее об акциях', 'button--angle stock__more', 'arrow-angle')
+        +button('Подробнее об акциях', 'button--angle stock__more', 'arrow-angle', URLS.certificates)
     
     section.products-carousel
       .products-carousel__container.container
