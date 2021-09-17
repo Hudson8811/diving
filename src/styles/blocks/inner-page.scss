@@ -26,6 +26,14 @@
     }
   }
 
+  &--order-accepted {
+    min-height: vw(960);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: right 0 bottom 0;
+    background-image: url("../images/cabinet/order-bg.svg");
+  }
+
   &__header {
     padding-bottom: 50px;
 
