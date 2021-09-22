@@ -129,17 +129,24 @@ block main
         +title(page.title, 'h1', 'title--large product-card__title')
         .product-card__image
           .product-card__photo
-            img(src="images/product-card/product-full3.jpg", srcset="images/product-card/product-full3@2x.jpg 2x", width="495", height="375", alt="Вид слева")
+            a(href="https://via.placeholder.com/640", data-fancybox)
+              img(src="images/product-card/product-full3.jpg", srcset="images/product-card/product-full3@2x.jpg 2x", width="495", height="375", alt="Вид слева")
           .product-card__thumbs.swiper-container.__js_product-thumbs
             .swiper-wrapper
-              button.product-card__thumbs-item.active.swiper-slide(type="button", data-full-image="images/product-card/product-full3.jpg", data-full-image2x="images/product-card/product-full3@2x.jpg 2x", data-alt="Вид слева")
+              button.product-card__thumbs-item.active.swiper-slide(type="button", data-full-image="images/product-card/product-full3.jpg", data-full-image2x="images/product-card/product-full3@2x.jpg 2x", data-fancybox-image="https://via.placeholder.com/640", data-alt="Вид слева")
                 img(src="images/product-card/product-thumb-1.jpg", srcset="images/product-card/product-thumb-1@2x.jpg 2x", width="93", height="93", alt="Миниатюра вид слева")
-              button.product-card__thumbs-item.swiper-slide(type="button", data-full-image="images/product-card/full-2.jpg", data-full-image2x="images/product-card/full-2@2x.jpg 2x", data-alt="Вид справа")
+              button.product-card__thumbs-item.swiper-slide(type="button", data-full-image="images/product-card/full-2.jpg", data-full-image2x="images/product-card/full-2@2x.jpg 2x", data-fancybox-image="https://via.placeholder.com/640", data-alt="Вид справа")
                 img(src="images/product-card/product-thumb-2.jpg", srcset="images/product-card/product-thumb-2@2x.jpg 2x", width="93", height="93", alt="Миниатюра вид справа")
-              button.product-card__thumbs-item.swiper-slide(type="button", data-full-image="images/product-card/full-3.jpg", data-full-image2x="images/product-card/full-3@2x.jpg 2x", data-alt="Вид сверху")
+              button.product-card__thumbs-item.swiper-slide(type="button", data-full-image="images/product-card/full-3.jpg", data-full-image2x="images/product-card/full-3@2x.jpg 2x", data-fancybox-image="https://via.placeholder.com/640", data-alt="Вид сверху")
                 img(src="images/product-card/product-thumb-3.jpg", srcset="images/product-card/product-thumb-3@2x.jpg 2x", width="93", height="93", alt="Миниатюра вид сверху")
-              button.product-card__thumbs-item.swiper-slide(type="button", data-full-image="images/product-card/full-4.jpg", data-full-image2x="images/product-card/full-4@2x.jpg 2x", data-alt="Вид снизу")
+              button.product-card__thumbs-item.swiper-slide(type="button", data-full-image="images/product-card/full-4.jpg", data-full-image2x="images/product-card/full-4@2x.jpg 2x", data-fancybox-image="https://via.placeholder.com/640", data-alt="Вид снизу")
                 img(src="images/product-card/product-thumb-4.jpg", srcset="images/product-card/product-thumb-4@2x.jpg 2x", width="93", height="93", alt="Миниатюра вид снизу")
+              // для теста переполнения //////////////////////////
+              //button.product-card__thumbs-item.swiper-slide(type="button", data-full-image="images/product-card/full-4.jpg", data-full-image2x="images/product-card/full-4@2x.jpg 2x",, data-fancybox-image="https://via.placeholder.com/640", data-alt="Вид снизу")
+                img(src="images/product-card/product-thumb-4.jpg", srcset="images/product-card/product-thumb-4@2x.jpg 2x", width="93", height="93", alt="Миниатюра вид снизу")
+              //button.product-card__thumbs-item.swiper-slide(type="button", data-full-image="images/product-card/full-4.jpg", data-full-image2x="images/product-card/full-4@2x.jpg 2x",, data-fancybox-image="https://via.placeholder.com/640", data-alt="Вид снизу")
+                img(src="images/product-card/product-thumb-4.jpg", srcset="images/product-card/product-thumb-4@2x.jpg 2x", width="93", height="93", alt="Миниатюра вид снизу")
+
             button.product-card__thumbs-btn.product-card__thumbs-btn--prev.__js_prev(type="button")
               +icon('chevron-up')(width="18", height="18")
             button.product-card__thumbs-btn.product-card__thumbs-btn--next.__js_next(type="button")
@@ -152,14 +159,8 @@ block main
               span.product-card__download-item-icon
                 +icon('file')(width="24", height="30")
               a(href="#", download) Скачать цветовую схему в формате PDF
-          .product-card__price
-            span 1&nbsp;500₽
-            span.product-card__price-max -&nbsp;2&nbsp;500₽
-          .product-card__action
-            +button('В корзину', 'product-card__btn button--to-cart', 'cart', '#')
-            a.product-card__btn.button.button--outline(href="#")
-              span.only-mobile Оформить
-              span Купить в 1 клик
+        
+
     
         .product-card__options.product-options
           each item, index in options
@@ -211,25 +212,25 @@ block main
                   p For those who already have a rebreather dive computer with a Fischer port, you may select a Fischer cable only. The Shearwater Petrel is the most popular dive computer of this nature, however other brands are also capable of working as well. Please contact your dive instructor, or KISS Rebreathers for questions on compatibility.
 
                   p The 28 inch version of the Fischer cable is for those who wish to have a wrist mount display. 
-
+        
+        .product-card__bottom
+          .product-card__price
+            span 1&nbsp;500₽
+            span.product-card__price-max -&nbsp;2&nbsp;500₽
+          .product-card__action
+            +button('В корзину', 'product-card__btn button--to-cart', 'cart', '#')
+            a.product-card__btn.button.button--outline(href="#")
+              span.only-mobile Оформить
+              span Купить в 1 клик
 
     .product-card__tabs.tabs
       .tabs__container.container
-        .tabs__only-mobile
-          select.__js_tabs-select(name="tabs-select")
-            option(value="#description" ) Описание товара
-            option(value="#specifications") Характеристики
-            option(value="#reviews") Отзывы (20)
-        .tabs__item.active
-          button(type="button", data-target="#description") Описание товара
-        .tabs__item
-          button(type="button", data-target="#specifications") Характеристики
-        .tabs__item
-          button(type="button", data-target="#reviews") Отзывы (20)
 
-    .product-card__content 
-      .container 
-        .tab-content.active#description
+        .tabs__item.active
+          button(type="button", data-target="#description") 
+            span Описание товара
+        
+        .tabs__content.tab-content.active#description
           p Sidemount rebreathers have historically taken on the form factor of a sidemount open circuit tank. While this design attempts to mimic the streamlining of a sidemount cylinder, often hydrostatic work of breathing issues result if the unit isn't perfectly rigged and mounted. Even when it is, the work of breathing is only optimal when in certain diving positions.
 
           p KISS Sidewinder rebreather solves these issues by splitting the canisters on the diver's left and right sides. These are connected by one 8-liter counterlung, which spans across the diver's back. The result is a super clean, streamlined configuration which provides excellent work of breathing in most diving orientations.
@@ -250,10 +251,11 @@ block main
 
 
   
-
-
-
-        .tab-content#specifications
+        .tabs__item
+          button(type="button", data-target="#specifications") 
+            span Характеристики
+        
+        .tabs__content.tab-content#specifications
           table
             tbody
               each tr in table
@@ -261,7 +263,11 @@ block main
                   th= tr.th 
                   td= tr.td
 
-        .tab-content.tab-content--no-border-padding#reviews
+        .tabs__item
+          button(type="button", data-target="#reviews") 
+            span Отзывы (20)
+
+        .tabs__content.tab-content.tab-content--no-border-padding#reviews
           each review in reviews 
             .product-card__review.review
               .review__author
@@ -284,6 +290,9 @@ block main
               label
                 textarea(name="review")
               +button('Отправить', 'give-review__send')
+
+
+
 
     section.products-carousel
       .products-carousel__container.container
