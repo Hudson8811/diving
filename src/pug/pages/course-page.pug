@@ -123,8 +123,8 @@ block main
           +button('', 'features__btn button--outline button--icon __js_prev', 'chevron-left')
           +button('', 'features__btn button--outline button--icon __js_next', 'chevron-right')
 
-      .inner-page__description
-        img.float-left(src="images/course/image.jpg", srcset="images/course/image@2x.jpg 2x", width="608", height="540", alt="")
+      .inner-page__description.text
+        img.alignleft(src="images/course/image.jpg", srcset="images/course/image@2x.jpg 2x", width="608", height="540", alt="")
 
         p Не&nbsp;следует, однако забывать, что реализация намеченных плановых заданий представляет собой интересный эксперимент проверки дальнейших направлений развития. Идейные соображения высшего порядка, а&nbsp;также начало повседневной работы по&nbsp;формированию позиции способствует подготовки и&nbsp;реализации форм развития.
 
@@ -160,7 +160,7 @@ block main
                 +button('Отправить', 'sform__send')(type="submit")
                 .sform__bottom-text Нажимая на кнопку «Отправить», вы соглашаетсь с <a href="#" target="_blank">условиями обработки персональных данных</a>
     
-    //-section.inner-page__courses.inner-page__courses--negative-mb.courses-carousel
+    section.inner-page__courses.inner-page__courses--negative-mb.courses-carousel
       .container
         +title('Предлагаем курсы', 'h2', 'title--small courses-carousel__title')
         .courses-carousel__swiper.swiper-container.__js_courses-carousel-a
@@ -173,7 +173,7 @@ block main
             +button('', 'products-carousel__btn button--outline button--icon __js_prev', 'chevron-left')
             +button('', 'products-carousel__btn button--outline button--icon __js_next', 'chevron-right')
 
-    section#courses.courses.inner-page__courses.inner-page__courses--negative-mb
+    //-section#courses.courses.inner-page__courses.inner-page__courses--negative-mb
       .container
         +title('Предлагаем курсы', 'h2', 'title--small courses__title')
         .courses__wrapper

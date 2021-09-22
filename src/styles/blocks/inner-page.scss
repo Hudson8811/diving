@@ -190,16 +190,16 @@
   &__description {
     //padding-bottom: 54px;
     padding-right: 22px;
-    font-size: 14px;
-    line-height: 1.857142857142857;
+    //font-size: 14px;
+    //line-height: 1.857142857142857;
     color: $gray-ph;
 
     @include max(md) {
-      padding-right: 0;
+      //padding-right: 0;
     }
 
     @include max(xs) {
-      font-size: 15px;
+      //font-size: 15px;
     }
 
     img {
