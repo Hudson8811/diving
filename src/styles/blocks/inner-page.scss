@@ -153,6 +153,14 @@
     margin-bottom: 22px;
   }
 
+  &__banner {
+    margin-bottom: 72px;
+
+    @include max(md) {
+      margin-bottom: 35px;
+    }
+  }
+
   &__features {
   }
 
