@@ -44,6 +44,14 @@
     &-row {
       display: flex;
       flex-wrap: wrap;
+
+      &--between {
+        justify-content: space-between;
+
+        & > * {
+          align-self: center;
+        }
+      }
     }
 
     &-clear-cart {
@@ -61,6 +69,9 @@
       @include hover {
         color: $blue-hover;
       }
+    }
+
+    &-sort {
     }
   }
 

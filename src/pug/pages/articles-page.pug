@@ -1,95 +1,39 @@
 extends ../layouts/default
 
 block vars
-	-
-		const page = {
-			title: 'Статьи'
-		};
+  -
+    const page = {
+      title: 'Статьи'
+    };
 
-		const bc = [
-			{text: page.title}
-		];
+    const bc = [
+      {text: page.title}
+    ];
+
+    const articleCards = [
+      {img: '1', title: 'Что такое дейли дайвинг <br>или сафари. Его особенности', class: 'articles-grid__item'},
+      {img: '2', title: 'Сайдмаунт - плюсы и минусы. Сложности сборки', class: 'articles-grid__item'},
+      {img: '3', title: 'Лучшие места для дайвинга. <br>Наша подборка', class: 'articles-grid__item'},
+      {img: '3', title: 'Лучшие места для дайвинга. <br>Наша подборка', class: 'articles-grid__item'},
+      {img: '1', title: 'Что такое дейли дайвинг <br>или сафари. Его особенности', class: 'articles-grid__item'},
+      {img: '2', title: 'Сайдмаунт - плюсы и минусы. Сложности сборки', class: 'articles-grid__item'},
+      {img: '1', title: 'Что такое дейли дайвинг <br>или сафари. Его особенности', class: 'articles-grid__item'},
+      {img: '2', title: 'Сайдмаунт - плюсы и минусы. Сложности сборки', class: 'articles-grid__item'},
+      {img: '3', title: 'Лучшие места для дайвинга. <br> Наша подборка', class: 'articles-grid__item'}
+    ];
 
 block main
-	article.articles-page
-		.container
-			+breadcrumbs(bc, 'inner-page__breadcrumbs')
-			section.articles.articles-page__section
-				.articles-page__top
-					+title('Статьи', '', 'title--medium articles-page__title')
-					select.__js_custom-select(name="select")
-						each it in ['',1,2,3,4,5,6,7]
-							option(value="by-deadline" + it) По актуальности #{it}
-				.articles-page__wrapper
-					.articles-page__item.articles-card
-						.articles-card__image
-							img(src="images/homepage/articles/1.jpg", srcset="images/homepage/articles/1.jpg 2x", width="397", height="246", alt="")
-						.articles-card__content
-							.articles-card__title Что такое дейли дайвинг <br> или сафари. Его особенности
-							.articles-card__row
-								+button('Подробнее', 'button--angle articles-card__more', 'arrow-angle')
-								.articles-card__date 20.08.2021
-					.articles-page__item.articles-card
-						.articles-card__image
-							img(src="images/homepage/articles/2.jpg", srcset="images/homepage/articles/2.jpg 2x", width="397", height="246", alt="")
-						.articles-card__content
-							.articles-card__title Сайдмаунт - плюсы и минусы. Сложности сборки
-							.articles-card__row
-								+button('Подробнее', 'button--angle articles-card__more', 'arrow-angle')
-								.articles-card__date 20.08.2021
-					.articles-page__item.articles-card
-						.articles-card__image
-							img(src="images/homepage/articles/3.jpg", srcset="images/homepage/articles/3.jpg 2x", width="397", height="246", alt="")
-						.articles-card__content
-							.articles-card__title Лучшие места для дайвинга. <br> Наша подборка
-							.articles-card__row
-								+button('Подробнее', 'button--angle articles-card__more', 'arrow-angle')
-								.articles-card__date 20.08.2021
-					.articles-page__item.articles-card
-						.articles-card__image
-							img(src="images/homepage/articles/3.jpg", srcset="images/homepage/articles/3.jpg 2x", width="397", height="246", alt="")
-						.articles-card__content
-							.articles-card__title Лучшие места для дайвинга. <br> Наша подборка
-							.articles-card__row
-								+button('Подробнее', 'button--angle articles-card__more', 'arrow-angle')
-								.articles-card__date 20.08.2021
-					.articles-page__item.articles-card
-						.articles-card__image
-							img(src="images/homepage/articles/1.jpg", srcset="images/homepage/articles/1.jpg 2x", width="397", height="246", alt="")
-						.articles-card__content
-							.articles-card__title Что такое дейли дайвинг <br> или сафари. Его особенности
-							.articles-card__row
-								+button('Подробнее', 'button--angle articles-card__more', 'arrow-angle')
-								.articles-card__date 20.08.2021
-					.articles-page__item.articles-card
-						.articles-card__image
-							img(src="images/homepage/articles/2.jpg", srcset="images/homepage/articles/2.jpg 2x", width="397", height="246", alt="")
-						.articles-card__content
-							.articles-card__title Сайдмаунт - плюсы и минусы. Сложности сборки
-							.articles-card__row
-								+button('Подробнее', 'button--angle articles-card__more', 'arrow-angle')
-								.articles-card__date 20.08.2021
-					.articles-page__item.articles-card
-						.articles-card__image
-							img(src="images/homepage/articles/1.jpg", srcset="images/homepage/articles/1.jpg 2x", width="397", height="246", alt="")
-						.articles-card__content
-							.articles-card__title Что такое дейли дайвинг <br> или сафари. Его особенности
-							.articles-card__row
-								+button('Подробнее', 'button--angle articles-card__more', 'arrow-angle')
-								.articles-card__date 20.08.2021
-					.articles-page__item.articles-card
-						.articles-card__image
-							img(src="images/homepage/articles/2.jpg", srcset="images/homepage/articles/2.jpg 2x", width="397", height="246", alt="")
-						.articles-card__content
-							.articles-card__title Сайдмаунт - плюсы и минусы. Сложности сборки
-							.articles-card__row
-								+button('Подробнее', 'button--angle articles-card__more', 'arrow-angle')
-								.articles-card__date 20.08.2021
-					.articles-page__item.articles-card
-						.articles-card__image
-							img(src="images/homepage/articles/3.jpg", srcset="images/homepage/articles/3.jpg 2x", width="397", height="246", alt="")
-						.articles-card__content
-							.articles-card__title Лучшие места для дайвинга. <br> Наша подборка
-							.articles-card__row
-								+button('Подробнее', 'button--angle articles-card__more', 'arrow-angle')
-								.articles-card__date 20.08.2021
+  article.inner-page
+    header.inner-page__header
+      .container
+        +breadcrumbs(bc, 'inner-page__breadcrumbs')
+        .inner-page__header-row.inner-page__header-row--between
+          +title('Статьи', 'h1', 'title--medium articles-page__title')
+          select.inner-page__header-sort.__js_custom-select(name="select")
+            each it in ['',1,2,3,4,5,6,7]
+              option(value="by-deadline" + it) По актуальности #{it}
+    .container
+      .articles-grid 
+        each item in articleCards
+          +articles-card(item)
+      
