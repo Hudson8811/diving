@@ -48,6 +48,19 @@
       }
     }
 
+    tr {
+      @include max(480) {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    tr + tr {
+      @include max(480) {
+        margin-top: 8px;
+      }
+    }
+
     th {
       display: flex;
       width: 342px;
@@ -60,18 +73,37 @@
         min-width: 200px;
       }
 
+      @include max(480) {
+        display: table-cell;
+        width: 100%;
+        padding: 0;
+        font-weight: 500;
+      }
+
       &::after {
-        content: "";
+        content: " -";
         display: inline-block;
+
         margin: 0 5px;
         border-top: dashed 1px $gray;
         flex-grow: 1;
         align-self: flex-end;
+
+        font-size: 0;
+
+        @include max(480) {
+          margin: 0;
+          font-size: inherit;
+        }
       }
     }
 
     td {
       padding: 15px 0 0 0;
+
+      @include max(480) {
+        padding: 0;
+      }
     }
   }
 

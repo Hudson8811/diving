@@ -75,7 +75,7 @@ window.addEventListener('load', () => {
     const thumbs = thumbsCarouselEl.querySelectorAll('.swiper-slide');
 
     if (thumbs.length && productFullPhoto) {
-      const productImg =productFullPhoto.querySelector('img');
+      const productImg = productFullPhoto.querySelector('img');
 
       thumbs.forEach(it => it.addEventListener('click', function() {
         thumbsCarouselEl.querySelector('.active').classList.remove('active');
@@ -83,9 +83,11 @@ window.addEventListener('load', () => {
         
         productFullPhoto.ontransitionend = () => {
           productFullPhoto.ontransitionend = null;
+
           productImg.src = it.dataset.fullImage;
           productImg.srcset = it.dataset.fullImage2x;
           productImg.alt = it.dataset.alt;
+          productImg.parentElement.href = it.dataset.fancyboxImage;
           it.classList.add('active');
           productFullPhoto.classList.remove('opacity-0');
         };
