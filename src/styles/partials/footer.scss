@@ -1,11 +1,21 @@
 .footer {
 	$self: &;
 
-	padding: 72px 0;
+	padding: 70px 0;
 	background: linear-gradient(180deg, #2C60AE 0%, #083880 100%);
 
 	@include max(md) {
 		padding: 49px 0 11px;
+	}
+
+	&__container {
+		@include max(md) {
+			display: flex;
+		}
+
+		@include max(xs) {
+			flex-direction: column;
+		}
 	}
 
 	&__wrapper {
@@ -13,31 +23,56 @@
 
 		@include max(md) {
 			flex-direction: column;
+			width: 50%;
 		}
 
 		&:not(.footer__wrapper--bottom) {
+			> * {
+				@include max(md) {
+					max-width: 250px;
+					margin: 0 auto 23px;
+				}
+
+				@include max(sm) {
+					margin: 0 0 23px;
+				}
+			}
+
+			@include max(xs) {
+				width: 100%;
+				max-width: 100%;
+				margin: 0;
+			}
+		}
+
+		&--bottom {
+			margin-top: 38px;
+			color: $white;
+
 			@include max(md) {
-				width: 250px;
-				margin: 0 auto;
+				display: flex;
+				flex-direction: row;
+				flex-wrap: wrap;
+				margin-top: 0;
+			}
+
+			@include max(sm) {
+				flex-direction: column;
 			}
 
 			@include max(xs) {
 				width: 100%;
 			}
-		}
-
-		&--bottom {
-			margin-top: 58px;
-			color: $white;
-
-			@include max(md) {
-				margin-top: 16px;
-			}
 
 			#{$self} {
 				&__col {
 					@include max(md) {
+						width: 50%;
 						margin-bottom: 39px;
+					}
+
+					@include max(sm) {
+						width: 100%;
 					}
 				}
 			}
@@ -84,6 +119,7 @@
 
 	&__inner-wrapper {
 		display: flex;
+		flex-wrap: wrap;
 		width: 100%;
 
 		@include max(md) {
@@ -98,12 +134,7 @@
 
 		#{$self} {
 			&__col {
-				width: 50%;
-
-				@include max(md) {
-					width: 100%;
-					margin-bottom: 0;
-				}
+				margin-bottom: 10px;
 
 				&:not(:last-child) {
 					#{$self}__list {
@@ -120,6 +151,68 @@
 						}
 					}
 				}
+
+				&--small {
+					width: 32%;
+
+					@include max(xl) {
+						width: 50%;
+					}
+
+					@include max(md) {
+						width: 100%;
+					}
+				}
+
+				&--big {
+					width: 68%;
+
+					@include max(xl) {
+						width: 50%;
+					}
+
+					@include max(md) {
+						width: 100%;
+					}
+				}
+
+				&--full {
+					width: 100%;
+
+					ul {
+						display: flex;
+						flex-wrap: wrap;
+					}
+
+					li {
+						margin-top: 0;
+						margin-bottom: 9px;
+
+						&:nth-child(odd) {
+							width: 32%;
+
+							@include max(xl) {
+								width: 50%;
+							}
+
+							@include max(md) {
+								width: 100%;
+							}
+						}
+
+						&:nth-child(even) {
+							width: 68%;
+
+							@include max(xl) {
+								width: 50%;
+							}
+
+							@include max(md) {
+								width: 100%;
+							}
+						}
+					}
+				}
 			}
 		}
 	}
@@ -131,6 +224,12 @@
 			width: 100%;
 			margin-bottom: 23px;
 		}
+
+		&--author {
+			@include max(md) {
+				order: 1;
+			}
+		}
 	}
 
 	&__accordion-item {
@@ -138,6 +237,7 @@
 		align-items: center;
 		justify-content: space-between;
 		height: 23px;
+		margin-bottom: 19px;
 
 		&.rotate {
 			svg {
@@ -174,10 +274,19 @@
 		}
 	}
 
+	&__accordion-item-subcategory {
+		a {
+			font-size: 14px;
+			line-height: 17px;
+			font-weight: 600;
+			color: $white;
+		}
+	}
+
 	&__list {
 		list-style: none;
 		padding-left: 0;
-		margin-top: 20px !important;
+		margin-top: 14px !important;
 
 		@include max(md) {
 			&:not(.footer__list--inner) {

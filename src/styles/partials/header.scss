@@ -320,13 +320,42 @@
 		background-color: $dark-blue;
 
 		@include max(md) {
+			height: 60px;
 			padding: 0 20px;
 		}
 
 		#{$self} {
+			&__wrapper {
+				position: relative;
+			}
+
+			&__left,
+			&__right {
+				display: flex;
+				align-items: center;
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+
+			&__left {
+				left: 0;
+			}
+
+			&__right {
+				right: 0;
+			}
+
+			&__container {
+				display: flex;
+				justify-content: space-between;
+				height: 100%;
+				padding: 0;
+			}
+
 			&__logos {
 				height: 40px;
-				margin-right: 23px;
+				margin-right: 0;
 
 				@include max(md) {
 					height: 34px;
@@ -407,6 +436,7 @@
 
 				&--bottom {
 					margin-right: auto;
+					margin-left: 0;
 
 					li {
 						padding: 0 12.5px;

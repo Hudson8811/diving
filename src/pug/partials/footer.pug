@@ -1,43 +1,53 @@
 footer.footer
-	.container
+	.container.footer__container
 		.footer__wrapper
 			.footer__group
 				.footer__accordion-item
 					a(href='#', target='_blank') Обучение дайвингу
 					+icon('arrow-angle')(width='15', height='10')
 				.footer__inner-wrapper
-					.footer__col
+					.footer__col.footer__col--full
+						.footer__accordion-item-subcategory
+							a(href='#', target='_blank') SDI
 						ul.footer__list.footer__list--inner
 							li
 								a(href='#', target='_blank') OWD
 							li
-								a(href='#', target='_blank') Advanced Adventure Open Water
-							li
-								a(href='#', target='_blank') Advanced Diver Development Program
-							li
-								a(href='#', target='_blank') Advanced Buoyancy
-							li
-								a(href='#', target='_blank') Advanced Buoyancy ext
-							li
-								a(href='#', target='_blank') U/W Navigation
-							li
-								a(href='#', target='_blank') Deep Diver
-							li
-								a(href='#', target='_blank') Night Diver
-					.footer__col
-						ul.footer__list.footer__list--inner
-							li
-								a(href='#', target='_blank') Dry Suit Diver
-							li
 								a(href='#', target='_blank') Ice Diver
+							li
+								a(href='#', target='_blank') Adventure Open Water
 							li
 								a(href='#', target='_blank') Sidemount Diver
 							li
+								a(href='#', target='_blank') Advanced Buoyancy
+							li
 								a(href='#', target='_blank') Rescue Diver
+							li
+								a(href='#', target='_blank') Advanced Buoyancy ext
 							li
 								a(href='#', target='_blank') SDI Divemaster
 							li
+								a(href='#', target='_blank') U/W Navigation
+							li
 								a(href='#', target='_blank') Assistant Instructor
+							li
+								a(href='#', target='_blank') Deep Diver
+							li
+								a(href='#', target='_blank') SDI Advanced SCUBA Diver certification
+							li
+								a(href='#', target='_blank') Night Diver
+							li
+								a(href='#', target='_blank') Dry Suit Diver
+					.footer__col.footer__col--small
+						.footer__accordion-item-subcategory
+							a(href='#', target='_blank') TDI
+						ul.footer__list.footer__list--inner
+							li
+								a(href='#', target='_blank') TDI Basic Nitrox
+					.footer__col.footer__col--big
+						.footer__accordion-item-subcategory
+							a(href='#', target='_blank') FRTI
+						ul.footer__list.footer__list--inner
 							li
 								a(href='#', target='_blank') Adult and Child Emergency Care
 							li
@@ -88,7 +98,7 @@ footer.footer
 			.footer__col
 				p Политика конфиденциальности
 				p Обработка персональных данных
-			.footer__col
+			.footer__col.footer__col--author
 				p Создание и продвижение сайта:
 				p
 					a(href='#', target='_blank') mockup.digital

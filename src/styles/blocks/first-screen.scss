@@ -2,10 +2,15 @@
 	width: 100%;
 	min-height: 100vh;
 	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
+	background-size: 125%;
+	background-position: 60% 25%;
 	overflow: hidden;
 	position: relative;
+
+	@include max(xl) {
+		background-position: center;
+		background-size: cover;
+	}
 
 	&__scale {
 		width: 163px;
