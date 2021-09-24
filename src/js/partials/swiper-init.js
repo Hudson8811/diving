@@ -33,7 +33,7 @@ window.addEventListener('load', () => {
           disabledClass: 'button--disabled'
         },
         pagination: {
-          el: '.swiper-pagination',
+          el: it.nextElementSibling,
           type: 'bullets',// 'bullets' | 'fraction' | 'progressbar' | 'custom'
           clickable: true
         },

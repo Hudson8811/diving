@@ -1,4 +1,6 @@
 .shop-page {
+  padding-bottom: 14px;
+
   @include max(sm) {
     display: flex;
     flex-direction: column;
@@ -25,13 +27,27 @@
   }
 
   &__stock {
-    margin-top: 26px;
-    margin-bottom: 36px;
+    margin-top: 48px;
+    margin-bottom: 34px;
 
     @include max(sm) {
       order: -1;
       margin: 0;
       padding-top: 20px;
     }
+  }
+
+  .info-block {
+    margin: 62px 0 36px;
+  }
+
+  .tutorials {
+    margin: 36px 0;
+    padding-bottom: 39px;
+  }
+
+  .tutorials__next,
+  .tutorials__prev {
+    top: 44%;
   }
 }

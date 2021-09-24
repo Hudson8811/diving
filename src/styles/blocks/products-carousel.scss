@@ -1,7 +1,7 @@
 .products-carousel {
   $self: &;
 
-  padding: 36px 0 58px;
+  padding: 36px 0; //58px;
   overflow: hidden;
 
   &--bg {
@@ -60,9 +60,13 @@
     padding: 0;
     font-size: 18px;
     line-height: 22px;
+    margin-bottom: 6px;
+    margin-right: 4px;
 
     @include max(sm) {
       margin-top: 15px;
+      margin-bottom: 0;
+      margin-right: 0;
     }
 
     svg {
@@ -95,38 +99,10 @@
       right: 0;
       transform: translateX(100%);
     }
+  }
 
-    .swiper-pagination {
-      position: absolute;
-      z-index: 1;
-      left: 0;
-      right: 0;
-      bottom: -22px;
-      display: flex;
-      justify-content: center;
-
-      @include max(sm) {
-        bottom: 20px;
-        left: 60px;
-        right: 60px;
-      }
-
-      &.swiper-pagination-lock {
-        display: none;
-      }
-
-      &-bullet {
-        display: block;
-        width: 20px;
-        height: 2px;
-        background-color: $lightBlue;
-        cursor: pointer;
-
-        &-active {
-          background-color: $blue;
-        }
-      }
-    }
+  &__item {
+    height: auto;
   }
 
   &__navigation {
@@ -151,6 +127,36 @@
     }
   }
 
+  &__pagination {
+    display: flex;
+    justify-content: center;
+
+    @include max(sm) {
+      position: absolute;
+      z-index: 1;
+      bottom: 20px;
+      left: 60px;
+      right: 60px;
+    }
+
+    &.swiper-pagination-lock {
+      display: none;
+    }
+
+    .swiper-pagination-bullet {
+      display: block;
+      width: 20px;
+      height: 2px;
+      margin-top: 20px;
+      background-color: $lightBlue;
+      cursor: pointer;
+
+      &-active {
+        background-color: $blue;
+      }
+    }
+  }
+
   &__btn {
     transform: translateY(-50%);
 
@@ -162,9 +168,4 @@
       display: none;
     }
   }
-}
-
-.products-carousel + .info-block {
-  margin-top: 40px;
-  margin-bottom: 36px;
 }

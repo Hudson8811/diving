@@ -13,7 +13,8 @@ mixin product-preview(item)
           .product-preview__price-old 1&nbsp;200₽
       if item.isOldPrice
         .product-preview__discount -10%
-      .product-preview__orders 150
+      if item.isOrderIt != true
+        .product-preview__orders 150
     .product-preview__bottom 
       .product-preview__rating
         - let starCount = 4;

@@ -225,10 +225,10 @@ block main
           .swiper-wrapper 
             each item in similar
               +product-preview(item)
-          .swiper-pagination
           .products-carousel__navigation
             +button('', 'products-carousel__btn button--outline button--icon __js_prev', 'chevron-left')
             +button('', 'products-carousel__btn button--outline button--icon __js_next', 'chevron-right')
+        .products-carousel__pagination
 
     section.products-carousel
       .products-carousel__container.container
@@ -237,7 +237,7 @@ block main
           .swiper-wrapper 
             each item in viewed
               +product-preview(item)
-          .swiper-pagination
           .products-carousel__navigation
             +button('', 'products-carousel__btn button--outline button--icon __js_prev', 'chevron-left')
             +button('', 'products-carousel__btn button--outline button--icon __js_next', 'chevron-right')
+        .products-carousel__pagination

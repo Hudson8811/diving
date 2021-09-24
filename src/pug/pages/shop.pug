@@ -98,11 +98,11 @@ block main
           .swiper-wrapper 
             each item in PRODUCTS_1
               +product-preview(item)
-          .swiper-pagination
           .products-carousel__navigation
             +button('', 'products-carousel__btn button--outline button--icon __js_prev', 'chevron-left')
             +button('', 'products-carousel__btn button--outline button--icon __js_next', 'chevron-right')
-    
+        .products-carousel__pagination
+
     section.shop-page__stock.stock.stock--bg
       .container.stock__container
         .stock__wrapper
@@ -136,10 +136,10 @@ block main
           .swiper-wrapper 
             each item in PRODUCTS_1
               +product-preview(item)
-          .swiper-pagination
           .products-carousel__navigation
             +button('', 'products-carousel__btn button--outline button--icon __js_prev', 'chevron-left')
             +button('', 'products-carousel__btn button--outline button--icon __js_next', 'chevron-right')
+        .products-carousel__pagination
 
     include ../blocks/info-block
 
@@ -153,10 +153,10 @@ block main
           .swiper-wrapper 
             each item in PRODUCTS_1
               +product-preview(item)
-          .swiper-pagination
           .products-carousel__navigation
             +button('', 'products-carousel__btn button--outline button--icon __js_prev', 'chevron-left')
             +button('', 'products-carousel__btn button--outline button--icon __js_next', 'chevron-right')
+        .products-carousel__pagination
 
     include ../blocks/tutorials
 
@@ -170,9 +170,8 @@ block main
           .swiper-wrapper 
             each item in PRODUCTS_1
               +product-preview(item)
-          .swiper-pagination
           .products-carousel__navigation
             +button('', 'products-carousel__btn button--outline button--icon __js_prev', 'chevron-left')
             +button('', 'products-carousel__btn button--outline button--icon __js_next', 'chevron-right')
-
+        .products-carousel__pagination
 
