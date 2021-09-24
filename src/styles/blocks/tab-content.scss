@@ -49,14 +49,15 @@
     }
 
     tr {
-      @include max(480) {
+      @include max(375) {
         display: flex;
-        flex-direction: column;
+        //flex-direction: column;
+        flex-wrap: wrap;
       }
     }
 
     tr + tr {
-      @include max(480) {
+      @include max(375) {
         margin-top: 8px;
       }
     }
@@ -67,15 +68,16 @@
       padding: 15px 0 0 0;
       font-weight: 400;
       text-align: left;
+      vertical-align: bottom;
 
       @include max(sm) {
         width: 50%;
         min-width: 200px;
       }
 
-      @include max(480) {
+      @include max(375) {
         display: table-cell;
-        width: 100%;
+        //width: 100%;
         padding: 0;
         font-weight: 500;
       }
@@ -91,7 +93,7 @@
 
         font-size: 0;
 
-        @include max(480) {
+        @include max(375) {
           margin: 0;
           font-size: inherit;
         }
@@ -100,8 +102,9 @@
 
     td {
       padding: 15px 0 0 0;
+      vertical-align: bottom;
 
-      @include max(480) {
+      @include max(375) {
         padding: 0;
       }
     }
