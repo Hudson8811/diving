@@ -11,6 +11,10 @@
     width: 100%;
     margin-top: 18px;
 
+    @include max(sm) {
+      margin-top: 20px;
+    }
+
     &--half {
       width: calc(50% - 12px);
 
@@ -28,6 +32,10 @@
       flex-direction: column-reverse;
     }
 
+    @include max(sm) {
+      margin-top: 20px;
+    }
+
     &-text {
       font-size: 12px;
       line-height: 1.833333333333333;
@@ -36,6 +44,11 @@
 
       @include max(xs) {
         margin-bottom: 24px;
+      }
+
+      @include max(sm) {
+        font-size: 15px;
+        line-height: 21px;
       }
 
       a {
@@ -56,8 +69,8 @@
     align-self: flex-start;
 
     @include max(xs) {
+      max-width: 115px;
       margin-right: 0;
-      align-self: center;
     }
   }
 

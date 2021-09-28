@@ -5,6 +5,10 @@
     line-height: (17.07 / 14);
     color: $blue;
     font-weight: 500;
+
+    @include max(sm) {
+      font-size: 15px;
+    }
   }
 
   &__text {
@@ -13,6 +17,18 @@
     font-weight: 500;
     font-style: normal;
     color: $gray-ph;
+
+    @include max(sm) {
+      font-size: 15px;
+    }
+
+    br {
+      display: none;
+
+      @include max(sm) {
+        display: block;
+      }
+    }
 
     a {
       color: $gray-ph;
