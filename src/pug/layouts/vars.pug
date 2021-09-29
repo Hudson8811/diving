@@ -32,39 +32,84 @@
     notFound: '404.html'
   };
   const PRODUCTS_2 = [
-      {
-        img: {n: '1', w: '120', h: '171'},
-        title: 'SDI OWD',
-        text: 'Open Water Diver. Учебное пособие по дайвингу',
-        isOldPrice: true,
-        cl: 'tutorials__item swiper-slide'
-      },
-      {
-        img: {n: '2', w: '115', h: '171'},
-        title: 'SDI ночной дайвинг',
-        text: 'Ночной дайвинг. Подводная навигация и погружения',
-        isOldPrice: true,
-        cl: 'tutorials__item swiper-slide'
-      },
-      {
-        img: {n: '3', w: '120', h: '171'},
-        title: 'FRTI пособие',
-        text: 'Экстренная медицинская помощь для взрослых и детей',
-        isOldPrice: true,
-        cl: 'tutorials__item swiper-slide'
-      },
-      {
-        img: {n: '4', w: '123', h: '171'},
-        title: 'Стивен Барски Dry Suit',
-        text: 'Дайвинг в сухом костюме. История, обзор теории, уход.',
-        isOldPrice: true,
-        cl: 'tutorials__item swiper-slide'
-      },
-      {
-        img: {n: '3', w: '120', h: '171'},
-        title: 'FRTI пособие',
-        text: 'Экстренная медицинская помощь для взрослых и детей',
-        isOldPrice: true,
-        cl: 'tutorials__item swiper-slide'
-      }
-    ];
+    {
+      img: {n: '1', w: '120', h: '171'},
+      title: 'SDI OWD',
+      text: 'Open Water Diver. Учебное пособие по дайвингу',
+      isOldPrice: true,
+      cl: 'tutorials__item swiper-slide'
+    },
+    {
+      img: {n: '2', w: '115', h: '171'},
+      title: 'SDI ночной дайвинг',
+      text: 'Ночной дайвинг. Подводная навигация и погружения',
+      isOldPrice: true,
+      cl: 'tutorials__item swiper-slide'
+    },
+    {
+      img: {n: '3', w: '120', h: '171'},
+      title: 'FRTI пособие',
+      text: 'Экстренная медицинская помощь для взрослых и детей',
+      isOldPrice: true,
+      cl: 'tutorials__item swiper-slide'
+    },
+    {
+      img: {n: '4', w: '123', h: '171'},
+      title: 'Стивен Барски Dry Suit',
+      text: 'Дайвинг в сухом костюме. История, обзор теории, уход.',
+      isOldPrice: true,
+      cl: 'tutorials__item swiper-slide'
+    },
+    {
+      img: {n: '3', w: '120', h: '171'},
+      title: 'FRTI пособие',
+      text: 'Экстренная медицинская помощь для взрослых и детей',
+      isOldPrice: true,
+      cl: 'tutorials__item swiper-slide'
+    }
+  ];
+
+  const SUBMENU_DIVING = [
+    {text: 'OWD', url: '#'},
+    {text: 'Advanced Adventure Open Water', url: '#'},
+    {text: 'Advanced Diver Development Program', url: '#'},
+    {text: 'Advanced Buoyancy', url: '#'},
+    {text: 'Advanced Buoyancy ext', url: '#'},
+    {text: 'U/W Navigation', url: '#'},
+    {text: 'Deep Diver', url: '#'},
+    {text: 'Night Diver', url: '#'},
+    {text: 'Dry Suit Diver', url: '#'},
+    {text: 'Ice Diver', url: '#'},
+    {text: 'Sidemount Diver', url: '#'},
+    {text: 'Rescue Diver', url: '#'},
+    {text: 'SDI Divemaster', url: '#'},
+    {text: 'Assistant Instructor', url: '#'},
+    {text: 'Adult and Child Emergency Care', url: '#'},
+    {text: 'O2 Administrator', url: '#'}
+  ];
+
+  const SUBMENU_CATALOG = [
+    {text: 'Костюмы', url: URLS.catalog},
+    {text: 'Аксессуары', url: URLS.catalog},
+    {text: 'Такелаж', url: URLS.catalog},
+    {text: 'Фонари', url: URLS.catalog},
+    {text: 'Ребризер', url: URLS.catalog},
+    {text: 'Подводная съемка', url: URLS.catalog},
+    {text: 'Ласты', url: URLS.catalog},
+    {text: 'Катушки и буи', url: URLS.catalog},
+    {text: 'Sidemount', url: URLS.catalog}
+  ];
+
+  const MENU_1 = [
+    {text: 'Обучение дайвингу', url: URLS.courses, submenu: SUBMENU_DIVING},
+    {text: 'Магазин', url: URLS.shop, submenu: SUBMENU_CATALOG},
+    {text: 'Карты сертификации', url: URLS.certification},
+    {text: 'Клубные поездки', url: URLS.trips},
+  ];
+
+  const MENU_2 = [
+    {text: 'Акции', url: '#'},
+    {text: 'Оплата и доставка', url: '#'},
+    {text: 'Статьи', url: URLS.articles},
+    {text: 'Контакты', url: URLS.contacts}
+  ];

@@ -6,6 +6,8 @@
 //= ./libs/gsap.min.js
 //= ./libs/gsap-slider.js
 
+//= ./libs/simplebar.js
+
 //= ./partials/main.js
 //= ./partials/swiper-init.js
 //= ./partials/tabs.js
@@ -22,3 +24,4 @@
 //= ./partials/status.js
 //= ./partials/product-options.js
 //= ./partials/filters.js
+//= ./partials/menu.js

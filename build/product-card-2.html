@@ -15,95 +15,113 @@
     <title>Комплект сценического такелажа EVO</title>
   </head>
   <body>
-    <header class="header header--main">
-      <div class="header__wrapper">
-        <div class="header__left">
-          <div class="header__profile header__profile--mobile">
-            <svg>
-              <use xlink:href="./images/sprite.svg#profile"></use>
-            </svg>
-          </div>
-          <div class="header__logos"><a href="/homepage.html">
-              <svg>
-                <use xlink:href="./images/sprite.svg#logo-tdi"></use>
-              </svg></a><a href="/homepage.html">
-              <svg>
-                <use xlink:href="./images/sprite.svg#logo-sdi"></use>
-              </svg></a></div>
-          <div class="header__burger">
-            <svg width="22" height="11">
-              <use xlink:href="./images/sprite.svg#burger"></use>
-            </svg>
-          </div>
+    <header class="header">
+      <div class="header__container">
+        <div class="header__logo"><a class="header__logo-tdi" href="homepage.html">
+            <svg width="85" height="40">
+              <use xlink:href="./images/sprite.svg#logo-tdi"></use>
+            </svg></a><a class="header__logo-sdi" href="homepage.html">
+            <svg width="84" height="40">
+              <use xlink:href="./images/sprite.svg#logo-sdi"></use>
+            </svg></a>
         </div>
-        <div class="container header__container">
-          <ul class="header__menu header__menu--bottom">
-            <li class="expand"><a href="#" target="_blank">Обучение дайвингу
-                <svg>
-                  <use xlink:href="./images/sprite.svg#arrow-angle"></use>
-                </svg></a>
-              <ul class="header__submenu">
-                <li class="title">Обучение дайвингу</li>
-                <li><a href="#" target="_blank">OWD</a></li>
-                <li><a href="#" target="_blank">Dry Suit Diver</a></li>
-                <li><a href="#" target="_blank">Advanced Adventure Open Water</a></li>
-                <li><a href="#" target="_blank">Ice Diver</a></li>
-                <li><a href="#" target="_blank">Advanced Diver Development Program</a></li>
-                <li><a href="#" target="_blank">Sidemount Diver</a></li>
-                <li><a href="#" target="_blank">Advanced Buoyancy</a></li>
-                <li><a href="#" target="_blank">Rescue Diver</a></li>
-                <li><a href="#" target="_blank">Advanced Buoyancy ext</a></li>
-                <li><a href="#" target="_blank">SDI Divemaster</a></li>
-                <li><a href="#" target="_blank">U/W Navigation</a></li>
-                <li><a href="#" target="_blank">Assistant Instructor</a></li>
-                <li><a href="#" target="_blank">Deep Diver</a></li>
-                <li><a href="#" target="_blank">Adult and Child Emergency Care</a></li>
-                <li><a href="#" target="_blank">Night Diver</a></li>
-                <li><a href="#" target="_blank">O2 Administrator</a></li>
-              </ul>
-            </li>
-            <li class="expand"><a href="#" target="_blank">Магазин
-                <svg>
-                  <use xlink:href="./images/sprite.svg#arrow-angle"></use>
-                </svg></a>
-              <ul class="header__submenu">
-                <li class="title">Магазин</li>
-                <li><a href="#" target="_blank">Костюмы</a></li>
-                <li><a href="#" target="_blank">Аксессуары</a></li>
-                <li><a href="#" target="_blank">Такелаж</a></li>
-                <li><a href="#" target="_blank">Фонари</a></li>
-                <li><a href="#" target="_blank">Ребризер</a></li>
-                <li><a href="#" target="_blank">Подводная съемка</a></li>
-                <li><a href="#" target="_blank">Ласты</a></li>
-                <li><a href="#" target="_blank">Катушки и буи</a></li>
-                <li><a href="#" target="_blank">Sidemount</a></li>
-              </ul>
-            </li>
-            <li><a href="#" target="_blank">Карты сертификации</a></li>
-            <li><a href="#" target="_blank">Клубные поездки</a></li>
-          </ul>
-          <ul class="header__menu">
-            <li><a href="#" target="_blank">Акции</a></li>
-            <li><a href="#" target="_blank">Оплата и доставка</a></li>
-            <li><a href="#" target="_blank">Статьи</a></li>
-            <li><a href="#" target="_blank">Контакты</a></li>
-          </ul>
-        </div>
-        <div class="header__right">
-          <div class="header__lang-swither"><a class="ru active">RU</a><span class="delimiter">/</span><a class="en" href="#">EN</a></div>
-          <div class="header__buttons">
-            <div class="header__basket">
-              <svg width="20" height="20">
-                <use xlink:href="./images/sprite.svg#cart"></use>
-              </svg><span>0</span>
-            </div>
-            <div class="header__profile">
-              <svg>
-                <use xlink:href="./images/sprite.svg#profile"></use>
+        <div class="header__canvas">
+          <button class="header__canvas-close" type="button" aria-label="Скрыть меню">
+            <svg width="14" height="14">
+              <use xlink:href="./images/sprite.svg#close"></use>
+            </svg>
+          </button>
+          <div class="header__main-menu menu">
+            <ul class="menu__list"> 
+              <li class="menu__item menu__item--expand"><a class="menu__link" href="courses-page.html">Обучение дайвингу
+                  <svg width="8" height="4">
+                    <use xlink:href="./images/sprite.svg#arrow-angle-down"></use>
+                  </svg></a>
+                <div class="menu__submenu">
+                  <button class="menu__back" type="button" aria-label="Вернуться в основное меню">
+                    <svg width="30" height="30">
+                      <use xlink:href="./images/sprite.svg#back"></use>
+                    </svg>
+                  </button>
+                  <div class="menu__submenu-title">Обучение дайвингу</div>
+                  <ul class="menu__submenu-list"> 
+                    <li class="menu__submenu-item"> <a href="#">OWD</a></li>
+                    <li class="menu__submenu-item"> <a href="#">Advanced Adventure Open Water</a></li>
+                    <li class="menu__submenu-item"> <a href="#">Advanced Diver Development Program</a></li>
+                    <li class="menu__submenu-item"> <a href="#">Advanced Buoyancy</a></li>
+                    <li class="menu__submenu-item"> <a href="#">Advanced Buoyancy ext</a></li>
+                    <li class="menu__submenu-item"> <a href="#">U/W Navigation</a></li>
+                    <li class="menu__submenu-item"> <a href="#">Deep Diver</a></li>
+                    <li class="menu__submenu-item"> <a href="#">Night Diver</a></li>
+                    <li class="menu__submenu-item"> <a href="#">Dry Suit Diver</a></li>
+                    <li class="menu__submenu-item"> <a href="#">Ice Diver</a></li>
+                    <li class="menu__submenu-item"> <a href="#">Sidemount Diver</a></li>
+                    <li class="menu__submenu-item"> <a href="#">Rescue Diver</a></li>
+                    <li class="menu__submenu-item"> <a href="#">SDI Divemaster</a></li>
+                    <li class="menu__submenu-item"> <a href="#">Assistant Instructor</a></li>
+                    <li class="menu__submenu-item"> <a href="#">Adult and Child Emergency Care</a></li>
+                    <li class="menu__submenu-item"> <a href="#">O2 Administrator</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="menu__item menu__item--expand"><a class="menu__link" href="shop.html">Магазин
+                  <svg width="8" height="4">
+                    <use xlink:href="./images/sprite.svg#arrow-angle-down"></use>
+                  </svg></a>
+                <div class="menu__submenu">
+                  <button class="menu__back" type="button" aria-label="Вернуться в основное меню">
+                    <svg width="30" height="30">
+                      <use xlink:href="./images/sprite.svg#back"></use>
+                    </svg>
+                  </button>
+                  <div class="menu__submenu-title">Магазин</div>
+                  <ul class="menu__submenu-list"> 
+                    <li class="menu__submenu-item"> <a href="catalog.html">Костюмы</a></li>
+                    <li class="menu__submenu-item"> <a href="catalog.html">Аксессуары</a></li>
+                    <li class="menu__submenu-item"> <a href="catalog.html">Такелаж</a></li>
+                    <li class="menu__submenu-item"> <a href="catalog.html">Фонари</a></li>
+                    <li class="menu__submenu-item"> <a href="catalog.html">Ребризер</a></li>
+                    <li class="menu__submenu-item"> <a href="catalog.html">Подводная съемка</a></li>
+                    <li class="menu__submenu-item"> <a href="catalog.html">Ласты</a></li>
+                    <li class="menu__submenu-item"> <a href="catalog.html">Катушки и буи</a></li>
+                    <li class="menu__submenu-item"> <a href="catalog.html">Sidemount</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="menu__item"><a class="menu__link" href="certification.html">Карты сертификации</a>
+              </li>
+              <li class="menu__item"><a class="menu__link" href="trips-page.html">Клубные поездки</a>
+              </li>
+            </ul>
+          </div>
+          <div class="header__second-menu">
+            <button class="header__second-menu-toggle" type="button" aria-label="Показать дополнительное меню">
+              <svg width="22" height="11">
+                <use xlink:href="./images/sprite.svg#burger"></use>
               </svg>
+            </button>
+            <div class="menu menu--second">
+              <ul class="menu__list"> 
+                <li class="menu__item"><a class="menu__link" href="#">Акции</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Оплата и доставка</a></li>
+                <li class="menu__item"><a class="menu__link" href="articles-page.html">Статьи</a></li>
+                <li class="menu__item"><a class="menu__link" href="contacts.html">Контакты</a></li>
+              </ul>
             </div>
           </div>
-        </div>
+          <div class="header__lang-swither"><a class="ru active">RU</a><span class="delimiter">/</span><a class="en" href="#">EN</a></div><a class="header__basket" href="cart.html">
+            <svg width="20" height="20">
+              <use xlink:href="./images/sprite.svg#cart"></use>
+            </svg><span>0</span></a>
+        </div><a class="header__profile" href="profile.html">
+          <svg width="20" height="20">
+            <use xlink:href="./images/sprite.svg#profile"></use>
+          </svg></a>
+        <button class="header__burger" type="button">
+          <svg width="22" height="11">
+            <use xlink:href="./images/sprite.svg#burger"></use>
+          </svg>
+        </button>
       </div>
     </header>
     <main class="main">
