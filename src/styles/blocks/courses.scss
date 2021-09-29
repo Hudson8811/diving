@@ -75,6 +75,7 @@
 
   &__btn {
     max-width: 250px;
+    width: 100%;
     padding: 14.5px 16px;
     margin: 30px auto 0;
     font-size: 19px;
@@ -83,6 +84,10 @@
       margin: 0 30px;
       font-size: 15px;
       padding: 11px 15px;
+    }
+
+    @include max(sm) {
+      max-width: 150px;
     }
   }
 

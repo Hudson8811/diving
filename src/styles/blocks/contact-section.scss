@@ -3,7 +3,7 @@
   background-color: $smoky;
 
   @include max(sm) {
-    padding: 50px 0;
+    padding: 50px 0 100px;
   }
 
   &__container {
@@ -52,7 +52,7 @@
     @include max(sm) {
       width: 100%;
       margin-right: 0;
-      margin-bottom: 50px;
+      margin-bottom: 36px;
     }
   }
 
@@ -65,6 +65,10 @@
   &__item {
     margin-right: 50px;
     margin-top: 30px;
+
+    @include max(sm) {
+      margin-top: 14px;
+    }
 
     &--full {
       width: 100%;
@@ -90,6 +94,12 @@
 
   &__title {
     margin-bottom: 7px;
+
+    @include max(sm) {
+      font-size: 18px;
+      line-height: 22px;
+      margin-bottom: 20px;
+    }
   }
 
   &__text {
@@ -97,6 +107,12 @@
     font-size: 17px;
     line-height: 1.529411764705882;
     color: $gray-ph;
+
+    @include max(sm) {
+      font-size: 15px;
+      margin-top: -7px;
+      margin-bottom: 7px;
+    }
   }
 
   &__form {

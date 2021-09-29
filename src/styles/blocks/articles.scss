@@ -16,6 +16,11 @@
 		@include max(md) {
 			order: -2;
 		}
+
+		@include max(sm) {
+			font-size: 18px;
+			line-height: 22px;
+		}
 	}
 
 	&__wrapper {
@@ -24,7 +29,7 @@
 		margin: 25px -12px 0;
 
 		@include max(lg) {
-			margin-top: 18px;
+			margin: 18px 0 0;
 		}
 	}
 

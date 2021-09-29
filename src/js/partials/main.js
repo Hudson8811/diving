@@ -1,5 +1,5 @@
 $(window).on('load', function() {
-	var tabsRecommend = $('.recommend__tabs p');
+	var tabsRecommend = $('.recommend__tabs p:not(.title)');
 
 	tabsRecommend.click(function () {
 		if (!$(this).hasClass('active')) {

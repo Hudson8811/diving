@@ -16,11 +16,11 @@ section.recommend
 				option(value='Катушки и буи') Катушки и буи
 				option(value='Sidemount') Sidemount
 			.recommend__tabs
-				p.active Категории
+				p.title Категории
 				p Популярное
 				p Костюмы
 				p Аксессуары
-				p Такелаж
+				p.active Такелаж
 				p Фонари
 				p Ребризер
 				p Подводная съемка
@@ -31,42 +31,8 @@ section.recommend
 				.recommend__content-item(style='display: block')
 					.swiper-container.__js_recommend-carousel
 						.swiper-wrapper
-							.recommend__item.product-preview.swiper-slide
-								.product-preview__image
-									img(src="images/homepage/recommend/1.jpg", srcset="images/homepage/recommend/1@2x.jpg 2x", width="145", height="189", alt="")
-								h3.product-preview__title
-									a(href="#") SDI ночной дайвинг
-								.product-preview__text Ночной дайвинг. Подводная навигация и погружения
-								.product-preview__bottom
-									+button('В корзину', 'product-preview__btn', 'cart', '#')
-									.product-preview__price 1 200₽
-							.recommend__item.product-preview.swiper-slide
-								.product-preview__image
-									img(src="images/homepage/recommend/2.jpg", srcset="images/homepage/recommend/2@2x.jpg 2x", width="168", height="146", alt="")
-								h3.product-preview__title
-									a(href="#") SDI ночной дайвинг
-								.product-preview__text Ночной дайвинг. Подводная навигация и погружения
-								.product-preview__bottom
-									+button('В корзину', 'product-preview__btn', 'cart', '#')
-									.product-preview__price 1 200₽
-							.recommend__item.product-preview.swiper-slide
-								.product-preview__image
-									img(src="images/homepage/recommend/3.jpg", srcset="images/homepage/recommend/3@2x.jpg 2x", width="126", height="162", alt="")
-								h3.product-preview__title
-									a(href="#") SDI ночной дайвинг
-								.product-preview__text Ночной дайвинг. Подводная навигация и погружения
-								.product-preview__bottom
-									+button('В корзину', 'product-preview__btn', 'cart', '#')
-									.product-preview__price 1 200₽
-							.recommend__item.product-preview.swiper-slide
-								.product-preview__image
-									img(src="images/homepage/recommend/3.jpg", srcset="images/homepage/recommend/3@2x.jpg 2x", width="126", height="162", alt="")
-								h3.product-preview__title
-									a(href="#") SDI ночной дайвинг
-								.product-preview__text Ночной дайвинг. Подводная навигация и погружения
-								.product-preview__bottom
-									+button('В корзину', 'product-preview__btn', 'cart', '#')
-									.product-preview__price 1 200₽
+							each item in PRODUCTS_3
+								+product-preview(item)
 					.recommend__nav
 						+button('', 'button--outline button--icon slick-prev recommend__prev', 'chevron-right')
 						.recommend__pagination
@@ -75,60 +41,8 @@ section.recommend
 				.recommend__content-item
 					.swiper-container.__js_recommend-carousel
 						.swiper-wrapper
-							.recommend__item.product-preview.swiper-slide
-								.product-preview__image
-									img(src="images/homepage/recommend/1.jpg", srcset="images/homepage/recommend/1@2x.jpg 2x", width="145", height="189", alt="")
-								h3.product-preview__title
-									a(href="#") SDI ночной дайвинг
-								.product-preview__text Ночной дайвинг. Подводная навигация и погружения
-								.product-preview__bottom
-									+button('В корзину', 'product-preview__btn', 'cart', '#')
-									.product-preview__price 1 200₽
-							.recommend__item.product-preview.swiper-slide
-								.product-preview__image
-									img(src="images/homepage/recommend/2.jpg", srcset="images/homepage/recommend/2@2x.jpg 2x", width="168", height="146", alt="")
-								h3.product-preview__title
-									a(href="#") SDI ночной дайвинг
-								.product-preview__text Ночной дайвинг. Подводная навигация и погружения
-								.product-preview__bottom
-									+button('В корзину', 'product-preview__btn', 'cart', '#')
-									.product-preview__price 1 200₽
-							.recommend__item.product-preview.swiper-slide
-								.product-preview__image
-									img(src="images/homepage/recommend/3.jpg", srcset="images/homepage/recommend/3@2x.jpg 2x", width="126", height="162", alt="")
-								h3.product-preview__title
-									a(href="#") SDI ночной дайвинг
-								.product-preview__text Ночной дайвинг. Подводная навигация и погружения
-								.product-preview__bottom
-									+button('В корзину', 'product-preview__btn', 'cart', '#')
-									.product-preview__price 1 200₽
-							.recommend__item.product-preview.swiper-slide
-								.product-preview__image
-									img(src="images/homepage/recommend/3.jpg", srcset="images/homepage/recommend/3@2x.jpg 2x", width="126", height="162", alt="")
-								h3.product-preview__title
-									a(href="#") SDI ночной дайвинг
-								.product-preview__text Ночной дайвинг. Подводная навигация и погружения
-								.product-preview__bottom
-									+button('В корзину', 'product-preview__btn', 'cart', '#')
-									.product-preview__price 1 200₽
-							.recommend__item.product-preview.swiper-slide
-								.product-preview__image
-									img(src="images/homepage/recommend/3.jpg", srcset="images/homepage/recommend/3@2x.jpg 2x", width="126", height="162", alt="")
-								h3.product-preview__title
-									a(href="#") SDI ночной дайвинг
-								.product-preview__text Ночной дайвинг. Подводная навигация и погружения
-								.product-preview__bottom
-									+button('В корзину', 'product-preview__btn', 'cart', '#')
-									.product-preview__price 1 200₽
-							.recommend__item.product-preview.swiper-slide
-								.product-preview__image
-									img(src="images/homepage/recommend/3.jpg", srcset="images/homepage/recommend/3@2x.jpg 2x", width="126", height="162", alt="")
-								h3.product-preview__title
-									a(href="#") SDI ночной дайвинг
-								.product-preview__text Ночной дайвинг. Подводная навигация и погружения
-								.product-preview__bottom
-									+button('В корзину', 'product-preview__btn', 'cart', '#')
-									.product-preview__price 1 200₽
+							each item in PRODUCTS_3
+								+product-preview(item)
 					.recommend__nav
 						+button('', 'button--outline button--icon slick-prev recommend__prev', 'chevron-right')
 						.recommend__pagination
@@ -137,42 +51,8 @@ section.recommend
 				.recommend__content-item
 					.swiper-container.__js_recommend-carousel
 						.swiper-wrapper
-							.recommend__item.product-preview.swiper-slide
-								.product-preview__image
-									img(src="images/homepage/recommend/1.jpg", srcset="images/homepage/recommend/1@2x.jpg 2x", width="145", height="189", alt="")
-								h3.product-preview__title
-									a(href="#") SDI ночной дайвинг
-								.product-preview__text Ночной дайвинг. Подводная навигация и погружения
-								.product-preview__bottom
-									+button('В корзину', 'product-preview__btn', 'cart', '#')
-									.product-preview__price 1 200₽
-							.recommend__item.product-preview.swiper-slide
-								.product-preview__image
-									img(src="images/homepage/recommend/2.jpg", srcset="images/homepage/recommend/2@2x.jpg 2x", width="168", height="146", alt="")
-								h3.product-preview__title
-									a(href="#") SDI ночной дайвинг
-								.product-preview__text Ночной дайвинг. Подводная навигация и погружения
-								.product-preview__bottom
-									+button('В корзину', 'product-preview__btn', 'cart', '#')
-									.product-preview__price 1 200₽
-							.recommend__item.product-preview.swiper-slide
-								.product-preview__image
-									img(src="images/homepage/recommend/3.jpg", srcset="images/homepage/recommend/3@2x.jpg 2x", width="126", height="162", alt="")
-								h3.product-preview__title
-									a(href="#") SDI ночной дайвинг
-								.product-preview__text Ночной дайвинг. Подводная навигация и погружения
-								.product-preview__bottom
-									+button('В корзину', 'product-preview__btn', 'cart', '#')
-									.product-preview__price 1 200₽
-							.recommend__item.product-preview.swiper-slide
-								.product-preview__image
-									img(src="images/homepage/recommend/3.jpg", srcset="images/homepage/recommend/3@2x.jpg 2x", width="126", height="162", alt="")
-								h3.product-preview__title
-									a(href="#") SDI ночной дайвинг
-								.product-preview__text Ночной дайвинг. Подводная навигация и погружения
-								.product-preview__bottom
-									+button('В корзину', 'product-preview__btn', 'cart', '#')
-									.product-preview__price 1 200₽
+							each item in PRODUCTS_3
+								+product-preview(item)
 					.recommend__nav
 						+button('', 'button--outline button--icon slick-prev recommend__prev', 'chevron-right')
 						.recommend__pagination
@@ -181,60 +61,8 @@ section.recommend
 				.recommend__content-item
 					.swiper-container.__js_recommend-carousel
 						.swiper-wrapper
-							.recommend__item.product-preview.swiper-slide
-								.product-preview__image
-									img(src="images/homepage/recommend/1.jpg", srcset="images/homepage/recommend/1@2x.jpg 2x", width="145", height="189", alt="")
-								h3.product-preview__title
-									a(href="#") SDI ночной дайвинг
-								.product-preview__text Ночной дайвинг. Подводная навигация и погружения
-								.product-preview__bottom
-									+button('В корзину', 'product-preview__btn', 'cart', '#')
-									.product-preview__price 1 200₽
-							.recommend__item.product-preview.swiper-slide
-								.product-preview__image
-									img(src="images/homepage/recommend/2.jpg", srcset="images/homepage/recommend/2@2x.jpg 2x", width="168", height="146", alt="")
-								h3.product-preview__title
-									a(href="#") SDI ночной дайвинг
-								.product-preview__text Ночной дайвинг. Подводная навигация и погружения
-								.product-preview__bottom
-									+button('В корзину', 'product-preview__btn', 'cart', '#')
-									.product-preview__price 1 200₽
-							.recommend__item.product-preview.swiper-slide
-								.product-preview__image
-									img(src="images/homepage/recommend/3.jpg", srcset="images/homepage/recommend/3@2x.jpg 2x", width="126", height="162", alt="")
-								h3.product-preview__title
-									a(href="#") SDI ночной дайвинг
-								.product-preview__text Ночной дайвинг. Подводная навигация и погружения
-								.product-preview__bottom
-									+button('В корзину', 'product-preview__btn', 'cart', '#')
-									.product-preview__price 1 200₽
-							.recommend__item.product-preview.swiper-slide
-								.product-preview__image
-									img(src="images/homepage/recommend/3.jpg", srcset="images/homepage/recommend/3@2x.jpg 2x", width="126", height="162", alt="")
-								h3.product-preview__title
-									a(href="#") SDI ночной дайвинг
-								.product-preview__text Ночной дайвинг. Подводная навигация и погружения
-								.product-preview__bottom
-									+button('В корзину', 'product-preview__btn', 'cart', '#')
-									.product-preview__price 1 200₽
-							.recommend__item.product-preview.swiper-slide
-								.product-preview__image
-									img(src="images/homepage/recommend/3.jpg", srcset="images/homepage/recommend/3@2x.jpg 2x", width="126", height="162", alt="")
-								h3.product-preview__title
-									a(href="#") SDI ночной дайвинг
-								.product-preview__text Ночной дайвинг. Подводная навигация и погружения
-								.product-preview__bottom
-									+button('В корзину', 'product-preview__btn', 'cart', '#')
-									.product-preview__price 1 200₽
-							.recommend__item.product-preview.swiper-slide
-								.product-preview__image
-									img(src="images/homepage/recommend/3.jpg", srcset="images/homepage/recommend/3@2x.jpg 2x", width="126", height="162", alt="")
-								h3.product-preview__title
-									a(href="#") SDI ночной дайвинг
-								.product-preview__text Ночной дайвинг. Подводная навигация и погружения
-								.product-preview__bottom
-									+button('В корзину', 'product-preview__btn', 'cart', '#')
-									.product-preview__price 1 200₽
+							each item in PRODUCTS_3
+								+product-preview(item)
 					.recommend__nav
 						+button('', 'button--outline button--icon slick-prev recommend__prev', 'chevron-right')
 						.recommend__pagination
@@ -243,42 +71,8 @@ section.recommend
 				.recommend__content-item
 					.swiper-container.__js_recommend-carousel
 						.swiper-wrapper
-							.recommend__item.product-preview.swiper-slide
-								.product-preview__image
-									img(src="images/homepage/recommend/1.jpg", srcset="images/homepage/recommend/1@2x.jpg 2x", width="145", height="189", alt="")
-								h3.product-preview__title
-									a(href="#") SDI ночной дайвинг
-								.product-preview__text Ночной дайвинг. Подводная навигация и погружения
-								.product-preview__bottom
-									+button('В корзину', 'product-preview__btn', 'cart', '#')
-									.product-preview__price 1 200₽
-							.recommend__item.product-preview.swiper-slide
-								.product-preview__image
-									img(src="images/homepage/recommend/2.jpg", srcset="images/homepage/recommend/2@2x.jpg 2x", width="168", height="146", alt="")
-								h3.product-preview__title
-									a(href="#") SDI ночной дайвинг
-								.product-preview__text Ночной дайвинг. Подводная навигация и погружения
-								.product-preview__bottom
-									+button('В корзину', 'product-preview__btn', 'cart', '#')
-									.product-preview__price 1 200₽
-							.recommend__item.product-preview.swiper-slide
-								.product-preview__image
-									img(src="images/homepage/recommend/3.jpg", srcset="images/homepage/recommend/3@2x.jpg 2x", width="126", height="162", alt="")
-								h3.product-preview__title
-									a(href="#") SDI ночной дайвинг
-								.product-preview__text Ночной дайвинг. Подводная навигация и погружения
-								.product-preview__bottom
-									+button('В корзину', 'product-preview__btn', 'cart', '#')
-									.product-preview__price 1 200₽
-							.recommend__item.product-preview.swiper-slide
-								.product-preview__image
-									img(src="images/homepage/recommend/3.jpg", srcset="images/homepage/recommend/3@2x.jpg 2x", width="126", height="162", alt="")
-								h3.product-preview__title
-									a(href="#") SDI ночной дайвинг
-								.product-preview__text Ночной дайвинг. Подводная навигация и погружения
-								.product-preview__bottom
-									+button('В корзину', 'product-preview__btn', 'cart', '#')
-									.product-preview__price 1 200₽
+							each item in PRODUCTS_3
+								+product-preview(item)
 					.recommend__nav
 						+button('', 'button--outline button--icon slick-prev recommend__prev', 'chevron-right')
 						.recommend__pagination
@@ -287,60 +81,8 @@ section.recommend
 				.recommend__content-item
 					.swiper-container.__js_recommend-carousel
 						.swiper-wrapper
-							.recommend__item.product-preview.swiper-slide
-								.product-preview__image
-									img(src="images/homepage/recommend/1.jpg", srcset="images/homepage/recommend/1@2x.jpg 2x", width="145", height="189", alt="")
-								h3.product-preview__title
-									a(href="#") SDI ночной дайвинг
-								.product-preview__text Ночной дайвинг. Подводная навигация и погружения
-								.product-preview__bottom
-									+button('В корзину', 'product-preview__btn', 'cart', '#')
-									.product-preview__price 1 200₽
-							.recommend__item.product-preview.swiper-slide
-								.product-preview__image
-									img(src="images/homepage/recommend/2.jpg", srcset="images/homepage/recommend/2@2x.jpg 2x", width="168", height="146", alt="")
-								h3.product-preview__title
-									a(href="#") SDI ночной дайвинг
-								.product-preview__text Ночной дайвинг. Подводная навигация и погружения
-								.product-preview__bottom
-									+button('В корзину', 'product-preview__btn', 'cart', '#')
-									.product-preview__price 1 200₽
-							.recommend__item.product-preview.swiper-slide
-								.product-preview__image
-									img(src="images/homepage/recommend/3.jpg", srcset="images/homepage/recommend/3@2x.jpg 2x", width="126", height="162", alt="")
-								h3.product-preview__title
-									a(href="#") SDI ночной дайвинг
-								.product-preview__text Ночной дайвинг. Подводная навигация и погружения
-								.product-preview__bottom
-									+button('В корзину', 'product-preview__btn', 'cart', '#')
-									.product-preview__price 1 200₽
-							.recommend__item.product-preview.swiper-slide
-								.product-preview__image
-									img(src="images/homepage/recommend/3.jpg", srcset="images/homepage/recommend/3@2x.jpg 2x", width="126", height="162", alt="")
-								h3.product-preview__title
-									a(href="#") SDI ночной дайвинг
-								.product-preview__text Ночной дайвинг. Подводная навигация и погружения
-								.product-preview__bottom
-									+button('В корзину', 'product-preview__btn', 'cart', '#')
-									.product-preview__price 1 200₽
-							.recommend__item.product-preview.swiper-slide
-								.product-preview__image
-									img(src="images/homepage/recommend/3.jpg", srcset="images/homepage/recommend/3@2x.jpg 2x", width="126", height="162", alt="")
-								h3.product-preview__title
-									a(href="#") SDI ночной дайвинг
-								.product-preview__text Ночной дайвинг. Подводная навигация и погружения
-								.product-preview__bottom
-									+button('В корзину', 'product-preview__btn', 'cart', '#')
-									.product-preview__price 1 200₽
-							.recommend__item.product-preview.swiper-slide
-								.product-preview__image
-									img(src="images/homepage/recommend/3.jpg", srcset="images/homepage/recommend/3@2x.jpg 2x", width="126", height="162", alt="")
-								h3.product-preview__title
-									a(href="#") SDI ночной дайвинг
-								.product-preview__text Ночной дайвинг. Подводная навигация и погружения
-								.product-preview__bottom
-									+button('В корзину', 'product-preview__btn', 'cart', '#')
-									.product-preview__price 1 200₽
+							each item in PRODUCTS_3
+								+product-preview(item)
 					.recommend__nav
 						+button('', 'button--outline button--icon slick-prev recommend__prev', 'chevron-right')
 						.recommend__pagination
@@ -349,42 +91,8 @@ section.recommend
 				.recommend__content-item
 					.swiper-container.__js_recommend-carousel
 						.swiper-wrapper
-							.recommend__item.product-preview.swiper-slide
-								.product-preview__image
-									img(src="images/homepage/recommend/1.jpg", srcset="images/homepage/recommend/1@2x.jpg 2x", width="145", height="189", alt="")
-								h3.product-preview__title
-									a(href="#") SDI ночной дайвинг
-								.product-preview__text Ночной дайвинг. Подводная навигация и погружения
-								.product-preview__bottom
-									+button('В корзину', 'product-preview__btn', 'cart', '#')
-									.product-preview__price 1 200₽
-							.recommend__item.product-preview.swiper-slide
-								.product-preview__image
-									img(src="images/homepage/recommend/2.jpg", srcset="images/homepage/recommend/2@2x.jpg 2x", width="168", height="146", alt="")
-								h3.product-preview__title
-									a(href="#") SDI ночной дайвинг
-								.product-preview__text Ночной дайвинг. Подводная навигация и погружения
-								.product-preview__bottom
-									+button('В корзину', 'product-preview__btn', 'cart', '#')
-									.product-preview__price 1 200₽
-							.recommend__item.product-preview.swiper-slide
-								.product-preview__image
-									img(src="images/homepage/recommend/3.jpg", srcset="images/homepage/recommend/3@2x.jpg 2x", width="126", height="162", alt="")
-								h3.product-preview__title
-									a(href="#") SDI ночной дайвинг
-								.product-preview__text Ночной дайвинг. Подводная навигация и погружения
-								.product-preview__bottom
-									+button('В корзину', 'product-preview__btn', 'cart', '#')
-									.product-preview__price 1 200₽
-							.recommend__item.product-preview.swiper-slide
-								.product-preview__image
-									img(src="images/homepage/recommend/3.jpg", srcset="images/homepage/recommend/3@2x.jpg 2x", width="126", height="162", alt="")
-								h3.product-preview__title
-									a(href="#") SDI ночной дайвинг
-								.product-preview__text Ночной дайвинг. Подводная навигация и погружения
-								.product-preview__bottom
-									+button('В корзину', 'product-preview__btn', 'cart', '#')
-									.product-preview__price 1 200₽
+							each item in PRODUCTS_3
+								+product-preview(item)
 					.recommend__nav
 						+button('', 'button--outline button--icon slick-prev recommend__prev', 'chevron-right')
 						.recommend__pagination
@@ -393,60 +101,8 @@ section.recommend
 				.recommend__content-item
 					.swiper-container.__js_recommend-carousel
 						.swiper-wrapper
-							.recommend__item.product-preview.swiper-slide
-								.product-preview__image
-									img(src="images/homepage/recommend/1.jpg", srcset="images/homepage/recommend/1@2x.jpg 2x", width="145", height="189", alt="")
-								h3.product-preview__title
-									a(href="#") SDI ночной дайвинг
-								.product-preview__text Ночной дайвинг. Подводная навигация и погружения
-								.product-preview__bottom
-									+button('В корзину', 'product-preview__btn', 'cart', '#')
-									.product-preview__price 1 200₽
-							.recommend__item.product-preview.swiper-slide
-								.product-preview__image
-									img(src="images/homepage/recommend/2.jpg", srcset="images/homepage/recommend/2@2x.jpg 2x", width="168", height="146", alt="")
-								h3.product-preview__title
-									a(href="#") SDI ночной дайвинг
-								.product-preview__text Ночной дайвинг. Подводная навигация и погружения
-								.product-preview__bottom
-									+button('В корзину', 'product-preview__btn', 'cart', '#')
-									.product-preview__price 1 200₽
-							.recommend__item.product-preview.swiper-slide
-								.product-preview__image
-									img(src="images/homepage/recommend/3.jpg", srcset="images/homepage/recommend/3@2x.jpg 2x", width="126", height="162", alt="")
-								h3.product-preview__title
-									a(href="#") SDI ночной дайвинг
-								.product-preview__text Ночной дайвинг. Подводная навигация и погружения
-								.product-preview__bottom
-									+button('В корзину', 'product-preview__btn', 'cart', '#')
-									.product-preview__price 1 200₽
-							.recommend__item.product-preview.swiper-slide
-								.product-preview__image
-									img(src="images/homepage/recommend/3.jpg", srcset="images/homepage/recommend/3@2x.jpg 2x", width="126", height="162", alt="")
-								h3.product-preview__title
-									a(href="#") SDI ночной дайвинг
-								.product-preview__text Ночной дайвинг. Подводная навигация и погружения
-								.product-preview__bottom
-									+button('В корзину', 'product-preview__btn', 'cart', '#')
-									.product-preview__price 1 200₽
-							.recommend__item.product-preview.swiper-slide
-								.product-preview__image
-									img(src="images/homepage/recommend/3.jpg", srcset="images/homepage/recommend/3@2x.jpg 2x", width="126", height="162", alt="")
-								h3.product-preview__title
-									a(href="#") SDI ночной дайвинг
-								.product-preview__text Ночной дайвинг. Подводная навигация и погружения
-								.product-preview__bottom
-									+button('В корзину', 'product-preview__btn', 'cart', '#')
-									.product-preview__price 1 200₽
-							.recommend__item.product-preview.swiper-slide
-								.product-preview__image
-									img(src="images/homepage/recommend/3.jpg", srcset="images/homepage/recommend/3@2x.jpg 2x", width="126", height="162", alt="")
-								h3.product-preview__title
-									a(href="#") SDI ночной дайвинг
-								.product-preview__text Ночной дайвинг. Подводная навигация и погружения
-								.product-preview__bottom
-									+button('В корзину', 'product-preview__btn', 'cart', '#')
-									.product-preview__price 1 200₽
+							each item in PRODUCTS_3
+								+product-preview(item)
 					.recommend__nav
 						+button('', 'button--outline button--icon slick-prev recommend__prev', 'chevron-right')
 						.recommend__pagination
@@ -455,42 +111,8 @@ section.recommend
 				.recommend__content-item
 					.swiper-container.__js_recommend-carousel
 						.swiper-wrapper
-							.recommend__item.product-preview.swiper-slide
-								.product-preview__image
-									img(src="images/homepage/recommend/1.jpg", srcset="images/homepage/recommend/1@2x.jpg 2x", width="145", height="189", alt="")
-								h3.product-preview__title
-									a(href="#") SDI ночной дайвинг
-								.product-preview__text Ночной дайвинг. Подводная навигация и погружения
-								.product-preview__bottom
-									+button('В корзину', 'product-preview__btn', 'cart', '#')
-									.product-preview__price 1 200₽
-							.recommend__item.product-preview.swiper-slide
-								.product-preview__image
-									img(src="images/homepage/recommend/2.jpg", srcset="images/homepage/recommend/2@2x.jpg 2x", width="168", height="146", alt="")
-								h3.product-preview__title
-									a(href="#") SDI ночной дайвинг
-								.product-preview__text Ночной дайвинг. Подводная навигация и погружения
-								.product-preview__bottom
-									+button('В корзину', 'product-preview__btn', 'cart', '#')
-									.product-preview__price 1 200₽
-							.recommend__item.product-preview.swiper-slide
-								.product-preview__image
-									img(src="images/homepage/recommend/3.jpg", srcset="images/homepage/recommend/3@2x.jpg 2x", width="126", height="162", alt="")
-								h3.product-preview__title
-									a(href="#") SDI ночной дайвинг
-								.product-preview__text Ночной дайвинг. Подводная навигация и погружения
-								.product-preview__bottom
-									+button('В корзину', 'product-preview__btn', 'cart', '#')
-									.product-preview__price 1 200₽
-							.recommend__item.product-preview.swiper-slide
-								.product-preview__image
-									img(src="images/homepage/recommend/3.jpg", srcset="images/homepage/recommend/3@2x.jpg 2x", width="126", height="162", alt="")
-								h3.product-preview__title
-									a(href="#") SDI ночной дайвинг
-								.product-preview__text Ночной дайвинг. Подводная навигация и погружения
-								.product-preview__bottom
-									+button('В корзину', 'product-preview__btn', 'cart', '#')
-									.product-preview__price 1 200₽
+							each item in PRODUCTS_3
+								+product-preview(item)
 					.recommend__nav
 						+button('', 'button--outline button--icon slick-prev recommend__prev', 'chevron-right')
 						.recommend__pagination
@@ -499,104 +121,8 @@ section.recommend
 				.recommend__content-item
 					.swiper-container.__js_recommend-carousel
 						.swiper-wrapper
-							.recommend__item.product-preview.swiper-slide
-								.product-preview__image
-									img(src="images/homepage/recommend/1.jpg", srcset="images/homepage/recommend/1@2x.jpg 2x", width="145", height="189", alt="")
-								h3.product-preview__title
-									a(href="#") SDI ночной дайвинг
-								.product-preview__text Ночной дайвинг. Подводная навигация и погружения
-								.product-preview__bottom
-									+button('В корзину', 'product-preview__btn', 'cart', '#')
-									.product-preview__price 1 200₽
-							.recommend__item.product-preview.swiper-slide
-								.product-preview__image
-									img(src="images/homepage/recommend/2.jpg", srcset="images/homepage/recommend/2@2x.jpg 2x", width="168", height="146", alt="")
-								h3.product-preview__title
-									a(href="#") SDI ночной дайвинг
-								.product-preview__text Ночной дайвинг. Подводная навигация и погружения
-								.product-preview__bottom
-									+button('В корзину', 'product-preview__btn', 'cart', '#')
-									.product-preview__price 1 200₽
-							.recommend__item.product-preview.swiper-slide
-								.product-preview__image
-									img(src="images/homepage/recommend/3.jpg", srcset="images/homepage/recommend/3@2x.jpg 2x", width="126", height="162", alt="")
-								h3.product-preview__title
-									a(href="#") SDI ночной дайвинг
-								.product-preview__text Ночной дайвинг. Подводная навигация и погружения
-								.product-preview__bottom
-									+button('В корзину', 'product-preview__btn', 'cart', '#')
-									.product-preview__price 1 200₽
-							.recommend__item.product-preview.swiper-slide
-								.product-preview__image
-									img(src="images/homepage/recommend/3.jpg", srcset="images/homepage/recommend/3@2x.jpg 2x", width="126", height="162", alt="")
-								h3.product-preview__title
-									a(href="#") SDI ночной дайвинг
-								.product-preview__text Ночной дайвинг. Подводная навигация и погружения
-								.product-preview__bottom
-									+button('В корзину', 'product-preview__btn', 'cart', '#')
-									.product-preview__price 1 200₽
-							.recommend__item.product-preview.swiper-slide
-								.product-preview__image
-									img(src="images/homepage/recommend/3.jpg", srcset="images/homepage/recommend/3@2x.jpg 2x", width="126", height="162", alt="")
-								h3.product-preview__title
-									a(href="#") SDI ночной дайвинг
-								.product-preview__text Ночной дайвинг. Подводная навигация и погружения
-								.product-preview__bottom
-									+button('В корзину', 'product-preview__btn', 'cart', '#')
-									.product-preview__price 1 200₽
-							.recommend__item.product-preview.swiper-slide
-								.product-preview__image
-									img(src="images/homepage/recommend/3.jpg", srcset="images/homepage/recommend/3@2x.jpg 2x", width="126", height="162", alt="")
-								h3.product-preview__title
-									a(href="#") SDI ночной дайвинг
-								.product-preview__text Ночной дайвинг. Подводная навигация и погружения
-								.product-preview__bottom
-									+button('В корзину', 'product-preview__btn', 'cart', '#')
-									.product-preview__price 1 200₽
-					.recommend__nav
-						+button('', 'button--outline button--icon slick-prev recommend__prev', 'chevron-right')
-						.recommend__pagination
-						+button('', 'button--outline button--icon slick-next recommend__next', 'chevron-right')
-					+button('Перейти в магазин', 'button--angle recommend__more', 'arrow-angle')
-				.recommend__content-item
-					.swiper-container.__js_recommend-carousel
-						.swiper-wrapper
-							.recommend__item.product-preview.swiper-slide
-								.product-preview__image
-									img(src="images/homepage/recommend/1.jpg", srcset="images/homepage/recommend/1@2x.jpg 2x", width="145", height="189", alt="")
-								h3.product-preview__title
-									a(href="#") SDI ночной дайвинг
-								.product-preview__text Ночной дайвинг. Подводная навигация и погружения
-								.product-preview__bottom
-									+button('В корзину', 'product-preview__btn', 'cart', '#')
-									.product-preview__price 1 200₽
-							.recommend__item.product-preview.swiper-slide
-								.product-preview__image
-									img(src="images/homepage/recommend/2.jpg", srcset="images/homepage/recommend/2@2x.jpg 2x", width="168", height="146", alt="")
-								h3.product-preview__title
-									a(href="#") SDI ночной дайвинг
-								.product-preview__text Ночной дайвинг. Подводная навигация и погружения
-								.product-preview__bottom
-									+button('В корзину', 'product-preview__btn', 'cart', '#')
-									.product-preview__price 1 200₽
-							.recommend__item.product-preview.swiper-slide
-								.product-preview__image
-									img(src="images/homepage/recommend/3.jpg", srcset="images/homepage/recommend/3@2x.jpg 2x", width="126", height="162", alt="")
-								h3.product-preview__title
-									a(href="#") SDI ночной дайвинг
-								.product-preview__text Ночной дайвинг. Подводная навигация и погружения
-								.product-preview__bottom
-									+button('В корзину', 'product-preview__btn', 'cart', '#')
-									.product-preview__price 1 200₽
-							.recommend__item.product-preview.swiper-slide
-								.product-preview__image
-									img(src="images/homepage/recommend/3.jpg", srcset="images/homepage/recommend/3@2x.jpg 2x", width="126", height="162", alt="")
-								h3.product-preview__title
-									a(href="#") SDI ночной дайвинг
-								.product-preview__text Ночной дайвинг. Подводная навигация и погружения
-								.product-preview__bottom
-									+button('В корзину', 'product-preview__btn', 'cart', '#')
-									.product-preview__price 1 200₽
+							each item in PRODUCTS_3
+								+product-preview(item)
 					.recommend__nav
 						+button('', 'button--outline button--icon slick-prev recommend__prev', 'chevron-right')
 						.recommend__pagination

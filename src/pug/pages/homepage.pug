@@ -45,7 +45,7 @@ block main
 
 			section.contact-section__main
 				+title('Есть вопросы?', 'h2', 'title--small contact-section__title')
-				.contact-section__text Воспользуйтесь формой ниже, и мы поможем вам начать ваше путешествие
+				.contact-section__text Воспользуйтесь формой ниже, и мы поможем вам начать <br> ваше путешествие
 
 				.contact-section__form.sform
 					form(action="#", method="post")
@@ -60,7 +60,7 @@ block main
 							span.field__hint Email*
 							input(type="email", name="email")
 						label.sform__field.field
-							span.field__hint Что вас интересует
+							span.field__hint Что Вас интересует?
 							textarea(name="message")
 						.sform__bottom
 							+button('Отправить', 'sform__send')(type="submit")
