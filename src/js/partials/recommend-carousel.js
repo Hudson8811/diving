@@ -26,10 +26,10 @@ $(window).on('load', function() {
 			},
 			breakpoints: {
 				768: {
-					slidesPerView: 2
+					slidesPerView: 2.2
 				},
 				1280: {
-					slidesPerView: 3,
+					slidesPerView: 3.2,
 					spaceBetween: 25
 				},
 			}
