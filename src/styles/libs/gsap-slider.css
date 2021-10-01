@@ -764,6 +764,7 @@ main {
   bottom: 0;
   left: 0;
   display: flex;
+  justify-content: center;
   z-index: 1000;
   width: 100%;
 }
@@ -783,6 +784,7 @@ main {
 .boxnav__item--label {
   display: flex;
   justify-content: center;
+  width: 200px;
 }
 
 .boxnav__item svg {
@@ -839,6 +841,7 @@ main {
 @media screen and (min-width: 900px) {
   .boxnav {
     position: absolute;
+    width: auto;
     left: 20px; /*17.1875vw;*/
     right: auto; /*60vw;*/
     width: auto;
@@ -874,6 +877,10 @@ main {
     justify-content: center;
     border-left: none;
     border-radius: 0 5px 5px 0;
+  }
+
+  .boxnav__item--label {
+    width: auto;
   }
 }
 
