@@ -6,10 +6,13 @@ block vars
 			title: 'Главная'
 		};
 
-		let headerClasses = 'header--absolute';
+		const isHomepage = true;
+
+		//let headerClasses = 'header--absolute';
+		let headerClasses = 'header--homepage';
 
 block header
-	include ../partials/header
+	include ../partials/new-header
 
 block main
 	include ../blocks/first-screen.pug
