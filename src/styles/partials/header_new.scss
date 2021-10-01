@@ -2,7 +2,7 @@
   $self: &;
   //padding: 25px 0;
   position: relative;
-  z-index: 1;
+  z-index: 2;
   background-color: $dark-blue;
 
   @include max(lg) {
@@ -23,10 +23,17 @@
     }
 
     #{$self}__container {
+      //display: grid;
+      //grid-template-columns: 240px 1fr;
+
+      @include max(lg) {
+        display: flex;
+      }
     }
 
     #{$self}__logo {
       margin-top: -27px;
+      margin-left: 0;
 
       @include max(lg) {
         margin-top: -2px;
@@ -58,9 +65,8 @@
       max-width: none;
       min-width: 828px;
       grid-template-columns: 1fr 0.5fr 120px 40px;
-      //align-self: flex-end;
       margin-left: auto;
-      margin-right: -40px;
+      //margin-right: -40px;
       margin-bottom: -4px;
 
       @include max(1600) {
@@ -75,6 +81,13 @@
         margin-right: 0;
         margin-bottom: 0;
       }
+
+      #{$self}__profile {
+        grid-column: -2 / -1;
+        grid-row: 2 / 3;
+        margin-left: 0;
+        align-self: center;
+      }
     }
 
     #{$self}__second-menu {
@@ -83,7 +96,11 @@
       grid-row-end: 2;
       align-self: center;
 
-      margin-right: -12px;
+      //margin-right: -12px;
+
+      li:last-child {
+        padding-right: 0 !important;
+      }
 
       @include max(lg) {
         margin-right: 0;
@@ -163,7 +180,7 @@
       position: relative;
       z-index: 1;
       align-self: flex-end;
-      margin-left: 0;
+      margin-left: -40px;
     }
 
     &.is-menu-open {

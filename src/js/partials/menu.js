@@ -8,6 +8,7 @@ window.addEventListener('load', () => {
 
   if (header) {
     const canvas = header.querySelector('.header__canvas');
+    const profile = header.querySelector('.header__profile');
     const openBtn = header.querySelector('.header__burger');
     const closeBtn = canvas.querySelector('.header__canvas-close');
     const secondMenu = header.querySelector('.header__second-menu');
@@ -35,6 +36,8 @@ window.addEventListener('load', () => {
     if (html.clientWidth >= breakpoint && html.clientWidth < secondBreakpoint) {
       secondMenuToggle.onclick = showSecondMenu;
     }
+
+    //appendProfile();
 
     function openMenu() {
       blockScroll();
@@ -178,6 +181,17 @@ window.addEventListener('load', () => {
       document.body.style.marginRight = '';
     }
 
+    function appendProfile() {
+      if (header.classList.contains('header--homepage')) {
+        if (html.clientWidth >= breakpoint) {
+          canvas.appendChild(profile);
+        } else {
+          header.querySelector('.header__container').appendChild(profile);
+        }
+        
+      }
+    }
+
     window.addEventListener('resize', () => {
       if (html.clientWidth < breakpoint) {
         openBtn.onclick = openMenu;
@@ -199,6 +213,7 @@ window.addEventListener('load', () => {
       } else {
         resetSecondMenu();
       }
+      //appendProfile();
     });
   }
 
@@ -239,6 +254,8 @@ window.addEventListener('load', () => {
       items.forEach(it => el.appendChild(it));
     }
   }
+
+
 
   function getScrollbarWidth() {
     const block = document.createElement('div');

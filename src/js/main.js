@@ -25,3 +25,4 @@
 //= ./partials/product-options.js
 //= ./partials/filters.js
 //= ./partials/menu.js
+//= ./partials/footer.js
