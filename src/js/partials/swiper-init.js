@@ -11,10 +11,10 @@ window.addEventListener('load', () => {
     productsCarousels.forEach(it => {
       new Swiper(it, {
         speed: 300,
-        slidesPerView: 1,
+        slidesPerView: 'auto',
         spaceBetween: 24,
         watchOverflow: true,
-        breakpoints: {
+        /*breakpoints: {
           // when window width is >= 480px
           560: {
             slidesPerView: 2
@@ -26,7 +26,7 @@ window.addEventListener('load', () => {
           1280: {
             slidesPerView: 4
           }
-        },
+        },*/
         navigation: {
           nextEl: '.__js_next',
           prevEl: '.__js_prev',

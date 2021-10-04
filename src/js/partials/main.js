@@ -1,21 +1,5 @@
 $(window).on('load', function() {
-	var tabsRecommend = $('.recommend__tabs p:not(.title)');
-
-	tabsRecommend.click(function () {
-		if (!$(this).hasClass('active')) {
-			tabsRecommend.removeClass('active');
-			$(this).addClass('active');
-			$('.recommend__content-item').hide().eq($(this).index()).fadeIn(300);
-		}
-	});
-
-	setTimeout(function () {
-		var dropdown = $('.recommend__wrapper .choices');
-
-		dropdown.change(function () {
-			$('.recommend__content-item').hide().eq($('.choices__item.is-selected').index()).fadeIn(300);
-		});
-	}, 100);
+	
 
 	const defaultChoicesOptions = {
 		silent: false,

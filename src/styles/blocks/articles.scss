@@ -1,169 +1,179 @@
 .articles {
-	padding: 77px 0 63px;
+  padding: 77px 0 63px;
 
-	@include max(md) {
-		padding: 60px 0 70px;
-	}
+  @include max(md) {
+    padding: 60px 0 70px;
+  }
 
-	&__container {
-		display: flex;
-		flex-direction: column;
-	}
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
 
-	&__title {
-		text-align: center;
+  &__title {
+    text-align: center;
 
-		@include max(md) {
-			order: -2;
-		}
+    @include max(md) {
+      order: -2;
+    }
 
-		@include max(sm) {
-			font-size: 18px;
-			line-height: 22px;
-		}
-	}
+    @include max(sm) {
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
 
-	&__wrapper {
-		display: flex;
-		flex-wrap: wrap;
-		margin: 25px -12px 0;
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 25px -12px 0;
 
-		@include max(lg) {
-			margin: 18px 0 0;
-		}
-	}
+    @include max(lg) {
+      margin: 18px 0 0;
+    }
 
-	&__item {
-		width: calc(33.3333% - 24px);
-		margin: 0 12px;
+    .swiper-wrapper {
+      flex-wrap: wrap;
+      margin-top: -24px;
 
-		@include max(lg) {
-			//height: 174px;
-			margin-left: 0;
-			margin-bottom: 0;
-		}
-	}
+      @include max(lg) {
+        flex-wrap: nowrap;
+        margin-top: 0;
+      }
+    }
+  }
 
-	&__more {
-		margin: 17px auto 0;
-		font-size: 18px;
+  &__item {
+    width: calc(33.3333% - 24px);
+    height: auto;
+    margin: 24px 12px 0;
 
-		@include max(md) {
-			order: -1;
-			font-size: 16px;
-			margin: 0 auto;
-		}
+    @include max(lg) {
+      //height: 174px;
+      margin: 0;
+    }
+  }
 
-		svg {
-			width: 10px;
-			height: 10px;
-			margin-left: 7px;
-		}
-	}
+  &__more {
+    margin: 17px auto 0;
+    font-size: 18px;
 
-	&__nav {
-		width: 100%;
-		display: none;
-		align-items: center;
-		justify-content: center;
+    @include max(md) {
+      order: -1;
+      font-size: 16px;
+      margin: 0 auto;
+    }
 
-		@include max(lg) {
-			display: flex;
-			margin-top: 25px;
-		}
+    svg {
+      width: 10px;
+      height: 10px;
+      margin-left: 7px;
+    }
+  }
 
-		@include max(xs) {
-			justify-content: space-between;
-		}
-	}
+  &__nav {
+    width: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
 
-	&__pagination {
-		display: none;
-		justify-content: center;
-		position: relative;
-		z-index: 1;
+    @include max(lg) {
+      display: flex;
+      margin-top: 25px;
+    }
 
-		@include max(lg) {
-			display: flex;
-			margin: 0 30px;
-		}
+    @include max(xs) {
+      justify-content: space-between;
+    }
+  }
 
-		&.swiper-pagination-lock {
-			display: none;
-		}
+  &__pagination {
+    display: none;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
 
-		.swiper-pagination-bullet {
-			display: block;
-			width: 20px;
-			height: 2px;
-			background-color: $lightBlue;
-			cursor: pointer;
+    @include max(lg) {
+      display: flex;
+      margin: 0 30px;
+    }
 
-			&-active {
-				background-color: $blue;
-			}
-		}
-	}
+    &.swiper-pagination-lock {
+      display: none;
+    }
 
-	&__prev,
-	&__next {
-		position: absolute;
-		top: 52%;
+    .swiper-pagination-bullet {
+      display: block;
+      width: 20px;
+      height: 2px;
+      background-color: $lightBlue;
+      cursor: pointer;
 
-		@include max(lg) {
-			position: relative;
-			top: unset;
-			bottom: 0;
-		}
-	}
+      &-active {
+        background-color: $blue;
+      }
+    }
+  }
 
-	&__prev {
-		left: -45px;
+  &__prev,
+  &__next {
+    position: absolute;
+    top: 52%;
 
-		@include max(lg) {
-			left: 0;
-		}
-	}
+    @include max(lg) {
+      position: relative;
+      top: unset;
+      bottom: 0;
+    }
+  }
 
-	&__next {
-		right: -45px;
+  &__prev {
+    left: -45px;
 
-		@include max(lg) {
-			right: 0;
-		}
-	}
+    @include max(lg) {
+      left: 0;
+    }
+  }
 
-	&--similar {
-		padding: 58px 0 0;
+  &__next {
+    right: -45px;
 
-		@include max(md) {
-			padding: 30px 0 0;
-		}
+    @include max(lg) {
+      right: 0;
+    }
+  }
 
-		.articles {
-			&__row {
-				display: flex;
-				align-items: center;
-				justify-content: space-between;
+  &--similar {
+    padding: 58px 0 0;
 
-				@include max(md) {
-					flex-direction: column;
-				}
-			}
+    @include max(md) {
+      padding: 30px 0 0;
+    }
 
-			&__all {
-				font-size: 19px;
-				line-height: 23px;
-				padding-right: 0;
-			}
+    .articles {
+      &__row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
 
-			&__wrapper {
-				margin: 35px -12px 0;
+        @include max(md) {
+          flex-direction: column;
+        }
+      }
 
-				@include max(lg) {
-					margin: 18px 0 0;
-				}
-			}
-		}
-	}
+      &__all {
+        font-size: 19px;
+        line-height: 23px;
+        padding-right: 0;
+      }
+
+      &__wrapper {
+        margin: 35px -12px 0;
+
+        @include max(lg) {
+          margin: 18px 0 0;
+        }
+      }
+    }
+  }
 }

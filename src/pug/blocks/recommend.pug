@@ -1,130 +1,27 @@
 section.recommend
 	.container
 		+title('Рекомендуемые товары <br> для дайвинга', '', 'title--large recommend__title')
-		+button('Все учебники', 'button--angle recommend__more recommend__more--mobile', 'arrow-angle')
+		+button('Все учебники', 'button--angle recommend__more recommend__more--mobile', 'arrow-angle', URLS.shop)
 		.recommend__wrapper
 			select.__js_custom-select(name='categories')
-				option(value='Категории') Категории
-				option(value='Популярное') Популярное
-				option(value='Костюмы') Костюмы
-				option(value='Аксессуары') Аксессуары
-				option(value='Такелаж') Такелаж
-				option(value='Фонари') Фонари
-				option(value='Ребризер') Ребризер
-				option(value='Подводная съемка') Подводная съемка
-				option(value='Ласты') Ласты
-				option(value='Катушки и буи') Катушки и буи
-				option(value='Sidemount') Sidemount
+				each item in RECOMMEND_TABS
+					option(value= item.target)= item.text
+
 			.recommend__tabs
 				p.title Категории
-				p Популярное
-				p Костюмы
-				p Аксессуары
-				p.active Такелаж
-				p Фонари
-				p Ребризер
-				p Подводная съемка
-				p Ласты
-				p Катушки и буи
-				p Sidemount
+				each item, index in RECOMMEND_TABS
+					button(class= (index === 0 ? 'active' : '') ,type="button", data-target= item.target)= item.text
+
 			.recommend__content
-				.recommend__content-item(style='display: block')
-					.swiper-container.__js_recommend-carousel
-						.swiper-wrapper
-							each item in PRODUCTS_3
-								+product-preview(item)
-					.recommend__nav
-						+button('', 'button--outline button--icon slick-prev recommend__prev', 'chevron-right')
-						.recommend__pagination
-						+button('', 'button--outline button--icon slick-next recommend__next', 'chevron-right')
-					+button('Перейти в магазин', 'button--angle recommend__more', 'arrow-angle')
-				.recommend__content-item
-					.swiper-container.__js_recommend-carousel
-						.swiper-wrapper
-							each item in PRODUCTS_3
-								+product-preview(item)
-					.recommend__nav
-						+button('', 'button--outline button--icon slick-prev recommend__prev', 'chevron-right')
-						.recommend__pagination
-						+button('', 'button--outline button--icon slick-next recommend__next', 'chevron-right')
-					+button('Перейти в магазин', 'button--angle recommend__more', 'arrow-angle')
-				.recommend__content-item
-					.swiper-container.__js_recommend-carousel
-						.swiper-wrapper
-							each item in PRODUCTS_3
-								+product-preview(item)
-					.recommend__nav
-						+button('', 'button--outline button--icon slick-prev recommend__prev', 'chevron-right')
-						.recommend__pagination
-						+button('', 'button--outline button--icon slick-next recommend__next', 'chevron-right')
-					+button('Перейти в магазин', 'button--angle recommend__more', 'arrow-angle')
-				.recommend__content-item
-					.swiper-container.__js_recommend-carousel
-						.swiper-wrapper
-							each item in PRODUCTS_3
-								+product-preview(item)
-					.recommend__nav
-						+button('', 'button--outline button--icon slick-prev recommend__prev', 'chevron-right')
-						.recommend__pagination
-						+button('', 'button--outline button--icon slick-next recommend__next', 'chevron-right')
-					+button('Перейти в магазин', 'button--angle recommend__more', 'arrow-angle')
-				.recommend__content-item
-					.swiper-container.__js_recommend-carousel
-						.swiper-wrapper
-							each item in PRODUCTS_3
-								+product-preview(item)
-					.recommend__nav
-						+button('', 'button--outline button--icon slick-prev recommend__prev', 'chevron-right')
-						.recommend__pagination
-						+button('', 'button--outline button--icon slick-next recommend__next', 'chevron-right')
-					+button('Перейти в магазин', 'button--angle recommend__more', 'arrow-angle')
-				.recommend__content-item
-					.swiper-container.__js_recommend-carousel
-						.swiper-wrapper
-							each item in PRODUCTS_3
-								+product-preview(item)
-					.recommend__nav
-						+button('', 'button--outline button--icon slick-prev recommend__prev', 'chevron-right')
-						.recommend__pagination
-						+button('', 'button--outline button--icon slick-next recommend__next', 'chevron-right')
-					+button('Перейти в магазин', 'button--angle recommend__more', 'arrow-angle')
-				.recommend__content-item
-					.swiper-container.__js_recommend-carousel
-						.swiper-wrapper
-							each item in PRODUCTS_3
-								+product-preview(item)
-					.recommend__nav
-						+button('', 'button--outline button--icon slick-prev recommend__prev', 'chevron-right')
-						.recommend__pagination
-						+button('', 'button--outline button--icon slick-next recommend__next', 'chevron-right')
-					+button('Перейти в магазин', 'button--angle recommend__more', 'arrow-angle')
-				.recommend__content-item
-					.swiper-container.__js_recommend-carousel
-						.swiper-wrapper
-							each item in PRODUCTS_3
-								+product-preview(item)
-					.recommend__nav
-						+button('', 'button--outline button--icon slick-prev recommend__prev', 'chevron-right')
-						.recommend__pagination
-						+button('', 'button--outline button--icon slick-next recommend__next', 'chevron-right')
-					+button('Перейти в магазин', 'button--angle recommend__more', 'arrow-angle')
-				.recommend__content-item
-					.swiper-container.__js_recommend-carousel
-						.swiper-wrapper
-							each item in PRODUCTS_3
-								+product-preview(item)
-					.recommend__nav
-						+button('', 'button--outline button--icon slick-prev recommend__prev', 'chevron-right')
-						.recommend__pagination
-						+button('', 'button--outline button--icon slick-next recommend__next', 'chevron-right')
-					+button('Перейти в магазин', 'button--angle recommend__more', 'arrow-angle')
-				.recommend__content-item
-					.swiper-container.__js_recommend-carousel
-						.swiper-wrapper
-							each item in PRODUCTS_3
-								+product-preview(item)
-					.recommend__nav
-						+button('', 'button--outline button--icon slick-prev recommend__prev', 'chevron-right')
-						.recommend__pagination
-						+button('', 'button--outline button--icon slick-next recommend__next', 'chevron-right')
-					+button('Перейти в магазин', 'button--angle recommend__more', 'arrow-angle')
+				each item, index in RECOMMEND_TABS
+					.recommend__content-item(data-id= item.target, class= (index === 0 ? 'is-shown' : 'is-hidden'))
+						.swiper-container.__js_recommend-carousel
+							.swiper-wrapper
+								each item in PRODUCTS_3
+									+product-preview(item)
+						.recommend__content-item-bottom
+							.recommend__nav
+								+button('', 'button--outline button--icon slick-prev recommend__prev', 'chevron-right')
+								.recommend__pagination
+								+button('', 'button--outline button--icon slick-next recommend__next', 'chevron-right')
+							+button('Перейти в магазин ' + item.text, 'button--angle recommend__more', 'arrow-angle', URLS.shop)

@@ -7,9 +7,9 @@ $(window).on('load', function() {
 		function initTutorialsCarousel() {
 			tutorialsEl.forEach(it => {
 				let tutorialsCarousel = new Swiper(it, {
-					slidesPerView: 1,
+					slidesPerView: 'auto',
 					speed: 300,
-					spaceBetween: 14,
+					spaceBetween: 24,
 					loop: true,
 					navigation: {
 						prevEl: it.nextElementSibling.querySelector('.tutorials__prev'),
@@ -20,7 +20,7 @@ $(window).on('load', function() {
 						type: 'bullets',
 						clickable: true
 					},
-					breakpoints: {
+					/*breakpoints: {
 						768: {
 							slidesPerView: 2
 						},
@@ -31,7 +31,7 @@ $(window).on('load', function() {
 						1280: {
 							slidesPerView: 4
 						}
-					}
+					}*/
 				});
 			})
 			

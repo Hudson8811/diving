@@ -1,46 +1,30 @@
-$(window).on('load', function() {
+window.addEventListener('load', () => {
 	const elems = document.querySelectorAll('.__js_recommend-carousel');
 
-	elems.forEach((elem, index) => {
-		elem.classList.add('__js_recommend-carousel-' + (index + 1));
+	if (elems.length) {
+		elems.forEach(elem => {
+			if (elem) {
+				initRecommendCarousel(elem);
+			}
+		});
+	}
 
-		const options = {
-			slidesPerView: 1,
+	function initRecommendCarousel(el) {
+		let recommendCarousel = new Swiper(el, {
+			slidesPerView: 'auto',
 			speed: 300,
-			spaceBetween: 15,
+			spaceBetween: 24,
 			observer: true,
 			observeParents: true,
 			pagination: {
-				el: document
-						.querySelector('.__js_recommend-carousel-' + (index + 1) + ' .recommend__pagination'),
+				el: el.nextElementSibling.querySelector('.recommend__pagination'),
 				type: 'bullets',
 				clickable: true
 			},
 			navigation: {
-				prevEl: document
-						.querySelector('.__js_recommend-carousel-' + (index + 1))
-						.parentElement.querySelector(' .recommend__prev'),
-				nextEl: document
-						.querySelector('.__js_recommend-carousel-' + (index + 1))
-						.parentElement.querySelector(' .recommend__next')
+				prevEl: el.nextElementSibling.querySelector(' .recommend__prev'),
+				nextEl: el.nextElementSibling.querySelector(' .recommend__next')
 			},
-			breakpoints: {
-				768: {
-					slidesPerView: 2.2
-				},
-				1280: {
-					slidesPerView: 3.2,
-					spaceBetween: 25
-				},
-			}
-		};
-
-		if (elem) {
-			initRecommendCarousel(elem);
-
-			function initRecommendCarousel(el) {
-				let recommendCarousel = new Swiper(el, options);
-			}
-		}
-	});
+		});
+	}
 })

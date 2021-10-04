@@ -5,19 +5,9 @@
     padding: 50px 0;
   }
 
-  /*padding: 50px 0;
-
-	&__breadcrumbs {
-		margin-bottom: 50px;
-	}
-
-	&__title {
-		margin-bottom: 30px;
-	}
-
-	&__header {
-		padding-bottom: 50px;
-	}*/
+  @include max(sm) {
+    padding: 37px 0 50px;
+  }
 
   &__title {
     font-weight: 400;
@@ -28,11 +18,24 @@
       font-weight: 500;
       margin-bottom: 28px;
     }
+
+    @include max(sm) {
+      font-size: 18px;
+      line-height: 22px;
+    }
   }
 
   &__wrapper {
     position: relative;
     margin-bottom: 30px;
+
+    @include max(sm) {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__item {
+    height: auto;
   }
 
   &__note {
@@ -88,6 +91,7 @@
 
     @include max(sm) {
       max-width: 150px;
+      width: auto;
     }
   }
 
