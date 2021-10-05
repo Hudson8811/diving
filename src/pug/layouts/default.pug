@@ -23,6 +23,8 @@ html(lang="ru")
 	- let modClass = headerModClass ? ' ' + headerModClass : '';
 
 	body(class=modClass)
+		include ../partials/preloader.pug
+
 		block header
 			include ../partials/new-header
 

@@ -137,3 +137,12 @@ figure {
   padding: 0;
   border: 0;
 }
+
+.loaded .preloader {
+  display: none;
+}
+
+.hide-preloader-opacity .preloader {
+  opacity: 0;
+  transition: opacity 0.5s linear;
+}

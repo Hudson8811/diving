@@ -5,6 +5,7 @@
 //= ./libs/choices.min.js
 //= ./libs/gsap.min.js
 //= ./libs/gsap-slider.js
+//= ./libs/particles.min.js
 
 //= ./libs/simplebar.js
 
@@ -26,3 +27,4 @@
 //= ./partials/filters.js
 //= ./partials/menu.js
 //= ./partials/footer.js
+//= ./partials/preloader.js

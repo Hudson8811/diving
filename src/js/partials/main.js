@@ -123,4 +123,11 @@ $(window).on('load', function() {
 			});
 		};
 	});
+
+	// Close preloader
+	document.body.classList.add('hide-preloader-opacity');
+	window.setTimeout(function () {
+		document.body.classList.add('loaded');
+		document.body.classList.remove('hide-preloader-opacity');
+	}, 600);
 });
