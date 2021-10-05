@@ -32,25 +32,39 @@
     @include max(md) {
       margin-top: 8px;
     }
+
+    .swiper-wrapper {
+      margin-top: -24px;
+      flex-wrap: wrap;
+
+      @include max(lg) {
+        margin-top: 0;
+        flex-wrap: nowrap;
+      }
+    }
+  }
+
+  &__slide {
+    width: calc(33.3333% - 25px);
+    margin: 24px 12.5px 17px !important;
+    box-sizing: border-box;
+    height: 245px;
+
+    @include max(lg) {
+      height: auto;
+      margin: 0;
+    }
   }
 
   &__item {
     display: flex;
     align-items: flex-end;
-    width: calc(33.3333% - 25px);
     height: 245px;
     padding: 20px 20px 23px 0;
-    margin: 0 12.5px 17px;
     background-color: $blue;
     border-radius: 5px;
     overflow: hidden;
     position: relative;
-
-    @include max(lg) {
-      height: 174px;
-      margin-left: 0;
-      margin-bottom: 0;
-    }
   }
 
   &__bg {

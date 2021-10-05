@@ -16,6 +16,7 @@
 //= ./partials/courses-carousel.js
 //= ./partials/tutorials-carousel.js
 //= ./partials/recommend-carousel.js
+//= ./partials/recommend-tabs.js
 //= ./partials/trip-carousel.js
 //= ./partials/reviews-carousel.js
 //= ./partials/products-carousel.js

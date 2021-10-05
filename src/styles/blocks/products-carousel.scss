@@ -19,6 +19,9 @@
   }
 
   &__container {
+    @include max(sm) {
+      position: relative;
+    }
   }
 
   &__title {
@@ -102,6 +105,9 @@
   }
 
   &__item {
+    width: 100%;
+    max-width: 292px;
+    //margin-right: 24px;
     height: auto;
   }
 
@@ -167,5 +173,13 @@
     &.swiper-button-lock {
       display: none;
     }
+  }
+}
+
+.products-carousel + .info-block {
+  margin-top: 119px;
+
+  @include max(md) {
+    margin-top: 50px;
   }
 }

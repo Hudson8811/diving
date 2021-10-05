@@ -1,4 +1,18 @@
-section.products
+section.products-carousel
+	.products-carousel__container.container
+		header.products-carousel__header
+			+title('Товары с клубной символикой', 'h2', 'title--small products-carousel__title')
+
+			+button('Все товары', 'products-carousel__more button--angle', 'arrow-angle', URLS.catalog)
+		.products-carousel__swiper.swiper-container.__js_products-carousel
+			.swiper-wrapper 
+				each item in CLUB_SYMBOLS_PRODUCTS
+					+product-preview(item)
+			.products-carousel__navigation
+				+button('', 'products-carousel__btn button--outline button--icon __js_prev', 'chevron-left')
+				+button('', 'products-carousel__btn button--outline button--icon __js_next', 'chevron-right')
+		.products-carousel__pagination
+//-section.products
 	.container
 		.products__row
 			+title('Товары с клубной символикой', '', 'title--small products__title')

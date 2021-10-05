@@ -5,11 +5,11 @@ $(window).on('load', function() {
 		let width = document.documentElement.clientWidth,
 				isInit = false,
 				articlesCarousel = null;
-		const breakpoint = 1280;
+		const breakpoint = 1279;
 
 		if (width <= breakpoint) {
 			initArticlesCarousel();
-			setEqualHeight($('.articles-card__content'));
+			//setEqualHeight($('.articles-card__content'));
 			isInit = true;
 		}
 
@@ -18,7 +18,7 @@ $(window).on('load', function() {
 
 			if (width <= breakpoint && !isInit) {
 				initArticlesCarousel();
-				setEqualHeight($('.articles-card__content'));
+				//setEqualHeight($('.articles-card__content'));
 				isInit = true;
 			} else if (width > breakpoint && isInit) {
 				articlesCarousel.destroy();
@@ -48,7 +48,7 @@ $(window).on('load', function() {
 			articlesCarousel = new Swiper(articlesEl, {
 				slidesPerView: 1,
 				speed: 300,
-				spaceBetween: 14,
+				spaceBetween: 24,
 				loop: true,
 				navigation: {
 					prevEl: '.articles__prev',

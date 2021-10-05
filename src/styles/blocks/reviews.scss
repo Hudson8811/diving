@@ -1,125 +1,134 @@
 .reviews {
-	padding: 21px 0 104px;
-	background-color: $gray-f5;
+  padding: 21px 0 104px;
+  background-color: $gray-f5;
 
-	@include max(md) {
-		padding: 50px 0;
-	}
+  @include max(md) {
+    padding: 50px 0;
+  }
 
-	&__row {
-		display: flex;
-		justify-content: space-between;
+  &__row {
+    display: flex;
+    justify-content: space-between;
 
-		@include max(md) {
-			flex-direction: column;
-			align-items: center;
-			justify-content: center;
-		}
-	}
+    @include max(md) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
 
-	&__title {
-		@include max(md) {
-			text-align: center;
-		}
-	}
+  &__title {
+    @include max(md) {
+      text-align: center;
+    }
 
-	&__more {
-		font-size: 18px;
-		padding-right: 0;
+    @include max(sm) {
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
 
-		@include max(md) {
-			font-size: 16px;
-			line-height: 20px;
-			margin-top: 10px;
-		}
-	}
+  &__more {
+    font-size: 18px;
+    padding-right: 0;
 
-	&__wrapper {
-		margin-top: 25px;
-		position: relative;
+    @include max(md) {
+      font-size: 16px;
+      line-height: 20px;
+      margin-top: 10px;
+    }
+  }
 
-		@include max(md) {
-			margin-top: 18px;
-		}
-	}
+  &__wrapper {
+    margin-top: 25px;
+    position: relative;
 
-	&__mobile-wrapper {
-		display: flex;
-		align-items: center;
-		justify-content: center;
+    @include max(md) {
+      margin-top: 18px;
+    }
+  }
 
-		@include max(xl) {
-			margin-top: 25px;
-		}
+  &__mobile-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-		@include max(xs) {
-			justify-content: space-between;
-		}
+    @include max(xl) {
+      margin-top: 25px;
+    }
 
-		.reviews__prev,
-		.reviews__next {
-			display: none;
+    @include max(xs) {
+      justify-content: space-between;
+    }
 
-			@include max(xl) {
-				display: block;
-			}
-		}
-	}
+    .reviews__prev,
+    .reviews__next {
+      display: none;
 
-	&__pagination {
-		display: none;
-		justify-content: center;
-		position: relative;
-		z-index: 1;
+      @include max(xl) {
+        display: block;
+      }
+    }
+  }
 
-		@include max(xl) {
-			display: flex;
-			margin: 0 30px;
-		}
+  &__pagination {
+    display: none;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
 
-		&.swiper-pagination-lock {
-			display: none;
-		}
+    @include max(xl) {
+      display: flex;
+      margin: 0 30px;
+    }
 
-		.swiper-pagination-bullet {
-			display: block;
-			width: 20px;
-			height: 2px;
-			background-color: $lightBlue;
-			cursor: pointer;
+    &.swiper-pagination-lock {
+      display: none;
+    }
 
-			&-active {
-				background-color: $blue;
-			}
-		}
-	}
+    .swiper-pagination-bullet {
+      display: block;
+      width: 20px;
+      height: 2px;
+      background-color: $lightBlue;
+      cursor: pointer;
 
-	&__prev,
-	&__next {
-		position: absolute;
-		top: 46.5%;
+      &-active {
+        background-color: $blue;
+      }
+    }
+  }
 
-		@include max(xl) {
-			display: none;
-			position: relative;
-			top: unset;
-			bottom: 0;
-		}
-	}
+  &__prev,
+  &__next {
+    position: absolute;
+    top: 46.5%;
 
-	&__prev {
-		left: -60px;
+    @include max(xl) {
+      display: none;
+      position: relative;
+      top: unset;
+      bottom: 0;
+    }
+  }
 
-		@include max(xl) {
-			left: 0;
-		}
-	}
+  &__prev {
+    left: -60px;
 
-	&__next {
-		right: -60px;
+    @include max(xl) {
+      left: 0;
+    }
+  }
 
-		@include max(xl) {
-			right: 0;
-		}
-	}
+  &__next {
+    right: -60px;
+
+    @include max(xl) {
+      right: 0;
+    }
+  }
+}
+
+.reviews + .products-carousel {
+  margin-top: 36px;
 }

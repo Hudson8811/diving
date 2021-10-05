@@ -5,7 +5,7 @@ $(window).on('load', function() {
 		let width = document.documentElement.clientWidth,
 				isInit = false,
 				stockCarousel = null;
-		const breakpoint = 1280;
+		const breakpoint = 1279;
 
 		if (width <= breakpoint) {
 			initStockCarousel();
@@ -28,7 +28,7 @@ $(window).on('load', function() {
 			stockCarousel = new Swiper(stockEl, {
 				slidesPerView: 1,
 				speed: 300,
-				spaceBetween: 14,
+				spaceBetween: 10,
 				loop: true,
 				navigation: {
 					prevEl: '.stock__prev',
@@ -47,6 +47,7 @@ $(window).on('load', function() {
 						slidesPerView: 3
 					},
 					1080: {
+						slidesPerView: 3,
 						spaceBetween: 24
 					}
 				}

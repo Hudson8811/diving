@@ -1,119 +1,162 @@
 .first-screen {
-	width: 100%;
-	min-height: 100vh;
-	background-repeat: no-repeat;
-	background-size: 125%;
-	background-position: 60% 25%;
-	overflow: hidden;
-	position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: 125%;
+  background-position: 60% 25%;
+  overflow: hidden;
+  position: relative;
 
-	@include max(xl) {
-		background-position: center;
-		background-size: cover;
-	}
+  @include max(xl) {
+    background-position: center;
+    background-size: cover;
+  }
 
-	&__scale {
-		width: 163px;
-		height: calc(100% - 98px - 54px);
-		position: absolute;
-		left: 56px;
-		bottom: 49px;
+  @include max(md) {
+    display: flex;
+  }
 
-		@include max(md) {
-			display: none;
-		}
+  @include max(sm) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    min-height: 330px;
+  }
 
-		svg {
-			width: 100%;
-			height: 100%;
-		}
-	}
+  &__scale {
+    width: 163px;
+    height: calc(100% - 98px - 54px);
+    position: absolute;
+    left: 56px;
+    bottom: 49px;
 
-	&__center {
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		align-items: center;
-		height: 100vh;
-		padding: 208px 170px 116px;
+    @include max(md) {
+      left: vw(56, 1079);
+    }
 
-		@include max(md) {
-			padding: 70px 35px;
-			justify-content: center;
-		}
-	}
+    @include max(sm) {
+      display: none;
+    }
 
-	&__title {
-		max-width: 1032px;
-		font-size: 60px;
-		line-height: 77px;
-		font-weight: 500;
-		color: $white;
-		text-transform: uppercase;
-		text-align: center;
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
 
-		@include max(md) {
-			font-size: 21px;
-			line-height: 32px;
-		}
-	}
+  &__center {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    padding: 208px 170px 116px;
 
-	&__logos {
-		display: flex;
-		align-items: flex-end;
+    @include max(md) {
+      max-height: vw(433, 1079);
+      padding: 0 35px;
+      align-self: center;
+    }
 
-		@include max(md) {
-			display: none;
-		}
+    @include max(sm) {
+      max-height: none;
+      height: auto;
+      padding: 70px 40px 35px;
+      justify-content: center;
+    }
+  }
 
-		svg {
-			&:not(:last-child) {
-				margin-right: 22px;
-			}
-		}
-	}
+  &__title {
+    max-width: 1032px;
+    font-size: 60px;
+    line-height: 77px;
+    font-weight: 500;
+    color: $white;
+    text-transform: uppercase;
+    text-align: center;
 
-	&__anchor {
-		display: flex;
-		justify-content: center;
-		width: 93px;
-		height: 93px;
-		padding: 25px 20px 50px;
-		border-radius: 50%;
-		background-color: $white;
-		position: absolute;
-		bottom: -46px;
-		left: 50%;
-		transform: translateX(-50%);
-		cursor: pointer;
-		transition: background-color 0.3s ease;
+    @include max(md) {
+      max-width: vw(1032, 1079);
+      font-size: vw(60, 1079);
+      line-height: 1.283333333333333;
+    }
 
-		@include hover {
-			background-color: rgba($white, 0.85);
-		}
+    @include max(sm) {
+      max-width: 257px;
+      font-size: 21px;
+      line-height: 32px;
+    }
+  }
 
-		@include max(md) {
-			width: 40px;
-			height: 40px;
-			padding: 5px 16px 16px;
-			bottom: -20px;
-		}
+  &__logos {
+    display: flex;
+    align-items: flex-end;
 
-		svg {
-			fill: $dark-blue;
-		}
-	}
+    @include max(sm) {
+      display: none;
+    }
 
-	&__socials {
-		position: absolute;
-		bottom: 56px;
-		right: 65px;
+    svg {
+      @include max(md) {
+        display: block;
+        width: vw(171, 1079);
+        height: auto;
+      }
+      &:not(:last-child) {
+        margin-right: 22px;
 
-		@include max(md) {
-			bottom: 25px;
-			right: unset;
-			left: 50%;
-			transform: translateX(-50%);
-		}
-	}
+        @include max(md) {
+          display: block;
+          width: vw(176, 1079);
+          height: auto;
+          margin-right: vw(22, 1079);
+        }
+      }
+    }
+  }
+
+  &__anchor {
+    display: flex;
+    justify-content: center;
+    width: 93px;
+    height: 93px;
+    padding: 25px 20px 50px;
+    border-radius: 50%;
+    background-color: $white;
+    position: absolute;
+    bottom: -46px;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    @include hover {
+      background-color: rgba($white, 0.85);
+    }
+
+    @include max(md) {
+      width: 40px;
+      height: 40px;
+      padding: 5px 16px 16px;
+      bottom: -20px;
+    }
+
+    svg {
+      fill: $dark-blue;
+    }
+  }
+
+  &__socials {
+    position: absolute;
+    bottom: 56px;
+    right: 65px;
+
+    @include max(md) {
+      bottom: 25px;
+      right: unset;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
 }
