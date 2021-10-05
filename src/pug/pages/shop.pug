@@ -12,14 +12,14 @@ block vars
 
     const categories = [
       {icon: {id: 'scuba-diver', w: '17', h: '20'}, text: 'Костюмы'},
-      {icon: {id: 'diving-goggles', w: '25', h: '20'}, text: 'Аксессуары'},
       {icon: {id: 'climb', w: '17', h: '20'}, text: 'Такелаж'},
-      {icon: {id: 'torch', w: '20', h: '20'}, text: 'Фонари'},
       {icon: {id: 'oxygen-tank', w: '16', h: '20'}, text: 'Ребризер'},
       {icon: {id: 'underwater', w: '24', h: '20'}, text: 'Подводная съемка'},
+      {icon: {id: 'sidemount', w: '20', h: '20'}, text: 'Sidemount'},
+      {icon: {id: 'diving-goggles', w: '25', h: '20'}, text: 'Аксессуары'},
+      {icon: {id: 'torch', w: '20', h: '20'}, text: 'Фонари'},
       {icon: {id: 'flippers', w: '20', h: '20'}, text: 'Ласты'},
-      {icon: {id: 'buoy', w: '26', h: '20'}, text: 'Катушки и буи'},
-      {icon: {id: 'sidemount', w: '20', h: '20'}, text: 'Sidemount'}
+      {icon: {id: 'buoy', w: '26', h: '20'}, text: 'Катушки и буи'}
     ];
 
     const PRODUCTS_1 = [
@@ -55,12 +55,39 @@ block vars
 
 block main
   article.shop-page
-    +title('Магазин', 'h1', 'visually-hidden') 
+    +title('Магазин', 'h1', 'visually-hidden')
     .shop-page__hero
       .shop-page__categories.shop-categories
         .shop-categories__container.container
           +title('Категории', 'h2', 'title--medium shop-categories__title')
-          each item in categories 
+          .shop-categories__burger
+            +icon('burger')(width='22', height='11')
+            .shop-categories__menu
+              each item in categories
+                .shop-categories__item-wrapper
+                  a.shop-categories__item(href= URLS.catalog)
+                    span.shop-categories__item-icon
+                      +icon(item.icon.id)(width= item.icon.w, height= item.icon.h)
+                    span.shop-categories__item-text= item.text
+                  .shop-categories__submenu
+                    .title Обучение дайвингу
+                    a(href='#', target='_blank') OWD
+                    a(href='#', target='_blank') Dry Suit Diver
+                    a(href='#', target='_blank') Advanced Adventure Open Water
+                    a(href='#', target='_blank') Ice Diver
+                    a(href='#', target='_blank') Advanced Diver Development Program
+                    a(href='#', target='_blank') Sidemount Diver
+                    a(href='#', target='_blank') Advanced Buoyancy
+                    a(href='#', target='_blank') Rescue Diver
+                    a(href='#', target='_blank') Advanced Buoyancy ext
+                    a(href='#', target='_blank') SDI Divemaster
+                    a(href='#', target='_blank') U/W Navigation
+                    a(href='#', target='_blank') Assistant Instructor
+                    a(href='#', target='_blank') Deep Diver
+                    a(href='#', target='_blank') Adult and Child Emergency Care
+                    a(href='#', target='_blank') Night Diver
+                    a(href='#', target='_blank') O2 Administrator
+          each item in categories
             a.shop-categories__item(href= URLS.catalog)
               span.shop-categories__item-icon
                 +icon(item.icon.id)(width= item.icon.w, height= item.icon.h)

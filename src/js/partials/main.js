@@ -114,4 +114,17 @@ $(window).on('load', function() {
 		document.body.classList.add('loaded');
 		document.body.classList.remove('hide-preloader-opacity');
 	}, 600);
+
+	// Shop menu
+	/*document.querySelectorAll('.shop-categories__item').forEach(function (el) {
+		el.addEventListener('mouseenter', function (e) {
+			if (e.target == el.nextElementSibling || e.target == el) {
+				el.nextElementSibling.classList.add('show');
+			}
+		});
+
+		el.addEventListener('mouseleave', function (e) {
+			el.nextElementSibling.classList.remove('show');
+		});
+	});*/
 });

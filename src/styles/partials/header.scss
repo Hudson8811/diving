@@ -275,6 +275,10 @@
     @include max(md) {
       display: flex;
     }
+
+    svg {
+      stroke: $white;
+    }
   }
 
   &__basket {
