@@ -27,5 +27,6 @@
 //= ./partials/product-options.js
 //= ./partials/filters.js
 //= ./partials/menu.js
+//= ./partials/header.js
 //= ./partials/footer.js
 //= ./partials/preloader.js

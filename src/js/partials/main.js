@@ -116,15 +116,19 @@ $(window).on('load', function() {
 	}, 600);
 
 	// Shop menu
-	/*document.querySelectorAll('.shop-categories__item').forEach(function (el) {
-		el.addEventListener('mouseenter', function (e) {
-			if (e.target == el.nextElementSibling || e.target == el) {
-				el.nextElementSibling.classList.add('show');
-			}
-		});
+	document.querySelectorAll('.shop-categories__submenu').forEach(function (el) {
+		el.style.minHeight = document.querySelector('.shop-categories__menu').offsetHeight + 'px';
+	});
 
-		el.addEventListener('mouseleave', function (e) {
-			el.nextElementSibling.classList.remove('show');
-		});
-	});*/
+	// Filters
+	if (window.matchMedia('(max-width: 1079px)').matches) {
+		var filter = $('.filters'),
+				showFilter = $('.inner-page__filter-btn');
+
+		if (filter) {
+			showFilter.click(function () {
+				filter.slideToggle(300);
+			});
+		}
+	}
 });

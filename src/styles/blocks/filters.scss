@@ -3,7 +3,6 @@
 
   padding: 30px;
   border: solid 1px $gray;
-  border-bottom: none;
   border-radius: 5px 5px 0 0;
 
   @include max(md) {
@@ -19,6 +18,15 @@
     form {
       display: block;
       margin-left: 0;
+    }
+  }
+
+  form {
+    position: sticky;
+    top: 110px;
+
+    @include max(lg) {
+      top: 75px;
     }
   }
 
@@ -109,6 +117,26 @@
     &-checkbox {
       & + & {
         margin-top: 10px;
+      }
+    }
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 40px;
+
+    @include max(md) {
+      margin-top: 0;
+    }
+
+    button {
+      display: flex;
+      width: 125px;
+
+      &:first-child {
+        margin-right: 15px;
       }
     }
   }

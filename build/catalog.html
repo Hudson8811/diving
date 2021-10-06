@@ -139,13 +139,18 @@
               <label class="custom-checkbox">
                 <input class="visually-hidden" type="checkbox" name="withDiscount"><span class="custom-checkbox__text">Со скидкой</span>
               </label>
+              <div class="inner-page__filter-btn">
+                <svg>
+                  <use xlink:href="./images/sprite.svg#filter"></use>
+                </svg>
+              </div>
             </div>
           </div>
         </header>
         <div class="container">
           <div class="inner-page__category">
             <div class="inner-page__category-aside inner-page__category-aside--flex-column">
-              <div class="title--small inner-page__category-aside-title title">Фильтры</div>
+              <!--+title('Фильтры', 'div', 'title--small inner-page__category-aside-title')-->
               <div class="inner-page__category-aside-filters filters">
                 <form action="#" method="post">
                   <div class="filters__section">
@@ -210,6 +215,12 @@
                         <input class="visually-hidden" type="checkbox" name="discounted-products"><span class="custom-checkbox__text">Товары со скидкой (2)</span>
                       </label>
                     </div>
+                  </div>
+                  <div class="filters__nav">
+                    <button class="button filters__reset"><span>Сбросить</span>
+                    </button>
+                    <button class="button filters__done"><span>Применить</span>
+                    </button>
                   </div>
                 </form>
               </div>

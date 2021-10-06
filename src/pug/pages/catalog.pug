@@ -187,6 +187,8 @@ block main
             option(value="by-popular") По популярности
             option(value="by-price") По цене
           +custom-checkbox('withDiscount', 'Со скидкой')
+          .inner-page__filter-btn
+            +icon('filter')
         //-.inner-page__tags.tags-block
           +title('Теги', 'div', 'title--small tags-block__title')
           .tags-block__list
@@ -202,7 +204,7 @@ block main
     .container
       .inner-page__category
         .inner-page__category-aside.inner-page__category-aside--flex-column
-          +title('Фильтры', 'div', 'title--small inner-page__category-aside-title')
+          //+title('Фильтры', 'div', 'title--small inner-page__category-aside-title')
           
           .inner-page__category-aside-filters.filters
             form(action="#", method="post")
@@ -241,6 +243,9 @@ block main
                   +custom-checkbox('discounted-products', 'Товары со скидкой (2)', false, 'filters__section-checkbox')
 
 
+              .filters__nav
+                +button('Сбросить', 'filters__reset')
+                +button('Применить', 'filters__done')
         .inner-page__category-grid.products-grid.products-grid--three-columns
           each item in PRODUCTS
             +product-preview(item)
