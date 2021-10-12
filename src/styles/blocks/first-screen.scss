@@ -75,6 +75,12 @@
     color: $white;
     text-transform: uppercase;
     text-align: center;
+	transition: opacity 1s ease, transform 1s ease;
+
+	&.anima{
+	  opacity: 0;
+	  transform: translateY(150%);
+	}
 
     @include max(md) {
       max-width: vw(1032, 1079);

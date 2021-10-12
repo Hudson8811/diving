@@ -87,3 +87,22 @@
     }
   }
 }
+
+
+
+.hide-btns ~ .tutorials__nav,
+.hide-btns ~ button{
+  display: none;
+}
+.hide-btns-640 ~ .tutorials__nav,
+.hide-btns-640 ~ button{
+  @include min(640){
+    display: none;
+  }
+}
+.hide-btns-960 ~ .tutorials__nav,
+.hide-btns-960 ~ button{
+  @include min(960){
+    display: none;
+  }
+}

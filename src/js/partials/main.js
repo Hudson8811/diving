@@ -113,6 +113,11 @@ $(window).on('load', function() {
 	window.setTimeout(function () {
 		document.body.classList.add('loaded');
 		document.body.classList.remove('hide-preloader-opacity');
+		if ($('.first-screen__title').length){
+			setTimeout(function (){
+				$('.first-screen__title').removeClass('anima');
+			},50);
+		}
 	}, 600);
 
 	// Shop menu

@@ -1,45 +1,74 @@
 
 window.addEventListener('load', () => {
   const html = document.documentElement;
-  const productsCarousels = document.querySelectorAll('.__js_products-carousel');
+
   const coursesCarousels = document.querySelectorAll('.__js_courses-carousel-a');
   const thumbsCarouselEl = document.querySelector('.__js_product-thumbs');
   const productFullPhoto = document.querySelector('.product-card__photo')
   const featuresEl = document.querySelector('.__js_features-carousel');
 
-  if (productsCarousels.length) {
-    productsCarousels.forEach(it => {
-      new Swiper(it, {
-        speed: 300,
-        slidesPerView: 'auto',
-        spaceBetween: 24,
-        watchOverflow: true,
-        /*breakpoints: {
-          // when window width is >= 480px
-          560: {
-            slidesPerView: 2
-          },
-          // when window width is >= 640px
-          1080: {
-            slidesPerView: 3
-          },
-          1280: {
-            slidesPerView: 4
-          }
-        },*/
-        navigation: {
-          nextEl: '.__js_next',
-          prevEl: '.__js_prev',
-          disabledClass: 'button--disabled'
-        },
-        pagination: {
-          el: it.nextElementSibling,
-          type: 'bullets',// 'bullets' | 'fraction' | 'progressbar' | 'custom'
-          clickable: true
-        },
-      });
-    });
-  }
+
+
+    if ($('.__js_products-carousel').length) {
+        $('.__js_products-carousel').each(function (){
+            let slideCount = $(this).find('.product-preview').length;
+            let loopMain = true;
+            let loopTablet = true;
+            let loopTablet2 = true;
+            let loopDesktop = true;
+            let allowTouchMove = true;
+
+            if (slideCount <= 1){
+                $(this).addClass('hide-btns');
+                allowTouchMove = false;
+                loopMain = false;
+                loopTablet = false;
+                loopTablet2 = false;
+                loopDesktop = false;
+            } else if (slideCount == 2){
+                $(this).addClass('hide-btns-640');
+                loopTablet = false;
+                loopTablet2 = false;
+                loopDesktop = false;
+            } else if (slideCount == 3){
+                $(this).addClass('hide-btns-960');
+                loopTablet2 = false;
+                loopDesktop = false;
+            }
+
+            let tutorialsCarousel = new Swiper(this, {
+                speed: 300,
+                slidesPerView: 'auto',
+                spaceBetween: 24,
+                watchOverflow: true,
+                allowTouchMove : allowTouchMove,
+                loop : loopMain,
+                navigation: {
+                    nextEl: '.__js_next',
+                    prevEl: '.__js_prev',
+                    disabledClass: 'button--disabled'
+                },
+                pagination: {
+                    el: this.nextElementSibling,
+                    type: 'bullets',
+                    clickable: true
+                },
+                breakpoints: {
+                    640: {
+                        loop: loopTablet
+                    },
+                    960: {
+                        loop: loopTablet2
+                    },
+                    1280: {
+                        loop: loopDesktop
+                    }
+                }
+            });
+        })
+    }
+
+
 
   if (coursesCarousels.length) {
     coursesCarousels.forEach(it => {

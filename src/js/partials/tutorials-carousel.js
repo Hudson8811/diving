@@ -1,40 +1,63 @@
 $(window).on('load', function() {
-	let tutorialsEl = document.querySelectorAll('.__js_tutorials-carousel');
+    if ($('.__js_tutorials-carousel').length) {
+        initTutorialsCarousel();
+    }
 
-	if (tutorialsEl.length) {
-		initTutorialsCarousel();
 
-		function initTutorialsCarousel() {
-			tutorialsEl.forEach(it => {
-				let tutorialsCarousel = new Swiper(it, {
-					slidesPerView: 'auto',
-					speed: 300,
-					spaceBetween: 24,
-					loop: true,
-					navigation: {
-						prevEl: it.nextElementSibling.querySelector('.tutorials__prev'),
-						nextEl: it.nextElementSibling.querySelector('.tutorials__next')
-					},
-					pagination: {
-						el: it.nextElementSibling.querySelector('.tutorials__pagination'),
-						type: 'bullets',
-						clickable: true
-					},
-					/*breakpoints: {
-						768: {
-							slidesPerView: 2
-						},
-						1080: {
-							slidesPerView: 3,
-							spaceBetween: 24
-						},
-						1280: {
-							slidesPerView: 4
-						}
-					}*/
-				});
-			})
-			
-		}
-	}
+    function initTutorialsCarousel() {
+        $('.__js_tutorials-carousel').each(function (){
+            let slideCount = $(this).find('.tutorials__item').length;
+            let loopMain = true;
+            let loopTablet = true;
+            let loopTablet2 = true;
+            let loopDesktop = true;
+            let allowTouchMove = true;
+
+            if (slideCount <= 1){
+                $(this).addClass('hide-btns');
+                allowTouchMove = false;
+                loopMain = false;
+                loopTablet = false;
+                loopTablet2 = false;
+                loopDesktop = false;
+            } else if (slideCount == 2){
+                $(this).addClass('hide-btns-640');
+                loopTablet = false;
+                loopTablet2 = false;
+                loopDesktop = false;
+            } else if (slideCount == 3){
+                $(this).addClass('hide-btns-960');
+                loopTablet2 = false;
+                loopDesktop = false;
+            }
+
+            let tutorialsCarousel = new Swiper(this, {
+                slidesPerView: 'auto',
+                speed: 300,
+                spaceBetween: 24,
+                loop: loopMain,
+                allowTouchMove : allowTouchMove,
+                navigation: {
+                    prevEl: this.nextElementSibling.querySelector('.tutorials__prev'),
+                    nextEl: this.nextElementSibling.querySelector('.tutorials__next')
+                },
+                pagination: {
+                    el: this.nextElementSibling.querySelector('.tutorials__pagination'),
+                    type: 'bullets',
+                    clickable: true
+                },
+               breakpoints: {
+                    640: {
+                        loop: loopTablet
+                    },
+                    960: {
+                        loop: loopTablet2
+                    },
+                    1280: {
+                        loop: loopDesktop
+                    }
+                }
+            });
+        })
+    }
 })
