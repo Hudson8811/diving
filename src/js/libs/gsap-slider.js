@@ -297,7 +297,7 @@
     }
     initEvents() {
       // Open the details boxes.
-      this.DOM.detailsCtrl.addEventListener("click", (e) => this.openDetailsBoxes());
+      //this.DOM.detailsCtrl.addEventListener("click", (e) => this.openDetailsBoxes());
 
       this.DOM.el.addEventListener('click', e => {
         

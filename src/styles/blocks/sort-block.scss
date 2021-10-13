@@ -11,5 +11,8 @@
 
   .choices {
     min-width: 92px;
+	&:first-child{
+	  min-width: 145px;
+	}
   }
 }

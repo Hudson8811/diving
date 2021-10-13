@@ -45,10 +45,16 @@
   }
 
   &__slide {
-    width: calc(33.3333% - 25px);
-    margin: 24px 12.5px 17px !important;
+    //width: calc(33.3333% - 25px);
+    width: 33.3333%;
+    //margin: 24px 12.5px 17px !important;
     box-sizing: border-box;
     height: 245px;
+
+	@include min(1280) {
+	  width: calc(33.3333% - 25px);
+	  margin: 24px 12.5px 17px !important;
+	}
 
     @include max(lg) {
       height: auto;

@@ -28,24 +28,24 @@
       display: flex;
 
       @include max(md) {
-        width: 25%;
+        width: 33.33%;
+		&:nth-child(2){
+		  border-left: solid 1px $gray;
+		  border-right: solid 1px $gray;
+		}
       }
 
       @include max(sm) {
-        width: 50%;
+        width: 100%;
 
-        border: solid 1px $gray;
+		&:nth-child(2){
+		  border-left: none;
+		  border-right: none;
+		  border-top: solid 1px $gray;
+		  border-bottom: solid 1px $gray;
+		}
         border-top: none;
 
-        &:nth-child(odd) {
-          border-left: none;
-        }
-        &:nth-child(even) {
-          border-right: none;
-        }
-        &:nth-last-child(-n + 2) {
-          border-bottom: none;
-        }
       }
 
       &--current {
@@ -81,9 +81,8 @@
       }
 
       @include max(sm) {
-        flex-direction: column;
-        padding-left: 8px;
-        padding-right: 8px;
+		padding: 15px;
+		justify-content: center;
         text-align: center;
       }
 
@@ -100,10 +99,7 @@
       margin-right: 10px;
 
       @include max(sm) {
-        width: 35px;
-        height: 35px;
-        margin-right: 0;
-        margin-bottom: 5px;
+
       }
 
       svg {

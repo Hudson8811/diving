@@ -50,10 +50,12 @@
     }
 
     &--dropdown {
-      min-width: 280px;
+      //min-width: 280px;
+	  width: auto;
+	  min-width: 100%;
       border-color: $gray;
       border-radius: 0;
-      padding: 45px 50px 46px;
+      padding: 20px 20px 20px;
       background-color: $white;
 
       #{$self}__item {
@@ -62,6 +64,7 @@
         line-height: (17.07 / 14);
         color: $dark;
         transition: color 0.3s ease;
+		white-space: nowrap;
 
         &--selectable {
           &.is-highlighted {

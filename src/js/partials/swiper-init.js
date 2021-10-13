@@ -38,7 +38,7 @@ window.addEventListener('load', () => {
 
             let tutorialsCarousel = new Swiper(this, {
                 speed: 300,
-                slidesPerView: 'auto',
+                slidesPerView: 1,
                 spaceBetween: 24,
                 watchOverflow: true,
                 allowTouchMove : allowTouchMove,
@@ -55,13 +55,16 @@ window.addEventListener('load', () => {
                 },
                 breakpoints: {
                     640: {
-                        loop: loopTablet
+                        loop: loopTablet,
+	                    slidesPerView: 2,
                     },
                     960: {
-                        loop: loopTablet2
+                        loop: loopTablet2,
+	                    slidesPerView: 3,
                     },
                     1280: {
-                        loop: loopDesktop
+                        loop: loopDesktop,
+	                    slidesPerView: 4,
                     }
                 }
             });

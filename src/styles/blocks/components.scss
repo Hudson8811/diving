@@ -106,3 +106,131 @@
     display: none;
   }
 }
+
+
+.woof_container{
+  padding-bottom: 23px;
+  border-bottom: solid 1px $dark;
+
+  &.no-border {
+	border-bottom: none;
+  }
+
+  @include max(md) {
+	width: calc(33.33% - 20px);
+	margin-top: 23px;
+	margin-left: 20px;
+  }
+
+  @include max(sm) {
+	width: calc(50% - 20px);
+  }
+
+  @include max(600) {
+	width: 100%;
+	margin-top: 0;
+	margin-left: 0;
+  }
+
+  & + & {
+	margin-top: 30px;
+  }
+
+  h4{
+	position: relative;
+	display: block;
+	width: 100%;
+	padding: 0 16px 0 0;
+
+	font-size: 19px;
+	line-height: 1.526315789473684;
+	font-weight: 500;
+	color: $dark;
+	text-align: left;
+	appearance: none;
+	cursor: pointer;
+	transition: color 0.3s ease;
+	+.woof_block_html_items{
+	  padding-top: 28px;
+	  padding-bottom: 2px;
+	}
+  }
+  .woof_front_toggle{
+	content: "";
+	position: absolute;
+	top: 14px;
+	right: 0;
+	width: 8px;
+	height: 4px;
+	transform: scale(1, -1);
+	color: transparent;
+	font-size: 0;
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='8' height='4' viewBox='0 0 8 4' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M0 0l4 4 4-4H0z' fill='%232c60ae'/%3e%3c/svg%3e");
+  }
+}
+
+.woof_list_checkbox{
+  > li {
+	& + & {
+	  margin-top: 10px;
+	}
+
+	display: block;
+
+	.woof_checkbox_label {
+	  position: relative;
+	  display: inline-block;
+	  vertical-align: top;
+	  padding-left: 30px;
+	  font-size: 14px;
+	  line-height: (22 / 14);
+	  color: $dark;
+	  cursor: pointer;
+	  &::before {
+		content: "";
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 20px;
+		height: 20px;
+		border: solid 1px $gray;
+		border-radius: 3px;
+		transition: border-color 0.3s ease;
+		background-color: $white;
+	  }
+	}
+
+	input:focus ~ .woof_checkbox_label,
+	.woof_checkbox_label:hover {
+	  &::before {
+		border-color: $dark;
+	  }
+	}
+
+	input:checked ~ .woof_checkbox_label {
+	  &::before {
+		background-repeat: no-repeat;
+		background-size: 70% auto;
+		background-position: 50% 50%;
+		background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg viewBox='0 0 515.556 515.556' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill='%232c60ae' d='m0 274.226 176.549 176.886L515.556 112.44l-48.67-47.997-290.337 290L47.996 225.891z'/%3e%3c/svg%3e");
+	  }
+	}
+  }
+}
+
+
+.filters .woof_list label{
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.woof_submit_search_form_container{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 40px;
+}

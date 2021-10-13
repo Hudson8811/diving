@@ -32,7 +32,7 @@ $(window).on('load', function() {
             }
 
             let tutorialsCarousel = new Swiper(this, {
-                slidesPerView: 'auto',
+                slidesPerView: 1,
                 speed: 300,
                 spaceBetween: 24,
                 loop: loopMain,
@@ -48,13 +48,16 @@ $(window).on('load', function() {
                 },
                breakpoints: {
                     640: {
-                        loop: loopTablet
+                        loop: loopTablet,
+	                    slidesPerView: 2,
                     },
                     960: {
-                        loop: loopTablet2
+                        loop: loopTablet2,
+	                    slidesPerView: 3,
                     },
                     1280: {
-                        loop: loopDesktop
+                        loop: loopDesktop,
+	                    slidesPerView: 4,
                     }
                 }
             });

@@ -260,6 +260,13 @@
       @include max(lg) {
         color: $white;
       }
+
+	  a{
+		color: $gray-ph;
+		@include max(lg) {
+		  color: $white;
+		}
+	  }
     }
 
     &-list {

@@ -51,8 +51,11 @@
     justify-content: space-between;
     align-items: center;
     height: 100vh;
-    padding: 208px 170px 116px;
+    padding: 278px 170px 116px;
 
+    @include max(lg) {
+	  padding: 208px 170px 116px;
+    }
     @include max(md) {
       max-height: vw(433, 1079);
       padding: 0 35px;
@@ -75,7 +78,7 @@
     color: $white;
     text-transform: uppercase;
     text-align: center;
-	transition: opacity 1s ease, transform 1s ease;
+	transition: opacity 2s ease, transform 2s ease;
 
 	&.anima{
 	  opacity: 0;

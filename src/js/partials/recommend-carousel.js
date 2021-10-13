@@ -11,7 +11,7 @@ window.addEventListener('load', () => {
 
 	function initRecommendCarousel(el) {
 		let recommendCarousel = new Swiper(el, {
-			slidesPerView: 'auto',
+			slidesPerView: 1,
 			speed: 300,
 			spaceBetween: 24,
 			observer: true,
@@ -25,6 +25,14 @@ window.addEventListener('load', () => {
 				prevEl: el.nextElementSibling.querySelector(' .recommend__prev'),
 				nextEl: el.nextElementSibling.querySelector(' .recommend__next')
 			},
+			breakpoints: {
+				640: {
+					slidesPerView: 2,
+				},
+				1280: {
+					slidesPerView: 3,
+				},
+			}
 		});
 	}
 })

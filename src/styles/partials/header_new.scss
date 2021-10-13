@@ -431,6 +431,10 @@
 
       &.show {
       }
+	  .menu {
+		opacity: 1;
+		pointer-events: auto;
+	  }
     }
 
     &-toggle {

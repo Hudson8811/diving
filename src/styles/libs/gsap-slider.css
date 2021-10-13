@@ -233,7 +233,7 @@ main {
   color: #2c60ae;
 }
 
-.slide__content .action--details {
+.slide__content .action {
   display: none;
 }
 
@@ -460,7 +460,7 @@ main {
   background-color: #1b498e;
 }
 
-.action--details {
+.action {
   z-index: 3000;
   top: 100%;
   font-weight: bold;
@@ -472,17 +472,17 @@ main {
   transition: background-color 0.3s ease;
 }
 
-.action--details:hover,
-.action--details:focus {
+.action:hover,
+.action:focus {
   background-color: #1b498e;
 }
 
 @media screen and (min-width: 900px) {
-  .action--details {
+  .action {
     display: none;
   }
 
-  .slide__content .action--details {
+  .slide__content .action {
     /*position: absolute;
   z-index: 3000;
   top: 100%;
@@ -507,7 +507,7 @@ main {
     appearance: none;
   }
 
-  .action--details svg {
+  .action svg {
     display: block;
     margin-left: 10px;
     /*stroke: #ffffff;*/
@@ -721,7 +721,7 @@ main {
   .details__inner--grid {
     grid-template-columns: repeat(3, 1.5rem);
   }
-  .action--details {
+  .action {
     /*top: calc(6rem + 10vh);
     right: 4rem;
     left: auto;
@@ -731,8 +731,8 @@ main {
     padding: 0;*/
     cursor: pointer;
   }
-  .action--details:hover,
-  .action--details:focus {
+  .action:hover,
+  .action:focus {
     background-color: #1b498e;
   }
 }
