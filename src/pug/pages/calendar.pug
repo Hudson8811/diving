@@ -1,0 +1,420 @@
+extends ../layouts/default
+
+block vars
+    -
+        const page = {
+            title: 'Календарь'
+        };
+
+        const bc = [
+            {text: page.title}
+        ];
+
+
+block main
+    article.inner-page
+        header.inner-page__header
+            .container
+                +breadcrumbs(bc, 'inner-page__breadcrumbs')
+                +title(page.title, 'h1', 'title--medium inner-page__title')
+
+        .container
+            #eventsCalendarTop
+                .fc__top
+                    .fc__navigate
+                        a.fc__nav.fc__prev(href='javascript:;' data-month='')
+                            svg(width='12' height='22' viewBox='0 0 12 22' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                path(d='M0.381142 10.1872L9.62957 0.348701C9.81057 0.155172 10.0489 0.0341776 10.3042 0.00622166C10.5595 -0.0217324 10.816 0.0450744 11.0302 0.195318L11.195 0.348701L11.3392 0.523998C11.4596 0.715229 11.5239 0.940222 11.5239 1.1704C11.5239 1.40059 11.4596 1.62558 11.3392 1.81681L11.195 1.99211C11.1502 2.05434 11.0942 2.10648 11.0302 2.14549L3.49142 10.1872C3.28513 10.4088 3.1694 10.708 3.1694 11.0199C3.1694 11.3317 3.28513 11.631 3.49141 11.8525L11.0302 19.9381L11.195 20.0915C11.3403 20.2883 11.4193 20.5314 11.4193 20.7817C11.4193 21.032 11.3403 21.2751 11.195 21.4719L11.0508 21.6472L10.886 21.8006C10.7031 21.9306 10.4881 22 10.2681 22C10.0481 22 9.83308 21.9306 9.65017 21.8006L9.48538 21.6472L0.999075 12.6414L0.236957 11.8087C0.0612372 11.5702 -0.0217658 11.2691 0.00506016 10.9674C0.031887 10.6657 0.166498 10.3864 0.381142 10.1872Z' fill='currentColor')
+                        .fc__monthName Апрель 2021
+                        a.fc__nav.fc__next(href='javascript:;' data-month='')
+                            svg(width='11' height='22' viewBox='0 0 11 22' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                path(d='M10.6363 11.8128L1.80825 21.6513C1.63548 21.8448 1.40798 21.9658 1.1643 21.9938C0.920633 22.0217 0.675783 21.9549 0.471259 21.8047L0.313966 21.6513L0.176336 21.476C0.0613737 21.2848 -3.58412e-06 21.0598 -3.54495e-06 20.8296C-3.50577e-06 20.5994 0.0613738 20.3744 0.176336 20.1832L0.313966 20.0079C0.356759 19.9457 0.410226 19.8935 0.471259 19.8545L7.6674 11.8128C7.86431 11.5912 7.97477 11.292 7.97477 10.9801C7.97477 10.6683 7.86431 10.369 7.6674 10.1475L0.471262 2.06193L0.31397 1.90854C0.175245 1.71168 0.0998399 1.46862 0.09984 1.21831C0.09984 0.968002 0.175245 0.72494 0.31397 0.528083L0.4516 0.352787L0.608893 0.199401C0.783489 0.0693911 0.988759 1.77744e-07 1.19874 2.15492e-07C1.40873 2.5324e-07 1.61399 0.0693913 1.78859 0.199401L1.94588 0.352787L10.0464 9.35864L10.7739 10.1913C10.9417 10.4298 11.0209 10.7309 10.9953 11.0326C10.9697 11.3343 10.8412 11.6136 10.6363 11.8128Z' fill='currentColor')
+                    .fc__home
+                        a.fc__home-link(href='javascript:;' data-month='') Сегодня
+
+            #eventsCalendar
+                .fc.fc-unthemed.fc-ltr
+                    .fc-view-container
+                        .fc-view.fc-month-view.fc-basic-view
+                            table
+                                thead.fc-head
+                                    tr
+                                        td.fc-head-container
+                                            .fc-row
+                                                table
+                                                    thead
+                                                        tr
+                                                            th.fc-day-header.fc-widget-header.fc-mon
+                                                                span Пн
+                                                            th.fc-day-header.fc-widget-header.fc-tue
+                                                                span Вт
+                                                            th.fc-day-header.fc-widget-header.fc-wed
+                                                                span Ср
+                                                            th.fc-day-header.fc-widget-header.fc-thu
+                                                                span Чт
+                                                            th.fc-day-header.fc-widget-header.fc-fri
+                                                                span Пт
+                                                            th.fc-day-header.fc-widget-header.fc-sat
+                                                                span Сб
+                                                            th.fc-day-header.fc-widget-header.fc-sun
+                                                                span Вс
+                                tbody.fc-body
+                                    tr
+                                        td.fc-widget-content
+                                            .fc-scroller.fc-day-grid-container
+                                                .fc-day-grid.fc-unselectable
+                                                    .fc-row.fc-week.fc-widget-content
+                                                        .fc-bg
+                                                            table
+                                                                tbody
+                                                                    tr
+                                                                        td.fc-day.fc-widget-content.fc-other-month
+                                                                        td.fc-day.fc-widget-content.has-events
+                                                                        td.fc-day.fc-widget-content.has-events
+                                                                        td.fc-day.fc-widget-content.has-events
+                                                                        td.fc-day.fc-widget-content.has-events
+                                                                        td.fc-day.fc-widget-content.fc-sun.has-events
+                                                                        td.fc-day.fc-widget-content.fc-sun.has-events
+                                                        .fc-content-skeleton
+                                                            table
+                                                                thead
+                                                                    tr
+                                                                        td.fc-day-top.fc-other-month
+                                                                            span.fc-day-number 31
+                                                                        td.fc-day-top
+                                                                            span.fc-day-number 1
+                                                                        td.fc-day-top
+                                                                            span.fc-day-number 2
+                                                                        td.fc-day-top
+                                                                            span.fc-day-number 3
+                                                                        td.fc-day-top
+                                                                            span.fc-day-number 4
+                                                                        td.fc-day-top.fc-sun
+                                                                            span.fc-day-number 5
+                                                                        td.fc-day-top.fc-sun
+                                                                            span.fc-day-number 6
+                                                                tbody
+                                                                    tr
+                                                                        td
+                                                                        td.fc-event-container(colspan='2')
+                                                                            a.fc-day-grid-event.fc-h-event.fc-event.fc-start.fc-end(href='javascript:;' data-title='Семинар Крийя' data-description='This is a simple event, using the Zap Calendar PHP library. This is a simple event, using the Zap Calendar PHP library. This is a simple event, using the Zap Calendar PHP library. This is a simple event, using the Zap Calendar PHP library. ' data-id='3075' data-location='Москва, Красная площадь' data-time='10:20' data-date='01 июня' data-img='http://ik.q7.by/wp-content/uploads/2021/03/home-slider-pic-570x410.jpg' data-permalink='http://ik.q7.by/events/seminar-krijya/' data-google='https://www.google.com/calendar/event?action=TEMPLATE&text=%D0%A1%D0%B5%D0%BC%D0%B8%D0%BD%D0%B0%D1%80+%D0%9A%D1%80%D0%B8%D0%B9%D1%8F&dates=20210601T102000/20210602T112100&location=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0%2C+%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D0%B0%D1%8F+%D0%BF%D0%BB%D0%BE%D1%89%D0%B0%D0%B4%D1%8C&details=This+is+a+simple+event%2C+using+the+Zap+Calendar+PHP+library.+This+is+a+simple+event%2C+using+the+Zap+Calendar+PHP+library.+This+is+a+simple+event%2C+using+the+Zap+Calendar+PHP+library.+This+is+a+simple+event%2C+using+the+Zap+Calendar+PHP+library.+' data-apple='/wp-content/themes/imram-kriya-custom/generate-ical.php?post_id=3075')
+                                                                                .fc-content
+                                                                                    span.fc-title Семинар Крийя
+                                                                        td.fc-event-container(colspan='1')
+                                                                            a.fc-day-grid-event.fc-h-event.fc-event.fc-start.fc-end(href='javascript:;' data-title='3-7' data-description='Краткое описание событие' data-id='3831' data-location='Киев' data-time='12:00' data-date='03 июня' data-img='http://ik.q7.by/wp-content/uploads/2021/06/babaji_square-570x410.jpg' data-permalink='http://ik.q7.by/events/testovoe-meropriyatie-dlya-otladki-kalendarya-3/' data-google='https://www.google.com/calendar/event?action=TEMPLATE&text=3-7&dates=20210603T000000/20210714T000000&location=%D0%9A%D0%B8%D0%B5%D0%B2&details=%D0%9A%D1%80%D0%B0%D1%82%D0%BA%D0%BE%D0%B5+%D0%BE%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5+%D1%81%D0%BE%D0%B1%D1%8B%D1%82%D0%B8%D0%B5' data-apple='/wp-content/themes/imram-kriya-custom/generate-ical.php?post_id=3831')
+                                                                                .fc-content
+                                                                                    span.fc-title Лекция «Кhbqz
+                                                                    tr
+                                                                        td
+                                                                        td.fc-event-container(colspan='2')
+                                                                            a.fc-day-grid-event.fc-h-event.fc-event.fc-start.fc-end(href='javascript:;' data-title='Ретрит' data-description='This is a simple event, using the Zap Calendar PHP library. This is a simple event, using the Zap Calendar PHP library. This is a simple event, using the Zap Calendar PHP library. This is a simple event, using the Zap Calendar PHP library. ' data-id='3096' data-location='Москва, Красная площадь' data-time='10:20' data-date='01 июня' data-img='http://ik.q7.by/wp-content/uploads/2021/04/dsc_0998-1-570x360.jpg' data-permalink='http://ik.q7.by/events/retreat/' data-google='https://www.google.com/calendar/event?action=TEMPLATE&text=%D0%A0%D0%B5%D1%82%D1%80%D0%B8%D1%82&dates=20210601T102000/20210602T112100&location=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0%2C+%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D0%B0%D1%8F+%D0%BF%D0%BB%D0%BE%D1%89%D0%B0%D0%B4%D1%8C&details=This+is+a+simple+event%2C+using+the+Zap+Calendar+PHP+library.+This+is+a+simple+event%2C+using+the+Zap+Calendar+PHP+library.+This+is+a+simple+event%2C+using+the+Zap+Calendar+PHP+library.+This+is+a+simple+event%2C+using+the+Zap+Calendar+PHP+library.+' data-apple='/wp-content/themes/imram-kriya-custom/generate-ical.php?post_id=3096')
+                                                                                .fc-content
+                                                                                    span.fc-title Ретрит
+                                                                        td
+                                                                        td
+                                                                        td
+                                                                        td
+                                                                    tr
+                                                                        td
+                                                                        td
+                                                                        td
+                                                                        td
+                                                                        td
+                                                                        td
+                                                                        td
+                                                    .fc-row.fc-week.fc-widget-content
+                                                        .fc-bg
+                                                            table
+                                                                tbody
+                                                                    tr
+                                                                        td.fc-day.fc-widget-content.has-events
+                                                                        td.fc-day.fc-widget-content.has-events
+                                                                        td.fc-day.fc-widget-content.has-events
+                                                                        td.fc-day.fc-widget-content.has-events
+                                                                        td.fc-day.fc-widget-content.has-events
+                                                                        td.fc-day.fc-widget-content.fc-sun.has-events
+                                                                        td.fc-day.fc-widget-content.fc-sun.has-events
+                                                        .fc-content-skeleton
+                                                            table
+                                                                thead
+                                                                    tr
+                                                                        td.fc-day-top
+                                                                            span.fc-day-number 7
+                                                                        td.fc-day-top
+                                                                            span.fc-day-number 8
+                                                                        td.fc-day-top
+                                                                            span.fc-day-number 9
+                                                                        td.fc-day-top
+                                                                            span.fc-day-number 10
+                                                                        td.fc-day-top
+                                                                            span.fc-day-number 11
+                                                                        td.fc-day-top.fc-sun
+                                                                            span.fc-day-number 12
+                                                                        td.fc-day-top.fc-sun
+                                                                            span.fc-day-number 13
+                                                                tbody
+                                                                    tr
+                                                                        td.fc-event-container(colspan='7')
+                                                                            a.fc-day-grid-event.fc-h-event.fc-event.fc-not-start.fc-not-end(href='javascript:;' data-title='3-7' data-description='Краткое описание событие' data-id='3831' data-location='Киев' data-time='12:00' data-date='03 июня' data-img='http://ik.q7.by/wp-content/uploads/2021/06/babaji_square-570x410.jpg' data-permalink='http://ik.q7.by/events/testovoe-meropriyatie-dlya-otladki-kalendarya-3/' data-google='https://www.google.com/calendar/event?action=TEMPLATE&text=3-7&dates=20210603T000000/20210714T000000&location=%D0%9A%D0%B8%D0%B5%D0%B2&details=%D0%9A%D1%80%D0%B0%D1%82%D0%BA%D0%BE%D0%B5+%D0%BE%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5+%D1%81%D0%BE%D0%B1%D1%8B%D1%82%D0%B8%D0%B5' data-apple='/wp-content/themes/imram-kriya-custom/generate-ical.php?post_id=3831')
+                                                                                .fc-content
+                                                                                    span.fc-title 3-7
+                                                                    tr
+                                                                        td
+                                                                        td
+                                                                        td
+                                                                        td
+                                                                        td
+                                                                        td.fc-event-container(colspan='2')
+                                                                            a.fc-day-grid-event.fc-h-event.fc-event.fc-start.fc-not-end(href='javascript:;' data-title='мероприятие для отладки календаря 12-26' data-description='Краткое описание событие asdsadsadsd' data-id='3820' data-location='Киев' data-time='12:00' data-date='12 июня' data-img='http://ik.q7.by/wp-content/uploads/2021/06/babaji_square-570x410.jpg' data-permalink='http://ik.q7.by/events/testovoe-meropriyatie-dlya-otladki-kalendarya/' data-google='https://www.google.com/calendar/event?action=TEMPLATE&text=%D0%BC%D0%B5%D1%80%D0%BE%D0%BF%D1%80%D0%B8%D1%8F%D1%82%D0%B8%D0%B5+%D0%B4%D0%BB%D1%8F+%D0%BE%D1%82%D0%BB%D0%B0%D0%B4%D0%BA%D0%B8+%D0%BA%D0%B0%D0%BB%D0%B5%D0%BD%D0%B4%D0%B0%D1%80%D1%8F+12-26&dates=20210612T000000/20210626T000000&location=%D0%9A%D0%B8%D0%B5%D0%B2&details=%D0%9A%D1%80%D0%B0%D1%82%D0%BA%D0%BE%D0%B5+%D0%BE%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5+%D1%81%D0%BE%D0%B1%D1%8B%D1%82%D0%B8%D0%B5%0D%0Aasdsadsadsd' data-apple='/wp-content/themes/imram-kriya-custom/generate-ical.php?post_id=3820')
+                                                                                .fc-content
+                                                                                    span.fc-title мероприятие для отладки календаря 12-26
+                                                                    tr
+                                                                        td
+                                                                        td
+                                                                        td
+                                                                        td
+                                                                        td
+                                                                        td
+                                                                        td
+                                                    .fc-row.fc-week.fc-widget-content
+                                                        .fc-bg
+                                                            table
+                                                                tbody
+                                                                    tr
+                                                                        td.fc-day.fc-widget-content.has-events
+                                                                        td.fc-day.fc-widget-content.has-events
+                                                                        td.fc-day.fc-widget-content.has-events
+                                                                        td.fc-day.fc-widget-content.fc-today.has-events
+                                                                        td.fc-day.fc-widget-content.has-events
+                                                                        td.fc-day.fc-widget-content.fc-sun.has-events
+                                                                        td.fc-day.fc-widget-content.fc-sun.has-events
+                                                        .fc-content-skeleton
+                                                            table
+                                                                thead
+                                                                    tr
+                                                                        td.fc-day-top
+                                                                            span.fc-day-number 14
+                                                                        td.fc-day-top
+                                                                            span.fc-day-number 15
+                                                                        td.fc-day-top
+                                                                            span.fc-day-number 16
+                                                                        td.fc-day-top.fc-today
+                                                                            span.fc-day-number 17
+                                                                        td.fc-day-top
+                                                                            span.fc-day-number 18
+                                                                        td.fc-day-top.fc-sun
+                                                                            span.fc-day-number 19
+                                                                        td.fc-day-top.fc-sun
+                                                                            span.fc-day-number 20
+                                                                tbody
+                                                                    tr
+                                                                        td.fc-event-container(colspan='7')
+                                                                            a.fc-day-grid-event.fc-h-event.fc-event.fc-not-start.fc-not-end(href='javascript:;' data-title='3-7' data-description='Краткое описание событие' data-id='3831' data-location='Киев' data-time='12:00' data-date='03 июня' data-img='http://ik.q7.by/wp-content/uploads/2021/06/babaji_square-570x410.jpg' data-permalink='http://ik.q7.by/events/testovoe-meropriyatie-dlya-otladki-kalendarya-3/' data-google='https://www.google.com/calendar/event?action=TEMPLATE&text=3-7&dates=20210603T000000/20210714T000000&location=%D0%9A%D0%B8%D0%B5%D0%B2&details=%D0%9A%D1%80%D0%B0%D1%82%D0%BA%D0%BE%D0%B5+%D0%BE%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5+%D1%81%D0%BE%D0%B1%D1%8B%D1%82%D0%B8%D0%B5' data-apple='/wp-content/themes/imram-kriya-custom/generate-ical.php?post_id=3831')
+                                                                                .fc-content
+                                                                                    span.fc-title 3-7
+                                                                    tr
+                                                                        td.fc-event-container(colspan='7')
+                                                                            a.fc-day-grid-event.fc-h-event.fc-event.fc-not-start.fc-not-end(href='javascript:;' data-title='мероприятие для отладки календаря 12-26' data-description='Краткое описание событие asdsadsadsd' data-id='3820' data-location='Киев' data-time='12:00' data-date='12 июня' data-img='http://ik.q7.by/wp-content/uploads/2021/06/babaji_square-570x410.jpg' data-permalink='http://ik.q7.by/events/testovoe-meropriyatie-dlya-otladki-kalendarya/' data-google='https://www.google.com/calendar/event?action=TEMPLATE&text=%D0%BC%D0%B5%D1%80%D0%BE%D0%BF%D1%80%D0%B8%D1%8F%D1%82%D0%B8%D0%B5+%D0%B4%D0%BB%D1%8F+%D0%BE%D1%82%D0%BB%D0%B0%D0%B4%D0%BA%D0%B8+%D0%BA%D0%B0%D0%BB%D0%B5%D0%BD%D0%B4%D0%B0%D1%80%D1%8F+12-26&dates=20210612T000000/20210626T000000&location=%D0%9A%D0%B8%D0%B5%D0%B2&details=%D0%9A%D1%80%D0%B0%D1%82%D0%BA%D0%BE%D0%B5+%D0%BE%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5+%D1%81%D0%BE%D0%B1%D1%8B%D1%82%D0%B8%D0%B5%0D%0Aasdsadsadsd' data-apple='/wp-content/themes/imram-kriya-custom/generate-ical.php?post_id=3820')
+                                                                                .fc-content
+                                                                                    span.fc-title мероприятие для отладки календаря 12-26
+                                                                    tr
+                                                                        td
+                                                                        td
+                                                                        td
+                                                                        td.fc-event-container(colspan='4')
+                                                                            a.fc-day-grid-event.fc-h-event.fc-event.fc-start.fc-not-end(href='javascript:;' data-title='Тестовое мероприятие для отладки календаря 17-23' data-description='Краткое описание событие' data-id='3830' data-location='Киев' data-time='12:00' data-date='17 июня' data-img='http://ik.q7.by/wp-content/uploads/2021/06/babaji_square-570x410.jpg' data-permalink='http://ik.q7.by/events/testovoe-meropriyatie-dlya-otladki-kalendarya-2/' data-google='https://www.google.com/calendar/event?action=TEMPLATE&text=%D0%A2%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D0%BE%D0%B5+%D0%BC%D0%B5%D1%80%D0%BE%D0%BF%D1%80%D0%B8%D1%8F%D1%82%D0%B8%D0%B5+%D0%B4%D0%BB%D1%8F+%D0%BE%D1%82%D0%BB%D0%B0%D0%B4%D0%BA%D0%B8+%D0%BA%D0%B0%D0%BB%D0%B5%D0%BD%D0%B4%D0%B0%D1%80%D1%8F+17-23&dates=20210617T000000/20210623T000000&location=%D0%9A%D0%B8%D0%B5%D0%B2&details=%D0%9A%D1%80%D0%B0%D1%82%D0%BA%D0%BE%D0%B5+%D0%BE%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5+%D1%81%D0%BE%D0%B1%D1%8B%D1%82%D0%B8%D0%B5' data-apple='/wp-content/themes/imram-kriya-custom/generate-ical.php?post_id=3830')
+                                                                                .fc-content
+                                                                                    span.fc-title Тестовое мероприятие для отладки календаря 17-23
+                                                    .fc-row.fc-week.fc-widget-content
+                                                        .fc-bg
+                                                            table
+                                                                tbody
+                                                                    tr
+                                                                        td.fc-day.fc-widget-content.has-events
+                                                                        td.fc-day.fc-widget-content.has-events
+                                                                        td.fc-day.fc-widget-content.has-events
+                                                                        td.fc-day.fc-widget-content.has-events
+                                                                        td.fc-day.fc-widget-content.has-events
+                                                                        td.fc-day.fc-widget-content.fc-sun.has-events
+                                                                        td.fc-day.fc-widget-content.fc-sun.has-events
+                                                        .fc-content-skeleton
+                                                            table
+                                                                thead
+                                                                    tr
+                                                                        td.fc-day-top
+                                                                            span.fc-day-number 21
+                                                                        td.fc-day-top
+                                                                            span.fc-day-number 22
+                                                                        td.fc-day-top
+                                                                            span.fc-day-number 23
+                                                                        td.fc-day-top
+                                                                            span.fc-day-number 24
+                                                                        td.fc-day-top
+                                                                            span.fc-day-number 25
+                                                                        td.fc-day-top.fc-sun
+                                                                            span.fc-day-number 26
+                                                                        td.fc-day-top.fc-sun
+                                                                            span.fc-day-number 27
+                                                                tbody
+                                                                    tr
+                                                                        td.fc-event-container(colspan='7')
+                                                                            a.fc-day-grid-event.fc-h-event.fc-event.fc-not-start.fc-not-end(href='javascript:;' data-title='3-7' data-description='Краткое описание событие' data-id='3831' data-location='Киев' data-time='12:00' data-date='03 июня' data-img='http://ik.q7.by/wp-content/uploads/2021/06/babaji_square-570x410.jpg' data-permalink='http://ik.q7.by/events/testovoe-meropriyatie-dlya-otladki-kalendarya-3/' data-google='https://www.google.com/calendar/event?action=TEMPLATE&text=3-7&dates=20210603T000000/20210714T000000&location=%D0%9A%D0%B8%D0%B5%D0%B2&details=%D0%9A%D1%80%D0%B0%D1%82%D0%BA%D0%BE%D0%B5+%D0%BE%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5+%D1%81%D0%BE%D0%B1%D1%8B%D1%82%D0%B8%D0%B5' data-apple='/wp-content/themes/imram-kriya-custom/generate-ical.php?post_id=3831')
+                                                                                .fc-content
+                                                                                    span.fc-title 3-7
+                                                                    tr
+                                                                        td.fc-event-container(colspan='6')
+                                                                            a.fc-day-grid-event.fc-h-event.fc-event.fc-not-start.fc-end(href='javascript:;' data-title='мероприятие для отладки календаря 12-26' data-description='Краткое описание событие asdsadsadsd' data-id='3820' data-location='Киев' data-time='12:00' data-date='12 июня' data-img='http://ik.q7.by/wp-content/uploads/2021/06/babaji_square-570x410.jpg' data-permalink='http://ik.q7.by/events/testovoe-meropriyatie-dlya-otladki-kalendarya/' data-google='https://www.google.com/calendar/event?action=TEMPLATE&text=%D0%BC%D0%B5%D1%80%D0%BE%D0%BF%D1%80%D0%B8%D1%8F%D1%82%D0%B8%D0%B5+%D0%B4%D0%BB%D1%8F+%D0%BE%D1%82%D0%BB%D0%B0%D0%B4%D0%BA%D0%B8+%D0%BA%D0%B0%D0%BB%D0%B5%D0%BD%D0%B4%D0%B0%D1%80%D1%8F+12-26&dates=20210612T000000/20210626T000000&location=%D0%9A%D0%B8%D0%B5%D0%B2&details=%D0%9A%D1%80%D0%B0%D1%82%D0%BA%D0%BE%D0%B5+%D0%BE%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5+%D1%81%D0%BE%D0%B1%D1%8B%D1%82%D0%B8%D0%B5%0D%0Aasdsadsadsd' data-apple='/wp-content/themes/imram-kriya-custom/generate-ical.php?post_id=3820')
+                                                                                .fc-content
+                                                                                    span.fc-title мероприятие для отладки календаря 12-26
+                                                                        td
+                                                                    tr
+                                                                        td.fc-event-container(colspan='3')
+                                                                            a.fc-day-grid-event.fc-h-event.fc-event.fc-not-start.fc-end(href='javascript:;' data-title='Тестовое мероприятие для отладки календаря 17-23' data-description='Краткое описание событие' data-id='3830' data-location='Киев' data-time='12:00' data-date='17 июня' data-img='http://ik.q7.by/wp-content/uploads/2021/06/babaji_square-570x410.jpg' data-permalink='http://ik.q7.by/events/testovoe-meropriyatie-dlya-otladki-kalendarya-2/' data-google='https://www.google.com/calendar/event?action=TEMPLATE&text=%D0%A2%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D0%BE%D0%B5+%D0%BC%D0%B5%D1%80%D0%BE%D0%BF%D1%80%D0%B8%D1%8F%D1%82%D0%B8%D0%B5+%D0%B4%D0%BB%D1%8F+%D0%BE%D1%82%D0%BB%D0%B0%D0%B4%D0%BA%D0%B8+%D0%BA%D0%B0%D0%BB%D0%B5%D0%BD%D0%B4%D0%B0%D1%80%D1%8F+17-23&dates=20210617T000000/20210623T000000&location=%D0%9A%D0%B8%D0%B5%D0%B2&details=%D0%9A%D1%80%D0%B0%D1%82%D0%BA%D0%BE%D0%B5+%D0%BE%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5+%D1%81%D0%BE%D0%B1%D1%8B%D1%82%D0%B8%D0%B5' data-apple='/wp-content/themes/imram-kriya-custom/generate-ical.php?post_id=3830')
+                                                                                .fc-content
+                                                                                    span.fc-title Тестовое мероприятие для отладки календаря 17-23
+                                                                        td
+                                                                        td
+                                                                        td
+                                                                        td
+                                                    .fc-row.fc-week.fc-widget-content
+                                                        .fc-bg
+                                                            table
+                                                                tbody
+                                                                    tr
+                                                                        td.fc-day.fc-widget-content.has-events
+                                                                        td.fc-day.fc-widget-content.has-events
+                                                                        td.fc-day.fc-widget-content.has-events
+                                                                        td.fc-day.fc-widget-content.fc-other-month.has-events
+                                                                        td.fc-day.fc-widget-content.fc-other-month.has-events
+                                                                        td.fc-day.fc-widget-content.fc-sun.fc-other-month.has-events
+                                                                        td.fc-day.fc-widget-content.fc-sun.fc-other-month.has-events
+                                                        .fc-content-skeleton
+                                                            table
+                                                                thead
+                                                                    tr
+                                                                        td.fc-day-top
+                                                                            span.fc-day-number 28
+                                                                        td.fc-day-top
+                                                                            span.fc-day-number 29
+                                                                        td.fc-day-top
+                                                                            span.fc-day-number 30
+                                                                        td.fc-day-top.fc-other-month
+                                                                            span.fc-day-number 1
+                                                                        td.fc-day-top.fc-other-month
+                                                                            span.fc-day-number 2
+                                                                        td.fc-day-top.fc-sun.fc-other-month
+                                                                            span.fc-day-number 3
+                                                                        td.fc-day-top.fc-sun.fc-other-month
+                                                                            span.fc-day-number 4
+                                                                tbody
+                                                                    tr
+                                                                        td.fc-event-container(colspan='7')
+                                                                            a.fc-day-grid-event.fc-h-event.fc-event.fc-not-start.fc-not-end(href='javascript:;' data-title='3-7' data-description='Краткое описание событие' data-id='3831' data-location='Киев' data-time='12:00' data-date='03 июня' data-img='http://ik.q7.by/wp-content/uploads/2021/06/babaji_square-570x410.jpg' data-permalink='http://ik.q7.by/events/testovoe-meropriyatie-dlya-otladki-kalendarya-3/' data-google='https://www.google.com/calendar/event?action=TEMPLATE&text=3-7&dates=20210603T000000/20210714T000000&location=%D0%9A%D0%B8%D0%B5%D0%B2&details=%D0%9A%D1%80%D0%B0%D1%82%D0%BA%D0%BE%D0%B5+%D0%BE%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5+%D1%81%D0%BE%D0%B1%D1%8B%D1%82%D0%B8%D0%B5' data-apple='/wp-content/themes/imram-kriya-custom/generate-ical.php?post_id=3831')
+                                                                                .fc-content
+                                                                                    span.fc-title 3-7
+                                                                    tr
+                                                                        td
+                                                                        td
+                                                                        td
+                                                                        td
+                                                                        td
+                                                                        td
+                                                                        td
+                                                                    tr
+                                                                        td
+                                                                        td
+                                                                        td
+                                                                        td
+                                                                        td
+                                                                        td
+                                                                        td
+                                                    .fc-row.fc-week.fc-widget-content
+                                                        .fc-bg
+                                                            table
+                                                                tbody
+                                                                    tr
+                                                                        td.fc-day.fc-widget-content.fc-other-month.has-events
+                                                                        td.fc-day.fc-widget-content.fc-other-month.has-events
+                                                                        td.fc-day.fc-widget-content.fc-other-month.has-events
+                                                                        td.fc-day.fc-widget-content.fc-other-month.has-events
+                                                                        td.fc-day.fc-widget-content.fc-other-month.has-events
+                                                                        td.fc-day.fc-widget-content.fc-sun.fc-other-month.has-events
+                                                                        td.fc-day.fc-widget-content.fc-sun.fc-other-month.has-events
+                                                        .fc-content-skeleton
+                                                            table
+                                                                thead
+                                                                    tr
+                                                                        td.fc-day-top.fc-other-month
+                                                                            span.fc-day-number 5
+                                                                        td.fc-day-top.fc-other-month
+                                                                            span.fc-day-number 6
+                                                                        td.fc-day-top.fc-other-month
+                                                                            span.fc-day-number 7
+                                                                        td.fc-day-top.fc-other-month
+                                                                            span.fc-day-number 8
+                                                                        td.fc-day-top.fc-other-month
+                                                                            span.fc-day-number 9
+                                                                        td.fc-day-top.fc-sun.fc-other-month
+                                                                            span.fc-day-number 10
+                                                                        td.fc-day-top.fc-sun.fc-other-month
+                                                                            span.fc-day-number 11
+                                                                tbody
+                                                                    tr
+                                                                        td.fc-event-container(colspan='7')
+                                                                            a.fc-day-grid-event.fc-h-event.fc-event.fc-not-start.fc-not-end(href='javascript:;' data-title='3-7' data-description='Краткое описание событие' data-id='3831' data-location='Киев' data-time='12:00' data-date='03 июня' data-img='http://ik.q7.by/wp-content/uploads/2021/06/babaji_square-570x410.jpg' data-permalink='http://ik.q7.by/events/testovoe-meropriyatie-dlya-otladki-kalendarya-3/' data-google='https://www.google.com/calendar/event?action=TEMPLATE&text=3-7&dates=20210603T000000/20210714T000000&location=%D0%9A%D0%B8%D0%B5%D0%B2&details=%D0%9A%D1%80%D0%B0%D1%82%D0%BA%D0%BE%D0%B5+%D0%BE%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5+%D1%81%D0%BE%D0%B1%D1%8B%D1%82%D0%B8%D0%B5' data-apple='/wp-content/themes/imram-kriya-custom/generate-ical.php?post_id=3831')
+                                                                                .fc-content
+                                                                                    span.fc-title 3-7
+                                                                    tr
+                                                                        td
+                                                                        td
+                                                                        td
+                                                                        td
+                                                                        td
+                                                                        td
+                                                                        td
+                                                                    tr
+                                                                        td
+                                                                        td
+                                                                        td
+                                                                        td
+                                                                        td
+                                                                        td
+                                                                        td
+
+
+                .calendar-page__add-all
+                    a.kspc-event-calendar__item(href='' target='_blank')
+                        svg.kspc-event-calendar__item-pic(width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg')
+                            rect(x='5.33331' width='1.33333' height='12' rx='0.666667' fill='#25378D')
+                            rect(y='6.6665' width='1.33333' height='12' rx='0.666666' transform='rotate(-90 0 6.6665)' fill='#25378D')
+                        span.kspc-event-calendar__item-name Добавить в календарь все мероприятия
+
+
+            #eventsModal
+                .eventsModal
+                    .eventsModal__slide
+                        .eventsModal__img
+                            img(src='' alt='')
+                        .eventsModal__info
+                            .eventsModal__title
+                            .eventsModal__datetime
+                                .eventsModal__datetime-item
+                                .eventsModal__datetime-item
+                                .eventsModal__datetime-item
+                            .eventsModal__text
+                                .eventsModal__text-inner
+                                .eventsModal__text-link
+                                    | ...
+                                    a(href='' target='_blank') Подробнее
+                            .kspc-event-calendar.eventsModal__kspc
+                                a.kspc-event-calendar__item.eventsModal__google(href='' target='_blank')
+                                    svg.kspc-event-calendar__item-pic(width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                        rect(x='5.33331' width='1.33333' height='12' rx='0.666667' fill='#25378D')
+                                        rect(y='6.6665' width='1.33333' height='12' rx='0.666666' transform='rotate(-90 0 6.6665)' fill='#25378D')
+                                    span.kspc-event-calendar__item-name Google Календарь
+                                a.kspc-event-calendar__item.eventsModal__apple(href='' target='_blank')
+                                    svg.kspc-event-calendar__item-pic(width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                        rect(x='5.33331' width='1.33333' height='12' rx='0.666667' fill='#25378D')
+                                        rect(y='6.6665' width='1.33333' height='12' rx='0.666666' transform='rotate(-90 0 6.6665)' fill='#25378D')
+                                    span.kspc-event-calendar__item-name Apple Календарь
+

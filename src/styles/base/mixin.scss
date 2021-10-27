@@ -46,3 +46,7 @@
 @function vw($px, $resolutiond: 1920) {
   @return (($px/$resolutiond) * 100) + vw;
 }
+
+@function vw2($px, $resolutiond: 360) {
+  @return (($px/$resolutiond) * 100) + vw;
+}

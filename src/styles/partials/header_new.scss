@@ -110,6 +110,7 @@
       .menu {
         @include max(1600) {
           opacity: 1;
+	        display: block;
           pointer-events: auto;
           position: static;
           width: auto;
@@ -404,20 +405,22 @@
     @include max(1600) {
       margin-right: 0;
       .menu {
-        opacity: 0;
-        pointer-events: none;
+        //opacity: 0;
+        //pointer-events: none;
+        display: none;
       }
 
       &.animate {
         .menu {
-          transition: opacity 0.3s ease;
+          //transition: opacity 0.3s ease;
         }
       }
 
       &.shown {
         .menu {
-          opacity: 1;
-          pointer-events: auto;
+          display: block;
+          //opacity: 1;
+          //pointer-events: auto;
         }
       }
     }
@@ -432,13 +435,15 @@
       &.show {
       }
 	  .menu {
-		opacity: 1;
-		pointer-events: auto;
+        display: block;
+		//opacity: 1;
+		//pointer-events: auto;
 	  }
     }
 
     &-toggle {
       display: none;
+      cursor: pointer;
 
       @include max(1600) {
         display: flex;

@@ -92,23 +92,23 @@ window.addEventListener('load', () => {
     }
 
     function showSecondMenu() {
-      secondMenu.classList.add(ModifierClass.ANIMATE);
+      //secondMenu.classList.add(ModifierClass.ANIMATE);
       secondMenu.classList.add(ModifierClass.SHOWN);
-
-      secondMenuMenu.ontransitionend = () => {
+      this.onclick = hideSecondMenu;
+      /*secondMenuMenu.ontransitionend = () => {
         secondMenu.classList.remove(ModifierClass.ANIMATE);
         this.onclick = hideSecondMenu;
-      };
+      };*/
     }
 
     function hideSecondMenu() {
-      secondMenu.classList.add(ModifierClass.ANIMATE);
+      //secondMenu.classList.add(ModifierClass.ANIMATE);
       secondMenu.classList.remove(ModifierClass.SHOWN);
-
-      secondMenuMenu.ontransitionend = () => {
+      this.onclick = showSecondMenu;
+      /*secondMenuMenu.ontransitionend = () => {
         secondMenu.classList.remove(ModifierClass.ANIMATE);
         this.onclick = showSecondMenu;
-      };
+      };*/
     }
 
     function resetSecondMenu() {
