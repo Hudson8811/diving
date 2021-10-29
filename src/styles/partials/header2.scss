@@ -1,0 +1,294 @@
+.header {
+	$self: &;
+
+	position: relative;
+	z-index: 2;
+	background-color: $dark-blue;
+
+
+	@include max(lg) {
+		padding: 15px 0;
+	}
+
+	&.is-menu-open {
+		#{$self}__profile {
+			position: relative;
+			z-index: 100;
+		}
+	}
+
+
+	&__container {
+		position: relative;
+		z-index: 1;
+		width: 100%;
+		max-width: 1820px;
+		margin: 0 auto;
+		padding: 0 20px;
+		box-sizing: border-box;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__logo {
+		display: flex;
+		align-self: center;
+		margin-right: 24px;
+
+		@include max(lg) {
+			margin: -2px auto;
+		}
+
+		&-tdi,
+		&-sdi {
+			height: 40px;
+
+			@include max(xl) {
+				height: 34px;
+			}
+		}
+
+		a {
+			display: block;
+			align-self: center;
+
+			+ a {
+				margin-left: 10px;
+			}
+		}
+
+		svg {
+			display: block;
+			width: auto;
+			height: 100%;
+		}
+	}
+
+	&__main{
+		height: 100%;
+		@include max(lg) {
+			display: none;
+			position: fixed;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			z-index: 99;
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+			max-width: 450px;
+			min-height: 480px;
+			height: 100vh;
+			height: calc(var(--vh,1vh)*100);
+			padding: 86px 20px 25px;
+			transform: translateX(-100%);
+			background-color: $dark-blue;
+			transition: transform 0.3s ease;
+			&.shown {
+				transform: translateX(0);
+			}
+		}
+
+		&-close {
+			position: absolute;
+			z-index: 2;
+			top: 15px;
+			right: 20px;
+			justify-content: center;
+			width: 30px;
+			height: 30px;
+			padding: 0;
+			border: solid 1px $white;
+			border-radius: 50%;
+			background-color: transparent;
+			cursor: pointer;
+
+			display: none;
+
+			@include max(lg) {
+				display: flex;
+			}
+
+			svg {
+				display: block;
+				align-self: center;
+				fill: $white;
+			}
+		}
+
+		&-bottom{
+			display: none;
+			@include max(lg) {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				margin-top: auto;
+				> * {
+					display: flex !important;
+				}
+			}
+		}
+	}
+
+
+	&__right{
+		display: flex;
+		align-items: center;
+		@include max(lg) {
+			order: -1;
+		}
+	}
+
+	&__lang-swither {
+		margin-left: auto;
+		align-self: center;
+
+		@include max(lg) {
+			position: absolute;
+			left: 20px;
+			bottom: 35px;
+			margin-left: 0;
+			display: none;
+		}
+
+		.delimiter {
+			padding: 0 10px;
+			font-size: 18px;
+			font-weight: 500;
+			color: $white;
+		}
+
+		a {
+			font-size: 18px;
+			font-weight: 500;
+			color: $lightBlue3;
+			transition: color 0.3s ease;
+
+			&:not(.active) {
+				cursor: pointer;
+
+				@include hover {
+					color: $white;
+				}
+			}
+
+			&.active {
+				color: $white;
+				text-decoration: underline;
+				pointer-events: none;
+			}
+		}
+	}
+
+
+	&__basket,
+	&__profile,
+	&__burger {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 9px;
+		border: 1px solid $white;
+		border-radius: 50px;
+		cursor: pointer;
+		transition: opacity 0.3s ease;
+		align-self: center;
+		@include hover {
+			opacity: 0.85;
+		}
+		svg {
+			fill: $white;
+		}
+
+		#mini-cart-count,
+		span {
+			font-size: 15px;
+			color: $white;
+			padding-left: 10px;
+		}
+	}
+
+	&__profile {
+		width: 40px;
+		margin-left: 20px;
+
+		@include max(lg) {
+			width: 30px;
+			height: 30px;
+			padding: 0;
+			margin-left: 0;
+			order: -1;
+		}
+
+		svg {
+			width: 20px;
+			height: 20px;
+			@include max(lg) {
+				width: 15px;
+				height: 15px;
+			}
+		}
+	}
+
+	&__basket {
+		width: 80px;
+		margin: 0 0 0 20px;
+		@include max(lg) {
+			margin-top: 20px;
+			margin-left: auto;
+			display: none;
+		}
+	}
+
+	&__burger {
+		display: none;
+		width: 30px;
+		height: 30px;
+		padding: 0;
+
+		@include max(lg) {
+			display: flex;
+		}
+		svg {
+			stroke: $white;
+		}
+	}
+
+	&__overlay {
+		@include max(lg) {
+			position: fixed;
+			z-index: 0;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-color: rgba(#000, 0.7);
+			cursor: pointer;
+		}
+	}
+
+
+	&--fixed {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		transition: transform 0.5s ease;
+	}
+
+	&--homepage{
+		width: 100%;
+		background: none;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	&.is-menu-open {
+		#{$self}__profile {
+			position: relative;
+			z-index: 100;
+		}
+	}
+
+}

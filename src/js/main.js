@@ -26,7 +26,7 @@
 //= ./partials/status.js
 //= ./partials/product-options.js
 //= ./partials/filters.js
-//= ./partials/menu.js
+//= ./partials/menu2.js
 //= ./partials/header.js
 //= ./partials/footer.js
 //= ./partials/preloader.js
