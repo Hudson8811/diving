@@ -14,13 +14,18 @@ header.header(class= headerClasses || '')
                 .menu__list
                     .menu__item.menu__item--parent
                         a.menu__link(href="") Обучение дайвингу
+                            +icon('arrow-angle-down')(width="8", height="4")
                         .menu__submenu
+                            button.menu__back(type="button", aria-label="Вернуться в основное меню")
+                                +icon('back')(width="30", height="30")
                             .menu__submenu-list.menu__submenu-list--cat
                                 .menu__submenu-item
                                     a.menu__submenu-link(href="") Индивидуальные курсы
+                                        +icon('arrow-angle-down')(width="8", height="4")
                                     .menu__submenu-list.menu__submenu-list--cat
                                         .menu__submenu-item
                                             a.menu__submenu-link(href="") SDI
+                                                +icon('arrow-angle-down')(width="8", height="4")
                                             .menu__submenu-list
                                                 .menu__submenu-item
                                                     a.menu__submenu-link(href="") Open Water Scuba Diver VIP
@@ -36,6 +41,7 @@ header.header(class= headerClasses || '')
                                                     a.menu__submenu-link(href="") Экстренная медицинская помощь / Adult and Child Emergency Care
                                         .menu__submenu-item
                                             a.menu__submenu-link(href="") TDI
+                                                +icon('arrow-angle-down')(width="8", height="4")
                                             .menu__submenu-list
                                                 .menu__submenu-item
                                                     a.menu__submenu-link(href="") Open Water Scuba Diver VIP
@@ -45,6 +51,7 @@ header.header(class= headerClasses || '')
                                                     a.menu__submenu-link(href="") Продвинутая плавучесть расширенный курс / Advanced Buoyancy extended
                                         .menu__submenu-item
                                             a.menu__submenu-link(href="") FRTI
+                                                +icon('arrow-angle-down')(width="8", height="4")
                                             .menu__submenu-list
                                                 .menu__submenu-item
                                                     a.menu__submenu-link(href="") Open Water Scuba Diver VIP

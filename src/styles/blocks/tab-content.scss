@@ -24,13 +24,13 @@
     display: block;
   }
 
-  p + p {
+  /*p + p {
     margin-top: 38px;
 
     @include max(sm) {
       margin-top: 20px;
     }
-  }
+  }*/
 
   table {
     font-size: 14px;

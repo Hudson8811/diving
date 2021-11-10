@@ -236,12 +236,12 @@
       line-height: 26px;
     }
 
-    p + p {
+    /*p + p {
       margin-top: 26px;
 
       @include max(sm) {
         margin-top: 22px;
       }
-    }
+    }*/
   }
 }

@@ -23,12 +23,12 @@
   }
 
   &__categories {
-    display: none;
+    //display: none;
     margin: 0 auto;
 
-    @include max(sm) {
+   /*@include max(sm) {
       display: block;
-    }
+    }*/
   }
 
   &__slider {

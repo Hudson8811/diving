@@ -87,6 +87,21 @@
     }
   }
 
+  &--angle2 {
+    svg {
+      width: 12px;
+      height: 12px;
+      fill: #fff;
+      margin-left: 9px;
+    }
+
+    &.button--disabled {
+      color: $gray-706;
+      border-color: $gray-706;
+      background-color: $white;
+    }
+  }
+
   &--disabled {
     background-color: $gray-706;
     pointer-events: none;

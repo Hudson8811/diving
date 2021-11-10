@@ -14,15 +14,15 @@
 @import "libs/simplebar.css";
 
 /* partials */
+@import "partials/socials";
 @import "partials/menu";
 @import "partials/header2";
-@import "partials/footer_new";
+@import "partials/footer2";
 @import "partials/title";
 @import "partials/text";
 @import "partials/button";
 @import "partials/pagination";
 @import "partials/breadcrumbs";
-@import "partials/socials";
 @import "partials/custom-checkbox";
 @import "partials/custom-radio";
 @import "partials/choices"; //override lib styles

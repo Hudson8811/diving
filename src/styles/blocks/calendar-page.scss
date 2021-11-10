@@ -805,6 +805,16 @@ tr:first-child>td>.fc-day-grid-event {
         }
       }
     }
+
+    &-button{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 30px;
+      a{
+        min-width: 190px;
+      }
+    }
   }
 
   &__kspc {
@@ -951,5 +961,54 @@ tr:first-child>td>.fc-day-grid-event {
 
   .calendar-page__add-all {
     margin-top: 32px;
+  }
+}
+
+
+.fc-event{
+  &[data-id="1"],
+  &[data-id="6"],
+  &[data-id="11"],
+  &[data-id="16"],
+  &[data-id="21"],
+  &[data-id="26"],
+  &[data-id="31"]{
+    background: #234e8f;
+  }
+  &[data-id="2"],
+  &[data-id="7"],
+  &[data-id="12"],
+  &[data-id="17"],
+  &[data-id="22"],
+  &[data-id="27"],
+  &[data-id="32"]{
+    background: #3174d9;
+  }
+  &[data-id="3"],
+  &[data-id="8"],
+  &[data-id="13"],
+  &[data-id="18"],
+  &[data-id="23"],
+  &[data-id="28"],
+  &[data-id="33"]{
+    background: #3a7e8a;
+  }
+  &[data-id="4"],
+  &[data-id="9"],
+  &[data-id="14"],
+  &[data-id="19"],
+  &[data-id="24"],
+  &[data-id="29"],
+  &[data-id="34"]{
+    background: #7e2222;
+  }
+  &[data-id="5"],
+  &[data-id="10"],
+  &[data-id="15"],
+  &[data-id="20"],
+  &[data-id="25"],
+  &[data-id="30"],
+  &[data-id="35"]{
+    background: #29227e;
   }
 }

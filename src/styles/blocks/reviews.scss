@@ -1,5 +1,5 @@
 .reviews {
-  padding: 21px 0 104px;
+  padding: 60px 0 104px;
   background-color: $gray-f5;
 
   @include max(md) {
@@ -9,6 +9,7 @@
   &__row {
     display: flex;
     justify-content: space-between;
+
 
     @include max(md) {
       flex-direction: column;

@@ -75,6 +75,30 @@ $(document).ready(function(){
         headerMobileReposition();
     });
 
+    var openedMenus = [];
+
+    $('.menu__submenu-link,.menu__link').on('click touch',function (){
+        if ($(window).width() < 1280){
+            let child = $(this).siblings('.menu__submenu-list, .menu__submenu');
+            if (child.length > 0){
+                event.preventDefault();
+                child.addClass('shown');
+                openedMenus.push(child);
+                $('.header__profile').hide();
+            }
+        }
+    });
+
+    $('.menu__back').on('click touch',function (){
+        event.preventDefault();
+        console.log(openedMenus);
+        let menu = openedMenus.at(-1);
+        menu.removeClass('shown');
+        openedMenus = openedMenus.slice(0, -1);
+        if (openedMenus.length < 1){
+            $('.header__profile').show();
+        }
+    });
 
 });
 
@@ -139,8 +163,17 @@ window.addEventListener('load', () => {
                 closeBtn.onclick = null;
                 openBtn.onclick = openMenu;
                 unblockScroll();
+                resetSubMenu();
             }
         }
+
+
+        function resetSubMenu() {
+          $('.menu__submenu-list, .menu__submenu').removeClass('shown');
+            $('.header__profile').show();
+            openedMenus = [];
+        }
+
 
         function resetMenu() {
             header.classList.remove(ModifierClass.HEADER);
@@ -155,6 +188,7 @@ window.addEventListener('load', () => {
             }
 
             unblockScroll();
+            resetSubMenu();
         }
 
 
@@ -205,5 +239,42 @@ window.addEventListener('load', () => {
         block.remove();
         return width;
     }
+
+    /*if (submenuLists.length) {
+
+        if (html.clientWidth < breakpoint && !isSubmenuSimplebar) {
+            submenuLists.forEach(it => {
+                initSimplebar(it);
+            });
+
+            isSubmenuSimplebar = true;
+        }
+
+        window.addEventListener('resize', () => {
+            if (html.clientWidth < breakpoint && !isSubmenuSimplebar) {
+                submenuLists.forEach(it => {
+                    initSimplebar(it);
+                });
+                isSubmenuSimplebar = true;
+            } else if (html.clientWidth >= breakpoint) {
+                submenuLists.forEach(it => {
+                    destroySimplebar(it);
+                });
+                isSubmenuSimplebar = false;
+            }
+        });
+
+        function initSimplebar(el) {
+            new SimpleBar(el, { autoHide: false });
+        }
+
+        function destroySimplebar(el) {
+            const items = el.querySelectorAll('.menu__submenu-item');
+            el.removeAttribute('data-simplebar');
+            el.innerHTML = '';
+
+            items.forEach(it => el.appendChild(it));
+        }
+    }*/
 
 });

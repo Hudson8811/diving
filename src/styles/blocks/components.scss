@@ -234,3 +234,37 @@
   width: 100%;
   margin-top: 40px;
 }
+
+
+
+
+
+.custom-dots .slick-dots {
+  @include max(lg) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 36px 0 0;
+    width: 100%;
+    z-index: 4;
+  }
+
+  li {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: $lightBlue;
+    cursor: pointer;
+    list-style: none;
+    cursor: pointer;
+
+    &.slick-active {
+      background-color: $blue;
+    }
+
+    button {
+      display: none;
+    }
+  }
+}
+

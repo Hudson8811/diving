@@ -7,6 +7,7 @@
   position: relative;
   border-radius: 5px;
   overflow: hidden;
+  cursor: pointer;
 
   @include max(md) {
     justify-content: flex-start;
@@ -33,6 +34,13 @@
         #1b498e 40%,
         rgba(44, 96, 174, 0) 100%
       );
+      @include max(md) {
+        background: linear-gradient(
+                        90deg,
+                        #1b498e 40%,
+                        rgba(44, 96, 174, 0) 100%
+        );
+      }
     }
 
     img {

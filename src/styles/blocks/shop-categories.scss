@@ -2,65 +2,45 @@
   background-color: $white;
   transition: transform 0.5s ease;
 
+  &__btn{
+    user-select: none;
+    span{
+      margin-left: 9px;
+    }
+  }
   &__burger {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 30px;
-    max-width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    border: 1px solid $dark-blue;
-    cursor: pointer;
     position: relative;
 
     @include max(sm) {
       display: none;
     }
-
-    &:hover {
-      .shop-categories__menu {
-        opacity: 1;
-        pointer-events: auto;
-      }
-    }
-
-    svg {
-      stroke: $dark-blue;
-    }
   }
 
   &__menu {
     min-width: 300px;
-    display: flex;
+    padding: 15px 0;
     flex-direction: column;
     position: absolute;
     top: 100%;
     left: -20px;
     z-index: 10;
-    border: 1px solid $gray;
-    background-color: $white;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease;
+    display: none;
+    width: max-content;
+
+    background: #FFFFFF;
+    box-shadow: 0 2px 7px #AFB5BE;
+    border-radius: 5px;
 
     .shop-categories__item-wrapper {
       padding: 0 10px;
       cursor: default;
-
-      &:hover {
-        background-color: $gray;
-
-        .shop-categories__item span {
-          color: $gray-ph;
-        }
-
-        .shop-categories__submenu {
-          opacity: 1;
-          pointer-events: auto;
-          z-index: 1;
-        }
+      .shop-categories__item{
+        height: 40px;
       }
+
     }
 
     .shop-categories__item {
@@ -143,7 +123,7 @@
 
   &__container {
     display: flex;
-    align-items: center;
+    //align-items: center;
     justify-content: space-between;
     max-width: 1270px;
     width: 100%;
@@ -213,13 +193,30 @@
       }
     }
 
-    &:nth-child(-n+7) {
-      display: inline-flex;
+
+    &--row{
+      &:nth-child(-n+11) {
+        @include min(lg){
+          display: inline-flex;
+        }
+      }
+      &:nth-child(-n+8) {
+        @include max(lg){
+          display: inline-flex;
+        }
+      }
+      .shop-categories__item-icon{
+        display: none;
+        @include max(sm) {
+          display: flex;
+        }
+      }
     }
 
     &-icon {
       margin-right: 5px;
       align-self: center;
+      flex-shrink: 0;
 
       @include max(sm) {
         display: flex;
@@ -229,6 +226,7 @@
         margin-right: 8px;
       }
 
+      img,
       svg {
         display: block;
         fill: $blue;

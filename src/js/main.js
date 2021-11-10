@@ -28,5 +28,5 @@
 //= ./partials/filters.js
 //= ./partials/menu2.js
 //= ./partials/header.js
-//= ./partials/footer.js
+//= ./partials/footer2.js
 //= ./partials/preloader.js

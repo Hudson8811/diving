@@ -8,6 +8,7 @@
   border: solid 1px $gray;
   background-color: $white;
   border-radius: 5px;
+  height: auto;
 
   &.hide {
     @include max(sm) {
@@ -51,10 +52,11 @@
   }
 
   &__title {
-    margin-top: 4px;
-    margin-bottom: 7px;
+    margin-top: 12px;
+    margin-bottom: 6px;
     font-size: 15px;
-    line-height: 1.2; //(32 / 15);
+    line-height: 18px;
+    min-height: 36px;
 
     color: $dark;
     font-weight: 700;
@@ -71,8 +73,9 @@
   &__text {
     margin-bottom: 22px;
     font-size: 14px;
-    line-height: (22 / 14);
+    line-height: 1.57;
     color: $gray-ph;
+    min-height: 44px;
   }
 
   &__middle {

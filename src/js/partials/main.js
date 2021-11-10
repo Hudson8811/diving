@@ -121,9 +121,10 @@ $(window).on('load', function() {
 	}, 600);
 
 	// Shop menu
-	document.querySelectorAll('.shop-categories__submenu').forEach(function (el) {
+	/*document.querySelectorAll('.shop-categories__submenu').forEach(function (el) {
 		el.style.minHeight = document.querySelector('.shop-categories__menu').offsetHeight + 'px';
-	});
+	});*/
+
 
 	// Filters
 	if (window.matchMedia('(max-width: 1079px)').matches) {
@@ -136,4 +137,11 @@ $(window).on('load', function() {
 			});
 		}
 	}
+});
+
+$(document).ready(function (){
+	$('.shop-categories__btn').on('click touch',function (){
+		event.preventDefault();
+		$('.shop-categories__menu').slideToggle();
+	})
 });
