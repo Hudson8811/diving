@@ -50,6 +50,10 @@
 
     .shop-categories__item-icon {
       width: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
     }
   }
 
@@ -226,10 +230,14 @@
         margin-right: 8px;
       }
 
+      &:not(.shop-categories__item-icon--nofill){
+        svg {
+          fill: $blue;
+        }
+      }
       img,
       svg {
         display: block;
-        fill: $blue;
 
         @include max(sm) {
           width: auto;

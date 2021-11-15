@@ -40,37 +40,20 @@
     }
   }
 
-  &__wrapper {
-    margin-top: 25px;
+  &__slider{
     position: relative;
-
+    margin-top: 25px;
     @include max(md) {
       margin-top: 18px;
     }
   }
 
-  &__mobile-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  &__wrapper {
+    position: relative;
 
-    @include max(xl) {
-      margin-top: 25px;
-    }
-
-    @include max(xs) {
-      justify-content: space-between;
-    }
-
-    .reviews__prev,
-    .reviews__next {
-      display: none;
-
-      @include max(xl) {
-        display: block;
-      }
-    }
   }
+
+
 
   &__pagination {
     display: none;
@@ -80,7 +63,6 @@
 
     @include max(xl) {
       display: flex;
-      margin: 0 30px;
     }
 
     &.swiper-pagination-lock {
@@ -106,10 +88,12 @@
     top: 46.5%;
 
     @include max(xl) {
-      display: none;
-      position: relative;
+      position: static;
       top: unset;
       bottom: 0;
+    }
+    @include max(md) {
+      display: none;
     }
   }
 
@@ -118,6 +102,7 @@
 
     @include max(xl) {
       left: 0;
+      margin-right: 30px;
     }
   }
 
@@ -126,6 +111,19 @@
 
     @include max(xl) {
       right: 0;
+      margin-left: 30px;
+    }
+  }
+
+  &__navigation{
+    position: static;
+    @include max(xl) {
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      min-width: 180px;
     }
   }
 }

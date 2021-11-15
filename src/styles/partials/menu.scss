@@ -163,6 +163,9 @@
 			width: max-content;
 			padding: 30px;
 			display: none;
+
+
+
 			@include max(lg) {
 				background: none;
 				max-width: 100%;
@@ -200,6 +203,26 @@
 
 			}
 
+
+			&:not(.menu__submenu-list--cat){
+				@include min(lg) {
+					max-height: 500px;
+					overflow: auto;
+					&::-webkit-scrollbar {
+						width: 6px;
+					}
+					&::-webkit-scrollbar-track {
+						background: transparent;
+					}
+					&::-webkit-scrollbar-thumb {
+						background: #2c60ae;
+						border-radius: 5px;
+					}
+					&::-webkit-scrollbar-thumb:hover {
+						background: #1b3870;
+					}
+				}
+			}
 
 			&--cat{
 				@include min(lg){

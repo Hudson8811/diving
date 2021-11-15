@@ -806,6 +806,7 @@ tr:first-child>td>.fc-day-grid-event {
       }
     }
 
+
     &-button{
       display: flex;
       align-items: center;
@@ -813,6 +814,18 @@ tr:first-child>td>.fc-day-grid-event {
       margin-top: 30px;
       a{
         min-width: 190px;
+      }
+    }
+    &-add{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 30px;
+      a{
+        min-width: 190px;
+      }
+      +.eventsModal__text-button{
+        margin-top: 10px;
       }
     }
   }
