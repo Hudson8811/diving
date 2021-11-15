@@ -33,9 +33,14 @@ block main
 						.contacts-info__item
 							.contacts-info__hint Контакты
 							.contacts-info__text
-								p
+								p.contacts-info__contacts-item
+									+icon('contacts-phone')(width='20', height='20')
 									a(href="tel:+79998887765") +7 (999) 888 77-65
-								p
+								p.contacts-info__contacts-item
+									+icon('contacts-whatsapp')(width='20', height='20')
+									a(href="https://wa.me/+79998887765") +7 (999) 888 77-65
+								p.contacts-info__contacts-item
+									+icon('contacts-email')(width='20', height='14')
 									a(href="mailto:12345diving@mail.com") 12345diving@mail.com
 						.contacts-info__item.contacts-info__item--social
 							.contacts-info__hint Мы в соцсетях

@@ -106,3 +106,9 @@ dist
 .history
 .idea
 package-lock.json
+
+### macOS ###
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
