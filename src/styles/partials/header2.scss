@@ -142,7 +142,7 @@
 		display: flex;
 		align-items: center;
 		@include max(lg) {
-			order: -1;
+			//order: -1;
 		}
 	}
 
@@ -224,7 +224,7 @@
 			height: 30px;
 			padding: 0;
 			margin-left: 0;
-			order: -1;
+			//order: -1;
 		}
 
 		svg {
@@ -255,6 +255,7 @@
 
 		@include max(lg) {
 			display: flex;
+			order: -1;
 		}
 		svg {
 			stroke: $white;
