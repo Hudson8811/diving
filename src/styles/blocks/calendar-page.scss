@@ -575,10 +575,16 @@ tr:first-child > td > .fc-day-grid-event {
 		border-radius: vw2(5);
 	}
 
+	&__slide {
+		@media screen and (max-width: 1150px) {
+			position: relative;
+		}
+	}
+
 	&__marker {
 		position: absolute;
-		left: 15px;
-		top: 239px;
+		left: 0;
+		top: 194px;
 		width: 60px;
 		height: 10px;
 		background: #1b3870;
