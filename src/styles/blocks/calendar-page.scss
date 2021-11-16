@@ -441,29 +441,28 @@ tr:first-child > td > .fc-day-grid-event {
 }
 
 .fc-day.fc-widget-content.has-events {
-	//@media screen and (max-width:1150px) {
-	//  cursor: pointer;
-	//  position: relative;
+	@media screen and (max-width: 1150px) {
+		cursor: pointer;
 
-	//  &::after {
-	//    content: "";
-	//    display: block;
-	//    width: 9px;
-	//    height: 9px;
-	//    background: #1b3870;
-	//    border-radius: 50%;
-	//    position: absolute;
-	//    left: 50%;
-	//    bottom: 23px;
-	//    transform: translateX(-50%);
+		//  &::after {
+		//    content: "";
+		//    display: block;
+		//    width: 9px;
+		//    height: 9px;
+		//    background: #1b3870;
+		//    border-radius: 50%;
+		//    position: absolute;
+		//    left: 50%;
+		//    bottom: 23px;
+		//    transform: translateX(-50%);
 
-	//    @media screen and (max-width: 749px) {
-	//      width: vw2(6);
-	//      height: vw2(6);
-	//      bottom: vw2(23);
-	//    }
-	//  }
-	//}
+		//    @media screen and (max-width: 749px) {
+		//      width: vw2(6);
+		//      height: vw2(6);
+		//      bottom: vw2(23);
+		//    }
+		//  }
+	}
 }
 
 .fc-day__events {
