@@ -576,6 +576,17 @@ tr:first-child > td > .fc-day-grid-event {
 		border-radius: vw2(5);
 	}
 
+	&__marker {
+		position: absolute;
+		left: 15px;
+		top: 238px;
+		width: 60px;
+		height: 10px;
+		background: #1b3870;
+		z-index: 1;
+		border-radius: 5px;
+	}
+
 	&-bg {
 		background: rgba(255, 255, 255, 0.1);
 		backdrop-filter: blur(0);
