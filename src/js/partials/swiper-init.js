@@ -122,6 +122,9 @@ window.addEventListener('load', () => {
           productImg.parentElement.href = it.dataset.fancyboxImage;
           it.classList.add('active');
           productFullPhoto.classList.remove('opacity-0');
+
+          $('.js-fancy a').attr('data-fancybox','gallery');
+          $('.js-fancy a[href="'+it.dataset.fancyboxImage+'"]').removeAttr('data-fancybox');
         };
       }));
     }
