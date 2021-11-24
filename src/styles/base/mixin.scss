@@ -1,52 +1,51 @@
 /* адаптив */
 @function _get-media-width($width, $maxmin) {
-  @if map-get($media-list, $width) {
-    $width: map-get($media-list, $width);
+	@if map-get($media-list, $width) {
+		$width: map-get($media-list, $width);
 
-    @if $maxmin {
-      @return $width;
-    } @else {
-      @return $width + 1;
-    }
-  } @else {
-    @return $width;
-  }
+		@if $maxmin {
+			@return $width;
+		} @else {
+			@return $width + 1;
+		}
+	} @else {
+		@return $width;
+	}
 }
 
 @mixin max($width) {
-  $width: _get-media-width($width, true);
-  @media only screen and (max-width: $width + "px") {
-    @content;
-  }
+	$width: _get-media-width($width, true);
+	@media only screen and (max-width: $width + "px") {
+		@content;
+	}
 }
 
 @mixin min($width) {
-  $width: _get-media-width($width, false);
-  @media only screen and (min-width: $width + "px") {
-    @content;
-  }
+	$width: _get-media-width($width, false);
+	@media only screen and (min-width: $width + "px") {
+		@content;
+	}
 }
 
 /* ховер */
 @mixin hover {
-  @media (min-width: 1080px) {
-    &:hover,
-    &:focus {
-      @content;
-    }
-  }
+	@media (min-width: 1080px) {
+		&:hover {
+			@content;
+		}
+	}
 }
 
 @mixin retina {
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    @content;
-  }
+	@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+		@content;
+	}
 }
 
 @function vw($px, $resolutiond: 1920) {
-  @return (($px/$resolutiond) * 100) + vw;
+	@return (($px/$resolutiond) * 100) + vw;
 }
 
 @function vw2($px, $resolutiond: 360) {
-  @return (($px/$resolutiond) * 100) + vw;
+	@return (($px/$resolutiond) * 100) + vw;
 }
