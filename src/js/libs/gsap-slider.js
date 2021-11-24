@@ -203,7 +203,7 @@
         },
         prev: () => {
           return false;
-        },
+        }
       };
       Object.assign(this.settings, settings);
 
@@ -244,17 +244,24 @@
       this.DOM.prevCtrl.addEventListener("click", () => this.settings.prev());
       this.DOM.nextCtrl.addEventListener("click", () => this.settings.next());
     }
+
+    autoplay() {
+
+    }
   }
 
   // The Slideshow class.
   class Slideshow {
-    constructor(el) {
+    constructor(el, options = {isAutoplay: false, autoplayDelay: 2000}) {
       this.DOM = { el: el };
+      this.isAutoplay = options.isAutoplay
+      this.autoplayDelay = options.autoplayDelay
 
       this.navigation = new Navigation(document.querySelector(".boxnav"), {
         next: () => this.navigate("right"),
         prev: () => this.navigate("left"),
       });
+
 
       this.DOM.detailsCtrl = document.querySelector(".action--details-mobile");
 
@@ -289,6 +296,10 @@
       this.current = 0;
 
       this.init();
+
+      if (this.isAutoplay) {
+        this.autoplay();
+      }
     }
     // Set the current slide and initialize some events.
     init() {
@@ -356,6 +367,13 @@
         });
       });
     }
+
+    autoplay() {
+      setTimeout(() => {
+        this.navigate('right');
+        this.autoplay();
+      }, this.autoplayDelay)
+    }
   }
 
   // Initialize the slideshow
@@ -367,7 +385,7 @@
   if (slideshowEl) {
 
     if (html.clientWidth >= 768) {
-      slideshow = new Slideshow(slideshowEl);
+      slideshow = new Slideshow(slideshowEl, {isAutoplay: true, autoplayDelay: 4000});
       // Preload all the images..
       imagesLoaded(document.querySelectorAll(".slide__img"), { background: true }, () => document.body.classList.remove("loading"));
     }
