@@ -584,7 +584,7 @@ tr:first-child > td > .fc-day-grid-event {
 	&__marker {
 		position: absolute;
 		left: 0;
-		top: 194px;
+		top: 15px;
 		width: 60px;
 		height: 10px;
 		background: #1b3870;
@@ -703,6 +703,7 @@ tr:first-child > td > .fc-day-grid-event {
 	}
 
 	&__info {
+		position: relative;
 		padding: 31px 34px 47px;
 		border-radius: 0 0 5px 5px;
 

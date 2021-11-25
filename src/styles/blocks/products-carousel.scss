@@ -109,6 +109,10 @@
     max-width: 292px;
     //margin-right: 24px;
     height: auto;
+
+		@include max(640) {
+			max-width: 100%;
+		}
   }
 
   &__navigation {
